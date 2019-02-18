@@ -5,14 +5,27 @@ a:link,a:visited{text-decoration: none; color: #000000;}
 header {width: 100%;}
 header h1 {text-align: center; width: 100%; height: 40px;  border-top: 1px solid gray;}
 #login {width: 980px; height: 20px; margin: 0 auto;}
-#login ul {width: 250px; float: right;}
-#login li {width: 60px; float: left; font-size: 12px; border-right: 1px solid #000; text-align: center;}
+#login ul {width: 300px; float: right;}
+#login li {width: 70px; float: left; font-size: 12px; border-right: 1px solid #000; text-align: center; line-height: 20px;}
 #login li:last-child {border-right: none;}
 #menu {width: 100%; height: 30px; background-color: dodgerblue}
 #menu ul {width: 980px; margin: 0 auto;}
-#menu li {width: 16.5%; float: left; font-size: 16px; text-align: center; line-height: 30px; display: block; display: block;}
+#menu li {width: 16.4%; float: left; font-size: 16px; text-align: center; line-height: 30px; display: block; display: block; border-left: 1px solid white; border-right: 1px solid white;}
+#menu li a {color: white;}
 #banner {width: 100%; height: 300px; position: relative; background: url(../img/banner.jpg)no-repeat; background-size: cover;}
 #banbox {width: 980px; height: 300px; margin: 0 auto; position: relative;}
 #pi {width: 200px; height: 300px; background: url(../img/pi.png)no-repeat top left; background-size: 100% 100%; position: absolute; right: 50px;}
 #banner strong {width: 300px; height: 30px; position: relative; top: 50px; left: 5%; font-size: 72px; color: white; line-height: 60px;}
 #txt1 {width: 300px; height: 50px; position: absolute; top: 180px; left: 5%; font-size: 14px; color: white;}
+section {background-color: lightgray; height: 200px;}
+section div {background-color: aqua; width: 980px; height: 200px; margin: 0 auto;}
+section div:after {content: ""; display: block; clear: both;}
+section div li a {width: 196px; height: 200px; float: left;}
+section div li:nth-child(1) a {background: url(../img/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8B%9C%EC%95%88_09.jpg)no-repeat; background-size: cover;}
+section div li:nth-child(2) a {background: url(../img/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8B%9C%EC%95%88_10.jpg)no-repeat; background-size: cover;}
+section div li:nth-child(3) a {background: url(../img/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8B%9C%EC%95%88_11.jpg)no-repeat; background-size: cover;}
+section div li:nth-child(4) a {background: url(../img/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8B%9C%EC%95%88_12.jpg)no-repeat; background-size: cover;}
+section div li:nth-child(5) a {background: url(../img/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8B%9C%EC%95%88_13.jpg)no-repeat; background-size: cover;}
+#middle_menu {}
+#middle_menu ul {width: 980px; height: 600px; margin: 0 auto;}
+#middle_menu ul li
