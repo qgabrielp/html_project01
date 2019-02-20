@@ -76,7 +76,8 @@ section>div>ul>li:nth-child(5) a {background: url(../img/m_05.png) no-repeat; ba
 #mm_bot:after {content: ""; display: block; clear: both;}
 #mm_bot>ul {width: 326.67px; height: 200px; float: right; border: 1px solid #dddddd;}
 #mm_bot>ul:after {content: ""; display: block; clear: both;}
-#mm_bot>ul>li {width: 150px; height: 160px; box-sizing: border-box; float: right; position: relative; top: 30px; right: 20px;}
+#mm_bot>ul>li {width: 150px; height: 160px; box-sizing: border-box; float: right; position: relative; top: 30px; right: 10px;}
+#mm_bot>ul>li:nth-child(2) {}
 #mm_bot>ul>h2 {padding-left: 10px; width: 200px; height: 30px;}
 #mm_bot>ul>p {padding-left: 10px; width: 300px; height: 60px;}
 #mm_bot>ul:nth-last-child(1) li {background: url(../img/m_09.png) no-repeat; background-size: 100% 100%;}

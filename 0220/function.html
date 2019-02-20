@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script>
+//        var text1 = " 안녕하세요!";
+        
+        function add(name,n){
+//            alert(name + "님,(" + age + "세/"+ addr +")" + text1);
+            var sum = 0;
+            for (var i=1; i<=n; i++){
+//                alert(sum);
+                sum = sum + i;
+//                sum += i;
+            }
+            alert(sum);
+            document.write(name + "님의");
+            return sum;
+        }
+        document.write("<br>결과 : " + add('홍길동',10));
+    </script>
+</head>
+<body>
+<!--
+    <div>
+        <script>
+        printMsg("황덕제",32,"서울");
+        </script>
+    </div>
+-->
+<!--
+    <button type="button" onclick="printMsg('황덕제',32,'서울')">회원정보1</button>
+    <div onclick="printMsg('황덕제',32,'서울')">회원정보2</div>
+    <a href="#a" onclick="printMsg('황덕제',32,'서울')">회원정보3</a>
+-->
+   <div>
+       <script>
+       document.write("<br>결과 : " + add('고길동',40));
+       </script>
+   </div> 
+</body>
+</html>
