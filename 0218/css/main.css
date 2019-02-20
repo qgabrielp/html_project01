@@ -68,22 +68,23 @@ section>div>ul>li:nth-child(5) a {background: url(../img/m_05.png) no-repeat; ba
 #mm_top>li {width: 326.67px; height: 300px; float: left; border: 1px solid #dddddd;}
 #mm_top>li>a {width: 326.67px; height: 200px; box-sizing: border-box;}
 #mm_top>li>h2 {padding-left: 10px; width: 150px;}
-#mm_top>li>p {padding-left: 10px; width: 300px;}
+#mm_top>li>p {padding-left: 10px; width: 300px; color: gray;}
 #mm_top>li:nth-last-child(1) a {background: url(../img/m_06.jpg) no-repeat; background-size: 100% 100%; float: left;}
 #mm_top>li:nth-last-child(2) a {background: url(../img/m_07.jpg) no-repeat; background-size: 100% 100%; float: right;}
 #mm_top>li:nth-last-child(3) a {background: url(../img/m_08.jpg) no-repeat; background-size: 100% 100%; float: right;}
 
-#mm_bot {width: 980px; margin: 0 auto;}
+#mm_bot {width: 980px; margin: 0 auto; position: relative;}
 #mm_bot:after {content: ""; display: block; clear: both;}
-#mm_bot>ul {width: 326.67px; height: 200px; float: right; border: 1px solid #dddddd;}
+#mm_bot>ul {width: 326.67px; height: 200px; float: left; border: 1px solid #dddddd;}
 #mm_bot>ul:after {content: ""; display: block; clear: both;}
-#mm_bot>ul>li {width: 150px; height: 160px; box-sizing: border-box; float: right; position: relative; top: 30px; right: 10px;}
-#mm_bot>ul>li:nth-child(2) {}
-#mm_bot>ul>h2 {padding-left: 10px; width: 200px; height: 30px;}
-#mm_bot>ul>p {padding-left: 10px; width: 300px; height: 60px;}
-#mm_bot>ul:nth-last-child(1) li {background: url(../img/m_09.png) no-repeat; background-size: 100% 100%;}
-#mm_bot>ul:nth-last-child(2) li {background: url(../img/m_10.png) no-repeat; background-size: 100% 100%; }
-#mm_bot>ul:nth-last-child(3) li {background: url(../img/m_11.png) no-repeat; background-size: 100% 100%;}
+#mm_bot>ul>li {width: 150px; height: 160px; box-sizing: border-box; position: absolute;}
+#mm_bot>ul>li:nth-child(1) {}
+#mm_bot>ul>h2 {padding-left: 10px; width: 200px; height: 30px; top: 20px; position: absolute;}
+#mm_bot>ul>p {padding-left: 10px; width: 300px; height: 60px; color: gray; position: absolute; top: 70px;}
+#mm_bot>ul>p>a {color: blue; position: absolute; top: 80px;}
+#mm_bot>ul:nth-last-child(1) li {background: url(../img/m_09.png) no-repeat; background-size: 100% 100%; left: 170px; top: 30px;}
+#mm_bot>ul:nth-last-child(2) li {background: url(../img/m_10.png) no-repeat; background-size: 100% 100%; left: 450px; top: 30px; width: 200px;}
+#mm_bot>ul:nth-last-child(3) li {background: url(../img/m_11.png) no-repeat; background-size: 100% 100%; right: 20px; top: 30px;}
 
 /*footer*/
 
