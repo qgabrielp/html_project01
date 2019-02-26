@@ -7,31 +7,60 @@
 	<title> Pixar Animation Studios  </title>
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
 	<style>
         *{padding: 0; margin: 0; box-sizing: border-box;}
         li {list-style: none;}
         a:link,a:visited{text-decoration: none; color: #000000;}
         .clearfix:after {content: ""; display: block; clear: both;}
         img{display: block;}
+/*        body{width: 1600px; margin: 0 auto;}*/
         
-/*        header{width: 100%; height: 200px;}*/
+        header{width: 100%; position: relative; z-index: 1;}
         #top_menubar_1{width: 1200px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
         #top_menubar_1>div{width: 1400px; height: 100%; background: url(edit_img/header_ca.png); margin: 0 auto; position: absolute; left: -200px;}
         
-        #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto; overflow: hidden;}
+        #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto; _overflow: hidden;}
         
         #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
         
         #top_menu_1{height: 100px; float: right;}
-        #top_menu_1>li{float: left; font-size: 18px; font-weight: bold; margin-left: 30px; line-height: 100px;}
+        #top_menu_1>li{float: left; font-size: 18px; font-weight: bold; margin-left: 30px; line-height: 50px; padding-top: 20px;}
+        
+        ul.submenu {opacity: 0;}
+        ul.submenu>li{margin-top: -10px;}
+        ul.submenu>li>a{display: block;}
+        ul.submenu>li>a{font-size: 14px; line-height: 28px; color: white; padding: 3px;}
+        #top_menu_1:after{content: ""; display: block; clear: both;}
+        #top_menu_1>li:hover .submenu {opacity: 1; background-color: black; transition: 0.5s;}
+        ul.submenu>li>a:hover{color: gray;}
+        
+        
+        div.slider_wrap{width: 1600px; margin: 0 auto;}
+        ul.slider>li{position: relative;}
+        #in2_bantt{width: 1000px; height: 250px; background: url(edit_img/bannertt_01.png)no-repeat center center; position: absolute; bottom: 0; left: 300px; }
+        #coco_bantt{width: 800px; height: 250px; background: url(edit_img/bannertt_02.png)no-repeat center center; position: absolute; bottom: 0; left: 400px;}
+        
+        div.bx-wrapper {margin-bottom: 0;}
         
     </style>
+    <script>
+        $(document).ready(function(){
+            var mySlider = $(".slider").bxSlider({
+                auto:true,
+                pause:5000,
+                controls:true,
+                mode:'horizontal'
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -45,13 +74,61 @@
                 <a href="#a"></a>
             </ul>
             <ul id="top_menu_1">
-                <li><a href="#a">FILMS</a></li>
-                <li><a href="#a">TECHNOLOGY</a></li>
-                <li><a href="#a">CAREERS</a></li>
-                <li><a href="#a">ABOUT</a></li>
+                <li><a href="#a">FILMS</a>
+                    <ul class="submenu">
+                          <li><a href="#a">FEATURE FILMS</a></li>
+                          <li><a href="#a">SHORT FILMS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">TECHNOLOGY</a>
+                    <ul class="submenu">
+                          <li><a href="#a">RENDERMAN</a></li>
+                          <li><a href="#a">CRAPHIC TECHNOLOGIES</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">CAREERS</a>
+                    <ul class="submenu">
+                          <li><a href="#a">CAREERS AT PIXAR</a></li>
+                          <li><a href="#a">INTERNSHIPS</a></li>
+                          <li><a href="#a">LIFE AT PIXAR</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">ABOUT</a>
+                    <ul class="submenu">
+                          <li><a href="#a">CONTACT US</a></li>
+                          <li><a href="#a">COMING SOON</a></li>
+                          <li><a href="#a">OUR STORY</a></li>
+                          <li><a href="#a">PIXAR PROFILES</a></li>
+                          <li><a href="#a">COMPANY FAQ'S</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </header>
+    <div class="wrap">
+        <div class="slider_wrap">
+            <ul class="slider">
+                <li>
+                    <img src="edit_img/banner_01.jpg" alt="">
+                    <div id="in2_bantt"></div>
+                </li>
+                <li>
+                    <img src="edit_img/banner_02.jpg" alt="">
+                    <div id="coco_bantt"></div>
+                </li>
+                <li>
+                    <img src="edit_img/banner_03.jpg" alt="">
+                    <div></div>
+                </li>
+            </ul>
+            <div class="prevBtn">
+                <img src="css/images/btn_left02.jpg" alt="">
+            </div>
+            <div class="nextBtn">
+                <img src="css/images/btn_right02.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
