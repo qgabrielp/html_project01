@@ -43,12 +43,21 @@
         ul.submenu>li>a:hover{color: gray;}
         
         
-        div.slider_wrap{width: 1600px; margin: 0 auto;}
+        div.slider_wrap{width: 1600px; position: relative; margin: 0 auto;}
         ul.slider>li{position: relative;}
         #in2_bantt{width: 1000px; height: 250px; background: url(edit_img/bannertt_01.png)no-repeat center center; position: absolute; bottom: 0; left: 300px; }
         #coco_bantt{width: 800px; height: 250px; background: url(edit_img/bannertt_02.png)no-repeat center center; position: absolute; bottom: 0; left: 400px;}
+        .prevBtn,.nextBtn{position: absolute; top: 380px; cursor: pointer; opacity: 0.5;}
+        .prevBtn:hover{opacity: 1;}
+        .nextBtn:hover{opacity: 1;}
+        .prevBtn{left: 10px;}
+        .nextBtn{right: 10px;}
         
         div.bx-wrapper {margin-bottom: 0;}
+        .bx-wrapper .bx-pager.bx-default-pager a {width: 35px; height: 10px; border-radius: 20px 20px 20px 20px; opacity: 0.6; background-color: gray; transform: scale(0.6); margin-top: 10px;}
+        .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: black;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: black; transform: scale(1.1);}
+
         
     </style>
     <script>
@@ -56,8 +65,14 @@
             var mySlider = $(".slider").bxSlider({
                 auto:true,
                 pause:5000,
-                controls:true,
+                controls:false,
                 mode:'horizontal'
+            });
+            $(".nextBtn").on("click",function(){
+                mySlider.goToNextSlide();
+            });
+            $(".prevBtn").on("click",function(){
+                mySlider.goToPrevSlide();
             });
         });
     </script>
@@ -122,10 +137,10 @@
                 </li>
             </ul>
             <div class="prevBtn">
-                <img src="css/images/btn_left02.jpg" alt="">
+                <img src="css/images/btn_left02.png" alt="">
             </div>
             <div class="nextBtn">
-                <img src="css/images/btn_right02.jpg" alt="">
+                <img src="css/images/btn_right02.png" alt="">
             </div>
         </div>
     </div>
