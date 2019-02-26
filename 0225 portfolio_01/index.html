@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -15,6 +16,7 @@
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	
 	<style>
         *{padding: 0; margin: 0; box-sizing: border-box;}
         li {list-style: none;}
@@ -25,7 +27,7 @@
         
         header{width: 100%; position: relative; z-index: 1;}
         #top_menubar_1{width: 1200px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
-        #top_menubar_1>div{width: 1400px; height: 100%; background: url(edit_img/header_ca.png); margin: 0 auto; position: absolute; left: -200px;}
+        #top_menubar_1>div{width: 1400px; height: 100%; background: url(edit_img/header_ca.png)no-repeat center center; margin: 0 auto; position: absolute; left: -100px;}
         
         #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto; _overflow: hidden;}
         
@@ -39,7 +41,7 @@
         ul.submenu>li>a{display: block;}
         ul.submenu>li>a{font-size: 14px; line-height: 28px; color: white; padding: 3px;}
         #top_menu_1:after{content: ""; display: block; clear: both;}
-        #top_menu_1>li:hover .submenu {opacity: 1; background-color: black; transition: 0.5s;}
+        #top_menu_1>li:hover .submenu{opacity: 1; background-color: black; transition: 0.5s;}
         ul.submenu>li>a:hover{color: gray;}
         
         
@@ -47,16 +49,16 @@
         ul.slider>li{position: relative;}
         #in2_bantt{width: 1000px; height: 250px; background: url(edit_img/bannertt_01.png)no-repeat center center; position: absolute; bottom: 0; left: 300px; }
         #coco_bantt{width: 800px; height: 250px; background: url(edit_img/bannertt_02.png)no-repeat center center; position: absolute; bottom: 0; left: 400px;}
-        .prevBtn,.nextBtn{position: absolute; top: 380px; cursor: pointer; opacity: 0.5;}
+        .prevBtn,.nextBtn{position: absolute; top: 380px; cursor: pointer; opacity: 0.4; font-size: 80px; color: white;}
         .prevBtn:hover{opacity: 1;}
         .nextBtn:hover{opacity: 1;}
         .prevBtn{left: 10px;}
         .nextBtn{right: 10px;}
         
         div.bx-wrapper {margin-bottom: 0;}
-        .bx-wrapper .bx-pager.bx-default-pager a {width: 35px; height: 10px; border-radius: 20px 20px 20px 20px; opacity: 0.6; background-color: gray; transform: scale(0.6); margin-top: 10px;}
+        .bx-wrapper .bx-pager.bx-default-pager a {width: 35px; height: 10px; border-radius: 20px 20px 20px 20px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
         .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: black;}
-        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: black; transform: scale(1.1);}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: black; transform: scale(1.1);}.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
 
         
     </style>
@@ -73,6 +75,23 @@
             });
             $(".prevBtn").on("click",function(){
                 mySlider.goToPrevSlide();
+            });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) { 
+                    $("#top_menubar_1").hide();
+                    $("#top_menubar_2").css('position','fixed');
+                    $("#top_menubar_2").css('left','50%');
+                    $("#top_menubar_2").css('margin-left','-800px');
+                    $("#top_menubar_2").css('width','1600px');
+                    $("#top_menubar_2").css('height','50px');
+                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
+                } else {
+//                    $("#top_menubar_1").show();
+                    $("#top_menubar_2").show();
+                }
+//                if ($(this).scrollTop() < 50) { 
+//                    $("#top_menubar_1").show(); 
+//                } 
             });
         });
     </script>
@@ -137,10 +156,10 @@
                 </li>
             </ul>
             <div class="prevBtn">
-                <img src="css/images/btn_left02.png" alt="">
+                <i class="fas fa-angle-left"></i>
             </div>
             <div class="nextBtn">
-                <img src="css/images/btn_right02.png" alt="">
+                <i class="fas fa-angle-right"></i>
             </div>
         </div>
     </div>
