@@ -21,7 +21,7 @@
 	<script> new WOW().init(); </script>
 	
 	<style>
-        *{padding: 0; margin: 0; box-sizing: border-box;}
+        *{padding: 0; margin: 0; box-sizing: border-box; transition: all 0.6s;}
         li {list-style: none;}
         a:link,a:visited{text-decoration: none; color: #000000;}
         .clearfix:after {content: ""; display: block; clear: both;}
@@ -32,7 +32,7 @@
         #top_menubar_1{width: 1200px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
         #top_menubar_1>div{width: 1400px; height: 100%; background: url(edit_img/header_ca.png)no-repeat center center; margin: 0 auto; position: absolute; left: -100px;}
         
-        #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto; _overflow: hidden;}
+        #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto;}
         
         #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
         
@@ -43,11 +43,11 @@
         ul.submenu>li{margin-top: -10px;}
         ul.submenu>li>a{display: block;}
         ul.submenu>li>a{font-size: 14px; line-height: 28px; color: white; padding: 3px;}
-        #top_menu_1:after{content: ""; display: block; clear: both;}
+        #top_menu_1>li:after{content: ""; display: block; clear: both;}
         #top_menu_1>li:hover .submenu{opacity: 1; background-color: black; transition: 0.5s;}
         ul.submenu>li>a:hover{color: gray;}
         
-        
+        div.wrap{margin-bottom: 100px;}
         div.slider_wrap{width: 1600px; position: relative; margin: 0 auto;}
         ul.slider>li{position: relative;}
         #in2_bantt{width: 1000px; height: 250px; background: url(edit_img/bannertt_01.png)no-repeat center center; position: absolute; bottom: 0; left: 300px; }
@@ -57,6 +57,41 @@
         .nextBtn:hover{opacity: 1;}
         .prevBtn{left: 10px;}
         .nextBtn{right: 10px;}
+        
+        #mid_menu{width: 1600px; background: white; margin: 0 auto; position: relative;}
+        #mid_menu_1{text-align: center;}
+        #mid_menu_1>div>h1{font-size: 50px; color: black; margin-bottom: 50px;}
+        #mid_menu_1_img>div{float: left;}
+        #mid_menu_1_img>div>div{font-size: 20px; font-weight: bold; margin-bottom: 100px;}
+        #mid_menu_1_img>div>a{width: 500px; display: block; overflow: hidden;}
+        #mid_menu_1_img>div:last-child{float: right;}
+        #mid_menu_1_img>div:nth-child(2){margin-left: 50px;}
+        #mid_menu_1_img>div>a img{background-size: 100% 100%;}
+        #mid_menu_1_img>div:after{content: ""; display: block; clear: both;}
+        #mid_menu_1_img>div>a img:hover{transform: scale(1.2); transition: all 0.3s ease-in-out;}
+        
+        #mid_menu_2{text-align: center;}
+        #mid_menu_2>div>h1{font-size: 50px; color: black; margin-bottom: 50px;}
+        #mid_menu_2_img>a{width: 600px; height: 400px; display: block; margin: 0 auto; overflow: hidden;}
+        #mid_menu_2_img>div{font-size: 20px; font-weight: bold; margin-bottom: 200px;}
+        #mid_menu_2_img:after{content: ""; display: block; clear: both;}
+        #mid_menu_2_img>a img:hover{transform: scale(1.2);}
+        
+        footer{width: 1200px; background: white; margin: 0 auto; position: relative;}
+        div#sns>div>nav {width: 200px; margin: 0 auto; pointer-events: auto;}
+/*
+        div#sns>div:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav:hover {opacity: 0.5;}
+*/
+        div#sns>div>nav>a {width: 25%; font-size: 30px; display: block; float: left;}
+        div#sns>div>nav:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav>a i:hover {opacity: 1; transform: scale(1.2); color: black;}
+        
+        #info{text-align: center; font-size: 20px;}
+        #info_top{position: absolute; left: 420px; top: 70px;}
+        #info_top>div{float: left; border-bottom: 1px solid #000; margin-left: 5px;}
+        #info>h3{width: 400px; position: absolute; top: 140px; left: 390px;}
+        
         
         div.bx-wrapper {margin-bottom: 0;}
         .bx-wrapper .bx-pager.bx-default-pager a {width: 35px; height: 10px; border-radius: 20px 20px 20px 20px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
@@ -166,6 +201,51 @@
             </div>
         </div>
     </div>
+    <section id="mid_menu">
+        <div id="mid_menu_1">
+            <div><h1>Most View</h1></div>
+            <div id="mid_menu_1_img">
+                <div>
+                <a class="wow fadeInLeft"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_1.jpg" width="100%" alt=""></a>
+                <div>Finding Dory</div>
+                </div>
+                <div>
+                <a class="wow fadeInDown"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_2.jpg" width="100%" alt=""></a>
+                <div>Toy Story 3</div>
+                </div>
+                <div>
+                <a class="wow fadeInRight"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_3.jpg" width="100%" alt=""></a>
+                <div>Inside Out</div>
+                </div>
+            </div>
+        </div>
+        <div id="mid_menu_2">
+            <div><h1>Coming Soon</h1></div>
+            <div id="mid_menu_2_img">
+                <a class="wow flipInX"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_4.jpg" alt=""></a>
+                <div>TOY STORY 4 TRAILERS</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="sns">
+            <div>
+                <nav>
+                    <a href="#a"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#a"><i class="fab fa-twitter"></i></a>
+                    <a href="#a"><i class="fab fa-instagram"></i></a>
+                    <a href="#a"><i class="fab fa-tumblr"></i></a>
+                </nav>
+            </div>
+        </div>
+        <div id="info">
+            <div id="info_top">
+                <div><a href="#a">PRIVACY POLICY |</a></div> 
+                <div><a href="#a">TERMS OF USE</a></div>
+            </div>
+            <h3>© 1986-2019 DISNEY / PIXAR</h3>
+        </div>
+    </footer>
 </body>
 </html>
 
