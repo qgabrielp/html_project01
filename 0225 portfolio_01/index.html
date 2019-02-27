@@ -95,7 +95,7 @@
         #info_top>div{float: left; border-bottom: 1px solid #000; margin-bottom: 50px; margin-right: 5px;}
         #info>h3{width: 200px; margin: 0 auto; margin-bottom: 100px;}
         
-        a.top{position: fixed; right: 10%; bottom: 50px; display: none; text-align: center; font-weight: bold; font-size: 20px;}
+        a.top{position: fixed; right: 5%; bottom: 50px; display: none; text-align: center; font-weight: bold; font-size: 20px;}
         a.top>img{width: 100px; height: 170px; background: url(edit_img/Top_02.png)no-repeat; background-size: contain;}
         
         
@@ -103,12 +103,17 @@
         .bx-wrapper .bx-pager.bx-default-pager a {width: 35px; height: 10px; border-radius: 20px 20px 20px 20px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
         .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: black;}
         .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: black; transform: scale(1.1);}.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
+        
+        
+        
 
         @media screen and (min-width:1280px) and (max-width:1599px){
             header{width: 100%; position: relative; z-index: 1;}
             #top_menubar_1{width: 100%; height: 100px; margin: 0 auto; position: relative;}
             #top_menubar_1>div{width: 100%; margin: 0 auto;}
             #top_menubar_2{width: 100%; margin: 0 auto;}
+            #top_menubar_2>#top_logo{}
+            #top_menubar_2>top_menu_1{}
             
             div.wrap{width: 100%; height: 100%; margin: 0 auto; position: relative;}
             div.slider_wrap{width: 100%; margin: 0 auto;}
@@ -189,29 +194,21 @@
             $(".prevBtn").on("click",function(){
                 mySlider.goToPrevSlide();
             });
-//            $(window).scroll(function() {
-//                if ($(this).scrollTop() > 50) { 
-//                    $("#top_menubar_1").hide();
-//                    $("#top_menubar_2").css('position','fixed');
-//                    $("#top_menubar_2").css('left','50%');
-//                    $("#top_menubar_2").css('margin-left','-800px');
-//                    $("#top_menubar_2").css('width','1600px');
-//                    $("#top_menubar_2").css('height','50px');
-//                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
-//                } else {
-//                    $("#top_menubar_1").show();
-//                    $("#top_menubar_2").show();
-//                }
-//                if ($(this).scrollTop() < 50) { 
-//                    $("#top_menubar_1").show();
-//                    $("#top_menubar_2").css('position','inherit');
-////                    $("#top_menubar_2").css('left','50%');
-//                    $("#top_menubar_2").css('margin-left','-700px');
-//                    $("#top_menubar_2").css('width','1400px');
-//                    $("#top_menubar_2").css('height','100px');
-//                    $("#top_menu_1>li").css('padding-top','20px'); $("#top_menubar_2>#top_logo>a").css('height','100px');
-//                } 
-//            });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) { 
+                    $("#top_menubar_1").hide();
+                    $("#top_menubar_2").css({'position': 'fixed', 'left': '50%','margin-left': '-800px','width': '1600px','height': '50px'});
+                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
+                } else {
+                    $("#top_menubar_1").show();
+                    $("#top_menubar_2").show();
+                }
+                if ($(this).scrollTop() < 50) { 
+                    $("#top_menubar_1").show();
+                    $("#top_menubar_2").css({'position': 'inherit','margin-left': '-700px','width': '1400px','height': '100px'});
+                    $("#top_menu_1>li").css('padding-top','20px'); $("#top_menubar_2>#top_logo>a").css('height','100px');
+                } 
+            });
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 600){
                     $('.top').fadeIn();
