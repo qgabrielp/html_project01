@@ -29,20 +29,21 @@
 /*        body{width: 1600px; margin: 0 auto;}*/
         
         header{width: 100%; position: relative; z-index: 1;}
-        #top_menubar_1{width: 1200px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
-        #top_menubar_1>div{width: 1400px; height: 100%; background: url(edit_img/header_ca.png)no-repeat center center; margin: 0 auto; position: absolute; left: -100px;}
+        #top_menubar_1{width: 1600px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
+        #top_menubar_1>div{width: 1200px; margin: 0 auto;}
+        #top_menubar_1>div>img{width: 7%; height: 100px; float: left; margin-left: 30px;}
         
-        #top_menubar_2{width: 1200px; height: 100px; background: white; margin: 0 auto;}
+        #top_menubar_2{width: 1400px; height: 100px; background: white; margin: 0 auto;}
         
         #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
         
         #top_menu_1{height: 100px; float: right;}
-        #top_menu_1>li{float: left; font-size: 18px; font-weight: bold; margin-left: 30px; line-height: 50px; padding-top: 20px;}
+        #top_menu_1>li{float: left; font-size: 18px; font-weight: bold; margin-left: 20px; line-height: 50px; padding-top: 20px;}
         
         ul.submenu {opacity: 0;}
         ul.submenu>li{margin-top: -10px;}
         ul.submenu>li>a{display: block;}
-        ul.submenu>li>a{font-size: 14px; line-height: 28px; color: white; padding: 3px;}
+        ul.submenu>li>a{font-size: 16px; line-height: 28px; color: white; padding: 5px;}
         #top_menu_1>li:after{content: ""; display: block; clear: both;}
         #top_menu_1>li:hover .submenu{opacity: 1; background-color: black; transition: 0.5s;}
         ul.submenu>li>a:hover{color: gray;}
@@ -72,25 +73,28 @@
         
         #mid_menu_2{text-align: center;}
         #mid_menu_2>div>h1{font-size: 50px; color: black; margin-bottom: 50px;}
-        #mid_menu_2_img>a{width: 600px; height: 400px; display: block; margin: 0 auto; overflow: hidden;}
-        #mid_menu_2_img>div{font-size: 20px; font-weight: bold; margin-bottom: 200px;}
+        #mid_menu_2_img>a{width: 600px; height: 400px; display: block; overflow: hidden; float: left; margin-left: 150px; margin-bottom: 50px;}
+        #mid_menu_2>div:last-child{font-size: 20px; font-weight: bold; margin-bottom: 200px;}
         #mid_menu_2_img:after{content: ""; display: block; clear: both;}
         #mid_menu_2_img>a img:hover{transform: scale(1.2);}
         
-        footer{width: 1200px; background: white; margin: 0 auto; position: relative;}
+        footer{width: 1600px; background: white; margin: 0 auto; position: relative;}
         div#sns>div>nav {width: 200px; margin: 0 auto; pointer-events: auto;}
 /*
         div#sns>div:after{content: ""; display: block; clear: both;}
         div#sns>div>nav:hover {opacity: 0.5;}
 */
-        div#sns>div>nav>a {width: 25%; font-size: 30px; display: block; float: left;}
-        div#sns>div>nav:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav>a {width: 25%; font-size: 30px; display: block; float: left; color: gray;}
+        div#sns>div>nav>a:after{content: ""; display: block; clear: both;}
         div#sns>div>nav>a i:hover {opacity: 1; transform: scale(1.2); color: black;}
         
         #info{text-align: center; font-size: 20px;}
-        #info_top{position: absolute; left: 420px; top: 70px;}
+        #info_top{position: absolute; left: 620px; top: 140px;}
         #info_top>div{float: left; border-bottom: 1px solid #000; margin-left: 5px;}
-        #info>h3{width: 400px; position: absolute; top: 140px; left: 390px;}
+        #info>h3{width: 400px; position: absolute; top: 200px; left: 590px; margin-bottom: 100px;}
+        
+        a.top{position: fixed; right: 10%; bottom: 50px; display: none;}
+        a.top>img{width: 100px; height: 100px; background: url(edit_img/top_up.png)no-repeat ;}
         
         
         div.bx-wrapper {margin-bottom: 0;}
@@ -131,14 +135,34 @@
 //                    $("#top_menubar_1").show(); 
 //                } 
             });
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 800){
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+            $('.top').click(function(){
+            $('html, body').animate({scrollTop : 0}, 400);
+            return false;
+        });
         });
     </script>
 </head>
 <body>
     <header>
         <div id="top_menubar_1">
-           <div class="wow bounceInDown" >
-               
+           <div>
+               <img class="wow bounceInLeft"data-wow-delay = "0.1s" src="edit_img/topicon_01.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.2s" src="edit_img/topicon_02.png" alt="">
+               <img class="wow fadeInUp"data-wow-delay = "0.3s" src="edit_img/topicon_03.png" alt="">
+               <img class="wow bounce"data-wow-delay = "0.4s" src="edit_img/topicon_04.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.5s" src="edit_img/topicon_05.png" alt="">
+               <img class="wow flash"data-wow-delay = "0.6s" src="edit_img/topicon_06.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.7s" src="edit_img/topicon_07.png" alt="">
+               <img class="wow swing"data-wow-delay = "0.8s" src="edit_img/topicon_08.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.9s" src="edit_img/topicon_09.png" alt="">
+               <img class="wow bounceInRight"data-wow-delay = "1s" src="edit_img/topicon_10.png" alt="">
            </div>
         </div>
         <div id="top_menubar_2">
@@ -223,8 +247,9 @@
             <div><h1>Coming Soon</h1></div>
             <div id="mid_menu_2_img">
                 <a class="wow flipInX"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_4.jpg" alt=""></a>
-                <div>TOY STORY 4 TRAILERS</div>
+                <a class="wow flipInX"data-wow-delay = "0.6s" href="#a"><img src="edit_img/mid_menu_5.jpg" alt=""></a>
             </div>
+            <div>TOY STORY 4 TRAILERS</div>
         </div>
     </section>
     <footer>
@@ -246,6 +271,9 @@
             <h3>© 1986-2019 DISNEY / PIXAR</h3>
         </div>
     </footer>
+    <div>
+        <a href="#" class="top"><img src="" alt="">Top</a>    
+    </div>
 </body>
 </html>
 
