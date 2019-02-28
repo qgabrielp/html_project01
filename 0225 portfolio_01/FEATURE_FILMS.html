@@ -32,7 +32,7 @@
         #top_menubar_1>div{width: 1200px; margin: 0 auto;}
         #top_menubar_1>div>img{width: 7%; height: 100px; float: left; margin-left: 30px;}
         
-        #top_menubar_2{width: 1400px; height: 100px; background: white; margin: 0 auto;}
+        #top_menubar_2{width: 100%; height: 100px; background: white; margin: 0 auto;}
         
         #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
         #menu_icon{display: none;}
@@ -57,11 +57,31 @@
         #main_img>div>div{position: absolute; width: 100%; top: 50%; text-align: center;}
         #main_img>div>div>h1{font-size: 51px; color: white; text-align: center; white-space: pre-wrap; letter-spacing: .29em; line-height: 1em; text-transform: uppercase; font-style: normal; font-family: brandon-grotesque;}
         
-        #list_box{max-width: 100%; margin: 0 auto; padding-left:200px; padding-right: 200px;}
+        #list_box{width: 100%; margin: 0 auto; padding-left:200px; padding-right: 200px; margin-bottom: 200px;}
         #list_box>ul{}
         #list_box>ul>li{float: left; width: 492px; height: 720px; overflow: hidden; margin-left: 200px; margin-bottom: 100px;}
-        #list_box>ul>li>a{}
+        #list_box>ul>li>a{display: block;}
         #list_box>ul>li>a>img{background-size: cover;}
+        
+        footer{width: 100%; background: white; margin: 0 auto; text-align: center; clear: both;}
+        
+        div#sns{width: 100%; height: 50px; margin-bottom: 100px;}
+        div#sns>div>nav {width: 200px; margin: 0 auto; pointer-events: auto;}
+/*
+        div#sns>div:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav:hover {opacity: 0.5;}
+*/
+        div#sns>div>nav>a {width: 25%; font-size: 30px; display: block; float: left; color: gray;}
+        div#sns>div>nav>a:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav>a i:hover {opacity: 1; transform: scale(1.2); color: black;}
+        
+        #info{width: 100%; height: 50px; margin: 0 auto; display: block;}
+        #info_top{width: 210px; margin: 0 auto;}
+        #info_top>div{float: left; border-bottom: 1px solid #000; margin-bottom: 50px; margin-right: 5px;}
+        #info>h3{width: 200px; margin: 0 auto; margin-bottom: 100px;}
+        
+        a.top{position: fixed; right: 5%; bottom: 50px; display: none; text-align: center; font-weight: bold; font-size: 20px;}
+        a.top>img{width: 100px; height: 170px; background: url(edit_img/Top_02.png)no-repeat; background-size: contain;}
         
     </style>
     <script>
@@ -199,6 +219,28 @@
             <li><a href="#a"><img src="FEATURE_FILMS/pic_022.jpg" width="100%" height="100%" alt=""></a></li>
         </ul>
     </div>
+    <footer>
+        <div id="sns">
+            <div>
+                <nav>
+                    <a href="#a"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#a"><i class="fab fa-twitter"></i></a>
+                    <a href="#a"><i class="fab fa-instagram"></i></a>
+                    <a href="#a"><i class="fab fa-tumblr"></i></a>
+                </nav>
+            </div>
+        </div>
+        <div id="info">
+            <div id="info_top">
+                <div><a href="#a">PRIVACY POLICY |</a></div> 
+                <div><a href="#a">TERMS OF USE</a></div>
+            </div>
+            <h3>© 1986-2019 DISNEY / PIXAR</h3>
+        </div>
+    </footer>
+    <div>
+        <a href="#" class="top"><img src="" alt=""></a>    
+    </div>    
 </body>
 </html>
 
