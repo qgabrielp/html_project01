@@ -36,6 +36,7 @@
         #top_menubar_2{width: 1400px; height: 100px; background: white; margin: 0 auto;}
         
         #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
+        #menu_icon{display: none;}
         
         #top_menu_1{height: 100px; float: right;}
         #top_menu_1>li{width: 160px; float: left; font-size: 18px; font-weight: bold; _margin-left: 20px; line-height: 50px; padding-top: 20px; text-align: center;}
@@ -48,12 +49,14 @@
         #top_menu_1>li:hover .submenu{display: block; background-color: black; transition: 0.5s;}
         ul.submenu>li>a:hover{color: gray;}
         
+        .nav{display: none;}
+        
         div.wrap{width: 1600px; margin: 0 auto; margin-bottom: 100px;}
         div.slider_wrap{width: 1600px; position: relative; margin: 0 auto;}
         ul.slider>li{position: relative;}
         #in2_bantt{width: 1000px; height: 250px; background: url(edit_img/bannertt_01.png)no-repeat center center; position: absolute; bottom: 0; left: 300px; }
         #coco_bantt{width: 800px; height: 250px; background: url(edit_img/bannertt_02.png)no-repeat center center; position: absolute; bottom: 0; left: 400px;}
-        .prevBtn,.nextBtn{position: absolute; top: 380px; cursor: pointer; opacity: 0.4; font-size: 80px; color: white;}
+        .prevBtn,.nextBtn{position: absolute; top: 50%; cursor: pointer; opacity: 0.4; font-size: 80px; color: white;}
         .prevBtn:hover{opacity: 1;}
         .nextBtn:hover{opacity: 1;}
         .prevBtn{left: 10px;}
@@ -105,12 +108,142 @@
         .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: black; transform: scale(1.1);}.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
         
         
+        .nav {_overflow: hidden; position: absolute; left: 50%; top: 50%; width: auto; height: 90px; margin-top: -45px; background: #fff; border-radius: 5px;
+        -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);}
+        .nav__cb {z-index: -1000; position: absolute; left: 0; top: 0; opacity: 0; pointer-events: none;}
+        .nav__content {position: relative; width: 90px; height: 100%;
+          -webkit-transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+          transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);}
+        .nav__cb:checked ~ .nav__content {
+          -webkit-transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          width: 640px;}
+        .nav__items {position: relative; width: 640px; height: 100%; padding-left: 20px; padding-right: 110px; list-style-type: none; font-size: 0;}
+        .nav__item {display: inline-block; vertical-align: top; width: 120px; text-align: center; color: #6C7784; font-size: 14px; line-height: 90px; font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+          -webkit-perspective: 1000px;
+                  perspective: 1000px;
+          -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+          cursor: pointer;}
+        .nav__item:hover {color: black;}
+        .nav__item-text {display: block; height: 100%;
+          -webkit-transform: rotateY(-70deg);
+                  transform: rotateY(-70deg);
+          opacity: 0;
+          -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);}
+        .nav__cb:checked ~ .nav__content .nav__item-text {
+          -webkit-transform: rotateY(0);
+                  transform: rotateY(0);
+          opacity: 1;
+          -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+        }
+        .submenu2 {display: block; height: 100%;
+/*
+          -webkit-transform: rotateY(-70deg);
+                  transform: rotateY(-70deg);
+*/
+          opacity: 0;
+          -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);}
+        .nav__cb:checked ~ .submenu2{
+/*
+          -webkit-transform: rotateY(0);
+                  transform: rotateY(0);
+*/
+          opacity: 1;
+          -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+        }
+        .nav__item:nth-child(1) .nav__item-text {
+          -webkit-transition-delay: 0.3s;
+                  transition-delay: 0.3s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(1) .nav__item-text {
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+        }
+        .nav__item:nth-child(2) .nav__item-text {
+          -webkit-transition-delay: 0.2s;
+                  transition-delay: 0.2s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(2) .nav__item-text {
+          -webkit-transition-delay: 0.1s;
+                  transition-delay: 0.1s;
+        }
+        .nav__item:nth-child(3) .nav__item-text {
+          -webkit-transition-delay: 0.1s;
+                  transition-delay: 0.1s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(3) .nav__item-text {
+          -webkit-transition-delay: 0.2s;
+                  transition-delay: 0.2s;
+        }
+        .nav__item:nth-child(4) .nav__item-text {
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(4) .nav__item-text {
+          -webkit-transition-delay: 0.3s;
+                  transition-delay: 0.3s;
+        }
+        .nav__btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 90px;
+          height: 90px;
+          padding: 36px 31px;
+          cursor: pointer;
+        }
+        .nav__btn:before, .nav__btn:after {
+          content: "";
+          display: block;
+          width: 28px;
+          height: 4px;
+          border-radius: 2px;
+          background: #6C7784;
+          -webkit-transform-origin: 50% 50%;
+                  transform-origin: 50% 50%;
+          -webkit-transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
+          transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+        }
+        .nav__btn:before {
+          margin-bottom: 10px;
+        }
+        .nav__btn:hover:before, .nav__btn:hover:after {
+          background: black;
+        }
+        .nav__cb:checked ~ .nav__btn:before {
+          -webkit-transform: translateY(7px) rotate(-225deg);
+                  transform: translateY(7px) rotate(-225deg);
+        }
+        .nav__cb:checked ~ .nav__btn:after {
+          -webkit-transform: translateY(-7px) rotate(225deg);
+                  transform: translateY(-7px) rotate(225deg);
+        }
+        .submenu2{width: 120px; height: 200px; line-height: 30px; text-align: center; margin: 5px; font-size: 11px; background-color: white;}
         
 
         @media screen and (min-width:1280px) and (max-width:1599px){
             header{width: 100%; position: relative; z-index: 1;}
             #top_menubar_1{width: 100%; height: 100px; margin: 0 auto; position: relative;}
             #top_menubar_1>div{width: 100%; margin: 0 auto;}
+            #top_menubar_1>div>img{width: 7%; height: 100px; float: left;}
             #top_menubar_2{width: 100%; margin: 0 auto;}
             #top_menubar_2>#top_logo{}
             #top_menubar_2>top_menu_1{}
@@ -142,6 +275,7 @@
             #top_menubar_1{width: 100%; height: 100px; margin: 0 auto; position: relative;}
             #top_menubar_1>div{width: 100%; margin: 0 auto;}
             #top_menubar_2{width: 100%; margin: 0 auto;}
+            #top_menubar_2>#top_logo>a{width: 220px; height: 90px; background: url(edit_img/logo_01.png)no-repeat center center; float: left;}
             
             div.wrap{width: 100%; height: 100%; margin: 0 auto; position: relative;}
             div.slider_wrap{width: 100%; margin: 0 auto;}
@@ -166,11 +300,50 @@
             
         }
         @media screen and (min-width:780px) and (max-width:1023px){
-
+            header{width: 100%; position: relative; z-index: 1;}
+            #top_menubar_1{width: 100%; height: 80px; margin: 0 auto; position: relative;}
+            #top_menubar_1>div{width: 100%; margin: 0 auto;}
+            #top_menubar_1>div>img{width: 6%; height: 80px; float: left;}
+            #top_menubar_2{width: 100%; margin: 0 auto;}
+            #top_menubar_2>#top_logo>a{width: 220px; height: 90px; background: url(edit_img/logo_01.png)no-repeat center center; float: left;}
+            
+            #top_menu_1{height: 80px; float: right;}
+            #top_menu_1>li{width: 120px; float: left; font-size: 16px; font-weight: bold; line-height: 50px; padding-top: 20px; text-align: center;}
+            ul.submenu>li>a{font-size: 12px; line-height: 28px; color: white; padding: 5px;}
+            
+            div.wrap{width: 100%; height: 100%; margin: 0 auto; position: relative;}
+            div.slider_wrap{width: 100%; margin: 0 auto;}
+            ul.slider{width: 100%; margin: 0 auto;}
+/*            ul.slider>li{position: relative;}*/
+            ul.slider>li>img{width: 100%; margin: 0 auto;}
+            #in2_bantt{width: 50%; margin: 0 auto; background-size: contain; bottom: -50px; left: 25%;}
+            #coco_bantt{width: 30%; margin: 0 auto; background-size: contain; bottom: -30px; left: 35%;}
+            
+            #mid_menu{width: 100%; margin: 0 auto;}
+            #mid_menu_1_img>div{width: 33.3%;}
+            #mid_menu_1_img>div:nth-child(2){margin-left: 0;}
+            #mid_menu_1_img>div>a{width: 100%; display: block; overflow: hidden;}
+            #mid_menu_1_img>div:last-child{float: left;}
+            
+            #mid_menu_2{width: 100%; margin: 0 auto;}
+            #mid_menu_2_img>a{width: 50%; height: 100%; display: block; overflow: hidden; float: left; margin-left: 0; margin-bottom: 50px; background: 100% 100%;}
+            
+            footer{width: 100%; margin: 0 auto;}
+            #info{width: 100%; margin: 0 auto;}
+            
+            
         }
 
         @media screen and (min-width:640px) and (max-width:779px){
-
+            header{width: 100%; position: relative; z-index: 1;}
+            #top_menubar_1{display: none;}
+            #top_menubar_2{width: 100%; margin: 0 auto;}
+            #top_menubar_2>#top_logo>a{width: 220px; height: 90px; background: url(edit_img/logo_01.png)no-repeat center center; float: left;}
+            
+            #top_menu_1{height: 80px; float: right;}
+            #top_menu_1>li{display: none;}
+            .nav{display: block;}
+            
         }
         @media screen and (min-width:480px) and (max-width:639px){
 
@@ -183,7 +356,7 @@
     <script>
         $(document).ready(function(){
             var mySlider = $(".slider").bxSlider({
-                auto:true,
+                auto:false,
                 pause:5000,
                 controls:false,
                 mode:'horizontal'
@@ -194,21 +367,21 @@
             $(".prevBtn").on("click",function(){
                 mySlider.goToPrevSlide();
             });
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 50) { 
-                    $("#top_menubar_1").hide();
-                    $("#top_menubar_2").css({'position': 'fixed', 'left': '50%','margin-left': '-800px','width': '1600px','height': '50px'});
-                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
-                } else {
-                    $("#top_menubar_1").show();
-                    $("#top_menubar_2").show();
-                }
-                if ($(this).scrollTop() < 50) { 
-                    $("#top_menubar_1").show();
-                    $("#top_menubar_2").css({'position': 'inherit','margin-left': '-700px','width': '1400px','height': '100px'});
-                    $("#top_menu_1>li").css('padding-top','20px'); $("#top_menubar_2>#top_logo>a").css('height','100px');
-                } 
-            });
+//            $(window).scroll(function() {
+//                if ($(this).scrollTop() > 50) { 
+//                    $("#top_menubar_1").hide();
+//                    $("#top_menubar_2").css({'position': 'fixed', 'left': '50%','margin-left': '-800px','width': '1600px','height': '50px'});
+//                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
+//                } else {
+//                    $("#top_menubar_1").show();
+//                    $("#top_menubar_2").show();
+//                }
+//                if ($(this).scrollTop() < 50) { 
+//                    $("#top_menubar_1").show();
+//                    $("#top_menubar_2").css({'position': 'inherit','margin-left': '-700px','width': '1400px','height': '100px'});
+//                    $("#top_menu_1>li").css('padding-top','20px'); $("#top_menubar_2>#top_logo>a").css('height','100px');
+//                } 
+//            });
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 600){
                     $('.top').fadeIn();
@@ -273,6 +446,54 @@
                     </ul>
                 </li>
             </ul>
+            <nav class="nav">
+              <input type="checkbox" class="nav__cb" id="menu-cb"/>
+              <div class="nav__content">
+                <ul class="nav__items">
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      FILMS
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">FEATURE FILMS</a></li>
+                        <li><a href="#a">SHORT FILMS</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      TECHNOLOGY
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">RENDERMAN</a></li>
+                        <li><a href="#a">CRAPHIC TECHNOLOGIES</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      CAREERS
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">CAREERS AT PIXAR</a></li>
+                        <li><a href="#a">INTERNSHIPS</a></li>
+                        <li><a href="#a">LIFE AT PIXAR</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      ABOUT
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">CONTACT US</a></li>
+                        <li><a href="#a">COMING SOON</a></li>
+                        <li><a href="#a">OUR STORY</a></li>
+                        <li><a href="#a">PIXAR PROFILES</a></li>
+                        <li><a href="#a">COMPANY FAQ'S</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <label class="nav__btn" for="menu-cb"></label>
+            </nav>
         </div>
     </header>
     <div class="wrap">
