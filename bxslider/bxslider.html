@@ -63,9 +63,10 @@
         $(document).ready(function(){
             var mySlider = $(".slider").bxSlider({
                 auto:true,
-                pager:false,
+//                pager:false,
                 controls:false,
-                mode:'vertical'
+                mode:'vertical',
+                pagerCustom:'.bx_pager'
             });
             $(".nextBtn").on("click",function(){
                 mySlider.goToNextSlide();
