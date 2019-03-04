@@ -58,10 +58,10 @@
         #main_img>div>div>h1{font-size: 51px; color: white; text-align: center; white-space: pre-wrap; letter-spacing: .29em; line-height: 1em; text-transform: uppercase; font-style: normal; font-family: brandon-grotesque;}
         
         #list_box{width: 100%; margin: 0 auto; padding-left:200px; padding-right: 200px; margin-bottom: 200px;}
-        #list_box>ul{}
-        #list_box>ul>li{float: left; width: 492px; height: 720px; overflow: hidden; margin-left: 170px; margin-bottom: 100px;}
+        #list_box>ul{width: 100%; margin: 0 auto;}
+        #list_box>ul>li{float: left; width: auto; max-width: 400px; height: auto; max-height: 720px; margin-bottom: 100px; margin-left: 10px; overflow: hidden;}
         #list_box>ul>li>a{display: block;}
-        #list_box>ul>li>a>img{background-size: cover;}
+        #list_box img{background-size: contain;}
         
         footer{width: 100%; background: white; margin: 0 auto; text-align: center; clear: both;}
         
@@ -83,6 +83,29 @@
         a.top{position: fixed; right: 5%; bottom: 50px; display: none; text-align: center; font-weight: bold; font-size: 20px;}
         a.top>img{width: 100px; height: 170px; background: url(edit_img/Top_02.png)no-repeat; background-size: contain;}
         
+        @media screen and (min-width:1280px) and (max-width:1599px){
+            
+        }
+        
+        @media screen and (min-width:1024px) and (max-width:1279px){
+            
+        }
+        
+        @media screen and (min-width:780px) and (max-width:1023px){
+            
+        }
+        
+        @media screen and (min-width:640px) and (max-width:779px){
+            
+        }
+        
+        @media screen and (min-width:480px) and (max-width:639px){
+            
+        }
+        
+        @media screen and (max-width:479px){
+            
+        }
     </style>
     <script>
         $(document).ready(function(){
