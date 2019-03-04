@@ -51,16 +51,19 @@
     ul.slider li .btn_more{top: 300px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
     ul.slider li .btn_more:hover{background-color: green; color: #ffc30d; cursor: pointer; transition: 0.3s;}
     
-    
-    
-    
+    .main_slider_pager{width: 100%; margin: 0 auto;}
+    .bx_pager{width: 100%; overflow: hidden;}
+    .bx_pager a{width: 25%; display: block; float: left; line-height: 72px; font-weight: bold; background: #514f64; text-align: center; position: relative;}
+    .bx_pager a:before{content: ""; position: absolute; display: block; height: 15px; top: 30px; left: -1px; border-left: 1px solid #fff;} .bx_pager a.active{background: #ffc30d;}
+    .bx_pager a:first-child{border-radius: 0 0 0 10px;}
+    .bx_pager a:last-child{border-radius: 0 0 10px 0;}
     
     </style>
     <script>
         $(document).ready(function(){
             var mySlider = $(".slider").bxSlider({
                 auto:true,
-//                pager:false
+                pager:false,
                 controls:false,
                 mode:'vertical'
             });
@@ -102,16 +105,22 @@
                     <div class="btn_more">바로가기</div>
                 </li>
             </ul>
-<!--
             <div class="prevBtn">
                 <img src="images/btn_left01.jpg" alt="">
             </div>
             <div class="nextBtn">
                 <img src="images/btn_right01.jpg" alt="">
             </div>
--->
         </div>
     </div>
-    <div style="height: 300px; background: red;"></div>
+    <div class="main_slider_pager">
+            <div class="bx_pager">
+                <a href="#a" data-slide-index="0">1번입니다</a>
+                <a href="#a" data-slide-index="1">2번입니다</a>
+                <a href="#a" data-slide-index="2">3번입니다</a>
+                <a href="#a" data-slide-index="3">4번입니다</a>
+            </div>
+    </div>
+<!--    <div style="height: 300px; background: red;"></div>-->
 </body>
 </html>
