@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" context="width=device-width, initial-scale=1.0">	
+	<title> 문서의 제목  </title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script>
+     $(function(){
+            var current = 0;
+            
+            var wrapWidth = $(window).outerWidth();
+            var liCount = $(".banner>ul>li").length;
+            
+            $(".banner>ul>li").css("width",wrapWidth);
+            $(".banner>ul").css("width",wrapWidth*liCount);
+            
+            $(window).resize(function(){
+                wrapWidth = $(window).outerWidth();
+                $(".banner>ul>li").css("width",wrapWidth);
+                $(".banner>ul").css("width",wrapWidth*liCount);
+                $(".banner>ul").css({left:current*wrapWidth*-1})
+            });
+            
+            var container = $(".banner>ul");
+            var pager = $(".pager>span");
+            $("#bt_next").click(function(){
+                if (current < 5){
+                    current++;
+                if(current == 5) current =0;
+                console.log("bbb"+current);
+                listMove();
+                }
+            });
+            $("#bt_prev").click(function(){
+                if (current < 5){
+                    current--;
+                if(current == -1) current =4;
+                console.log("bbb"+current);
+                listMove();
+                }
+            });
+            $(".pager>span").click(function(){
+                var i = $(this).index();
+                pager.css("color","white");
+                pager.eq(i).css("color","red");
+                current = i;
+                listMove();
+            });
+            
+            function listMove(){
+            var tl = wrapWidth * current * -1;
+            console.log("ccc"+wrapWidth);
+            container.stop().animate({left:tl}, 1000);
+            pager.css("color","white");
+            pager.eq(current).css("color","red");
+            }
+            
+            var timeID;
+            timer();
+            function timer(){
+                timeID = setInterval(function(){
+                     $("#bt_next").trigger("click");
+                }, 2000);
+            };
+            
+            $(".banner").on({mouseover:function(){
+                clearInterval(timeID);
+            },
+                             
+            mouseout:function(){
+                timer();
+            }
+            });
+            
+        });
+    </script>
+    <style>
+    .wrap{width: 100%; margin: 0 auto;}
+        .section{width: 100%;}
+        .banner{width: 100%; height: 400px; overflow: hidden; position: relative;}
+        .banner>ul{width: 500%; position: absolute;}
+        .banner>ul:after{content: ""; display: block; clear: both;}
+        .banner>ul>li{float: left;}
+        .banner>ul>li>img{width: 100%; height: 100%;}
+        .banner div.btn{width: 10%; position: absolute; top: 360px; background: #fff; text-align: center; left: 45%; background: black; color: white; font-weight: bold; font-size: 22px; cursor: pointer;}
+        .pager{width: 100%; position: absolute; bottom: 40px; text-align: center; color: white; cursor: pointer; font-size: 22px;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="section">
+        <div class="banner">
+            <ul>
+                <li><img src="img/images01.jpg" alt="img1"></li>
+                <li><img src="img/images02.jpg" alt="img2"></li>
+                <li><img src="img/images03.jpg" alt="img3"></li>
+                <li><img src="img/images04.jpg" alt="img4"></li>
+                <li><img src="img/images05.jpg" alt="img5"></li>
+            </ul>
+            <div class="btn">
+                <span id="bt_prev">이전</span>
+                <span id="bt_next">다음</span>
+            </div>
+            <div class="pager">
+                <span class="bts" style="color: red;">●</span>
+                <span class="bts">●</span>
+                <span class="bts">●</span>
+                <span class="bts">●</span>
+                <span class="bts">●</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
