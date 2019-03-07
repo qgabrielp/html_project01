@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{font-family: 'Noto Sans', sans-serif;}
+		h3{text-align:center;height:80px;line-height:80px;_background:#ddd;font-size:25px/*width:700px;margin:0 auto;*/}
+		div.table_layout{width:90%;margin:0 auto;}
+		div.table_layout ul{display:table;width:100%;}
+		div.table_layout ul>li{display:table-row;}
+		div.table_layout ul>li>div{display:table-cell;vertical-align:middle;text-align:center;padding:5px;}
+
+		.table_layout .table_th > div{
+			border-top:3px solid #0e71b8;
+			border-bottom:1px solid #e0e0e0;
+			background:#fbfbfb;height:70px;font-size:18px;
+			font-weight:bold;
+		}
+		.table_layout .table_tr > div{height:50px;border-bottom:1px solid #e0e0e0;}
+
+		.table_tr .subject{text-align:left !important;}
+		.table_tr:hover{background:#fbfbfb;}
+/*
+		.num.dpnone,.date.dpnone,.count.dpnone{display:none;}*/
+		.num{}
+		.date{}
+		.count{}
+		@media screen and (max-width:600px){
+			div.table_layout ul li div{display:block;}
+			.num.dpnone,.date.dpnone,.count.dpnone{display:none;}
+			.table_tr:after{content:"";clear: both;display: block;}
+			.table_tr > div{float:left;height:30px;border-bottom:none;}
+			div.table_layout .table_tr >li{display: block;border-bottom:1px solid red;}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<h3>공지사항</h3>
+	<div class="table_layout">
+		<ul>
+			<li class="table_th">
+				<div class="num dpnone">번호</div>
+				<div class="subject">제목</div>
+				<div class="date dpnone">등록일</div>
+				<div class="count dpnone">조회</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">5</div>
+				<div class="subject">안녕하세요. 홈페이지를 오픈하였습니다.</div>
+				<div class="date">2018-10-10</div>
+				<div class="count">100</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">4</div>
+				<div class="subject">안녕하세요. 홈페이지를 오픈하였습니다.</div>
+				<div class="date">2018-10-10</div>
+				<div class="count">100</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">3</div>
+				<div class="subject">안녕하세요. 홈페이지를 오픈하였습니다.</div>
+				<div class="date">2018-10-10</div>
+				<div class="count">100</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">2</div>
+				<div class="subject">안녕하세요. 홈페이지를 오픈하였습니다.</div>
+				<div class="date">2018-10-10</div>
+				<div class="count">100</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">1</div>
+				<div class="subject">안녕하세요. 홈페이지를 오픈하였습니다.</div>
+				<div class="date">2018-10-10</div>
+				<div class="count">100</div>
+			</li>
+			
+		</ul>
+	</div>
+
+	
+</body>
+</html>
