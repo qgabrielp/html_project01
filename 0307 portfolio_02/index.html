@@ -1,0 +1,236 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" context="width=device-width, initial-scale=1.0">	
+	<title> 문서의 제목  </title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/fullpage.css" />
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) { 
+               
+                $("#top_menu").css({'position': 'fixed', 'top': '0', 'background-color': "lavender"});
+                $("#top_menu>ul>li>a").css('color','black');
+            }
+            if ($(this).scrollTop() < 50) { 
+                
+                $("#top_menu").css({'position': 'fixed','top': '50px', 'background-color': ''});
+                $("#top_menu>ul>li>a").css('color','white');
+            } 
+        });
+        $(function(){
+            $("#fullpage").fullpage({
+                anchors:["1st","2st","3st","4st"],
+                menu:"#side_menu",
+                    'afterLoad':function(anchorsLink,index){
+                        if(index==2){
+                            $(".onview").addClass("mactive");
+                        }else{
+                            $(".onview").removeClass("mactive");
+                        }
+                        if(index==1){
+                            $("#side_menu>ul>li>a").removeClass("on");
+                            $("#side_menu>ul>li>a:eq(0)").addClass("on");
+                        }
+                        if(index==2){
+                            $("#side_menu>ul>li>a").removeClass("on");
+                            $("#side_menu>ul>li>a:eq(1)").addClass("on");
+                        }
+                        if(index==3){
+                            $("#side_menu>ul>li>a").removeClass("on");
+                            $("#side_menu>ul>li>a:eq(2)").addClass("on");
+                        }
+                        if(index==4){
+                            $("#side_menu>ul>li>a").removeClass("on");
+                            $("#side_menu>ul>li>a:eq(3)").addClass("on");
+                        }
+                    }
+            });
+        });
+        $(function(){
+             $("ul.sub").hide();
+             $("#top_menu>ul>li").hover(function(){
+                var i = $(this).index();
+                $("#top_menu>ul>li>ul").eq(i).stop().slideDown();
+             }).mouseleave(function(){
+                $("ul.sub").stop().slideUp();
+             });
+        });
+
+    </script>
+    <style>
+        header{width: 100%; position: relative; padding:  -top: 50px;}
+        
+        #top_menu{width: 100%; height: 50px; position: absolute; z-index: 2; border-bottom: 1px solid #fff;}
+        #top_menu>ul{width: 80%; margin: 0 auto;}
+        #top_menu>ul:after{content: ""; display: block; clear: both;}
+        #top_menu>ul>li{width: 20%; float: left; font-size: 18px; font-weight: bold; line-height: 50px; text-align: center; color: white;}
+        #top_menu>ul>li{color: white; position: relative;}
+        #top_menu>div{width: 15%; position: absolute; left: 0;}
+        #logo{background: url(img/circle-1613999_1280.png)no-repeat center; background-size: contain; width: 100%; height: 50px; display: block;}
+        header>div:after{content: ""; display: block; clear: both;}
+        #top_menu:hover{background: white;}
+        #top_menu:hover ul>li{color: black;}
+        #top_menu>ul>li:hover{background-color: white;}
+        #top_menu>ul>li:hover{color: black;}
+        ul.sub>a{display: inline; text-align: center; padding: 5px 10px;}
+        
+        #side_menu{position: fixed; right: 0; width: 5%; text-align: center; top: 60%; line-height: 30px; z-index: 1;}
+        #side_menu>ul>li{opacity: 0.5;}
+        #side_menu>ul>li:active{opacity: 1; line-height: 50px;}
+        #side_menu>ul>li>a{display: block; color: white;}
+        .on{background-color: cornflowerblue; line-height: 50px; font-weight: bold; font-size: 16px; opacity: 1; position: relative; width: 120px; float: right;}
+        
+        #page1{background-image: url(img/bg1.jpg);}
+        #page2{background-image: url(img/bg2.jpg);}
+        #page3{background-image: url(img/bg3.jpg);}
+        #page4{background-image: url(img/bg4.jpg);}
+        .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
+        
+        .main_cmt{width: 400px; margin-left: 100px;}
+        .main_cmt p{text-shadow: 1px 1px 1px #292929; color: #fff; font-weight: bold;}
+        .main_cmt p:nth-child(1){font-size: 4em;}
+        .main_cmt p:nth-child(2){font-size: 2em;}
+        .main_cmt a{width: 150px; border: 1px solid #fff; background: none; line-height: 45px; display: block; text-align: center; margin-top: 30px; color: white; border-radius: 10px; transition: 0.3s;}
+        .main_cmt a:hover{background: #fff; color: #000;}
+        
+        #page2 div.onview{opacity: 0; transition: 0.3s;}
+        #page2 div.onview.mactive{opacity: 1; transform: translateX(100px);}
+        #page3,#page4{padding: 0px 0 0px calc(50% - 50px);}
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <nav id="top_menu">
+            <div><a id="logo" href="#a"></a></div>
+            <ul>
+                <li>MENU1
+                    <ul class="sub">
+                        <a href="#a">submenu1</a>
+                        <a href="#a">submenu2</a>
+                        <a href="#a">submenu3</a>
+                        <a href="#a">submenu4</a>
+                    </ul>
+                </li>
+                <li>MENU2
+                    <ul class="sub">
+                        <a href="#a">submenu1</a>
+                        <a href="#a">submenu2</a>
+                        <a href="#a">submenu3</a>
+                        <a href="#a">submenu4</a>
+                    </ul>
+                </li>
+                <li>MENU3
+                    <ul class="sub">
+                        <a href="#a">submenu1</a>
+                        <a href="#a">submenu2</a>
+                        <a href="#a">submenu3</a>
+                        <a href="#a">submenu4</a>
+                    </ul>
+                </li>
+                <li>MENU4
+                    <ul class="sub">
+                        <a href="#a">submenu1</a>
+                        <a href="#a">submenu2</a>
+                        <a href="#a">submenu3</a>
+                        <a href="#a">submenu4</a>
+                    </ul>
+                </li>
+                <li>MENU5
+                    <ul class="sub">
+                        <a href="#a">submenu1</a>
+                        <a href="#a">submenu2</a>
+                        <a href="#a">submenu3</a>
+                        <a href="#a">submenu4</a>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav id="side_menu">
+            <ul>
+                <li data-menuanchor="1st"><a class="on" href="#1st">MENU1</a></li>
+                <li data-menuanchor="2st"><a href="#2st">MENU2</a></li>
+                <li data-menuanchor="3st"><a href="#3st">MENU3</a></li>
+                <li data-menuanchor="4st"><a href="#4st">MENU4</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section>
+    <div id="fullpage">
+        <div class="section pages" id="page1" data-anchor="1st">
+            <div class="main_cmt">
+                <p>Lorem ipsum.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <a href="#">more</a>
+            </div>
+        </div>
+        <div class="section pages" id="page2" data-anchor="2st">
+            <div class="main_cmt">
+                <div class="onview">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+        </div>
+        <div class="section pages" id="page3" data-anchor="3st">
+            <div class="main_cmt">
+                <p>Lorem ipsum.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <a href="#">more</a>
+            </div>
+        </div>
+        <div class="section pages" id="page4" data-anchor="4st">
+            <div class="slide">
+                <div class="main_cmt">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="main_cmt">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="main_cmt">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
