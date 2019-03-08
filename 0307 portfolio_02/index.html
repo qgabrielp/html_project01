@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/fullpage.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/animate.css">
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -15,6 +17,10 @@
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+	<script> new WOW().init(); </script>
+
 	<script>
         $(window).scroll(function() {
             if ($(this).scrollTop() > 50) { 
@@ -28,6 +34,7 @@
                 $("#top_menu>ul>li>a").css('color','white');
             } 
         });
+        
         $(function(){
             $("#fullpage").fullpage({
                 anchors:["1st","2st","3st","4st"],
@@ -57,6 +64,7 @@
                     }
             });
         });
+        
         $(function(){
              $("ul.sub").hide();
              $("#top_menu>ul>li").hover(function(){
@@ -65,6 +73,46 @@
              }).mouseleave(function(){
                 $("ul.sub").stop().slideUp(100);
              });
+        });
+        
+//        $(document).ready(function(){
+//            var mySlider = $(".slider").bxSlider({
+//                auto:true,
+//                pause:10000,
+//                controls:false,
+//                mode:'horizontal'
+//            });
+//            $(".nextBtn").on("click",function(){
+//                mySlider.goToNextSlide();
+//            });
+//            $(".prevBtn").on("click",function(){
+//                mySlider.goToPrevSlide();
+//            });
+//        });
+        
+        $(document).ready(function(){
+            $("article").on("mouseover", function(){
+                var vid = $(this).find("video").get(0);
+                vid.currentTime=0;
+                vid.play();
+
+                $(this).stop().animate({"width":"35%"}, 1000, function(){
+                    $(this).find("h3").stop().animate({"right":"10px"}, 400);
+                    $(this).find("p").stop().animate({"right":"10px"}, 800);
+                });
+                $(this).find("video").stop().animate({"opacity":"0.9"}, 1200);
+            });
+            $("article").on("mouseout", function(){
+                var vid = $(this).find("video").get(0);
+                vid.currentTime=0;
+                vid.pause();
+
+                $(this).stop().animate({"width":"15%"}, 1000, function(){
+                    $(this).find("h3").stop().animate({"opacity":"0.0"}, 400);
+                    $(this).find("p").stop().animate({"opacity":"0.0"}, 800);
+                });
+                $(this).find("video").stop().animate({"opacity":"0.0"}, 1200);
+            });
         });
 
     </script>
@@ -107,6 +155,39 @@
         #page2 div.onview{opacity: 0; transition: 0.3s;}
         #page2 div.onview.mactive{opacity: 1; transform: translateX(100px);}
         #page3,#page4{padding: 0px 0 0px calc(50% - 50px);}
+        
+/*
+        div.wrap{position: fixed; top: 0px; right: 0px; width: 100%; height: 80%;}
+        ul.slider{}
+        ul.slider>li{position: relative; width: 12%; height: 100%; float: left; overflow: hidden;}
+       
+        ul.slider>li>video{width: auto; height: 100%; margin-top: 0px; margin-left: -100px;}
+        ul.slider>li>h1{width: auto; height: auto; color: white; position: absolute; right: -500px; top: 50%; font-size: 30px; font-weight: bold;}
+        ul.slider>li>p{width: auto; height: auto; color: white; position: absolute; right: -500px; bottom: 40%;}
+*/
+        section {position: fixed; top: 0px; right: 0px; width: 100%; height: 100%;}
+        article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden;}
+
+        article h2 {position: absolute; top: 300px; left: 20px; padding-left: 15px; border-left: 3px solid #555; font: bold 20px Raleway; color: #666; z-index: 3; transition: all 0.5s;}
+        article div {position: absolute; left: 0px; top: 300px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
+
+        article:hover h2 {color: #ccc; border-left: 3px solid #ccc;}
+        article:hover div {top: 270px; height: 70px;}
+
+        article video {position: absolute; width: auto; height: 100%; margin-top: 0px; margin-left: -100px; opacity: 0; z-index: 1;}
+
+        article h3 {position: absolute; bottom: 210px; right: 310px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
+        article p {position: absolute; bottom: 50px; right: -310px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
+        
+        
+        .bx-wrapper{border: 0px;}
+        .bx-wrapper .bx-pager.bx-default-pager a {width: 10px; height: 25px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
+        .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: #4289f4;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #4289f4; transform: scale(1.1); opacity: 1;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
+        .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
+        .prevBtn, .nextBtn{display: none;}
+
     </style>
 </head>
 <body>
@@ -170,11 +251,65 @@
 <section>
     <div id="fullpage">
         <div class="section pages" id="page1" data-anchor="1st">
+<!--
             <div class="main_cmt">
                 <p>Lorem ipsum.</p>
                 <p>Lorem ipsum dolor sit.</p>
                 <a href="#">more</a>
             </div>
+-->
+<!--
+        <div class="wrap">
+            <div class="slider_wrap">
+                <ul class="slider">
+                    <li>
+                        <video src="img/video/Space%20-%2020763.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
+                        </video>
+                        <h1>Lorem ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
+                    </li>
+                    <li>
+                        <video src="img/video/Worm%20Hole%20-%206797.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
+                        </video>
+                        <h1>Lorem ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
+                    </li>
+                    <li>
+                        <video src="img/video/Atoms%20-%2013232.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
+                        </video>
+                        <h1>Lorem ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+-->
+       <section class="contents">
+            <article>
+                <h2>Jewelry</h2>
+                <video loop="loop" preload="auto" muted>
+                    <source src="img/video/Space%20-%2020763.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>Jewelry</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+            </article>
+            <article>
+                 <h2>Watch</h2>
+                <video loop="loop" preload="auto" muted>
+                    <source src="img/video/Worm%20Hole%20-%206797.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>Watch</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+            </article>
+            <article>
+                 <h2>Accessories</h2>
+                <video loop="loop" preload="auto" muted>
+                    <source src="img/video/Atoms%20-%2013232.mp4" type="video/mp4">
+                </video>
+                <div></div>
+                <h3>Accessories</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+            </article>
+        </section>
         </div>
         <div class="section pages" id="page2" data-anchor="2st">
             <div class="main_cmt">
