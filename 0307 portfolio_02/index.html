@@ -96,11 +96,13 @@
                 vid.currentTime=0;
                 vid.play();
 
-                $(this).stop().animate({"width":"35%"}, 1000, function(){
-                    $(this).find("h3").stop().animate({"right":"10px"}, 400);
-                    $(this).find("p").stop().animate({"right":"10px"}, 800);
+                $(this).stop().animate({"width":"70%"}, 1000, function(){
+                    $(this).find("h3").stop().animate({"right":"310px"}, 1400);
+                    $(this).find("p").stop().animate({"right":"310px"}, 1800);
+                    $(this).find("h3").stop().animate({"opacity":"1"}, 1);
+                    $(this).find("p").stop().animate({"opacity":"1"}, 1);
                 });
-                $(this).find("video").stop().animate({"opacity":"0.9"}, 1200);
+                $(this).find("video").stop().animate({"opacity":"1"}, 1200);
             });
             $("article").on("mouseout", function(){
                 var vid = $(this).find("video").get(0);
@@ -168,16 +170,16 @@
         section {position: fixed; top: 0px; right: 0px; width: 100%; height: 100%;}
         article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden;}
 
-        article h2 {position: absolute; top: 300px; left: 20px; padding-left: 15px; border-left: 3px solid #555; font: bold 20px Raleway; color: #666; z-index: 3; transition: all 0.5s;}
-        article div {position: absolute; left: 0px; top: 300px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
+        article h2 {position: absolute; top: 100px; left: 20px; padding-left: 15px; border-left: 3px solid #fff; font: bold 20px Raleway; color: white; z-index: 3; transition: all 0.5s; font-size: 30px;}
+        article>div {position: absolute; left: 0px; top: 200px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
 
         article:hover h2 {color: #ccc; border-left: 3px solid #ccc;}
-        article:hover div {top: 270px; height: 70px;}
+        article:hover div {top: 270px; height: 70px; top: 90px;}
 
-        article video {position: absolute; width: auto; height: 100%; margin-top: 0px; margin-left: -100px; opacity: 0; z-index: 1;}
+        article video {position: absolute; width: auto; height: 100%; margin-top: 0px; _margin-left: -50%; opacity: 0; z-index: 1;}
 
         article h3 {position: absolute; bottom: 210px; right: 310px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
-        article p {position: absolute; bottom: 50px; right: -310px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
+        article p {position: absolute; bottom: 50px; right: 310px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
         
         
         .bx-wrapper{border: 0px;}
@@ -286,28 +288,31 @@
 -->
        <section class="contents">
             <article>
-                <h2>Jewelry</h2>
-                <video loop="loop" preload="auto" muted>
+                <h2>movie1</h2>
+                <video width="100%" height="100%" loop="loop" preload="auto" muted>
                     <source src="img/video/Space%20-%2020763.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Jewelry</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+                <h3>Lorem ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
-                 <h2>Watch</h2>
-                <video loop="loop" preload="auto" muted>
+                <h2>movie2</h2>
+                <video width="100%" height="100%" loop="loop" preload="auto" muted>
                     <source src="img/video/Worm%20Hole%20-%206797.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Watch</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+                <h3>Lorem ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
-                 <h2>Accessories</h2>
-                <video loop="loop" preload="auto" muted>
+                <h2>movie3</h2>
+                <video width="100%" height="100%" loop="loop" preload="auto" muted>
                     <source src="img/video/Atoms%20-%2013232.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Accessories</h3><p>asjiodjoasjfojasojfioasjfiojasofjoiajsiofjiosajfoijoasjoifjiosajifojisoajfiojfiojsiaojfiojsaiofjjjfojaofjojaofjoajfojasiofjioajiofjioajfojofjojaiofjojsaofjiojasofjoajfio</p>
+                <h3>Lorem ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
         </section>
         </div>
