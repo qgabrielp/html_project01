@@ -61,9 +61,9 @@
              $("ul.sub").hide();
              $("#top_menu>ul>li").hover(function(){
                 var i = $(this).index();
-                $("#top_menu>ul>li>ul").eq(i).stop().slideDown();
+                $("#top_menu>ul>li>ul").eq(i).stop().slideDown(500);
              }).mouseleave(function(){
-                $("ul.sub").stop().slideUp(50);
+                $("ul.sub").stop().slideUp(100);
              });
         });
 
