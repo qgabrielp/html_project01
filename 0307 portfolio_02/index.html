@@ -96,11 +96,12 @@
                 vid.currentTime=0;
                 vid.play();
 
-                $(this).stop().animate({"width":"70%"}, 1000, function(){
-                $(this).find("h3").stop().animate({"right":"310px"}, 1400);
-                $(this).find("p").stop().animate({"right":"310px"}, 1800);
-                $(this).find("h3").stop().animate({"opacity":"1"}, 1);
-                $(this).find("p").stop().animate({"opacity":"1"}, 1);
+                    new WOW().init();
+                    $(this).stop().animate({"width":"70%"}, 1000, function(){
+//                    $(this).find("h3").stop().animate({"left":"510px"}, 1400);
+//                    $(this).find("p").stop().animate({"left":"510px"}, 1800);
+                    $(this).find("h3").stop().animate({"opacity":"1"}, 500);
+                    $(this).find("p").stop().animate({"opacity":"1"}, 800);
                 });
                 $(this).find("video").stop().animate({"opacity":"1"}, 1200);
             });
@@ -110,12 +111,17 @@
                 vid.pause();
 
                 $(this).stop().animate({"width":"15%"}, 1000, function(){
-                $(this).find("h3").stop().animate({"opacity":"0.0"}, 400);
+                $(this).find("h3").stop().animate({"opacity":"0.0"}, 500);
                 $(this).find("p").stop().animate({"opacity":"0.0"}, 800);
                 });
                 $(this).find("video").stop().animate({"opacity":"0.0"}, 1200);
             });
         });
+//        $("#btm>div").ready(function(){
+//            $("#btm>div").on("mouseover", function(){
+//                $(this).stop().animate({"height":"300px"}, 100,);
+//            });
+//        });
 
     </script>
     <style>
@@ -178,8 +184,8 @@
 
         article video {position: absolute; width: auto; height: 100%; margin-top: 0px; _margin-left: -50%; opacity: 0; z-index: 1;}
 
-        article h3 {position: absolute; bottom: 210px; right: 310px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
-        article p {position: absolute; bottom: 50px; right: 310px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
+        article h3 {position: absolute; bottom: 210px; left: 510px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
+        article p {position: absolute; bottom: 50px; left: 510px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
         
         
         .bx-wrapper{border: 0px;}
@@ -190,6 +196,12 @@
         .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
         .prevBtn, .nextBtn{display: none;}
 
+        #btm{width: 100%; height: 200px; position: relative; bottom: -500px;}
+        #btm>div{width: 25%; height: 200px; float: left; text-align: center; font-size: 20px; color: white; border: 1px solid #fff; vertical-align: baseline;}
+        #btm:after{content: ""; display: block; clear: both;}
+        #btm>div:hover{height: 300px;}
+        
+        
     </style>
 </head>
 <body>
@@ -293,8 +305,8 @@
                     <source src="img/video/Space%20-%2020763.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Lorem ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="wow bounceInDown" data-wow-delay = "1s">Lorem ipsum.</h3>
+                <p class="wow bounceInUp" data-wow-delay = "1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
                 <h2>movie2</h2>
@@ -302,8 +314,8 @@
                     <source src="img/video/Worm%20Hole%20-%206797.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Lorem ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="wow bounceInDown" data-wow-delay = "1s">Lorem ipsum.</h3>
+                <p class="wow bounceInUp" data-wow-delay = "1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
             <article>
                 <h2>movie3</h2>
@@ -311,8 +323,8 @@
                     <source src="img/video/Atoms%20-%2013232.mp4" type="video/mp4">
                 </video>
                 <div></div>
-                <h3>Lorem ipsum.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="wow bounceInDown" data-wow-delay = "1s">Lorem ipsum.</h3>
+                <p class="wow bounceInUp" data-wow-delay = "1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </article>
         </section>
         </div>
@@ -322,6 +334,20 @@
                     <p>Lorem ipsum.</p>
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
+                </div>
+            </div>
+            <div id="btm">
+                <div>Menu1
+                
+                </div>
+                <div>Menu2
+                
+                </div>
+                <div>Menu3
+                
+                </div>
+                <div>Menu4
+                
                 </div>
             </div>
         </div>
