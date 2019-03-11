@@ -22,6 +22,7 @@
 	<script> new WOW().init(); </script>
 
 	<script>
+        
         $(window).scroll(function() {
             if ($(this).scrollTop() > 50) { 
                
@@ -36,6 +37,7 @@
         });
         
         $(function(){
+            
             $("#fullpage").fullpage({
                 anchors:["1st","2st","3st","4st"],
                 menu:"#side_menu",
@@ -48,18 +50,34 @@
                         if(index==1){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(0)").addClass("on");
+//                            new WOW().init();
                         }
                         if(index==2){
+                            
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(1)").addClass("on");
+                            wow = new WOW(
+                                {offset: -1600,}
+                            );
+                            wow.init();                        
                         }
                         if(index==3){
+                            var bb = $("#page3").offset();
+                            console.log("aa"+bb);
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(2)").addClass("on");
+                            wow = new WOW(
+                                {offset: -3000,}
+                            )
+                            wow.init(); 
                         }
                         if(index==4){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(3)").addClass("on");
+                            wow = new WOW(
+                                {offset: -4500,}
+                            )
+                            wow.init();
                         }
                     }
             });
@@ -95,13 +113,13 @@
                 var vid = $(this).find("video").get(0);
                 vid.currentTime=0;
                 vid.play();
-
-                    new WOW().init();
+                new WOW().init();
+    
                     $(this).stop().animate({"width":"70%"}, 1000, function(){
 //                    $(this).find("h3").stop().animate({"left":"510px"}, 1400);
 //                    $(this).find("p").stop().animate({"left":"510px"}, 1800);
-                    $(this).find("h3").stop().animate({"opacity":"1"}, 500);
-                    $(this).find("p").stop().animate({"opacity":"1"}, 800);
+//                    $(this).find("h3").stop().animate({"opacity":"1"}, 500);
+//                    $(this).find("p").stop().animate({"opacity":"1"}, 800);
                 });
                 $(this).find("video").stop().animate({"opacity":"1"}, 1200);
             });
@@ -111,8 +129,8 @@
                 vid.pause();
 
                 $(this).stop().animate({"width":"15%"}, 1000, function(){
-                $(this).find("h3").stop().animate({"opacity":"0.0"}, 500);
-                $(this).find("p").stop().animate({"opacity":"0.0"}, 800);
+//                $(this).find("h3").stop().animate({"opacity":"0.0"}, 500);
+//                $(this).find("p").stop().animate({"opacity":"0.0"}, 800);
                 });
                 $(this).find("video").stop().animate({"opacity":"0.0"}, 1200);
             });
@@ -127,23 +145,35 @@
                 function () {
                     var $this = $(this);
                     $('a',$this).stop(true,true).animate({
-                            'bottom':'50px'
+                            'bottom':'35px'
                         }, 300);
                     $('i',$this).stop(true,true).animate({
                             'top':'-10px'
                         }, 400);
+                    $('.bg',$this).stop(true,true).animate({
+                            'bottom':'-0px'
+                        }, 500);
                 },
                 function () {
                     var $this = $(this);
                     $('a',$this).stop(true,true).animate({
-                            'bottom':'-50px'
+                            'bottom':'-65px'
                         }, 300);
                     $('i',$this).stop(true,true).animate({
                             'top':'50px'
                         }, 400);
+                    $('.bg',$this).stop(true,true).animate({
+                            'bottom':'-100px'
+                        }, 400);
                 }
             );
         });
+        
+//        $(window).load(function(){
+//            new WOW().init();
+//                       $(".page2_2").
+//            new WOW().init();
+//                       });
 
     </script>
     <style>
@@ -175,16 +205,24 @@
         #page4{background-image: url(img/bg4.jpg);}
         .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
         
-        .main_cmt{width: 400px; margin-left: 100px;}
+        .main_cmt{width: 100%; height: 50%; _margin-left: 100px; top: 150px; position: relative;}
+        #page2_box>div{width: 25%; height: 200px; float: left; border: 1px solid #fff;}
+        #page2_box>div:nth-child(2){margin-left: 50px;}
+        #page2_box>div:nth-child(2),#page2_box>div:nth-child(3),#page2_box>div:nth-child(4){width: 21%; height: 50%;}
         .main_cmt p{text-shadow: 1px 1px 1px #292929; color: #fff; font-weight: bold;}
+        #page2_box>div:nth-child(5){margin-left: 50px;}
+        #page2_box>div:nth-child(5),#page2_box>div:nth-child(6){width: 31.5%; height: 50%;}
         .main_cmt p:nth-child(1){font-size: 4em;}
         .main_cmt p:nth-child(2){font-size: 2em;}
         .main_cmt a{width: 150px; border: 1px solid #fff; background: none; line-height: 45px; display: block; text-align: center; margin-top: 30px; color: white; border-radius: 10px; transition: 0.3s;}
         .main_cmt a:hover{background: #fff; color: #000;}
         
-        #page2 div.onview{opacity: 0; transition: 0.3s;}
-        #page2 div.onview.mactive{opacity: 1; transform: translateX(100px);}
+        #page2 div.onview{opacity: 0; transition: 0.3s; width: 30%; height: 100%;}
+        #page2 div.onview.mactive{opacity: 1; transform: translateX(50px);}
         #page3,#page4{padding: 0px 0 0px calc(50% - 50px);}
+        
+        .fp-tableCell{display: block;}
+        
         
 /*
         div.wrap{position: fixed; top: 0px; right: 0px; width: 100%; height: 80%;}
@@ -231,13 +269,12 @@
             color:#000;
         }
 */
-        .container{
-            width:910px;
+        .container{width:910px;
             height:200px;
             margin:0 auto;
             position:relative;
             overflow:hidden;
-            border:3px solid #fff;
+            _border:3px solid #fff;
             _background-color:#fff;
             -moz-box-shadow:1px 1px 6px #000;
             -webkit-box-shadow:1px 1px 6px #000;
@@ -266,7 +303,7 @@
             cursor:pointer;
             position:relative;
             float:left;
-            bottom:-50px;
+            bottom:-65px;
             line-height:20px;
             width:210px;
         }
@@ -293,6 +330,7 @@
         .icon_search{
             background:transparent url(img/find.png) no-repeat top left;
         }
+        ul#menu span{position: relative; z-index: 10;}
         ul#menu span.title{
             display:block;
             height:26px;
@@ -302,8 +340,8 @@
         }
         ul#menu span.description{
             width:140px;
-            height:80px;
-            background-color:#B7B7B6;
+            height:100px;
+            _background-color:#B7B7B6;
             border:3px solid #fff;
             color:#fff;
             display:block;
@@ -317,12 +355,14 @@
             border-radius:10px;
         }
         ul#menu a:hover span.description{
-            background-color:#54504F;
+            _background-color:#54504F; transition: 1.3s;
         }
         ul#menu a:hover span.title{
-            color:#54504F;
+            color:#54504F; transition: 1.3s;
         }
-
+        .bg{bottom: -100px; height: 100px; position: absolute; width: 140px; z-index: 1; border-radius:10px;}
+        
+        
     </style>
 </head>
 <body>
@@ -393,32 +433,6 @@
                 <a href="#">more</a>
             </div>
 -->
-<!--
-        <div class="wrap">
-            <div class="slider_wrap">
-                <ul class="slider">
-                    <li>
-                        <video src="img/video/Space%20-%2020763.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
-                        </video>
-                        <h1>Lorem ipsum dolor.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
-                    </li>
-                    <li>
-                        <video src="img/video/Worm%20Hole%20-%206797.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
-                        </video>
-                        <h1>Lorem ipsum dolor.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
-                    </li>
-                    <li>
-                        <video src="img/video/Atoms%20-%2013232.mp4" width="100%" height="100%" loop onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true">
-                        </video>
-                        <h1>Lorem ipsum dolor.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
--->
        <section class="contents">
             <article>
                 <h2>movie1</h2>
@@ -450,12 +464,38 @@
         </section>
         </div>
         <div class="section pages" id="page2" data-anchor="2st">
-            <div class="main_cmt">
+            <div class="main_cmt" id="page2_box">
                 <div class="onview">
                     <p>Lorem ipsum.</p>
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
                 </div>
+                <div class="wow bounceInDown">
+                    <p>Lorem ipsum.1</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+                <div>
+                    <p>Lorem ipsum.2</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+                <div>
+                    <p>Lorem ipsum.3</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+                <div>
+                    <p>Lorem ipsum.4</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+                <div>
+                    <p>Lorem ipsum.5</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+                
             </div>
             <div class="container">
                 <ul id="menu">
@@ -464,6 +504,7 @@
                             <i class="icon_about"></i>
                             <span class="title">About</span>
                             <span class="description">Learn about us and our services</span>
+                            <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
                     </li>
                     <li>
@@ -471,6 +512,7 @@
                             <i class="icon_work"></i>
                             <span class="title">Work</span>
                             <span class="description">See our work and portfolio</span>
+                            <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
                     </li>
                     <li>
@@ -478,6 +520,7 @@
                             <i class="icon_help"></i>
                             <span class="title">Help</span>
                             <span class="description">Talk to our support</span>
+                            <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
                     </li>
                     <li>
@@ -485,42 +528,39 @@
                             <i class="icon_search"></i>
                             <span class="title">Search</span>
                             <span class="description">Search our website</span>
+                            <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="section pages" id="page3" data-anchor="3st">
-            <div class="main_cmt">
-                <p>Lorem ipsum.</p>
-                <p>Lorem ipsum dolor sit.</p>
-                <a href="#">more</a>
+            <div class="slide">
+                <div class="main_cmt wow bounceInUp">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="main_cmt">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="main_cmt">
+                    <p>Lorem ipsum.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <a href="#">more</a>
+                </div>
             </div>
             
 
         </div>
         <div class="section pages" id="page4" data-anchor="4st">
-            <div class="slide">
-                <div class="main_cmt">
-                    <p>Lorem ipsum.</p>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <a href="#">more</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="main_cmt">
-                    <p>Lorem ipsum.</p>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <a href="#">more</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="main_cmt">
-                    <p>Lorem ipsum.</p>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <a href="#">more</a>
-                </div>
-            </div>
+
             
         </div>
     </div>   
