@@ -122,6 +122,28 @@
 //                $(this).stop().animate({"height":"300px"}, 100,);
 //            });
 //        });
+        $(function() {
+            $('#menu > li').hover(
+                function () {
+                    var $this = $(this);
+                    $('a',$this).stop(true,true).animate({
+                            'bottom':'50px'
+                        }, 300);
+                    $('i',$this).stop(true,true).animate({
+                            'top':'-10px'
+                        }, 400);
+                },
+                function () {
+                    var $this = $(this);
+                    $('a',$this).stop(true,true).animate({
+                            'bottom':'-50px'
+                        }, 300);
+                    $('i',$this).stop(true,true).animate({
+                            'top':'50px'
+                        }, 400);
+                }
+            );
+        });
 
     </script>
     <style>
@@ -196,12 +218,111 @@
         .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
         .prevBtn, .nextBtn{display: none;}
 
-        #btm{width: 100%; height: 200px; position: relative; bottom: -500px;}
-        #btm>div{width: 25%; height: 200px; float: left; text-align: center; font-size: 20px; color: white; border: 1px solid #fff; vertical-align: baseline;}
-        #btm:after{content: ""; display: block; clear: both;}
-        #btm>div:hover{height: 300px;}
-        
-        
+/*
+        a.ref{
+            color:#888;
+            text-decoration:none;
+            text-shadow:1px 1px 1px #000;
+            position:relative;
+            bottom:10px;
+            right:10px;
+        }
+        a.ref:hover{
+            color:#000;
+        }
+*/
+        .container{
+            width:910px;
+            height:200px;
+            margin:0 auto;
+            position:relative;
+            overflow:hidden;
+            border:3px solid #fff;
+            _background-color:#fff;
+            -moz-box-shadow:1px 1px 6px #000;
+            -webkit-box-shadow:1px 1px 6px #000;
+            -moz-border-radius:0px 0px 20px 20px;
+            -webkit-border-bottom-left-radius:20px;
+            -webkit-border-bottom-right-radius:20px;
+            border-radius:20px 20px 0px 0px;
+            bottom: -38%;
+        }
+        ul#menu{
+            list-style:none;
+            position:absolute;
+            bottom:0px;
+            left:20px;
+            font-size:36px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            color:#999;
+            letter-spacing:-2px;
+        }
+        ul#menu li{
+            float:left;
+            margin:0px 10px 0px 0px;
+        }
+        ul#menu a{
+            cursor:pointer;
+            position:relative;
+            float:left;
+            bottom:-50px;
+            line-height:20px;
+            width:210px;
+        }
+        .icon_about,
+        .icon_work,
+        .icon_help,
+        .icon_search{
+            width:64px;
+            height:64px;
+            display:block;
+            left:140px;
+            top:50px;
+            position:absolute;
+        }
+        .icon_about{
+            background:transparent url(img/id_card.png) no-repeat top left;
+        }
+        .icon_work{
+            background:transparent url(img/globe.png) no-repeat top left;
+        }
+        .icon_help{
+            background:transparent url(img/help.png) no-repeat top left;
+        }
+        .icon_search{
+            background:transparent url(img/find.png) no-repeat top left;
+        }
+        ul#menu span.title{
+            display:block;
+            height:26px;
+            text-shadow:1px 1px 1px #000;
+            color:#B7B7B6;
+            text-indent:10px;
+        }
+        ul#menu span.description{
+            width:140px;
+            height:80px;
+            background-color:#B7B7B6;
+            border:3px solid #fff;
+            color:#fff;
+            display:block;
+            font-size:24px;
+            padding:10px;
+            -moz-box-shadow:1px 1px 6px #000;   
+            -webkit-box-shadow:1px 1px 6px #000;
+            box-shadow:1px 1px 6px #000;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            border-radius:10px;
+        }
+        ul#menu a:hover span.description{
+            background-color:#54504F;
+        }
+        ul#menu a:hover span.title{
+            color:#54504F;
+        }
+
     </style>
 </head>
 <body>
@@ -336,19 +457,37 @@
                     <a href="#">more</a>
                 </div>
             </div>
-            <div id="btm">
-                <div>Menu1
-                
-                </div>
-                <div>Menu2
-                
-                </div>
-                <div>Menu3
-                
-                </div>
-                <div>Menu4
-                
-                </div>
+            <div class="container">
+                <ul id="menu">
+                    <li>
+                        <a>
+                            <i class="icon_about"></i>
+                            <span class="title">About</span>
+                            <span class="description">Learn about us and our services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon_work"></i>
+                            <span class="title">Work</span>
+                            <span class="description">See our work and portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon_help"></i>
+                            <span class="title">Help</span>
+                            <span class="description">Talk to our support</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon_search"></i>
+                            <span class="title">Search</span>
+                            <span class="description">Search our website</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="section pages" id="page3" data-anchor="3st">
@@ -357,6 +496,8 @@
                 <p>Lorem ipsum dolor sit.</p>
                 <a href="#">more</a>
             </div>
+            
+
         </div>
         <div class="section pages" id="page4" data-anchor="4st">
             <div class="slide">
@@ -380,6 +521,7 @@
                     <a href="#">more</a>
                 </div>
             </div>
+            
         </div>
     </div>   
 </section>

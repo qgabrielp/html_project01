@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="js/custom.js"></script>
 	
 	<style>
+/*
         div#sns {width: 100%;}
         div#sns>div {height: auto;}
         div#sns>div>nav {width: 16%; margin-left: auto; margin-right: auto; pointer-events: auto;}
@@ -26,9 +27,37 @@
         div#sns>div>nav>a:hover {opacity: 1;}
         div#sns>div>nav>a:first-child {padding-left: 50px;}
         div#sns>div>nav>a:last-child {padding-right: 50px;}
+*/
+
     </style>
+    
+    <script>
+   $(function() {
+            $('#menu > li').hover(
+                function () {
+                    var $this = $(this);
+                    $('a',$this).stop(true,true).animate({
+                            'bottom':'-5px'
+                        }, 300);
+                    $('i',$this).stop(true,true).animate({
+                            'top':'-10px'
+                        }, 400);
+                },
+                function () {
+                    var $this = $(this);
+                    $('a',$this).stop(true,true).animate({
+                            'bottom':'-80px'
+                        }, 300);
+                    $('i',$this).stop(true,true).animate({
+                            'top':'50px'
+                        }, 400);
+                }
+            );
+    });
+    </script>
 </head>
 <body>
+<!--
     <div id="sns">
         <div>
             <nav>
@@ -39,6 +68,40 @@
             </nav>
         </div>
     </div>
+-->
+<div class="container">
+    <ul id="menu">
+        <li>
+            <a>
+                <i class="icon_about"></i>
+                <span class="title">About</span>
+                <span class="description">Learn about us and our services</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="icon_work"></i>
+                <span class="title">Work</span>
+                <span class="description">See our work and portfolio</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="icon_help"></i>
+                <span class="title">Help</span>
+                <span class="description">Talk to our support</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="icon_search"></i>
+                <span class="title">Search</span>
+                <span class="description">Search our website</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
 </body>
 </html>
 
