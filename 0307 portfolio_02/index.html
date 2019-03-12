@@ -50,11 +50,15 @@
                         if(index==1){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(0)").addClass("on");
+                            $("#page2>div").hide();
+                            
 //                            new WOW().init();
                         }
                         if(index==2){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(1)").addClass("on");
+                            $("#page2>div").show(200);
+                            
                             wow = new WOW(
                                 {offset: -1600,}
                             );
@@ -65,6 +69,8 @@
                             console.log("aa"+bb);
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(2)").addClass("on");
+                            $("#page2>div").hide();
+                            
                             wow = new WOW(
                                 {offset: -3000,}
                             )
@@ -73,6 +79,8 @@
                         if(index==4){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(3)").addClass("on");
+                            $("#page2>div").hide();
+                            
                             wow = new WOW(
                                 {offset: -4500,}
                             )
@@ -535,7 +543,7 @@
         </div>
         <div class="section pages" id="page3" data-anchor="3st">
             <div class="slide">
-                <div class="main_cmt wow bounceInUp">
+                <div class="main_cmt">
                     <p>Lorem ipsum.</p>
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
