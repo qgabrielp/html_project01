@@ -181,6 +181,37 @@
             );
         });
         
+         $(function() {
+            $('#sm_btn_1').hover(
+                function () {
+                    var $this = $(this);
+                    $('#sm_1').stop().animate({
+                            'bottom':'200px',
+                            'opacity':'1'
+                        }, 600);
+//                    $('i',$this).stop(true,true).animate({
+//                            'top':'-10px'
+//                        }, 400);
+//                    $('.bg',$this).stop(true,true).animate({
+//                            'bottom':'-0px'
+//                        }, 500);
+                },
+                function () {
+                    var $this = $(this);
+                    $('#sm_1').stop().animate({
+                            'bottom':'0px',
+                            'opacity':'0'
+                        }, 300);
+//                    $('i',$this).stop(true,true).animate({
+//                            'top':'50px'
+//                        }, 400);
+//                    $('.bg',$this).stop(true,true).animate({
+//                            'bottom':'-100px'
+//                        }, 400);
+                }
+            );
+        });
+        
 //        $(window).load(function(){
 //            new WOW().init();
 //                       $(".page2_2").
@@ -374,13 +405,35 @@
         }
         .bg{bottom: -100px; height: 100px; position: absolute; width: 140px; z-index: 1; border-radius:10px;}
         
-        #page4_top{width: 80%; height: 100%; padding-top: 200px; margin: 0 auto;}
-        #page4_top_tt{color: white; text-align: center; font-size: 30px; margin-bottom: 50px;}
-        #page4_top_section{width: 100%; height: 30%; margin: 0 auto;}
+        #page4_top{width: 80%; height: 50%; padding-top: 200px; margin: 0 auto;}
+        #page4_top_tt{color: white; text-align: center; font-size: 30px; margin-bottom: 50px; line-height: 34px;}
+        #page4_top_section{width: 100%; height: 80%; margin: 0 auto;}
         #page4_top_section:after{content: ""; display: block; clear: both;}
         #page4_top_section>div{width: 30%; height: 100%; float: left; text-align: center; margin: 10px; border: 1px solid #fff; line-height: 50px;}
+        #page4_top_section div{color: white; font-size: 28px;}
+        #page4_top_section div a{color: white;}
+        #page4_top_section div div{width: 100px; height: auto; display: block; padding-left: 20%;}
+        .page4_ts_img{background: url(img/hand.png)no-repeat; width: auto; height: 30px; font-size: 28px; line-height: 70px;}
+        .page4_ts_img:hover{background: url(img/hand.png)no-repeat 0 -30px; transition: 0.4s;}
+        #page4_top_section_01>div:hover a{color: #ffdd33;}
+        #page4_top_section_02>div:hover a{color: #ffdd33;}
+        #page4_top_section_03>div:hover a{color: #ffdd33;}
         
+        #page4_mid{width: 80%; height: 20%; margin: 0 auto; margin-top: 150px;}
+        #page4_mid>div{width: 20%; float: left; text-align: center; font-size: 20px;}
+        #page4_mid>div>a{color: white;}
+        #page4_mid>div>a>i{width: 80px; height: 80px; font-size: 40px; border: 1px solid #fff; padding-top: 20px; border-radius: 50%;}
+        #page4_mid>div>a:hover{color: #ffdd33;}
+        #page4_mid>div>a:hover i{background-color: white; transition: 0.3s;}
         
+        #page4_bot{width: 100%; height: 20%;}
+        #page4_bot_slide_menu{width: 100%; height: 20%; background-color: dimgray; position: relative;}
+        #page4_bot_slide_menu>div{width: 30%; height: 100%; background-color: currentColor; float: left; opacity: 1; text-align: center;}
+        #page4_bot_slide_menu>div:first-child{margin-left: 20%; border-left: 1px solid #fff;}
+        #page4_bot_slide_menu>div:last-child{margin-right: 20%; border-left: 1px solid #fff; border-right: 1px solid #fff; position: relative;}
+        #page4_bot_slide_menu>div>span{width: 100%; color: black; font-size: 20px; line-height: 250%;}
+        #page4_bot_slide_menu>div>p{width: 30px; height: 30px; background: url(img/arrow01.png)no-repeat; position: absolute; bottom: 20%; margin-left: 50px; cursor: pointer; z-index: 5; display: block;}
+        #page4_bot_slide_menu>div>ul{width: 100%; background-color: aliceblue; position: relative; bottom: 0px; z-index: 1; opacity: 0;}
         
     </style>
 </head>
@@ -587,36 +640,64 @@
                 <div id="page4_top_section">
                     <div id="page4_top_section_01">
                         <h3>lorem1</h3>
-                        <div><a href="#a">Menu1</a></div>
-                        <div><a href="#a">Menu2</a></div>
-                        <div><a href="#a">Menu3</a></div>
-                        <div><a href="#a">Menu4</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a>
+                        </div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu2</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu3</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu4</a></div>
                     </div>
                     <div id="page4_top_section_02">
                         <h3>lorem2</h3>
-                        <div><a href="#a">Menu1</a></div>
-                        <div><a href="#a">Menu2</a></div>
-                        <div><a href="#a">Menu3</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu2</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu3</a></div>
                     </div>
                     <div id="page4_top_section_03">
                         <h3>lorem3</h3>
-                        <div><a href="#a">Menu1</a></div>
-                        <div><a href="#a">Menu2</a></div>
-                        <div><a href="#a">Menu3</a></div>
-                        <div><a href="#a">Menu4</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu2</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu3</a></div>
+                        <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu4</a></div>
                     </div>
                 </div>
             </div>
             <div id="page4_mid">
-               <div><a href="#a"><i class="far fa-address-book"></i>Icon1</a></div>
-               <div><a href="#a"><i class="far fa-address-card"></i>Icon2</a></div>
-               <div><a href="#a"><i class="far fa-building"></i>Icon3</a></div>
-               <div><a href="#a"><i class="far fa-comment"></i>Icon4</a></div>
-               <div><a href="#a"><i class="far fa-copy"></i>Icon5</a></div> 
+               <div><a href="#a"><i class="far fa-address-book"></i><br>Icon1</a></div>
+               <div><a href="#a"><i class="far fa-address-card"></i><br>Icon2</a></div>
+               <div><a href="#a"><i class="far fa-building"></i><br>Icon3</a></div>
+               <div><a href="#a"><i class="far fa-comment"></i><br>Icon4</a></div>
+               <div><a href="#a"><i class="far fa-copy"></i><br>Icon5</a></div> 
             </div>
             <div id="page4_bot">
                 <div id="page4_bot_slide_menu">
-                    
+                    <div id="page4_bot_slide_menu_01">
+                        <span>SlideUpMenu1</span>
+                        <p id="sm_btn_1"></p>
+                        <ul id="sm_1">
+                            <li>SubMenu1</li>
+                            <li>SubMenu2</li>
+                            <li>SubMenu3</li>
+                            <li>SubMenu4</li>
+                            <li>SubMenu5</li>
+                            <li>SubMenu6</li>
+                            <li>SubMenu7</li>
+                            <li>SubMenu8</li>
+                        </ul>
+                    </div>
+                    <div id="page4_bot_slide_menu_02">
+                        <span>SlideUpMenu2</span>
+                        <p id="sm_btn_2"></p>
+                        <ul id="sm_2">
+                            <li>SubMenu1</li>
+                            <li>SubMenu2</li>
+                            <li>SubMenu3</li>
+                            <li>SubMenu4</li>
+                            <li>SubMenu5</li>
+                            <li>SubMenu6</li>
+                            <li>SubMenu7</li>
+                            <li>SubMenu8</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="page4_bot_footer">
                     
