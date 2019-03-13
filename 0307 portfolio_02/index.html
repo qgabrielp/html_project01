@@ -221,21 +221,6 @@
              });
         });
         
-//        $(document).ready(function(){
-//            var mySlider = $(".slider").bxSlider({
-//                auto:true,
-//                pause:10000,
-//                controls:false,
-//                mode:'horizontal'
-//            });
-//            $(".nextBtn").on("click",function(){
-//                mySlider.goToNextSlide();
-//            });
-//            $(".prevBtn").on("click",function(){
-//                mySlider.goToPrevSlide();
-//            });
-//        });
-        
         $(document).ready(function(){
             $("article").on("mouseover", function(){
                 var vid = $(this).find("video").get(0);
@@ -243,11 +228,8 @@
                 vid.play();
                 new WOW().init();
     
-                    $(this).stop().animate({"width":"70%"}, 1000, function(){
-//                    $(this).find("h3").stop().animate({"left":"510px"}, 1400);
-//                    $(this).find("p").stop().animate({"left":"510px"}, 1800);
-//                    $(this).find("h3").stop().animate({"opacity":"1"}, 500);
-//                    $(this).find("p").stop().animate({"opacity":"1"}, 800);
+                $(this).stop().animate({"width":"60%"}, 1000, function(){
+                    
                 });
                 $(this).find("video").stop().animate({"opacity":"1"}, 1200);
             });
@@ -257,17 +239,12 @@
                 vid.pause();
 
                 $(this).stop().animate({"width":"15%"}, 1000, function(){
-//                $(this).find("h3").stop().animate({"opacity":"0.0"}, 500);
-//                $(this).find("p").stop().animate({"opacity":"0.0"}, 800);
+
                 });
                 $(this).find("video").stop().animate({"opacity":"0.0"}, 1200);
             });
         });
-//        $("#btm>div").ready(function(){
-//            $("#btm>div").on("mouseover", function(){
-//                $(this).stop().animate({"height":"300px"}, 100,);
-//            });
-//        });
+
         $(function() {
             $('#menu>li').hover(
                 function () {
@@ -397,8 +374,8 @@
         .on{background-color: cornflowerblue; line-height: 50px; font-weight: bold; font-size: 16px; opacity: 1; position: relative; width: 120px; float: right; transition: 0.3s; border-radius: 20px 0 0 20px;}
         
         #page1{background-color: #17182f;}
-        #page2{background-image: url(img/bg2.jpg);}
-        #page3{background-image: url(img/bg3.jpg);}
+        #page2{background-image: url(img/visual03.jpg);}
+        #page3{background-image: url(img/visual05.jpg);}
         #page4{background-image: url(img/bg4.jpg);}
         .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
         
@@ -425,7 +402,8 @@
         .main_cmt a{width: 150px; border: 1px solid #fff; background: none; line-height: 45px; display: block; text-align: center; margin-top: 30px; color: white; border-radius: 10px; transition: 0.3s; position: absolute; bottom: 10px; right: 10px;}
         .main_cmt a:hover{background: #fff; color: #000;}
         
-        .slide .main_cmt{width: 80%; height: 70%; border: 1px solid #fff; border-radius: 1em; margin: 0 auto; margin-top: 100px;}
+        .slide .main_cmt{width: 100%; height: 100%; border: 1px solid #fff; border-radius: 1em; _margin-top: 100px;}
+        .slide>video{width: 100%; height: 100%;}
         
         #page2 div.onview{opacity: 0; transition: 0.7s; width: 30%; height: 100%;}
         #page2 div.onview.mactive{opacity: 1; transform: translateX(50px);}
@@ -444,7 +422,7 @@
         ul.slider>li>p{width: auto; height: auto; color: white; position: absolute; right: -500px; bottom: 40%;}
 */
         section {position: fixed; top: 0px; right: 0px; width: 100%; height: 100%;}
-        article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden;}
+        article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden; left: 20%;}
 
         article h2 {position: absolute; top: 100px; left: 20px; padding-left: 15px; border-left: 3px solid #fff; font: bold 20px Raleway; color: white; z-index: 3; transition: all 0.5s; font-size: 30px;}
         article>div {position: absolute; left: 0px; top: 200px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
@@ -527,22 +505,22 @@
             width:64px;
             height:64px;
             display:block;
-            right:42%;
+            right:40%;
             top:50px;
             position:absolute;
             
         }
         .icon_about{
-            background:transparent url(img/id_card.png) no-repeat top left;
+            background:transparent url(img/bn02_ico.png) no-repeat top left;
         }
         .icon_work{
-            background:transparent url(img/globe.png) no-repeat top left;
+            background:transparent url(img/bn01_ico.png) no-repeat top left;
         }
         .icon_help{
-            background:transparent url(img/help.png) no-repeat top left;
+            background:transparent url(img/bn03_ico.png) no-repeat top left;
         }
         .icon_search{
-            background:transparent url(img/find.png) no-repeat top left;
+            background:transparent url(img/bn04_ico.png) no-repeat top left;
         }
         ul#menu span{position: relative; z-index: 10;}
         ul#menu span.title{
@@ -551,7 +529,7 @@
             text-shadow:1px 1px 1px #000;
             color:#B7B7B6;
             text-indent:10px;
-            font-size: 30px;
+            font-size: 28px;
             text-align: center;
         }
         ul#menu span.description{
@@ -576,7 +554,7 @@
         ul#menu a:hover span.title{
             color:#54504F; transition: 1.3s;
         }
-        .bg{width: 100%; height: 300px; position: absolute; width: 100%; z-index: 1; border-radius:10px;}
+        .bg{width: 100%; height: 300px; position: absolute; width: 100%; z-index: 1; border-radius:10px; background-color:rgb(85,85,85)}
         
         .slide:nth-child(1).slide .main_cmt{background: url(img/sky-4011511_1920.jpg)no-repeat center; background-size: cover;}
         .slide:nth-child(2).slide .main_cmt{background: url(img/universe-4027609_1920.jpg)no-repeat center; background-size: cover;}
@@ -761,7 +739,7 @@
                             <i class="icon_about"></i>
                             <span class="title">NEWS</span>
                             <span class="description">Learn about us and our services</span>
-                            <img class="bg" src="img/menu_over_bg.png" alt="">
+                            <img class="bg" src="" alt="">
                         </a>
                     </li>
                     <li>
@@ -769,7 +747,7 @@
                             <i class="icon_work"></i>
                             <span class="title">R＆D</span>
                             <span class="description">See our work and portfolio</span>
-                            <img class="bg" src="img/menu_over_bg.png" alt="">
+                            <img class="bg" src="" alt="">
                         </a>
                     </li>
                     <li>
@@ -777,7 +755,7 @@
                             <i class="icon_help"></i>
                             <span class="title">ORGANIZATION</span>
                             <span class="description">Talk to our support</span>
-                            <img class="bg" src="img/menu_over_bg.png" alt="">
+                            <img class="bg" src="" alt="">
                         </a>
                     </li>
                     <li>
@@ -785,7 +763,7 @@
                             <i class="icon_search"></i>
                             <span class="title">KARI IMAGE</span>
                             <span class="description">Search our website</span>
-                            <img class="bg" src="img/menu_over_bg.png" alt="">
+                            <img class="bg" src="" alt="">
                         </a>
                     </li>
                 </ul>
@@ -793,6 +771,9 @@
         </div>
         <div class="section pages" id="page3" data-anchor="3st">
             <div class="slide">
+                <video width="100%" height="100%" loop="loop" preload="auto" muted>
+                    <source src="img/video/Space%20-%2020763.mp4" type="video/mp4">
+                </video>
                 <div class="main_cmt">
                     <p>Lorem ipsum.</p>
                     <p>Lorem ipsum dolor sit.</p>
