@@ -181,86 +181,81 @@
             );
         });
         
-         $(function() {
-            $('#page4_bot_slide_menu_01').hover(
-                function () {
-                    var $this = $(this);
-                    $('#sm_1').stop().animate({
-                            'bottom':'200px',
-                            'opacity':'1',
-                            'height':'150'
-                        }, 200);
-//                    $('i',$this).stop(true,true).animate({
-//                            'top':'-10px'
-//                        }, 400);
-//                    $('.bg',$this).stop(true,true).animate({
-//                            'bottom':'-0px'
-//                        }, 500);
-                },
-                function () {
-                    var $this = $(this);
-                    $('#sm_1').stop().animate({
-                            'bottom':'50px',
-                            'opacity':'0',
-                            'height':'0'
-                        }, 100);
-//                    $('i',$this).stop(true,true).animate({
-//                            'top':'50px'
-//                        }, 400);
-//                    $('.bg',$this).stop(true,true).animate({
-//                            'bottom':'-100px'
-//                        }, 400);
-                }
-            );
-        });
         $(function() {
-            $('#page4_bot_slide_menu_02').hover(
+            $('#page4_bot_slide_menu_01').click(
                 function () {
                     var $this = $(this);
-                    $('#sm_2').stop().animate({
-                            'bottom':'200px',
+                    $('#sm_1').stop().animate({
+                            'bottom':'450px',
                             'opacity':'1',
-                            'height':'150'
-                        }, 200);
-//                    $('i',$this).stop(true,true).animate({
-//                            'top':'-10px'
-//                        }, 400);
-//                    $('.bg',$this).stop(true,true).animate({
-//                            'bottom':'-0px'
-//                        }, 500);
+                            'height':'400'
+                        }, 300);
+                    $('#sm_1>li').stop().animate({
+                            'opacity':'1',
+                            'height':'12.5%'
+                        }, 1);
+                    $('#page4_bot_slide_menu_01>p').css({
+                            'background-position':'0 -30px'
+                    });
                 },
+            );
+            $('#page4_bot_slide_menu_01').mouseleave(
+                function () {
+                    var $this = $(this);
+                    $('#sm_1',$this).stop().animate({
+                            'bottom':'50',
+                            'opacity':'0',
+                            'height':'0'
+                        }, 200);
+                    $('#sm_1>li').stop().animate({
+                            'opacity':'1',
+                            'height':'0'
+                        }, 1);
+                    $('#page4_bot_slide_menu_01>p').css({
+                            'background-position':'0 0'
+                    });
+                }
+            )
+        });
+        
+        $(function() {
+            $('#page4_bot_slide_menu_02').click(
                 function () {
                     var $this = $(this);
                     $('#sm_2').stop().animate({
+                            'bottom':'450px',
+                            'opacity':'1',
+                            'height':'400'
+                        }, 300);
+                    $('#sm_2>li').stop().animate({
+                            'opacity':'1',
+                            'height':'12.5%'
+                        }, 1);
+                    $('#page4_bot_slide_menu_02>p').css({
+                            'background-position':'0 -30px'
+                    });
+                },
+            );
+            $('#page4_bot_slide_menu_02').mouseleave(
+                function () {
+                    var $this = $(this);
+                    $('#sm_2',$this).stop().animate({
                             'bottom':'50px',
                             'opacity':'0',
                             'height':'0'
-                        }, 100);
-//                    $('i',$this).stop(true,true).animate({
-//                            'top':'50px'
-//                        }, 400);
-//                    $('.bg',$this).stop(true,true).animate({
-//                            'bottom':'-100px'
-//                        }, 400);
-                }
-            );
-        });
-        
-        $("#page4_bot_slide_menu_01").toggle(function(){
-            $('#sm_1').stop().animate({
-                            'bottom':'200px',
+                        }, 200);
+                    $('#sm_2>li').stop().animate({
                             'opacity':'1',
-                            'height':'150'
-                            }, 200);
+                            'height':'0'
+                        }, 1);
+                    $('#page4_bot_slide_menu_02>p').css({
+                            'background-position':'0 0'
+                    });
+                }
+            )
         });
         
         
-//        $(window).load(function(){
-//            new WOW().init();
-//                       $(".page2_2").
-//            new WOW().init();
-//                       });
-
     </script>
     <style>
         header{width: 100%; position: relative; padding:  -top: 50px;}
@@ -448,7 +443,7 @@
         }
         .bg{bottom: -100px; height: 100px; position: absolute; width: 140px; z-index: 1; border-radius:10px;}
         
-        #page4_top{width: 80%; height: 50%; padding-top: 200px; margin: 0 auto;}
+        #page4_top{width: 80%; height: 50%; padding-top: 50px; margin: 0 auto;}
         #page4_top_tt{color: white; text-align: center; font-size: 30px; margin-bottom: 50px; line-height: 34px;}
         #page4_top_section{width: 100%; height: 80%; margin: 0 auto;}
         #page4_top_section:after{content: ""; display: block; clear: both;}
@@ -470,15 +465,19 @@
         #page4_mid>div>a:hover i{background-color: white; transition: 0.3s;}
         
         #page4_bot{width: 100%; height: 20%;}
-        #page4_bot_slide_menu{width: 100%; height: 20%; background-color: dimgray; position: relative;}
-        #page4_bot_slide_menu>div{width: 30%; height: 100%; background-color: currentColor; float: left; opacity: 1; text-align: center;}
+        #page4_bot_slide_menu{width: 100%; height: 20%; background: url(img/footer_bg.png); position: relative;}
+        #page4_bot_slide_menu:after{content: ""; display: block; clear: both;}
+        #page4_bot_slide_menu>div{width: 30%; height: 100%; float: left; text-align: center; cursor: pointer;}
         #page4_bot_slide_menu>div:first-child{margin-left: 20%; border-left: 1px solid #fff;}
         #page4_bot_slide_menu>div:last-child{margin-right: 20%; border-left: 1px solid #fff; border-right: 1px solid #fff; position: relative;}
-        #page4_bot_slide_menu>div>span{width: 100%; color: black; font-size: 20px; line-height: 250%;}
-        #page4_bot_slide_menu>div>p{width: 30px; height: 30px; background: url(img/arrow01.png)no-repeat; position: absolute; bottom: 20%; margin-left: 50px; cursor: pointer; z-index: 5; display: block;}
-        #page4_bot_slide_menu>div>ul{width: 100%; height: 0; background-color: dimgray; position: relative; bottom: 50px; z-index: 1; opacity: 0; color: black;}
+        #page4_bot_slide_menu>div>span{width: 100%; color: white; font-size: 20px; line-height: 250%; display: block;}
+        #page4_bot_slide_menu>div>p{width: 30px; height: 30px; background: url(img/arrow01.png)no-repeat; position: absolute; bottom: 20%; margin-left: 50px; z-index: 5; display: block;}
+        #page4_bot_slide_menu>div>ul{width: 100%; height: 0; background: url(img/footer_bg.png); position: relative; bottom: 50px; z-index: 1; opacity: 0; padding-top: 5px;}
+        #page4_bot_slide_menu>div>ul>li{width: auto;}
+        #page4_bot_slide_menu>div>ul>li>a{width: auto; display: inline; color: white; font-size: 20px; line-height: 20px;}
+        #page4_bot_slide_menu>div>ul>li>a:hover{border-bottom: 1px solid #fff; transition: 0.3s;}
         
-        #page4_bot_footer{width: 100%; height: 80%; background-color: darkgray; overflow: hidden; z-index: 5;}
+        #page4_bot_footer{width: 100%; height: 80%; background:url(img/footer_bg2.png); overflow: hidden; z-index: 5;}
         
     </style>
 </head>
@@ -719,28 +718,28 @@
                         <span>SlideUpMenu1</span>
                         <p id="sm_btn_1"></p>
                         <ul id="sm_1">
-                            <li>SubMenu1</li>
-                            <li>SubMenu2</li>
-                            <li>SubMenu3</li>
-                            <li>SubMenu4</li>
-                            <li>SubMenu5</li>
-                            <li>SubMenu6</li>
-                            <li>SubMenu7</li>
-                            <li>SubMenu8</li>
+                            <li><a href="#a">SubMenu1</a></li>
+                            <li><a href="#a">SubMenu2</a></li>
+                            <li><a href="#a">SubMenu3</a></li>
+                            <li><a href="#a">SubMenu4</a></li>
+                            <li><a href="#a">SubMenu5</a></li>
+                            <li><a href="#a">SubMenu6</a></li>
+                            <li><a href="#a">SubMenu7</a></li>
+                            <li><a href="#a">SubMenu8</a></li>
                         </ul>
                     </div>
                     <div id="page4_bot_slide_menu_02">
                         <span>SlideUpMenu2</span>
                         <p id="sm_btn_2"></p>
                         <ul id="sm_2">
-                            <li>SubMenu1</li>
-                            <li>SubMenu2</li>
-                            <li>SubMenu3</li>
-                            <li>SubMenu4</li>
-                            <li>SubMenu5</li>
-                            <li>SubMenu6</li>
-                            <li>SubMenu7</li>
-                            <li>SubMenu8</li>
+                            <li><a href="#a">SubMenu1</a></li>
+                            <li><a href="#a">SubMenu2</a></li>
+                            <li><a href="#a">SubMenu3</a></li>
+                            <li><a href="#a">SubMenu4</a></li>
+                            <li><a href="#a">SubMenu5</a></li>
+                            <li><a href="#a">SubMenu6</a></li>
+                            <li><a href="#a">SubMenu7</a></li>
+                            <li><a href="#a">SubMenu8</a></li>
                         </ul>
                     </div>
                 </div>
