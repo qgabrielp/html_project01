@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script> new WOW().init(); </script>
 
 	<script>
@@ -74,6 +75,7 @@
                             $("#side_menu>ul>li>a:eq(2)").addClass("on");
                             $("#page2>div").hide();
                             $("div.container").hide();
+                            $("#page4>div").hide();
                             
                             wow = new WOW(
                                 {offset: -3000,}
@@ -85,6 +87,7 @@
                             $("#side_menu>ul>li>a:eq(3)").addClass("on");
                             $("#page2>div").hide();
                             $("div.container").hide();
+                            $("#page4>div").show();
                             
                             wow = new WOW(
                                 {offset: -4500,}
@@ -94,6 +97,119 @@
                     }
             });
         });
+        
+        $(document).ready(function(){
+   particlesJS("particles-js", {
+            "particles": {
+            "number": {
+            "value": 355,
+            "density": {
+            "enable": true,
+            "value_area": 789.1476416322727
+            }
+        },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.2,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 83.91608391608392,
+        "size": 1,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+    });
         
         $(function(){
              $("ul.sub").hide();
@@ -153,14 +269,14 @@
 //            });
 //        });
         $(function() {
-            $('#menu > li').hover(
+            $('#menu>li').hover(
                 function () {
                     var $this = $(this);
                     $('a',$this).stop(true,true).animate({
                             'bottom':'0px'
                         }, 300);
                     $('i',$this).stop(true,true).animate({
-                            'top':'-50px'
+                            'top':'-65px'
                         }, 500);
                     $('.bg',$this).stop(true,true).animate({
                             'bottom':'0px'
@@ -266,7 +382,7 @@
         #top_menu>ul>li{width: 20%; float: left; font-size: 18px; font-weight: bold; line-height: 50px; text-align: center; color: white;}
         #top_menu>ul>li{color: white; position: relative;}
         #top_menu>div{width: 15%; position: absolute; left: 0;}
-        #logo{background: url(img/circle-1613999_1280.png)no-repeat center; background-size: contain; width: 100%; height: 50px; display: block;}
+        #logo{background: url(img/logo.png)no-repeat center; background-size: contain; width: 100%; height: 44px; display: block;}
         header>div:after{content: ""; display: block; clear: both;}
         #top_menu:hover{background: white;}
         #top_menu:hover ul>li{color: black;}
@@ -280,19 +396,29 @@
         #side_menu>ul>li>a{display: block; color: white;}
         .on{background-color: cornflowerblue; line-height: 50px; font-weight: bold; font-size: 16px; opacity: 1; position: relative; width: 120px; float: right; transition: 0.3s; border-radius: 20px 0 0 20px;}
         
-        #page1{background-image: url(img/bg1.jpg);}
+        #page1{background-color: #17182f;}
         #page2{background-image: url(img/bg2.jpg);}
         #page3{background-image: url(img/bg3.jpg);}
         #page4{background-image: url(img/bg4.jpg);}
         .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
         
+        
+        #particles-js{width: 100%; height: 100%; position: absolute;}
+    
         .main_cmt{width: 100%; height: 50%; _margin-left: 100px; top: 150px; position: relative;}
         .main_cmt>div{position: relative;}
         #page2_box>div{width: 25%; height: 200px; float: left; border: 1px solid #fff;}
-        #page2_box>div:nth-child(2){margin-left: 50px;}
+        #page2_box>div:nth-child(1){background: url(img/53453079_2036920243082547_9066438896841129984_n.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(2){margin-left: 50px; background: url(img/MNW_f01af584-1688-4804-b2dc-219aa1d961470.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(3){background: url(img/20190110084255837.JPG)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(4){background: url(img/20190228124647873.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(5){background: url(img/MNW_eaa01c88-ecd3-4290-b3ba-fab4d5c080ee0.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(6){background: url(img/20190212133303725.JPG)no-repeat top; background-size: 100% 100%;}
+        
+        #page2_box>div:nth-child(5){margin-left: 50px;}
+        
         #page2_box>div:nth-child(2),#page2_box>div:nth-child(3),#page2_box>div:nth-child(4){width: 21%; height: 50%;}
         .main_cmt p{text-shadow: 1px 1px 1px #292929; color: #fff; font-weight: bold;}
-        #page2_box>div:nth-child(5){margin-left: 50px;}
         #page2_box>div:nth-child(5),#page2_box>div:nth-child(6){width: 31.5%; height: 50%;}
         .main_cmt p:nth-child(1){font-size: 4em;}
         .main_cmt p:nth-child(2){font-size: 2em;}
@@ -401,9 +527,10 @@
             width:64px;
             height:64px;
             display:block;
-            right:10%;
+            right:42%;
             top:50px;
             position:absolute;
+            
         }
         .icon_about{
             background:transparent url(img/id_card.png) no-repeat top left;
@@ -424,6 +551,8 @@
             text-shadow:1px 1px 1px #000;
             color:#B7B7B6;
             text-indent:10px;
+            font-size: 30px;
+            text-align: center;
         }
         ul#menu span.description{
             width:100%;
@@ -448,6 +577,10 @@
             color:#54504F; transition: 1.3s;
         }
         .bg{width: 100%; height: 300px; position: absolute; width: 100%; z-index: 1; border-radius:10px;}
+        
+        .slide:nth-child(1).slide .main_cmt{background: url(img/sky-4011511_1920.jpg)no-repeat center; background-size: cover;}
+        .slide:nth-child(2).slide .main_cmt{background: url(img/universe-4027609_1920.jpg)no-repeat center; background-size: cover;}
+        .slide:nth-child(3).slide .main_cmt{background: url(img/dubai-4044183_1920.jpg)no-repeat center; background-size: cover;}
         
         #page4_top{width: 80%; height: 50%; padding-top: 50px; margin: 0 auto;}
         #page4_top_tt{color: white; text-align: center; font-size: 30px; margin-bottom: 50px; line-height: 34px;}
@@ -481,7 +614,8 @@
         #page4_bot_slide_menu>div>ul{width: 100%; height: 0; background: url(img/footer_bg.png); position: relative; bottom: 50px; z-index: 1; opacity: 0; padding-top: 5px;}
         #page4_bot_slide_menu>div>ul>li{width: auto;}
         #page4_bot_slide_menu>div>ul>li>a{width: auto; display: inline; color: white; font-size: 20px; line-height: 20px;}
-        #page4_bot_slide_menu>div>ul>li>a:hover{border-bottom: 1px solid #fff; transition: 0.3s;}
+        
+        #page4_bot_slide_menu>div>ul>li>a:hover{text-decoration: underline; transition: 2s;}
         
         #page4_bot_footer{width: 100%; height: 80%; background:url(img/footer_bg2.png); overflow: hidden; z-index: 5;}
         
@@ -548,6 +682,7 @@
 <section>
     <div id="fullpage">
         <div class="section pages" id="page1" data-anchor="1st">
+        <div id="particles-js"></div>
 <!--
             <div class="main_cmt">
                 <p>Lorem ipsum.</p>
@@ -568,7 +703,7 @@
             <article>
                 <h2>movie2</h2>
                 <video width="100%" height="100%" loop="loop" preload="auto" muted>
-                    <source src="img/video/Worm%20Hole%20-%206797.mp4" type="video/mp4">
+                    <source src="img/video/Mars%20Running%20-%2015298.mp4" type="video/mp4">
                 </video>
                 <div></div>
                 <h3 class="wow bounceInDown" data-wow-delay = "1s">Lorem ipsum.</h3>
@@ -577,7 +712,7 @@
             <article>
                 <h2>movie3</h2>
                 <video width="100%" height="100%" loop="loop" preload="auto" muted>
-                    <source src="img/video/Atoms%20-%2013232.mp4" type="video/mp4">
+                    <source src="img/video/Rocket%20-%20235.mp4" type="video/mp4">
                 </video>
                 <div></div>
                 <h3 class="wow bounceInDown" data-wow-delay = "1s">Lorem ipsum.</h3>
@@ -607,12 +742,12 @@
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
                 </div>
-                <div class="wow flipInX" data-wow-delay = "0.6s">
+                <div class="wow flipInX" data-wow-delay = "0.8s">
                     <p>Lorem ipsum.4</p>
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
                 </div>
-                <div class="wow flipInX" data-wow-delay = "0.6s">
+                <div class="wow flipInX" data-wow-delay = "0.8s">
                     <p>Lorem ipsum.5</p>
                     <p>Lorem ipsum dolor sit.</p>
                     <a href="#">more</a>
@@ -624,7 +759,7 @@
                     <li>
                         <a>
                             <i class="icon_about"></i>
-                            <span class="title">About</span>
+                            <span class="title">NEWS</span>
                             <span class="description">Learn about us and our services</span>
                             <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
@@ -632,7 +767,7 @@
                     <li>
                         <a>
                             <i class="icon_work"></i>
-                            <span class="title">Work</span>
+                            <span class="title">R＆D</span>
                             <span class="description">See our work and portfolio</span>
                             <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
@@ -640,7 +775,7 @@
                     <li>
                         <a>
                             <i class="icon_help"></i>
-                            <span class="title">Help</span>
+                            <span class="title">ORGANIZATION</span>
                             <span class="description">Talk to our support</span>
                             <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
@@ -648,7 +783,7 @@
                     <li>
                         <a>
                             <i class="icon_search"></i>
-                            <span class="title">Search</span>
+                            <span class="title">KARI IMAGE</span>
                             <span class="description">Search our website</span>
                             <img class="bg" src="img/menu_over_bg.png" alt="">
                         </a>
@@ -682,13 +817,13 @@
         </div>
         <div class="section pages" id="page4" data-anchor="4st">
             <div id="page4_top">
-                <div id="page4_top_tt">
+                <div id="page4_top_tt" class="wow swing">
                     <span>ㅡ</span>
                     <h1>lorem</h1>
                     <span>Lorem ipsum dolor sit amet.</span>
                 </div>
                 <div id="page4_top_section">
-                    <div id="page4_top_section_01">
+                    <div id="page4_top_section_01" class="wow rollIn" data-wow-delay = "0.5s">
                         <h3>lorem1</h3>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a>
                         </div>
@@ -696,13 +831,13 @@
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu3</a></div>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu4</a></div>
                     </div>
-                    <div id="page4_top_section_02">
+                    <div id="page4_top_section_02" class="wow rollIn" data-wow-delay = "0.7s">
                         <h3>lorem2</h3>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a></div>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu2</a></div>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu3</a></div>
                     </div>
-                    <div id="page4_top_section_03">
+                    <div id="page4_top_section_03" class="wow rollIn" data-wow-delay = "0.9s">
                         <h3>lorem3</h3>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu1</a></div>
                         <div><a class="page4_ts_img" href="#a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubMenu2</a></div>
@@ -712,13 +847,13 @@
                 </div>
             </div>
             <div id="page4_mid">
-               <div><a href="#a"><i class="far fa-address-book"></i><br>Icon1</a></div>
-               <div><a href="#a"><i class="far fa-address-card"></i><br>Icon2</a></div>
-               <div><a href="#a"><i class="far fa-building"></i><br>Icon3</a></div>
-               <div><a href="#a"><i class="far fa-comment"></i><br>Icon4</a></div>
-               <div><a href="#a"><i class="far fa-copy"></i><br>Icon5</a></div> 
+               <div class="wow bounceInUp" data-wow-delay = "0.3s"><a href="#a"><i class="far fa-address-book"></i><br>Icon1</a></div>
+               <div class="wow bounceInUp" data-wow-delay = "0.4s"><a href="#a"><i class="far fa-address-card"></i><br>Icon2</a></div>
+               <div class="wow bounceInUp" data-wow-delay = "0.5s"><a href="#a"><i class="far fa-building"></i><br>Icon3</a></div>
+               <div class="wow bounceInUp" data-wow-delay = "0.6s"><a href="#a"><i class="far fa-comment"></i><br>Icon4</a></div>
+               <div class="wow bounceInUp" data-wow-delay = "0.7s"><a href="#a"><i class="far fa-copy"></i><br>Icon5</a></div> 
             </div>
-            <div id="page4_bot">
+            <div id="page4_bot" class="wow fadeInUp">
                 <div id="page4_bot_slide_menu">
                     <div id="page4_bot_slide_menu_01">
                         <span>SlideUpMenu1</span>
