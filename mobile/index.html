@@ -1,10 +1,8 @@
 <!DOCTYPE html >
 <html>
 <head>
-<!--
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta charset="UTF-8">
--->
 		
 	<title> 모바일테스트  </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +23,12 @@
 -->
     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	
-	
+	<style>
+        #logo{width: 176px; height: 132px; text-indent: -9999px; background-image: url(img/CI_TITLE.png); background-repeat: no-repeat; margin-top: 0px; margin-right: auto; margin-left: auto; margin-bottom: 10px;}
+        .title_style{color: #3f3c30; padding-top: 10px;}
+        
+    </style>
+    
 </head>
 <body>
 <!--
@@ -75,7 +78,7 @@
     </div>
 </div>
 -->
-
+<!--
 <div data-role="header"><h1>My Title</h1></div>
 <div data-role="content">
     <p>Hello World</p>
@@ -91,6 +94,40 @@
         <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
     </form>
     <a href="#" data-role="button" data-icon="star">Star button</a>
+</div>
+-->
+<div data-role="page" id="main">
+    <div data-role="header">
+        <h2 id="logo">가상대학교</h2>
+    </div>
+    <div data-role="content" data-theme="d">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="campus_image.html" rel="external">
+                    <img src="img/pic_i.png" alt="">
+                    <h3>캠퍼스 이미지</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#" rel="external">
+                    <img src="img/intro_i.png" alt="">
+                    <h3>대학교소개</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#" rel="external">
+                    <img src="img/movie_i.png" alt="">
+                    <h3>홍보동영상</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#" rel="external">
+                    <img src="img/map_i.png" alt="">
+                    <h3>캠퍼스맵</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
