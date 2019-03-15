@@ -10,22 +10,28 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
 -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	
 <!--    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
 <!--	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <!--
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 -->
-    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    
+    <script>
+
+    </script>
 	
 	<style>
+/*
         #logo{width: 176px; height: 132px; text-indent: -9999px; background-image: url(img/CI_TITLE.png); background-repeat: no-repeat; margin-top: 0px; margin-right: auto; margin-left: auto; margin-bottom: 10px;}
         .title_style{color: #3f3c30; padding-top: 10px;}
+*/
         
     </style>
     
@@ -96,6 +102,7 @@
     <a href="#" data-role="button" data-icon="star">Star button</a>
 </div>
 -->
+<!--
 <div data-role="page" id="main">
     <div data-role="header">
         <h2 id="logo">가상대학교</h2>
@@ -129,6 +136,77 @@
         </ul>
     </div>
 </div>
+-->
+<!--
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>GET방식 페이지 이동</h1>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview">
+            <li><a href="01-1_get_ok.php?number=1">number=1</a></li>
+            <li><a href="01-1_get_ok.php?number=2">number=2</a></li>
+        </ul>
+    </div>
+</div>
+-->
+		<div data-role="page">
+			<div data-role="header" data-position="fixed">
+				<h1>회원가입</h1>
+			</div>
+			<div data-role="content">
+				<form name="form1" action="02-1_post_ok.php" method="post">
+					<div data-role="fieldcontain">
+						<label for="user_id">아이디: </label>
+						<input type="text" name="user_id" id="user_id" placeholder="아이디를 입력하세요."/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="user_pw">비밀번호: </label>
+						<input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요."/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="email">이메일: </label>
+						<input type="email" name="email" id="email" placeholder="이메일주소를 입력하세요." />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="age">나이: </label>
+						<input type="number" name="age" id="age" min="19" max="60" step="2" placeholder="19~60세까지만 가입 가능합니다."/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="phoneno">전화번호: </label>
+						<input type="tel" name="phoneno" id="phoneno" placeholder="연락처를 입력하세요."/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="blog">블로그: </label>
+						<input type="url" name="blog" id="blog" placeholder="블로그주소를 입력하세요."/>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="horizontal">
+							<legend>성별</legend>
+							<label for="sex1">남자</label>
+							<input type="radio" value="남자" name="sex" id="sex1">
+							<label for="sex2">여자</label>
+							<input type="radio" value="여자" name="sex" id="sex2">
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>취미</legend>
+							<label for="hobby1">독서</label>
+							<input type="checkbox" value="독서" name="hobby[]" id="hobby1">
+							<label for="hobby2">영화</label>
+							<input type="checkbox" value="영화" name="hobby[]" id="hobby2">
+							<label for="hobby3">음악</label>
+							<input type="checkbox" value="음악" name="hobby[]" id="hobby3">
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain" style="text-align: center">
+						<button type="reset" data-theme="a" data-inline="true" data-corners="false">다시작성</button>
+						<button type="submit" data-theme="b" data-inline="true" data-corners="false">가입하기</button>
+					</div>
+				</form>
+			</div>
+		</div>
 </body>
 </html>
 
