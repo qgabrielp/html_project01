@@ -74,15 +74,20 @@
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(0)").addClass("on");
                             $("#page2>div").hide();
-                            $("div.container").show(120);
+                            $("div.container").show(1200);
+                            $("#page4>div").hide();
                             
-//                            new WOW().init();
+//                            wow = new WOW(
+//                                {offset: 0,}
+//                            );
+//                            wow.init();
                         }
                         if(index==2){
                             $("#side_menu>ul>li>a").removeClass("on");
                             $("#side_menu>ul>li>a:eq(1)").addClass("on");
                             $("#page2>div").show(1200);
                             $("div.container").hide();
+                            $("#page4>div").hide();
                             
                             wow = new WOW(
                                 {offset: -1600,}
@@ -350,8 +355,8 @@
 
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: 30px; top: 300px; right: 0;}
 
-        div.slider_wrap{width: 100%; height: 800px;}
-        ul.slider li{position: relative;}
+        
+        ul.slider li{position: relative; height: 100%}
         ul.slider li h2,
         ul.slider li p,
         ul.slider li .btn_more{position: absolute; left: 700px;}
@@ -362,8 +367,14 @@
         ul.slider li .btn_more{top: 300px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
         ul.slider li .btn_more:hover{background-color: green; color: #ffc30d; cursor: pointer; transition: 0.3s;}
 
-        div.wrap{width: 100%; margin: 0 auto; margin-top: 110px;}
-        .slider>li{width: 100%; height:1000px;}
+        
+        .wrap{width: 100%; height: 1000px; margin: 0 auto;}
+        .slider_wrap{width: 100%; height: 100%;}
+        .slider{width: 100%; height: 1000px;}
+        .slider li{width: 100%; height: 100px;}
+        
+        
+/*        .slider>li{width: 100%;}*/
         .bx_pager{width: 100%; overflow: hidden;}
         .bx_pager a{width: 25%; display: block; float: left; line-height: 72px; font-weight: bold; background: #514f64; text-align: center; position: relative;}
         .bx_pager a:before{content: ""; position: absolute; display: block; height: 15px; top: 30px; left: -1px; border-left: 1px solid #fff;} .bx_pager a.active{background: #ffc30d;}
@@ -437,6 +448,7 @@
         article p {position: absolute; bottom: 50px; left: 510px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
         
         
+/*
         .bx-wrapper{border: 0px;}
         .bx-wrapper .bx-pager.bx-default-pager a {width: 10px; height: 25px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
         .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: #4289f4;}
@@ -444,6 +456,7 @@
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
         .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
         .prevBtn, .nextBtn{display: none;}
+*/
 
 /*
         a.ref{
@@ -461,7 +474,7 @@
         .container{width:80%;
             height:50%;
             margin:0 auto;
-            position:relative;
+            position: relative;
             overflow:hidden;
             _border:3px solid #fff;
             _background-color:#000;
@@ -471,7 +484,7 @@
             -webkit-border-bottom-left-radius:20px;
             -webkit-border-bottom-right-radius:20px;
             border-radius:20px 20px 0px 0px;
-            bottom: 3%;
+            bottom: 10%;
         }
         ul#menu{
             width: 100%;
@@ -514,6 +527,7 @@
             position:absolute;
             
         }
+/*
         .icon_about{
             background:transparent url(img/bn02_ico.png) no-repeat top left;
         }
@@ -526,12 +540,13 @@
         .icon_search{
             background:transparent url(img/bn04_ico.png) no-repeat top left;
         }
+*/
         ul#menu span{position: relative; z-index: 10;}
         ul#menu span.title{
             display:block;
             height:26px;
             text-shadow:1px 1px 1px #000;
-            color:#B7B7B6;
+            color: white;
             text-indent:10px;
             font-size: 28px;
             text-align: center;
@@ -563,7 +578,7 @@
         ul#menu a:hover span.title{
             color:#54504F; transition: 1.3s;
         }
-        .bg{width: 100%; height: 400px; position: absolute; width: 100%; z-index: 1; _border-radius:10px; background-color:rgb(66, 134, 244,0.3);}
+        .bg{width: 100%; height: 400px; position: absolute; width: 100%; z-index: 1; _border-radius:10px; background-color:rgb(0, 20, 137, 0.7);}
         
         .slide:nth-child(1).slide .main_cmt{background: url(img/sky-4011511_1920.jpg)no-repeat center; background-size: cover;}
         .slide:nth-child(2).slide .main_cmt{background: url(img/universe-4027609_1920.jpg)no-repeat center; background-size: cover;}
@@ -727,33 +742,33 @@
                     <li>
                         <a>
                             <i class="icon_about"></i>
-                            <span class="title">NEWS</span>
+                            <span class="title">빈티지</span>
                             <span class="description">Learn about us and our services</span>
-                            <img class="bg" src="" alt="">
+                            <img class="bg" src="img/ch/GettyImages-141342134.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a>
                             <i class="icon_work"></i>
-                            <span class="title">R＆D</span>
+                            <span class="title">하이라이트</span>
                             <span class="description">See our work and portfolio</span>
-                            <img class="bg" src="" alt="">
+                            <img class="bg" src="img/ch/190307_KIEV_EUL_H_3MIN.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a>
                             <i class="icon_help"></i>
-                            <span class="title">ORGANIZATION</span>
+                            <span class="title">MATCHDAY</span>
                             <span class="description">Talk to our support</span>
-                            <img class="bg" src="" alt="">
+                            <img class="bg" src="img/ch/thumbnail.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a>
                             <i class="icon_search"></i>
-                            <span class="title">KARI IMAGE</span>
+                            <span class="title">하이라이트</span>
                             <span class="description">Search our website</span>
-                            <img class="bg" src="" alt="">
+                            <img class="bg" src="img/ch/thumbnail2.jpg" alt="">
                         </a>
                     </li>
                 </ul>
