@@ -44,17 +44,17 @@
         $(document).ready(function(){
             var mySlider = $(".slider").bxSlider({
                 auto:true,
-//                pager:false,
+                pager:true,
                 controls:true,
                 mode:'fade',
-                pagerCustom:'.bx_pager'
+//                pagerCustom:'.bx_pager'
             });
-            $(".nextBtn").on("click",function(){
-                mySlider.goToNextSlide();
-            });
-            $(".prevBtn").on("click",function(){
-                mySlider.goToPrevSlide();
-            });
+//            $(".nextBtn").on("click",function(){
+//                mySlider.goToNextSlide();
+//            });
+//            $(".prevBtn").on("click",function(){
+//                mySlider.goToPrevSlide();
+//            });
         });
         
         
@@ -354,18 +354,20 @@
         background: #fff;
         }
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 30px;}
-        .bx-wrapper .bx-pager.bx-default-pager a {width: 30px; height: 30px; border-radius: 20px 1px 20px 5px; opacity: 0.6; background-color: orange; transform: scale(0.6); margin-top: 10px;}
+        .bx-wrapper .bx-pager.bx-default-pager a {width: 30px; height: 30px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: rgb(85, 85, 85,0.5); transform: scale(0.6); margin-top: 10px;}
         .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: green;}
-        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: green; transform: scale(1.1);}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #001489; transform: scale(1.1);}
 
         .slider_wrap{position: relative;}
+/*
         .prevBtn,.nextBtn{position: absolute; top: 350px; cursor: pointer;}    
         .prevBtn{left: 0;}
         .nextBtn{right: 0;}
+*/
 
         div.bx-wrapper {margin-bottom: 0;}
 
-        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: 30px; top: 300px; right: 0;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: auto; right: 45%;}
 
         
         ul.slider li{position: relative; height: 100%}
@@ -379,124 +381,24 @@
         ul.slider li .btn_more{top: 300px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
         ul.slider li .btn_more:hover{background-color: green; color: #ffc30d; cursor: pointer; transition: 0.3s;}
 
+        .wrap{width: 100%; height: 800px; margin: 0 auto;}
+        .slider_wrap{width: 100%; height: 800px;}
+        .slider{width: 100%; height: 800px;}
+        .slider li{width: 100%; height: 800px;}
         
-        .wrap{width: 100%; height: 1000px; margin: 0 auto;}
-        .slider_wrap{width: 100%; height: 100%;}
-        .slider{width: 100%; height: 1000px;}
-        .slider li{width: 100%; height: 100px;}
-        
-        
-/*        .slider>li{width: 100%;}*/
+/*
         .bx_pager{width: 100%; overflow: hidden;}
         .bx_pager a{width: 25%; display: block; float: left; line-height: 72px; font-weight: bold; background: #514f64; text-align: center; position: relative;}
         .bx_pager a:before{content: ""; position: absolute; display: block; height: 15px; top: 30px; left: -1px; border-left: 1px solid #fff;} .bx_pager a.active{background: #ffc30d;}
         .bx_pager a:first-child{border-radius: 0 0 0 10px;}
         .bx_pager a:last-child{border-radius: 0 0 10px 0;}
-        
-/*        풀레이지*/
-        #page1{background-color: #ebe6df;}
-        #page2{background-image: _url(img/universe-4027609_1920.jpg);}
-        #page3{background-image: url(img/visual05.jpg);}
-        #page4{background-image: url(img/bg4.jpg);}
-        .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
-        .main_cmt{width: 100%; height: 50%; _margin-left: 100px; top: 150px; position: relative;}
-        .main_cmt>div{position: relative;}
-        
-/*
-        section {position: fixed; top: 0px; right: 0px; width: 100%; height: 100%;}
-        article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden;}
-
-        article h2 {position: absolute; top: 100px; left: 20px; padding-left: 15px; border-left: 3px solid #fff; font: bold 20px Raleway; color: white; z-index: 3; transition: all 0.5s; font-size: 30px;}
-        article>div {position: absolute; left: 0px; top: 200px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
-
-        article:hover h2 {color: #ccc; border-left: 3px solid #ccc;}
-        article:hover div {top: 270px; height: 70px; top: 90px;}
-
-        article video {position: absolute; width: auto; height: 100%; margin-top: 0px; _margin-left: -50%; opacity: 0; z-index: 1;}
-
-        article h3 {position: absolute; bottom: 210px; left: 510px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
-        article p {position: absolute; bottom: 50px; left: 510px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
 */
-        
-/*        페이지2*/
-        #page2_box{width: 60%; height: 60%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat 0 20%; padding-top: 100px;}
-        #page2_box>div{float: left; overflow: hidden;}
-        #page2_box>div>div{width: 100%; height: 100%;}
-        #page2_box>div:nth-child(1){width: 100%; margin-bottom: 30px; margin-left: 50px;}
-        #page2_box>div:nth-child(1)>h1{font-size: 38px; color: black;}
-        #page2_box>div:nth-child(1)>h2{font-size: 24px;}
-       
-        #page2_box div p{position: absolute; top: 50px;}
-        #page2_box div span{position: absolute; top: 90px; font-size: 20px; color: white; text-shadow: 1px 1px 1px #292929;}
-        #page2_box>div:nth-child(2) div{background: url(img/ch/kiev-training-general.jpg)no-repeat top; background-size: 100% 100%; position: relative;}
-        #page2_box>div:nth-child(3) div{background: url(img/ch/callum-hudson-odoi-england.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(4) div{background: url(img/ch/kiev_stadium_view.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(5) div{background: url(img/ch/MPU_450X450_kor.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(6) div{background: url(img/ch/sarri-kiev-training.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(7) div{background: url(img/ch/Willian-Kiev-training.jpg)no-repeat top; background-size: 100% 100%;}
-/*
-        #page2_box>div:nth-child(4){background: url(img/20190228124647873.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(5){background: url(img/MNW_eaa01c88-ecd3-4290-b3ba-fab4d5c080ee0.jpg)no-repeat top; background-size: 100% 100%;}
-        #page2_box>div:nth-child(6){background: url(img/20190212133303725.JPG)no-repeat top; background-size: 100% 100%;}
-*/
-        
-        #page2_box>div:nth-child(2),#page2_box>div:nth-child(3),#page2_box>div:nth-child(4),#page2_box>div:nth-child(5),#page2_box>div:nth-child(6),#page2_box>div:nth-child(7){width: 25%; height: 40%; margin: 2.5%;}
-
-        .page2_ct:hover div{transform: scale(1.1); transition: 0.5s;}
-        
-        .main_cmt p{text-shadow: 1px 1px 1px #292929; color: #fff; font-weight: bold;}
-        .main_cmt p:nth-child(1){font-size: 4em;}
-        .main_cmt p:nth-child(2){font-size: 2em;}
-        .main_cmt a{width: 150px; border: 1px solid #fff; background: none; line-height: 45px; display: block; text-align: center; margin-top: 30px; color: white; border-radius: 10px; transition: 0.3s; position: absolute; bottom: 10px; right: 10px;}
-        .main_cmt a:hover{background: #fff; color: #000;}
-        
-        .slide .main_cmt{width: 100%; height: 100%; border: 1px solid #fff; border-radius: 1em; _margin-top: 100px;}
-        .slide>video{width: 100%; height: 100%;}
-        
-/*        #page2 div.onview{opacity: 0; transition: 0.7s; width: 30%; height: 100%;}*/
-/*        #page2 div.onview.mactive{opacity: 1; transform: translateX(50px);}*/
-/*        #page3,#page4{padding: 0px 0 0px calc(50% - 50px);}*/
         
         .fp-tableCell{display: block;}
         
-        
-/*
-        div.wrap{position: fixed; top: 0px; right: 0px; width: 100%; height: 80%;}
-        ul.slider{}
-        ul.slider>li{position: relative; width: 12%; height: 100%; float: left; overflow: hidden;}
-       
-        ul.slider>li>video{width: auto; height: 100%; margin-top: 0px; margin-left: -100px;}
-        ul.slider>li>h1{width: auto; height: auto; color: white; position: absolute; right: -500px; top: 50%; font-size: 30px; font-weight: bold;}
-        ul.slider>li>p{width: auto; height: auto; color: white; position: absolute; right: -500px; bottom: 40%;}
-*/ 
-        
-/*
-        .bx-wrapper{border: 0px;}
-        .bx-wrapper .bx-pager.bx-default-pager a {width: 10px; height: 25px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
-        .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: #4289f4;}
-        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #4289f4; transform: scale(1.1); opacity: 1;}
-        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
-        .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
-        .prevBtn, .nextBtn{display: none;}
-*/
-
-/*
-        a.ref{
-            color:#888;
-            text-decoration:none;
-            text-shadow:1px 1px 1px #000;
-            position:relative;
-            bottom:10px;
-            right:10px;
-        }
-        a.ref:hover{
-            color:#000;
-        }
-*/
-        
 /*        하단 슬라이드업메뉴*/
         .container{width:80%;
-            height:50%;
+            height:400px;
             margin:0 auto;
             position: relative;
             overflow:hidden;
@@ -508,7 +410,7 @@
             -webkit-border-bottom-left-radius:20px;
             -webkit-border-bottom-right-radius:20px;
             border-radius:20px 20px 0px 0px;
-            bottom: 10%;
+            bottom: 22%;
         }
         ul#menu{
             width: 100%;
@@ -526,7 +428,7 @@
         ul#menu li{
             width: 25%;
             position: relative;
-            bottom: -200px;
+            bottom: -400px;
             float:left;
             margin:0px;
         }
@@ -603,6 +505,109 @@
             color:#54504F; transition: 1.3s;
         }
         .bg{width: 100%; height: 400px; position: absolute; width: 100%; z-index: 1; _border-radius:10px; background-color:rgb(0, 20, 137, 0.7);}
+        
+/*        풀레이지*/
+        #page1{background-color: #ebe6df;}
+        #page2{background-image: _url(img/universe-4027609_1920.jpg);}
+        #page3{background-image: url(img/visual05.jpg);}
+        #page4{background-image: url(img/bg4.jpg);}
+        .pages{width: 100%; height: 100%; background-repeat: no-repeat; background-position: center top; background-size: cover;}
+        .main_cmt{width: 100%; height: 50%; _margin-left: 100px; top: 150px; position: relative;}
+        .main_cmt>div{position: relative;}
+        
+/*
+        section {position: fixed; top: 0px; right: 0px; width: 100%; height: 100%;}
+        article {position: relative; width: 12%; height: 100%; background: url(img/divider.png) no-repeat left center; float: left; overflow: hidden;}
+
+        article h2 {position: absolute; top: 100px; left: 20px; padding-left: 15px; border-left: 3px solid #fff; font: bold 20px Raleway; color: white; z-index: 3; transition: all 0.5s; font-size: 30px;}
+        article>div {position: absolute; left: 0px; top: 200px; width: 100%; height: 0px; background: #000; opacity: 0.5; z-index: 2; transition: all 0.5s;}
+
+        article:hover h2 {color: #ccc; border-left: 3px solid #ccc;}
+        article:hover div {top: 270px; height: 70px; top: 90px;}
+
+        article video {position: absolute; width: auto; height: 100%; margin-top: 0px; _margin-left: -50%; opacity: 0; z-index: 1;}
+
+        article h3 {position: absolute; bottom: 210px; left: 510px; font: 40px Ralway; color: #fff; text-align: right; opacity: 1; z-index: 4;}
+        article p {position: absolute; bottom: 50px; left: 510px; width: 300px; height: 150px; font: 12px/1.5 arial; color: #fff; text-align: right; opacity: 0.8; z-index: 5;}
+*/
+        
+/*        페이지2*/
+        #page2_box{width: 60%; height: 60%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat 0 20%; padding-top: 100px; background-size:contain;}
+        #page2_box>div{float: left; overflow: hidden;}
+        #page2_box>div>div{width: 100%; height: 100%;}
+        #page2_box>div:nth-child(1){width: 100%; margin-bottom: 30px; margin-left: 50px;}
+        #page2_box>div:nth-child(1)>h1{font-size: 38px; color: black;}
+        #page2_box>div:nth-child(1)>h2{font-size: 24px;}
+       
+        #page2_box div p{position: absolute; top: 50px;}
+        #page2_box div span{position: absolute; top: 90px; font-size: 20px; color: white; text-shadow: 1px 1px 1px #292929;}
+        #page2_box>div:nth-child(2) div{background: url(img/ch/kiev-training-general.jpg)no-repeat top; background-size: 100% 100%; position: relative;}
+        #page2_box>div:nth-child(3) div{background: url(img/ch/callum-hudson-odoi-england.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(4) div{background: url(img/ch/kiev_stadium_view.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(5) div{background: url(img/ch/MPU_450X450_kor.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(6) div{background: url(img/ch/sarri-kiev-training.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(7) div{background: url(img/ch/Willian-Kiev-training.jpg)no-repeat top; background-size: 100% 100%;}
+/*
+        #page2_box>div:nth-child(4){background: url(img/20190228124647873.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(5){background: url(img/MNW_eaa01c88-ecd3-4290-b3ba-fab4d5c080ee0.jpg)no-repeat top; background-size: 100% 100%;}
+        #page2_box>div:nth-child(6){background: url(img/20190212133303725.JPG)no-repeat top; background-size: 100% 100%;}
+*/
+        
+        #page2_box>div:nth-child(2),#page2_box>div:nth-child(3),#page2_box>div:nth-child(4),#page2_box>div:nth-child(5),#page2_box>div:nth-child(6),#page2_box>div:nth-child(7){width: 25%; height: 40%; margin: 2.5%;}
+
+        .page2_ct:hover div{transform: scale(1.1); transition: 0.5s;}
+        
+        .main_cmt p{text-shadow: 1px 1px 1px #292929; color: #fff; font-weight: bold;}
+        .main_cmt p:nth-child(1){font-size: 4em;}
+        .main_cmt p:nth-child(2){font-size: 2em;}
+        .main_cmt a{width: 150px; border: 1px solid #fff; background: none; line-height: 45px; display: block; text-align: center; margin-top: 30px; color: white; border-radius: 10px; transition: 0.3s; position: absolute; bottom: 10px; right: 10px;}
+        .main_cmt a:hover{background: #fff; color: #000;}
+        
+        .slide .main_cmt{width: 100%; height: 100%; border: 1px solid #fff; border-radius: 1em; _margin-top: 100px;}
+        .slide>video{width: 100%; height: 100%;}
+        
+/*        #page2 div.onview{opacity: 0; transition: 0.7s; width: 30%; height: 100%;}*/
+/*        #page2 div.onview.mactive{opacity: 1; transform: translateX(50px);}*/
+/*        #page3,#page4{padding: 0px 0 0px calc(50% - 50px);}*/
+        
+        
+        
+        
+/*
+        div.wrap{position: fixed; top: 0px; right: 0px; width: 100%; height: 80%;}
+        ul.slider{}
+        ul.slider>li{position: relative; width: 12%; height: 100%; float: left; overflow: hidden;}
+       
+        ul.slider>li>video{width: auto; height: 100%; margin-top: 0px; margin-left: -100px;}
+        ul.slider>li>h1{width: auto; height: auto; color: white; position: absolute; right: -500px; top: 50%; font-size: 30px; font-weight: bold;}
+        ul.slider>li>p{width: auto; height: auto; color: white; position: absolute; right: -500px; bottom: 40%;}
+*/ 
+        
+/*
+        .bx-wrapper{border: 0px;}
+        .bx-wrapper .bx-pager.bx-default-pager a {width: 10px; height: 25px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: white; transform: scale(0.6); margin-top: 10px; bottom: 10px;}
+        .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: #4289f4;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #4289f4; transform: scale(1.1); opacity: 1;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 10px;}
+        .bx-wrapper{margin-bottom: 0px; min-width: 100%; min-height: 100%;}
+        .prevBtn, .nextBtn{display: none;}
+*/
+
+/*
+        a.ref{
+            color:#888;
+            text-decoration:none;
+            text-shadow:1px 1px 1px #000;
+            position:relative;
+            bottom:10px;
+            right:10px;
+        }
+        a.ref:hover{
+            color:#000;
+        }
+*/
+        
+
         
 /*        페이지3*/
         .slide:nth-child(1).slide .main_cmt{background: url(img/sky-4011511_1920.jpg)no-repeat center; background-size: cover;}
