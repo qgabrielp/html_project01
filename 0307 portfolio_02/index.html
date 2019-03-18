@@ -303,7 +303,7 @@
     <style>
         
 /*        헤더*/
-        header{width: 100%; position: relative; margin-bottom: 50px;}
+        header{width: 100%; position: relative;}
         
 /*        탑메뉴*/
         #top_menu{width: 100%; height: 50px; position: absolute; z-index: 2; background: #fff; _box-shadow:1px 1px 6px #000; background: #001489;}
@@ -369,22 +369,21 @@
 
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: auto; right: 45%;}
 
-        
+        .wrap{width: 100%; height: 60%;}
+        ul.slider_wrap{width: 100%; height: 100%;}
+        ul.slider{width: 100%; height: 800px;}
         ul.slider li{position: relative; height: 100%; width: 100%;}
         ul.slider li h2,
         ul.slider li p,
-        ul.slider li .btn_more{position: absolute; left: 35%; margin: 0 auto; color: white;}
+        ul.slider>li>.btn_more{width: 100%; position: absolute; margin: 0 auto; color: white; text-align: center;}
 
         ul.slider li h2{bottom: 200px; background: #001489; cursor: none;}
 /*        ul.slider li h2:after{content: ""; width: 225px; height: 3px; background-color: white; position: absolute; bottom: -15px; left: 0;}*/
-        ul.slider li p{bottom: 100px; font-size: 30px; font-weight: bold; width: auto;}
+        ul.slider li p{bottom: 100px; font-size: 30px; font-weight: bold;}
         ul.slider li .btn_more{bottom: 50px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
         ul.slider li .btn_more:hover{background-color: #001489; color: #ffc30d; cursor: pointer; transition: 0.3s;}
 
-        .wrap{width: 100%; height: 60%;}
-        .slider_wrap{width: 100%;}
-        .slider{width: 100%; height: 900px;}
-        
+
         
 /*
         .bx_pager{width: 100%; overflow: hidden;}
@@ -410,7 +409,7 @@
             _-webkit-border-bottom-left-radius:20px;
             _-webkit-border-bottom-right-radius:20px;
             _border-radius:20px 20px 0px 0px;
-            bottom: -7%;
+            bottom: 0px;
         }
         ul#menu{
             width: 100%;
@@ -533,7 +532,7 @@
         
 /*        페이지2*/
         #page2{position: relative;}
-        #page2_box{width: 60%; height: 70%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat; background-size:contain; position: relative; margin-top: -50px; margin-bottom: 250px;}
+        #page2_box{width: 60%; height: 70%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat; background-size:contain; position: relative; margin-bottom: 200px;}
         #page2_box>div{float: left; overflow: hidden;}
         #page2_box>div>div{width: 100%; height: 100%;}
         #page2_box>div:nth-child(1){width: 100%; margin-bottom: 30px; margin-left: 50px;}
@@ -624,19 +623,33 @@
         .slide:nth-child(2).slide .main_cmt{background: url(img/universe-4027609_1920.jpg)no-repeat center; background-size: cover;}
         .slide:nth-child(3).slide .main_cmt{background: url(img/dubai-4044183_1920.jpg)no-repeat center; background-size: cover;}
 */
-        #sc{width: 80%; height: 100%; margin: 0 auto;}
+        #sc{width: 80%; height: 85%; margin: 0 auto; }
         #sc:after{content: ""; display: block; clear: both;}
         #sc>div{width: 30%; height: 100%; margin-top: 100px; float: left; margin-left: 1.5%; margin-right: 1.5%; position: relative;}
 /*        #sc>div>div{width: 30%; height: 100%; margin-top: 100px; float: left; margin-left: 1.5%; margin-right: 1.5%; background: white;}*/
-        #sc>div:nth-child(3)>ul{height: 70%;}
-        #sc>div:nth-child(3)>ul>li{width: 100%; height: 4.76%; text-align: left; font-size: 16px; border-top: 0.5px solid lightgray; line-height: 46px; position: relative;}
-        #sc>div:nth-child(3)>ul>li>span{width: 50px; height: 100%; color: black; line-height: 46px;}
-        #sc>div:nth-child(3)>ul>li>img{width: 30px; height: 30px; position: absolute; top: 5px;}
+        #sc>div:nth-child(3)>ul{height: 90%;}
+        #sc>div:nth-child(3)>ul>li{width: 100%; height: 4.76%; font-size: 16px; border-top: 0.5px solid lightgray; line-height: 46px; position: relative;}
+        #sc>div:nth-child(3)>ul>li>span{height: 100%; color: black; line-height: 46px; display: block; float: left; font-size: 12px;}
+        #sc>div:nth-child(3) ul li span img{width: 30px; height: 30px; position: absolute; top: 10%; display: block;}
+        
+        #chelsea{font-weight: bold; background: rgb(219, 218, 208, 0.4);}
+        .number{width: 10%; margin: 0 auto;}
+        .team{width: 24%; margin: 0 auto;}
+        .play{width: 12%; margin: 0 auto;}
+        .win{width: 6%; margin: 0 auto;}
+        .drow{width: 6%; margin: 0 auto;}
+        .lose{width: 6%; margin: 0 auto;}
+        .gf{width: 8%; margin: 0 auto;}
+        .ga{width: 8%; margin: 0 auto;}
+        .gd{width: 12%; margin: 0 auto;}
+        .pts{width: 8%; margin: 0 auto;}
+        
+        
         #sc>div>div>ul{width: 100%;}
         #sc>div>div>ul>li{width: 100%;}
         #sc>div>h1{font-size: 30px; font-weight: bold; color:#001489; line-height: 60px;}
         #sc>div>h2{font-size: 24px; font-weight: bold; color:#001489; line-height: 50px;}
-        #sc>div>ul{width: 100%; height: 12%; background: white; position: relative;}
+        #sc>div>ul{width: 100%; height: 15.5%; background: white; position: relative;}
         #sc>div>ul>h4{color: darkblue;}
         #sc>div>ul>span{color: black;}
         #sc>div>ul>li{width: 20%; position: absolute; text-align: center;}
@@ -649,7 +662,7 @@
         .mday{left: 45%; top: 30%; font-size: 26px; color: #001489;}
         
 /*        페이지4*/
-        #page4_top{width: 80%; height: 50%; padding-top: 50px; margin: 0 auto;}
+        #page4_top{width: 80%; height: 50%; margin: 0 auto;}
         #page4_top_tt{color: white; text-align: center; font-size: 30px; margin-bottom: 50px; line-height: 34px;}
         #page4_top_section{width: 100%; height: 80%; margin: 0 auto;}
         #page4_top_section:after{content: ""; display: block; clear: both;}
@@ -689,81 +702,83 @@
     </style>
 </head>
 <body>
-<header>
-    <div>
-        <nav id="top_menu">
-            <div><a id="logo" href="#a"></a></div>
-            <ul>
-                <li id="menu1">뉴스
-                    <div class="menu_img"></div>
-                    <span></span>
-                    <ul class="sub" style="">
-                        <li><a href="#a">smenu1</a></li>
-                        <li><a href="#a">smenu2</a></li>
-                        <li><a href="#a">smenu3</a></li>
-                        <li><a href="#a">smenu4</a></li>
-                        <li><a href="#a">smenu5</a></li>
-                    </ul>
-                </li>
-                <li id="menu2">영상
-                    <div class="menu_img"></div>
-                    <span></span>
-                    <ul class="sub" style="">
-                        <li><a href="#a">smenu1</a></li>
-                        <li><a href="#a">smenu2</a></li>
-                        <li><a href="#a">smenu3</a></li>
-                        <li><a href="#a">smenu4</a></li>
-                        <li><a href="#a">smenu5</a></li>
-                    </ul>
-                </li>
-                <li id="menu3">경기
-                    <div class="menu_img"></div>
-                    <span></span>
-                    <ul class="sub" style="">
-                        <li><a href="#a">smenu1</a></li>
-                        <li><a href="#a">smenu2</a></li>
-                        <li><a href="#a">smenu3</a></li>
-                        <li><a href="#a">smenu4</a></li>
-                        <li><a href="#a">smenu5</a></li>
-                    </ul>
-                </li>
-                <li id="menu4">첼시의 팀
-                    <div class="menu_img"></div>
-                    <span></span>
-                    <ul class="sub" style="">
-                        <li><a href="#a">smenu1</a></li>
-                        <li><a href="#a">smenu2</a></li>
-                        <li><a href="#a">smenu3</a></li>
-                        <li><a href="#a">smenu4</a></li>
-                        <li><a href="#a">smenu5</a></li>
-                    </ul>
-                </li>
-                <li id="menu5">쇼핑<i class="fas fa-shopping-cart"></i>
-                    <div class="menu_img"></div>
-                    <span></span>
-                    <ul class="sub" style="">
-                        <li><a href="#a">smenu1</a></li>
-                        <li><a href="#a">smenu2</a></li>
-                        <li><a href="#a">smenu3</a></li>
-                        <li><a href="#a">smenu4</a></li>
-                        <li><a href="#a">smenu5</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+
+<section>
+    <header>
+        <div>
+            <nav id="top_menu">
+                <div><a id="logo" href="#a"></a></div>
+                <ul>
+                    <li id="menu1">뉴스
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">smenu1</a></li>
+                            <li><a href="#a">smenu2</a></li>
+                            <li><a href="#a">smenu3</a></li>
+                            <li><a href="#a">smenu4</a></li>
+                            <li><a href="#a">smenu5</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu2">영상
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">smenu1</a></li>
+                            <li><a href="#a">smenu2</a></li>
+                            <li><a href="#a">smenu3</a></li>
+                            <li><a href="#a">smenu4</a></li>
+                            <li><a href="#a">smenu5</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu3">경기
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">smenu1</a></li>
+                            <li><a href="#a">smenu2</a></li>
+                            <li><a href="#a">smenu3</a></li>
+                            <li><a href="#a">smenu4</a></li>
+                            <li><a href="#a">smenu5</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu4">첼시의 팀
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">smenu1</a></li>
+                            <li><a href="#a">smenu2</a></li>
+                            <li><a href="#a">smenu3</a></li>
+                            <li><a href="#a">smenu4</a></li>
+                            <li><a href="#a">smenu5</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu5">쇼핑<i class="fas fa-shopping-cart"></i>
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">smenu1</a></li>
+                            <li><a href="#a">smenu2</a></li>
+                            <li><a href="#a">smenu3</a></li>
+                            <li><a href="#a">smenu4</a></li>
+                            <li><a href="#a">smenu5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <nav id="side_menu">
             <ul>
-                <li data-menuanchor="1st"><a class="on" href="#1st">MENU1</a></li>
-                <li data-menuanchor="2st"><a href="#2st">MENU2</a></li>
-                <li data-menuanchor="3st"><a href="#3st">MENU3</a></li>
-                <li data-menuanchor="4st"><a href="#4st">MENU4</a></li>
+                <li data-menuanchor="1st"><a class="on" href="#1st">홈</a></li>
+                <li data-menuanchor="2st"><a href="#2st">뉴스</a></li>
+                <li data-menuanchor="3st"><a href="#3st">일정</a></li>
+                <li data-menuanchor="4st"><a href="#4st">고객센터</a></li>
             </ul>
         </nav>
-    </div>
-</header>
-<section>
+    </header>
     <div id="fullpage">
         <div class="section pages" id="page1" data-anchor="1st">
+
             <div class="wrap">
                 <div class="slider_wrap">
                     <ul class="slider">
@@ -965,7 +980,7 @@
                         <span>스탬포드 브릿지 2019/04/09, 04:00 오전</span>
                         <li class="hometeam"><img src="img/ch/mini_em/pic_002.jpg" alt=""><br>첼시</li>
                         <li class="mday">09 화</li>
-                        <li class="awayteam"><img src="img/ch/mini_em/pic_005.jpg" alt=""><br>웨스트 햄 유나이티드</li>
+                        <li class="awayteam"><img src="img/ch/mini_em/pic_005.jpg" alt=""><br>웨스트햄<br>유나이티드</li>
                         <a href="#a">매치 센터 ></a>
                     </ul>
                     <ul>
@@ -999,9 +1014,9 @@
                     <ul>
                         <h4>UEFA 유로파리그  | 8강전  | 2차전</h4>
                         <span>스탬포드 브릿지 2019/04/19, 04:00 오전</span>
-                        <li class="hometeam"><img src="img/ch/mini_em/pic_002.jpg" alt=""><br>리버풀</li>
+                        <li class="hometeam"><img src="img/ch/mini_em/pic_002.jpg" alt=""><br>첼시</li>
                         <li class="mday">19 금</li>
-                        <li class="awayteam"><img src="img/ch/mini_em/pic_006.jpg" alt=""><br>첼시</li>
+                        <li class="awayteam"><img src="img/ch/mini_em/pic_006.jpg" alt=""><br>Slavia Prague</li>
                         <a href="#a">매치 센터 ></a>
                     </ul>
                     <h1>기타</h1>
@@ -1018,9 +1033,9 @@
                     <ul>
                         <h4>친선경기</h4>
                         <span>스탬포드 브릿지 2019/06/14, 09:00 오전</span>
-                        <li class="hometeam"><img src="img/ch/mini_em/pic_002.jpg" alt=""><br>New England Revolution</li>
+                        <li class="hometeam"><img src="img/ch/mini_em/pic_002.jpg" alt=""><br>첼시</li>
                         <li class="mday">14 목</li>
-                        <li class="awayteam"><img src="img/ch/mini_em/pic_012.jpg" alt=""><br>첼시</li>
+                        <li class="awayteam"><img src="img/ch/mini_em/pic_012.jpg" alt=""><br>New England Revolution</li>
                         <a href="#a">매치 센터 ></a>
                     </ul>
                 </div>
@@ -1029,27 +1044,258 @@
                     <h2>프리미어리그</h2>
                     
                         <ul>
-                            <li>&emsp;순위&emsp;&emsp;&emsp;팀&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;경기수&emsp;승&emsp;무&emsp;패&emsp;득점&emsp;실점&emsp;득실차&emsp;승점</li>
-                            <li><span>&emsp;&emsp;1</span>&emsp;&emsp;&emsp;<img src="img/ch/mini_em/total/pic_006.jpg" alt="">&emsp;&emsp;리버풀&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;31&emsp;&ensp;23&emsp;&ensp;7&emsp;&ensp;1&emsp;&ensp;70&emsp;&ensp;18&emsp;&emsp;&ensp;52&emsp;&emsp;&ensp;76</li>
-                            <li><span>2</span><img src="img/ch/" alt=""></li>
-                            <li><span>3</span><img src="img/ch/" alt=""></li>
-                            <li><span>4</span><img src="img/ch/" alt=""></li>
-                            <li><span>5</span><img src="img/ch/" alt=""></li>
-                            <li><span>6</span><img src="img/ch/" alt=""></li>
-                            <li><span>7</span><img src="img/ch/" alt=""></li>
-                            <li><span>8</span><img src="img/ch/" alt=""></li>
-                            <li><span>9</span><img src="img/ch/" alt=""></li>
-                            <li><span>10</span><img src="" alt=""></li>
-                            <li><span>11</span><img src="" alt=""></li>
-                            <li><span>12</span><img src="" alt=""></li>
-                            <li><span>13</span><img src="" alt=""></li>
-                            <li><span>14</span><img src="" alt=""></li>
-                            <li><span>15</span><img src="" alt=""></li>
-                            <li><span>16</span><img src="" alt=""></li>
-                            <li><span>17</span><img src="" alt=""></li>
-                            <li><span>18</span><img src="" alt=""></li>
-                            <li><span>19</span><img src="" alt=""></li>
-                            <li><span>20</span><img src="" alt=""></li>
+                            <li>
+                                <span class="number">순위</span>
+                                <span class="team">팀</span>
+                                <span class="play">경기수</span>
+                                <span class="win">승</span>
+                                <span class="drow">무</span>
+                                <span class="lose">패</span>
+                                <span class="gf">득점</span>
+                                <span class="ga">실점</span>
+                                <span class="gd">득실차</span>
+                                <span class="pts">승점</span>
+                            </li>
+                            <li>
+                                <span class="number">1</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_006.jpg" alt="">리버풀</span>
+                                <span class="play">31</span>
+                                <span class="win">23</span>
+                                <span class="drow">7</span>
+                                <span class="lose">1</span>
+                                <span class="gf">70</span>
+                                <span class="ga">18</span>
+                                <span class="gd">52</span>
+                                <span class="pts">76</span>
+                            </li>
+                            <li>
+                                <span class="number">2</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_007.jpg" alt="">맨시티</span>
+                                <span class="play">30</span>
+                                <span class="win">24</span>
+                                <span class="drow">2</span>
+                                <span class="lose">4</span>
+                                <span class="gf">79</span>
+                                <span class="ga">21</span>
+                                <span class="gd">58</span>
+                                <span class="pts">74</span>
+                            </li>
+                            <li>
+                                <span class="number">3</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_008.jpg" alt="">토트넘</span>
+                                <span class="play">30</span>
+                                <span class="win">20</span>
+                                <span class="drow">1</span>
+                                <span class="lose">9</span>
+                                <span class="gf">57</span>
+                                <span class="ga">32</span>
+                                <span class="gd">25</span>
+                                <span class="pts">61</span>
+                            </li>
+                            <li>
+                                <span class="number">4</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_009.jpg" alt="">아스날</span>
+                                <span class="play">30</span>
+                                <span class="win">18</span>
+                                <span class="drow">6</span>
+                                <span class="lose">6</span>
+                                <span class="gf">63</span>
+                                <span class="ga">39</span>
+                                <span class="gd">24</span>
+                                <span class="pts">60</span>
+                            </li>
+                            <li>
+                                <span class="number">5</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_010.jpg" alt="">맨유</span>
+                                <span class="play">30</span>
+                                <span class="win">17</span>
+                                <span class="drow">7</span>
+                                <span class="lose">6</span>
+                                <span class="gf">58</span>
+                                <span class="ga">40</span>
+                                <span class="gd">18</span>
+                                <span class="pts">58</span>
+                            </li>
+                            <li id="chelsea">
+                                <span class="number">6</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_011.jpg" alt="">첼시</span>
+                                <span class="play">30</span>
+                                <span class="win">17</span>
+                                <span class="drow">6</span>
+                                <span class="lose">7</span>
+                                <span class="gf">50</span>
+                                <span class="ga">33</span>
+                                <span class="gd">17</span>
+                                <span class="pts">57</span>
+                            </li>
+                            <li>
+                                <span class="number">7</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_012.jpg" alt="">울버햄튼</span>
+                                <span class="play">30</span>
+                                <span class="win">12</span>
+                                <span class="drow">8</span>
+                                <span class="lose">10</span>
+                                <span class="gf">38</span>
+                                <span class="ga">36</span>
+                                <span class="gd">2</span>
+                                <span class="pts">44</span>
+                            </li>
+                            <li>
+                                <span class="number">8</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_013.jpg" alt="">왓포드</span>
+                                <span class="play">30</span>
+                                <span class="win">12</span>
+                                <span class="drow">7</span>
+                                <span class="lose">11</span>
+                                <span class="gf">42</span>
+                                <span class="ga">44</span>
+                                <span class="gd">-2</span>
+                                <span class="pts">43</span>
+                            </li>
+                            <li>
+                                <span class="number">9</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_014.jpg" alt="">웨스트햄</span>
+                                <span class="play">31</span>
+                                <span class="win">12</span>
+                                <span class="drow">6</span>
+                                <span class="lose">13</span>
+                                <span class="gf">41</span>
+                                <span class="ga">46</span>
+                                <span class="gd">-5</span>
+                                <span class="pts">42</span>
+                            </li>
+                            <li>
+                                <span class="number">10</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_015.jpg" alt="">레스터</span>
+                                <span class="play">31</span>
+                                <span class="win">12</span>
+                                <span class="drow">5</span>
+                                <span class="lose">14</span>
+                                <span class="gf">40</span>
+                                <span class="ga">43</span>
+                                <span class="gd">-3</span>
+                                <span class="pts">41</span>
+                            </li>
+                            <li>
+                                <span class="number">11</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_016.jpg" alt="">에버튼</span>
+                                <span class="play">31</span>
+                                <span class="win">11</span>
+                                <span class="drow">7</span>
+                                <span class="lose">13</span>
+                                <span class="gf">43</span>
+                                <span class="ga">42</span>
+                                <span class="gd">1</span>
+                                <span class="pts">40</span>
+                            </li>
+                            <li>
+                                <span class="number">12</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_017.jpg" alt="">본머스</span>
+                                <span class="play">31</span>
+                                <span class="win">11</span>
+                                <span class="drow">5</span>
+                                <span class="lose">15</span>
+                                <span class="gf">43</span>
+                                <span class="ga">56</span>
+                                <span class="gd">-13</span>
+                                <span class="pts">38</span>
+                            </li>
+                            <li>
+                                <span class="number">13</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_018.jpg" alt="">뉴캐슬</span>
+                                <span class="play">31</span>
+                                <span class="win">9</span>
+                                <span class="drow">8</span>
+                                <span class="lose">14</span>
+                                <span class="gf">31</span>
+                                <span class="ga">40</span>
+                                <span class="gd">-9</span>
+                                <span class="pts">35</span>
+                            </li>
+                            <li>
+                                <span class="number">14</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_019.jpg" alt="">크리스탈</span>
+                                <span class="play">30</span>
+                                <span class="win">9</span>
+                                <span class="drow">6</span>
+                                <span class="lose">15</span>
+                                <span class="gf">36</span>
+                                <span class="ga">41</span>
+                                <span class="gd">-5</span>
+                                <span class="pts">33</span>
+                            </li>
+                            <li>
+                                <span class="number">15</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_020.jpg" alt="">브라이튼</span>
+                                <span class="play">29</span>
+                                <span class="win">9</span>
+                                <span class="drow">6</span>
+                                <span class="lose">14</span>
+                                <span class="gf">32</span>
+                                <span class="ga">42</span>
+                                <span class="gd">-10</span>
+                                <span class="pts">33</span>
+                            </li>
+                            <li>
+                                <span class="number">16</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_021.jpg" alt="">사우스햄튼</span>
+                                <span class="play">30</span>
+                                <span class="win">7</span>
+                                <span class="drow">9</span>
+                                <span class="lose">14</span>
+                                <span class="gf">34</span>
+                                <span class="ga">50</span>
+                                <span class="gd">-16</span>
+                                <span class="pts">30</span>
+                            </li>
+                            <li>
+                                <span class="number">17</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_022.jpg" alt="">번리</span>
+                                <span class="play">31</span>
+                                <span class="win">8</span>
+                                <span class="drow">6</span>
+                                <span class="lose">18</span>
+                                <span class="gf">35</span>
+                                <span class="ga">59</span>
+                                <span class="gd">-24</span>
+                                <span class="pts">30</span>
+                            </li>
+                            <li>
+                                <span class="number">18</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_023.jpg" alt="">카디프</span>
+                                <span class="play">30</span>
+                                <span class="win">8</span>
+                                <span class="drow">4</span>
+                                <span class="lose">18</span>
+                                <span class="gf">27</span>
+                                <span class="ga">57</span>
+                                <span class="gd">-30</span>
+                                <span class="pts">28</span>
+                            </li>
+                            <li>
+                                <span class="number">19</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_024.jpg" alt="">풀햄</span>
+                                <span class="play">31</span>
+                                <span class="win">4</span>
+                                <span class="drow">5</span>
+                                <span class="lose">22</span>
+                                <span class="gf">29</span>
+                                <span class="ga">70</span>
+                                <span class="gd">-41</span>
+                                <span class="pts">17</span>
+                            </li>
+                            <li>
+                                <span class="number">20</span>
+                                <span class="team"><img src="img/ch/mini_em/total/pic_025.jpg" alt="">허들스필드</span>
+                                <span class="play">31</span>
+                                <span class="win">3</span>
+                                <span class="drow">5</span>
+                                <span class="lose">23</span>
+                                <span class="gf">18</span>
+                                <span class="ga">57</span>
+                                <span class="gd">-39</span>
+                                <span class="pts">14</span>
+                            </li>
                         </ul>
                     
                 </div>
