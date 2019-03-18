@@ -43,7 +43,7 @@
         
         $(document).ready(function(){
             var mySlider = $(".slider").bxSlider({
-                auto:true,
+                auto:false,
                 pager:true,
                 controls:true,
                 mode:'fade',
@@ -356,7 +356,7 @@
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {bottom: 30px;}
         .bx-wrapper .bx-pager.bx-default-pager a {width: 30px; height: 30px; border-radius: 0px 0px 0px 0px; opacity: 0.6; background-color: rgb(85, 85, 85,0.5); transform: scale(0.6); margin-top: 10px;}
         .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {opacity: 1; background-color: green;}
-        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #001489; transform: scale(1.1);}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {background: #fff; transform: scale(1.1);}
 
         .slider_wrap{position: relative;}
 /*
@@ -370,21 +370,21 @@
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: auto; right: 45%;}
 
         
-        ul.slider li{position: relative; height: 100%}
+        ul.slider li{position: relative; height: 100%; width: 100%;}
         ul.slider li h2,
         ul.slider li p,
-        ul.slider li .btn_more{position: absolute; left: 700px;}
+        ul.slider li .btn_more{position: absolute; left: 35%; margin: 0 auto; color: white;}
 
-        ul.slider li h2{top: 200px;}
-        ul.slider li h2:after{content: ""; width: 225px; height: 3px; background-color: white; position: absolute; bottom: -15px; left: 0;}
-        ul.slider li p{top: 260px;}
-        ul.slider li .btn_more{top: 300px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
-        ul.slider li .btn_more:hover{background-color: green; color: #ffc30d; cursor: pointer; transition: 0.3s;}
+        ul.slider li h2{bottom: 200px; background: #001489; cursor: none;}
+/*        ul.slider li h2:after{content: ""; width: 225px; height: 3px; background-color: white; position: absolute; bottom: -15px; left: 0;}*/
+        ul.slider li p{bottom: 100px; font-size: 30px; font-weight: bold; width: auto;}
+        ul.slider li .btn_more{bottom: 50px; border: 2px solid #000; padding: 10px 30px; border-radius: 20px 1px 20px 20px; font-weight: bold;}
+        ul.slider li .btn_more:hover{background-color: #001489; color: #ffc30d; cursor: pointer; transition: 0.3s;}
 
-        .wrap{width: 100%; height: 800px; margin: 0 auto;}
-        .slider_wrap{width: 100%; height: 800px;}
-        .slider{width: 100%; height: 800px;}
-        .slider li{width: 100%; height: 800px;}
+        .wrap{width: 100%; height: 60%;}
+        .slider_wrap{width: 100%;}
+        .slider{width: 100%; height: 900px;}
+        
         
 /*
         .bx_pager{width: 100%; overflow: hidden;}
@@ -394,7 +394,7 @@
         .bx_pager a:last-child{border-radius: 0 0 10px 0;}
 */
         
-        .fp-tableCell{display: block;}
+        .fp-tableCell{display: block; padding: 0;}
         
 /*        하단 슬라이드업메뉴*/
         .container{width:80%;
@@ -407,10 +407,10 @@
             _-moz-box-shadow:1px 1px 6px #000;
             _-webkit-box-shadow:1px 1px 6px #000;
             _-moz-border-radius:0px 0px 20px 20px;
-            -webkit-border-bottom-left-radius:20px;
-            -webkit-border-bottom-right-radius:20px;
-            border-radius:20px 20px 0px 0px;
-            bottom: 28%;
+            _-webkit-border-bottom-left-radius:20px;
+            _-webkit-border-bottom-right-radius:20px;
+            _border-radius:20px 20px 0px 0px;
+            bottom: -2%;
         }
         ul#menu{
             width: 100%;
@@ -532,14 +532,15 @@
 */
         
 /*        페이지2*/
-        #page2_box{width: 60%; height: 60%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat; background-size:contain;}
+        #page2_box{width: 60%; height: 60%; margin: 0 auto; background: url(img/NEWS_ROOM_bg.png)no-repeat; background-size:contain; position: relative;}
         #page2_box>div{float: left; overflow: hidden;}
         #page2_box>div>div{width: 100%; height: 100%;}
         #page2_box>div:nth-child(1){width: 100%; margin-bottom: 30px; margin-left: 50px;}
         #page2_box>div:nth-child(1)>h1{font-size: 38px; color: black;}
         #page2_box>div:nth-child(1)>h2{font-size: 24px;}
        
-        #page2_box div p{position: absolute; top: 50px;}
+        #page2_box div h3{position: absolute; top: 0px; color: white; background: blue;}
+        #page2_box div p{position: absolute; bottom: 50px; text-align: center; font-size: 20px;}
         #page2_box div span{position: absolute; top: 90px; font-size: 20px; color: white; text-shadow: 1px 1px 1px #292929;}
         #page2_box>div:nth-child(2) div{background: url(img/ch/kiev-training-general.jpg)no-repeat top; background-size: 100% 100%; position: relative;}
         #page2_box>div:nth-child(3) div{background: url(img/ch/callum-hudson-odoi-england.jpg)no-repeat top; background-size: 100% 100%;}
@@ -565,6 +566,8 @@
         
         .slide .main_cmt{width: 100%; height: 100%; border: 1px solid #fff; border-radius: 1em; _margin-top: 100px;}
         .slide>video{width: 100%; height: 100%;}
+        
+        #totalnews{width: 200px; height: 50px; margin: 0 auto; color: white; text-align: center; background: #000; bottom: ; position: absolute;}
         
 /*        #page2 div.onview{opacity: 0; transition: 0.7s; width: 30%; height: 100%;}*/
 /*        #page2 div.onview.mactive{opacity: 1; transform: translateX(50px);}*/
@@ -735,27 +738,27 @@
                     <ul class="slider">
                         <li>
                             <img src="img/ch/pic_001.jpg" style="background-size: cover;" alt="">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <div class="btn_more">바로가기</div>
+<!--                            <h2>분석</h2>-->
+                            <p>훌륭한 퍼포먼스와 지루에 대한 만족감에 대해 이야기한 마우리치오 사리</p>
+<!--                            <div class="btn_more">바로가기</div>-->
                         </li>
                         <li>
                             <img src="img/ch/Giroud-celebrates-DAZ_8828-403379.jpg" alt="">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <div class="btn_more">바로가기</div>
+<!--                            <h2>뉴스</h2>-->
+                            <p>해트트릭과 첼시의 8강 진출에 대한 기쁨을 드러낸 올리비에 지루</p>
+<!--                            <div class="btn_more">바로가기</div>-->
                         </li>
                         <li>
                             <img src="img/ch/europa_league_round_of_32_draw.jpg" alt="">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <div class="btn_more">바로가기</div>
+<!--                            <h2>뉴스</h2>-->
+                            <p>유로파리그 8강 및 준결승 대진추첨 일정</p>
+<!--                            <div class="btn_more">바로가기</div>-->
                         </li>
                         <li>
                             <img src="img/ch/Pulisic-1005410884.jpg" alt="">
-                            <h2>Lorem ipsum dolor.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <div class="btn_more">바로가기</div>
+<!--                            <h2>뉴스</h2>-->
+                            <p>크리스티안 풀리시치가 첼시에서 성공을 거둘 거라고 예상하는 맷 미아즈가</p>
+<!--                            <div class="btn_more">바로가기</div>-->
                         </li>
                     </ul>
 <!--
@@ -859,41 +862,46 @@
                 </div>
                 <div class="page2_ct wow flipInY" data-wow-delay = "0.6s">
                     <div></div>
-                    <p>Lorem ipsum.1</p>
-                    <span>Lorem ipsum dolor sit.</span>
+                    <h3>분석</h3>
+                    <p>원정경기 트레이닝</p>
                     <a href="#">more</a>
                 </div>
                 <div class="page2_ct wow flipInY" data-wow-delay = "0.6s">
                     <div></div>
-                    <p>Lorem ipsum.2</p>
-                    <span>Lorem ipsum dolor sit.</span>
+                    <h3>A매치</h3>
+                    <p>잉글랜드 U-21 팀으로부터 첫 부름을 받은 칼럼 허드슨-오도이</p>
                     <a href="#">more</a>
                 </div>
                 <div class="page2_ct wow flipInY" data-wow-delay = "0.6s">
                     <div></div>
-                    <p>Lorem ipsum.3</p>
-                    <span>Lorem ipsum dolor sit.</span>
+                    <h3>구단역사</h3>
+                    <p>스템포드브릿지 스타디움</p>
                     <a href="#">more</a>
                 </div>
                 <div class="page2_ct wow flipInX" data-wow-delay = "0.8s">
                     <div></div>
-                    <p>Lorem ipsum.4</p>
-                    <p>Lorem ipsum dolor sit.</p>
+                    <h3>이벤트</h3>
+<!--                    <p>Lorem ipsum dolor sit.</p>-->
                     <a href="#">more</a>
                 </div>
                 <div class="page2_ct wow flipInX" data-wow-delay = "0.8s">
                     <div></div>
-                    <p>Lorem ipsum.5</p>
-                    <p>Lorem ipsum dolor sit.</p>
+                    <h3>뉴스</h3>
+                    <p>곤살로 이과인의 부재와 피치 컨디션에 대한 걱정에 대해 설명한 마우리치오 사리</p>
                     <a href="#">more</a>
                 </div>
                 <div class="page2_ct wow flipInX" data-wow-delay = "0.8s">
                     <div></div>
-                    <p>Lorem ipsum.6</p>
-                    <p>Lorem ipsum dolor sit.</p>
+                    <h3>인터뷰</h3>
+                    <p>슛팅에 강한 자신감을 드러내는 윌리엄</p>
                     <a href="#">more</a>
                 </div>
                 
+            </div>
+            <div id="totalnews">
+                <ul>
+                    <li>전체 뉴스</li>
+                </ul>
             </div>
 
         </div>
