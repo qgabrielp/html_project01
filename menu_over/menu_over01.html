@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.clearfix{content:"";clear: both;display: block;}
+		ul.first >li{float: left;}
+		ul.first >li>a{display: block;padding:5px 10px;}
+		ul.first .menu{width:100px;line-height:40px;}
+		ul.first .menu:after{
+			content: "";
+		    border-bottom: 5px solid #f0ca29;
+		    width: 0;
+		    display: block;
+		    transition-duration: 0.4s;
+		    margin-top: -9px;
+		}
+		ul.first .menu:hover:after{width: 100%;}
+		ul.sec >li{float: left;position: relative;}
+		ul.sec >li>a{display: block;padding:5px 10px;text-align: center;}
+		ul.sec .menu{width:100px;line-height:40px;}
+		ul.sec .menu:after{
+			content: "";
+			position: absolute;
+		    border-bottom: 5px solid #f0ca29;
+		    width: 0;
+		    left:50%;		    
+		    transform:translateX(-50%);
+		    
+		    transition-duration: 0.4s;
+		    margin-top: -9px;
+		}
+		ul.sec .menu:hover:after{width: 100%;}
+	</style>
+</head>
+<body>
+		
+	<ul class="first clearfix">
+		<li class="menu"><a href="#">menu1</a></li>
+		<li class="menu"><a href="#">menu2</a></li>
+		<li class="menu"><a href="#">menu3</a></li>
+		<li class="menu"><a href="#">menu4</a></li>
+	</ul>
+	<ul class="sec clearfix">
+		<li class="menu"><a href="#">menu1</a></li>
+		<li class="menu"><a href="#">menu2</a></li>
+		<li class="menu"><a href="#">menu3</a></li>
+		<li class="menu"><a href="#">menu4</a></li>
+	</ul>
+	<style>
+		.box{width:300px;height:300px;border: 1px solid #000;margin:0 auto;position: relative;overflow: hidden;}
+		.box:hover .bar{width:100%;transition:.3s;}
+		.bar{position: absolute;width:0;height:10px;left:50%;background:darkblue;transform:translateX(-50%)}
+	</style>
+	<div class="box">
+		<div class="bar"></div>	
+	</div>
+</body>
+</html>
