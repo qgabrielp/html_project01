@@ -151,7 +151,7 @@
                  $("#search_action").toggle();
              });
             $("#menu_btn").click(function(){
-                $("#top_menu>ul>li").toggle();
+                $("#top_menu>ul>li").toggle(500);
             });
         
         });
@@ -795,10 +795,10 @@
         @media screen and (min-width:780px) and (max-width:1023px){
             #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 80px; display: block; width: 80px; position: absolute; left: 15%; top: 15px; z-index: 5;}
             #top_menu_bar{width: 35%; left: 27%;}
-            #menu_btn{display: block; width: 50px; height: 50px; background-color: black; left: 40%; position: absolute; cursor: pointer;}
+            #menu_btn{display: block; width: 50px; height: 50px; background-color: black; left: 40%; position: absolute; cursor: pointer; border-radius: 5px 5px 5px 5px;}
             #top_menu>ul{background-color: white; height: 50px;}
             #top_menu>ul>li{display: none;}
-            #top_menu>ul>li{width: 20%; background-color: white; position: relative; top: 50px;}
+            #top_menu>ul>li{width: 20%; background-color: white; position: relative; top: 50px; font-size: 1.5em;}
             #top_menu>ul>div{float: left;}
             #search{right: 38%;}
             #search_action>input{width: 80%; position: fixed; left: 10%; height: 80px;}
