@@ -150,6 +150,9 @@
              $("#search").click(function(){
                  $("#search_action").toggle();
              });
+            $("#menu_btn").click(function(){
+                $("#top_menu>ul>li").toggle();
+            });
         
         });
         
@@ -348,6 +351,7 @@
         #top_menu_bar>ul>li>a{width: 100%; color: white;}
     
 /*        탑메뉴 서브메뉴*/
+        #menu_btn{display: none;}
         #top_menu>ul{width: 100%; background-color: white; box-shadow:1px 1px 6px #000; position: relative;}
         #top_menu>ul:hover{background: white;}
         #top_menu>ul:after{content: ""; display: block; clear: both;}
@@ -791,12 +795,15 @@
         @media screen and (min-width:780px) and (max-width:1023px){
             #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 80px; display: block; width: 80px; position: absolute; left: 15%; top: 15px; z-index: 5;}
             #top_menu_bar{width: 35%; left: 27%;}
+            #menu_btn{display: block; width: 50px; height: 50px; background-color: black; left: 40%; position: absolute; cursor: pointer;}
             #top_menu>ul{background-color: white; height: 50px;}
             #top_menu>ul>li{display: none;}
+            #top_menu>ul>div{float: left;}
             #search{right: 38%;}
             #search_action>input{width: 80%; position: fixed; left: 10%; height: 80px;}
             #login{font-size: 1.2em; width: 10%; right: 27%;}
             #join{font-size: 1.2em; width: 12%;}
+            
         }
         
         @media screen and (min-width:640px) and (max-width:779px){
@@ -832,6 +839,7 @@
                 <div><a id="yoko" href="#a"></a></div>
                 <div><a id="carabao" href="#a"></a></div>
                 <ul>
+                    <div id="menu_btn"></div>
                     <li id="menu1">뉴스
                         <div class="menu_img"></div>
                         <span></span>
