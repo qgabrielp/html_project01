@@ -760,21 +760,43 @@
         
 /*        미디어 커리*/
         
+        @media screen and (min-width:2000px) {
+            ul.sub>li{width: 100%; _float: left; font-size: 1em; _line-height: 20px;}
+            #login, #join{font-size: 1.6em;}
+        }
         
-        @media screen and (min-width:1800px) {
+        @media screen and (min-width:1800px) and (max-width:1999px) {
             ul.sub>li{width: 100%; _float: left; font-size: 0.8em; _line-height: 20px;}
         }
         
         @media screen and (min-width:1280px) and (max-width:1599px){
+            #top_menu_bar{width: 25%; left: 23%;}
+            #login, #join{font-size: 1em;}
+            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 6%; line-height: 50px; color: black; cursor: pointer; font-weight: bold;}
+            #top_menu>ul>li:first-child{margin-left: 22%;}
             
         }
         
         @media screen and (min-width:1024px) and (max-width:1279px){
+            #top_menu_bar{width: 30%; left: 25%;}
+            #search{right: 30%;}
+            #login{font-size: 1em; width: 5%; right: 24%;}
+            #join{font-size: 1em; width: 8%;}
+            #top_menu>ul>li{font-size: 1em; float: left; text-align: center; width: 8%; line-height: 50px; color: black; cursor: pointer; font-weight: bold;}
+            #top_menu>ul>li:first-child{margin-left: 24%;}
+            ul.sub>li{font-size: 0.5em;}
             
         }
         
         @media screen and (min-width:780px) and (max-width:1023px){
-            
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 80px; display: block; width: 80px; position: absolute; left: 15%; top: 15px; z-index: 5;}
+            #top_menu_bar{width: 35%; left: 27%;}
+            #top_menu>ul{background-color: white; height: 50px;}
+            #top_menu>ul>li{display: none;}
+            #search{right: 38%;}
+            #search_action>input{width: 80%; position: fixed; left: 10%; height: 80px;}
+            #login{font-size: 1.2em; width: 10%; right: 27%;}
+            #join{font-size: 1.2em; width: 12%;}
         }
         
         @media screen and (min-width:640px) and (max-width:779px){
