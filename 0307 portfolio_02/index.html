@@ -137,22 +137,26 @@
 //        <---탑메뉴--->
         $(function(){
              $("ul.sub").hide();
-             $("#top_menu>ul>li").hover(function(){
+             $("#top_menu>ul>li").click(function(){
                 var i = $(this).index();
-                $("#top_menu>ul>li>ul").stop().slideDown(500);
+                $("#top_menu>ul>li>ul").stop().toggle(500);
                 $("#search_action").hide(500);
                 
-             }).mouseleave(function(){
-                $("ul.sub").stop().slideUp(300);
-                
-             });
+             })
+//                .mouseleave(function(){
+//                    $("ul.sub").stop().slideUp(300);
+//                });
              $("#search_action").hide()
              $("#search").click(function(){
                  $("#search_action").toggle();
              });
-            $("#menu_btn").click(function(){
-                $("#top_menu>ul>li").toggle(500);
-            });
+//            $("#menu_btn").click(function(){
+//                $("#top_menu>ul>li").toggle(500);
+//                $("#top_menu>ul>li>ul").show();
+//            });
+//            $("#top_menu>ul>li").toggle(function(){
+//                $("#top_menu>ul>li>ul").stop().toggle(500);
+//            });
         
         });
         
@@ -351,11 +355,11 @@
         #top_menu_bar>ul>li>a{width: 100%; color: white;}
     
 /*        탑메뉴 서브메뉴*/
-        #menu_btn{display: none;}
+        #menu_btn{display: none; background: url(img/arrow02.png)no-repeat; background-position: -0.5px -1px; width: 50px; height: 50px; background-color: white; left: 40%; position: absolute; cursor: pointer; border-radius: 5px 5px 5px 5px; border: 2px solid black; box-shadow: 1px 1px 1px black;}
         #top_menu>ul{width: 100%; background-color: white; box-shadow:1px 1px 6px #000; position: relative;}
         #top_menu>ul:hover{background: white;}
         #top_menu>ul:after{content: ""; display: block; clear: both;}
-        #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 5%; line-height: 50px; color: black; cursor: pointer; font-weight: bold;}
+        #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 5%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
         #menu1{margin-left: 20%;}
         #top_menu>ul>li:hover{background: #eee; color: #001489; font-weight: bold;}
         #top_menu>ul>li:hover ul.sub{background: #eee;}
@@ -373,16 +377,16 @@
         #menu5:hover .menu_img{background: url(img/circle-1613999_1280_5.png)no-repeat; background-size: contain; opacity: 1; transition: 1s;}
 */
                 
-        ul.sub{width: 100%; position: relative; left: 0;}
-        ul.sub>li{width: 100%; _float: left; font-size: 0.65em; _line-height: 20px;}
+        ul.sub{width: 100%; height: 250px; position: relative; left: 0;}
+        ul.sub>li{width: 100%; _float: left; font-size: 0.65em; _line-height: 20px; }
         ul.sub:after{content: ""; display: block; clear: both;}
         ul.sub>li:hover{background: #001489; border-radius: 0px 0px 10px 0px;}
         ul.sub>li:hover a{color: white; text-decoration: underline;}
         ul.sub>li>a{display: inline; text-align: center; padding: 5px 10px; line-height: 50px;}
         
         #search{position: absolute; right: 25%; font-size: 20px; float: left; text-align: center; width: 5%; line-height: 50px; color: black; cursor: pointer;}
-        #search_action{position: relative; top: 50px; width: 40%; height: 200px; margin-left: 30%;}
-        #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489;}
+        #search_action{position: absolute; top: 0px; width: 25%; height: 50px; left: 45%;}
+        #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
         #login{position: absolute; right: 21%; font-size: 1.3em; float: left; text-align: center; width: 5%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
         #login:after{content: ""; position: absolute; border-bottom: 3px solid #001489; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
         #login:hover:after{width: 60%;}
@@ -419,7 +423,7 @@
 
         div.bx-wrapper {margin-bottom: 0;}
 
-        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: auto; right: 45%; top: 0%;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {width: auto; right: 50%; top: 0%; transform: translateX(50%)}
 
         .wrap{width: 100%; height: 60%; padding-top: 100px;}
         ul.slider_wrap{}
@@ -547,7 +551,7 @@
             -webkit-border-radius:10px;
             border-radius:10px;
 */
-            padding-top: 60%;
+            bottom: -280px;
             text-align: center;
         }
         ul#menu a:hover span.description{
@@ -771,51 +775,112 @@
             #login, #join{font-size: 1.6em;}
         }
         
-        @media screen and (min-width:1800px) and (max-width:1999px) {
+        @media screen and (min-width:1600px) and (max-width:1999px) {
             ul.sub>li{width: 100%; _float: left; font-size: 0.8em; _line-height: 20px;}
+            .wrap{width: 100%; height: 60%; padding-top: 100px;}
+            ul.slider>li{position: relative;}
+            ul.slider li img{width: 100%; height: 950px; margin: 0 auto; background-size: cover;}
         }
         
         @media screen and (min-width:1280px) and (max-width:1599px){
             #top_menu_bar{width: 25%; left: 23%;}
+            #search_action{position: absolute; top: 0px; width: 45%; height: 50px; left: 23%;}
+            #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
             #login, #join{font-size: 1em;}
             #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 7%; line-height: 50px; color: black; font-weight: bold;}
             #menu1{margin-left: 22%;}
             ul.sub>li{font-size: 0.7em;}
+            .wrap{width: 100%; height: 60%; padding-top: 100px;}
+            ul.slider>li{position: relative;}
+            ul.slider li img{width: 100%; height: 900px; margin: 0 auto; background-size: cover;}
+            ul#menu span.description{
+            width:100%;
+            height:400px;
+            color:#fff;
+            display:block;
+            font-size:0.5em;
+            padding:10px;
+            bottom: -280px;
+            text-align: center;
+        }
             
         }
         
         @media screen and (min-width:1024px) and (max-width:1279px){
-            #top_menu_bar{width: 30%; left: 25%;}
+            #top_menu_bar{width: 25%; left: 25%;}
             #search{right: 30%;}
+            #search_action{position: absolute; top: 0px; width: 40%; height: 50px; left: 25%;}
+            #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
             #login{font-size: 1em; width: 5%; right: 24%;}
             #join{font-size: 1em; width: 8%;}
-            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 8%; line-height: 50px; color: black; font-weight: bold;}
-            #menu1{margin-left: 24%;}
-            ul.sub>li{font-size: 0.65em;}
+            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 7.5%; line-height: 50px; color: black; font-weight: bold;}
+            #menu1{margin-left: 23%;}
+            ul.sub>li{font-size: 0.6em;}
         
         }
         
         @media screen and (min-width:780px) and (max-width:1023px){
-            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 80px; display: block; width: 80px; position: absolute; left: 15%; top: 15px; z-index: 5;}
-            #top_menu_bar{width: 35%; left: 27%;}
-            #menu_btn{display: block; width: 50px; height: 50px; background-color: black; left: 40%; position: absolute; cursor: pointer; border-radius: 5px 5px 5px 5px;}
-            #top_menu>ul{background-color: white; height: 50px;}
-            #top_menu>ul>li{display: none;}
-            #top_menu>ul>li{width: 20%; background-color: white; position: relative; top: 50px; font-size: 1.5em; line-height: 50px;}
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 50px; display: block; width: 50px; position: absolute; left: 10%; top: 0px; z-index: 5;}
+            #top_menu_bar{width: 35%; left: 17%;}
+            #nike, #yoko, #carabao{display: none;}
+            #top_menu>ul>li{width: 20%; background-color: white; position: relative; font-size: 1.5em; line-height: 50px;}
             #top_menu>ul>div{float: left;}
             #menu1{margin-left: 0%;}
-            #search{right: 38%;}
-            #search_action>input{width: 80%; position: fixed; left: 10%; height: 80px;}
-            #login{font-size: 1.2em; width: 10%; right: 27%;}
-            #join{font-size: 1.2em; width: 12%;}
+            #search{right: 35%; top: -50px; color: white;}
+            #search_action{position: absolute; top: 0px; width: 100%; height: 50px; left: 0%; }
+            #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
+            #login{font-size: 1.2em; width: 8%; right: 25%; top: -50px; color: white;}
+            #login:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #login:hover:after{width: 100%;}
+            #login:hover{color: white;}
+            #join{font-size: 1.2em; width: 17%; top: -50px; color: white; right: 10%;}
+            #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #join:hover:after{width: 100%;}
+            #join:hover{color: white;}
             
         }
         
         @media screen and (min-width:640px) and (max-width:779px){
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 50px; display: block; width: 50px; position: absolute; left: 15%; top: 0px; z-index: 5;}
+            #top_menu_bar>ul{display: none;}
+            #nike, #yoko, #carabao{display: none;}     
+            #top_menu>ul>li{width: 20%; background-color: white; position: relative; font-size: 1.5em; line-height: 50px;}
+            #top_menu>ul>div{float: left;}
+            #menu1{margin-left: 0%;}
+            #search{right: 45%; top: -50px; color: white;}
+            #search_action{position: absolute; top: 0px; width: 100%; height: 50px; left: 0%;}
+            #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%); z-index: 10;}
+            #login{font-size: 1.2em; width: 10%; right: 33%; top: -50px; color: white;}
+            #login:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #login:hover:after{width: 100%;}
+            #login:hover{color: white;}
+            #join{font-size: 1.2em; width: 17%; top: -50px; color: white;}
+            #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #join:hover:after{width: 100%;}
+            #join:hover{color: white;}
+            
             
         }
         
         @media screen and (min-width:480px) and (max-width:639px){
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 50px; width: 50px; position: absolute; display: block; left: 15%; top: 0px; z-index: 5;}
+            #top_menu_bar>ul{display: none;}
+            #nike, #yoko, #carabao{display: none;}
+            #menu_btn{display: block; left: 37%;}
+            #top_menu>ul>li{width: 20%; background-color: white; position: relative; font-size: 1.5em; line-height: 50px;}
+            #top_menu>ul>div{float: left;}
+            #menu1{margin-left: 0%;}
+            #search{right: 55%; top: -50px; color: white;}
+            #search_action{position: absolute; top: 0px; width: 100%; height: 50px; left: 0%;}
+            #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%); z-index: 10;}
+            #login{font-size: 1.2em; width: 10%; right: 36%; top: -50px; color: white;}
+            #login:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #login:hover:after{width: 100%;}
+            #login:hover{color: white;}
+            #join{font-size: 1.2em; width: 17%; top: -50px; color: white;}
+            #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+            #join:hover:after{width: 100%;}
+            #join:hover{color: white;}
             
         }
         
@@ -874,8 +939,8 @@
                             <li><a href="#a">경기 일정</a></li>
                             <li><a href="#a">결과</a></li>
                             <li><a href="#a">리그 테이블</a></li>
-                            <li><a href="#a"></a></li>
-                            <li><a href="#a"></a></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </li>
                     <li id="menu4">첼시의 팀
@@ -885,8 +950,8 @@
                             <li><a href="#a">퍼스트 팀</a></li>
                             <li><a href="#a">아카데미</a></li>
                             <li><a href="#a">레이디스</a></li>
-                            <li><a href="#a"></a></li>
-                            <li><a href="#a"></a></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </li>
                     <li id="menu5">쇼핑<i class="fas fa-shopping-cart"></i>
