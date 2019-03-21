@@ -398,10 +398,10 @@
         
 /*        사이드메뉴*/
         #side_menu{position: fixed; right: 0; width: 5%; text-align: center; top: 60%; line-height: 30px; z-index: 1;}
-        #side_menu>ul>li{opacity: 0.7;}
+        #side_menu>ul>li{opacity: 0.7; right: 20%; position: relative;}
         #side_menu>ul>li:active{opacity: 1; line-height: 50px;}
         #side_menu>ul>li>a{display: block; color: darkgray; font-weight: bold;}
-        .on{background-color: #001489; line-height: 50px; font-size: 16px; opacity: 1; position: relative; width: 120px; float: right; transition: 0.3s; border-radius: 20px 0 0 20px; font-size: 18px; padding-right: 50px;}
+        .on{background-color: #001489; line-height: 50px; font-size: 16px; opacity: 1; position: relative; width: 100px; float: right; transition: 0.3s; border-radius: 20px 0 0 20px; font-size: 18px; text-align: left;}
         
 /*        bx-슬라이드*/
         .bx-wrapper {
@@ -429,7 +429,7 @@
         ul.slider_wrap{}
         ul.slider{}
         ul.slider>li{position: relative;}
-        ul.slider li img{width: 80%; height: 80%; margin: 0 auto; background-size: cover;}
+        ul.slider li img{width: 100%; height: 80%; margin: 0 auto; background-size: cover;}
         ul.slider li h2,
         ul.slider li p,
         ul.slider>li>.btn_more{width: 100%; height: 100%; position: absolute; margin: 0 auto; color: white; text-align: center;}
@@ -779,20 +779,21 @@
             ul.sub>li{width: 100%; _float: left; font-size: 0.8em; _line-height: 20px;}
             .wrap{width: 100%; height: 60%; padding-top: 100px;}
             ul.slider>li{position: relative;}
-            ul.slider li img{width: 100%; height: 950px; margin: 0 auto; background-size: cover;}
+            ul.slider li img{width: 100%; height: 1000px; margin: 0 auto; background-size: cover;}
         }
         
         @media screen and (min-width:1280px) and (max-width:1599px){
-            #top_menu_bar{width: 25%; left: 23%;}
-            #search_action{position: absolute; top: 0px; width: 45%; height: 50px; left: 23%;}
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 100px; display: block; width: 100px; position: absolute; left: 10%; top: 15px; z-index: 5;}
+            #top_menu_bar{width: 25%; left: 18%;}
+            #search_action{position: absolute; top: 0px; width: 45%; height: 50px; left: 19%;}
             #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
             #login, #join{font-size: 1em;}
-            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 7%; line-height: 50px; color: black; font-weight: bold;}
-            #menu1{margin-left: 22%;}
-            ul.sub>li{font-size: 0.7em;}
+            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 8%; line-height: 50px; color: black; font-weight: bold;}
+            #menu1{margin-left: 17%;}
+            ul.sub>li{font-size: 0.8em;}
             .wrap{width: 100%; height: 60%; padding-top: 100px;}
             ul.slider>li{position: relative;}
-            ul.slider li img{width: 100%; height: 900px; margin: 0 auto; background-size: cover;}
+            ul.slider li img{width: 100%; height: 950px; margin: 0 auto; background-size: cover;}
             ul#menu span.description{
             width:100%;
             height:400px;
@@ -802,20 +803,32 @@
             padding:10px;
             bottom: -280px;
             text-align: center;
-        }
+            }
             
         }
         
         @media screen and (min-width:1024px) and (max-width:1279px){
-            #top_menu_bar{width: 25%; left: 25%;}
+            #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 100px; display: block; width: 100px; position: absolute; left: 10%; top: 15px; z-index: 5;}
+            #top_menu_bar{width: 30%; left: 20%;}
             #search{right: 30%;}
-            #search_action{position: absolute; top: 0px; width: 40%; height: 50px; left: 25%;}
+            #search_action{position: absolute; top: 0px; width: 40%; height: 50px; left: 20%;}
             #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
             #login{font-size: 1em; width: 5%; right: 24%;}
             #join{font-size: 1em; width: 8%;}
-            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 7.5%; line-height: 50px; color: black; font-weight: bold;}
-            #menu1{margin-left: 23%;}
+            #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 8%; line-height: 50px; color: black; font-weight: bold;}
+            #menu1{margin-left: 18%;}
             ul.sub>li{font-size: 0.6em;}
+            ul.sub>li{font-size: 0.7em;}
+            .wrap{width: 100%; height: 60%; padding-top: 100px;}
+            ul.slider>li{position: relative;}
+            ul.slider li img{width: 100%; height: 950px; margin: 0 auto; background-size: cover;}
+            .container{width:100%;
+            height:40%;
+            margin:0 auto;
+            position: relative;
+            overflow:hidden;
+            bottom: 0%;
+            }
         
         }
         
@@ -837,6 +850,16 @@
             #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
             #join:hover:after{width: 100%;}
             #join:hover{color: white;}
+            .wrap{width: 100%; height: 60%; padding-top: 100px;}
+            ul.slider>li{position: relative;}
+            ul.slider li img{width: 100%; height: 800px; margin: 0 auto; background-size: cover;}
+            .container{width:100%;
+            height:40%;
+            margin:0 auto;
+            position: relative;
+            overflow:hidden;
+            bottom: 0%;
+            }
             
         }
         
@@ -858,6 +881,9 @@
             #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
             #join:hover:after{width: 100%;}
             #join:hover{color: white;}
+            .wrap{width: 100%; height: 60%; padding-top: 100px;}
+            ul.slider>li{position: relative;}
+            ul.slider li img{width: 100%; height: 700px; margin: 0 auto; background-size: cover;}
             
             
         }
@@ -870,7 +896,7 @@
             #top_menu>ul>li{width: 20%; background-color: white; position: relative; font-size: 1.5em; line-height: 50px;}
             #top_menu>ul>div{float: left;}
             #menu1{margin-left: 0%;}
-            #search{right: 55%; top: -50px; color: white;}
+            #search{right: 52%; top: -50px; color: white;}
             #search_action{position: absolute; top: 0px; width: 100%; height: 50px; left: 0%;}
             #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%); z-index: 10;}
             #login{font-size: 1.2em; width: 10%; right: 36%; top: -50px; color: white;}
