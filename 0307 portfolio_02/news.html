@@ -149,18 +149,87 @@
         }
         #news{
             width: 100%;
-            height: ;
             margin-top: 50px;
             position: relative;
-            background-color: #fff;
+            
         }
-        .news_content_01{
+        #news>div{
+            float: left;
+        }
+        #news_box01{
             width: 45%;
-            background: url(news_img/pulisic-GettyImages-1064033978.jpg)no-repeat;
-            background-size: cover;
+            height: 500px;
+            position: relative;
         }
-        .news_content_01 a{
+        
+        #news_box02{
+            width: 24%;
+            height: 500px;
+            position: relative;
+            border: 14px solid #001489;
+        }
+        #news_box02 span{
+            color: black;
+        }
+        
+        .news_content{
             width: 100%;
+            height: 100%;
+        }
+        .news_content a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .news_content a img{
+            width: 100%;
+            height: 100%;
+        }
+        .news_content h4{
+            width: 5%;
+            height: 17px;
+            font-size: 0.8em;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px;
+        }
+        .news_content div{
+            width: 90%;
+            font-size: 2.2em;
+            text-align: center;
+            color: white;
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+        }
+        .news_content span{
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            color: white;
+            font-size: 0.9em;
+            font-weight: 900;
+        }
+        .news_content h5{
+            width: 90%;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 2.2em;
+            font-weight: 100;
+            color: #001489;
+        }
+        .news_content p{
+            width: 90%;
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            font-size: 1.45em;
+            font-weight: 100;
         }
     </style>
 </head>
@@ -289,13 +358,26 @@
             </select>
         </div>
         <div id="news">
-            <ul class="news_content_01">
-                <a href="#a">
-                    <span>뉴스</span>
+            <div id="news_box01">
+                <ul class="news_content">
+                    <a href="#a">
+                    <img src="news_img/pulisic-GettyImages-1064033978.jpg" style="background-size: cover" alt="">
+                    <h4>뉴스</h4>
                     <div>미국이 에콰도르를 상대로 거둔 승리를 도운 크리스티안 풀리시치</div>
                     <span>3 시간 전</span>
-                </a>
-            </ul>
+                    </a>
+                </ul>
+            </div>
+            <div id="news_box02">
+                <ul class="news_content">
+                    <a href="#a">
+                    <h4>뉴스</h4>
+                    <h5>벨기에의 승리를 이끈 에당 아자르; 마테오 코바시치, A매치 50경기 출전</h5>
+                    <p>유로 2020 대회를 위한 예선 캠페인이 시작된 가운데 오늘의 A매치 일정에 참여한 블루스 선수들이 득점에 성공하고 새로운 기록을 달성했다. </p>
+                    <span>8 시간 전</span>
+                    </a>
+                </ul>
+            </div>
         </div>
     </section>
 </body>
