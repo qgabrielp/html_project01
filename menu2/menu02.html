@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .main{
+            width: 200px;
+            background-color: #0f0;
+            line-height: 60px;
+/*            float: left;*/
+        }
+        .main:hover{
+            background-color: #ff0;
+        }
+        .main span{
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .main span:after{
+            content: '▼';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 2%;
+        }
+        .main.active span:after{
+            content: '▲';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 2%;
+        }
+        .sub li{
+            width: 200px;
+            height: 60px;
+            background-color: #0f0;
+            text-align: center;
+        }
+        .sub li:hover{
+            background-color: #ff0;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="wrap">
+            <div class="main"><a href="#a"><span>company</span></a>
+                <ul class="sub">
+                    <li><a href="#a">greeting</a></li>
+                    <li><a href="#a">history</a></li>
+                    <li><a href="#a">map</a></li>
+                </ul>
+            </div>
+            <div class="main"><a href="#a"><span>product</span></a>
+                <ul class="sub">
+                    <li><a href="#a">pants</a></li>
+                    <li><a href="#a">skirts</a></li>
+                    <li><a href="#a">glove</a></li>
+                </ul>
+            </div>
+            <div class="main"><a href="#a"><span>custom</span></a>
+                <ul class="sub">
+                    <li><a href="#a">contact us</a></li>
+                    <li><a href="#a">news</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        $(".sub").hide(); 
+        $(".main").click(function(){
+            if(!$(this).hasClass("active")){
+                
+                $(".main").each(function(){
+                    if($(this).hasClass("active")){
+                        $(this).removeClass("active");
+                        $(this).find(".sub").slideUp();
+                    }
+                });
+                
+                $(this).addClass("active");
+                $(this).find(".sub").slideDown();
+                
+                }else{
+                    
+                $(this).removeClass("active");
+                $(this).find(".sub").slideUp();
+                }
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
