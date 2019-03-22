@@ -1,0 +1,317 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title> 문서의 제목  </title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+	<script> new WOW().init(); </script>
+
+	<script>
+      //        <---탑메뉴--->
+        $(function(){
+             $("ul.sub").hide();
+             $("#top_menu>ul>li").click(function(){
+                var i = $(this).index();
+                $("#top_menu>ul>li>ul").stop().toggle(500);
+                $("#search_action").hide(500);
+                
+             })
+//                .mouseleave(function(){
+//                    $("ul.sub").stop().slideUp(300);
+//                });
+             $("#search_action").hide()
+             $("#search").click(function(){
+                 $("#search_action").toggle();
+             });
+             $("#page1, #page2, #page3, #page4").click(function(){
+                $("#top_menu>ul>li>ul").stop().slideUp(500);
+                $("#search_action").hide(500);
+             });
+//            $("#menu_btn").click(function(){
+//                $("#top_menu>ul>li").toggle(500);
+//                $("#top_menu>ul>li>ul").show();
+//            });
+//            $("#top_menu>ul>li").toggle(function(){
+//                $("#top_menu>ul>li>ul").stop().toggle(500);
+//            });
+             
+        
+        });  
+
+    </script>
+    <style>
+        body{background-color: #ebe6df}
+        /*        헤더*/
+        header{width: 100%; height: 150px; position: relative;}
+        
+/*        탑메뉴*/
+        #top_menu{width: 100%; height: 50px; position: absolute; z-index: 2; background: #fff; _box-shadow:1px 1px 6px #000; background: #001489;}
+        
+/*        탑메뉴 로고*/
+        header>div:after{content: ""; display: block; clear: both;}
+        #logo{background: url(img/ch/rgb-mar18.jpg)no-repeat center; background-size: contain; height: 100px; display: block; width: 100px; position: absolute; left: 15%; top: 15px; z-index: 5;}
+        #nike{background: url(img/ch/mini_em/total/pic_002.jpg)no-repeat center; background-size: contain; height: 50px; width: 8%; position: absolute; right: 30%; top: 0px; z-index: 5;}
+        #yoko{background: url(img/ch/mini_em/total/pic_003.jpg)no-repeat center; background-size: contain; height: 50px; width: 8%; position: absolute; right: 23%; top: 0px; z-index: 5;}
+        #carabao{background: url(img/ch/mini_em/total/pic_004.jpg)no-repeat center; background-size: contain; height: 50px; width: 8%; position: absolute; right: 15%; top: 0px; z-index: 5;}
+        
+/*        탑메뉴바*/
+        #top_menu_bar{width: 20%; height: 50px; position: relative; left: 21.5%;}
+        #top_menu_bar>ul{width: 100%;}
+        #top_menu_bar>ul:after{content: ""; display: block; clear: both;}
+        #top_menu_bar>ul>li{width: auto; height: 100%; float: left; text-align: center; line-height: 50px; margin-right: 15px; font-weight: bold; display: block; cursor: pointer; position: relative;}
+        #top_menu_bar>ul>li:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 40px;}
+        #top_menu_bar>ul>li:hover:after{width: 100%;}
+        #top_menu_bar>ul>li>a{width: 100%; color: white;}
+    
+/*        탑메뉴 서브메뉴*/
+        #menu_btn{display: none; background: url(img/arrow02.png)no-repeat; background-position: -0.5px -51px; width: 50px; height: 50px; background-color: white; position: relative; cursor: pointer; border-radius: 5px 5px 5px 5px; border: 2px solid black; box-shadow: 1px 1px 1px black; left: 50px; top: 50px;}
+        #top_menu>ul{width: 100%; position: relative;}
+        #top_menu>ul:hover{background: white; box-shadow:1px 1px 6px #000;}
+        #top_menu>ul:after{content: ""; display: block; clear: both;}
+        #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 6%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
+        #menu1{margin-left: 20%;}
+        #top_menu>ul>li:hover{background: #eee; color: #001489; font-weight: bold;}
+        #top_menu>ul>li:hover ul.sub{background: #eee;}
+        #top_menu>ul>li>span{width: 30px; height: 14px; background: url(img/arrow01_blue.png)no-repeat 0px 15px; line-height: 10px; margin: 0 auto; display: block;}
+        #top_menu>ul>li:hover span{width: 30px; height: 14px; display: block; margin: 0 auto; transition: 0.5s; background: url(img/arrow01_blue.png)no-repeat 0px 0px; display: block;}
+        ul.sub{width: 100%; height: 250px; position: relative; left: 0;}
+        ul.sub>li{width: 100%; _float: left; font-size: 0.8em; _line-height: 20px; }
+        ul.sub:after{content: ""; display: block; clear: both;}
+        ul.sub>li:hover{background: #001489; border-radius: 0px 0px 10px 0px;}
+        ul.sub>li:hover a{color: white; text-decoration: underline;}
+        ul.sub>li>a{display: inline; text-align: center; padding: 5px 10px; line-height: 50px;}
+        
+        #search{position: absolute; right: 25%; font-size: 20px; float: left; text-align: center; width: 5%; line-height: 50px; color: black; cursor: pointer;}
+        #search_action{position: absolute; top: 0px; width: 20%; height: 50px; left: 50%;}
+        #search_action>input{width: 100%; height: 50px; position: relative; font-size: 16px; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: 3px solid #001489; left: 50%; transform: translateX(-50%);}
+        #login{position: absolute; right: 21%; font-size: 1.3em; float: left; text-align: center; width: 5%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
+        #login:after{content: ""; position: absolute; border-bottom: 3px solid #001489; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+        #login:hover:after{width: 60%;}
+        #login:hover{color: darkblue;}
+        #join{position: absolute; right: 15%; font-size: 1.3em; float: left; text-align: center; width: 6%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
+        #join:after{content: ""; position: absolute; border-bottom: 3px solid #001489; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
+        #join:hover:after{width: 100%;}
+        #join:hover{color: darkblue;}
+        
+/*        본문*/
+        section{
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+            background-color: white;
+        }
+        section>div{
+            float: left;
+        }
+        section #news_tt{
+            width: 50%;
+            height: 100px;
+        }
+        section #news_tt span{
+            font-size: 5em;
+            font-weight: bold;
+            color: #140a47;
+        }
+        #news_sl{
+            width: 50%;
+            height: 100px;
+            position: absolute;
+            right: 0px;
+        }
+        .sl_box{
+            width: 33%;
+            height: 100%;
+            color: blue;
+            font-size: 1.8em;
+            text-indent: 40%;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0.5px solid #001489;
+            background-color: rgb(0,0,0,0)
+        }
+        .sl_box option{
+            margin-top: 10px;
+        }
+        #news{
+            width: 100%;
+            height: ;
+            margin-top: 50px;
+            position: relative;
+            background-color: #fff;
+        }
+        .news_content_01{
+            width: 45%;
+            background: url(news_img/pulisic-GettyImages-1064033978.jpg)no-repeat;
+            background-size: cover;
+        }
+        .news_content_01 a{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <nav id="top_menu">
+                <div><a id="logo" href="#a"></a></div>
+                <div id="top_menu_bar">
+                    <ul>
+                        <li><a href="#a">첼시에 대해</a></li>
+                        <li><a href="#a">스템포드 브릿지</a></li>
+                        <li><a href="#a">커뮤니티</a></li>
+                        <li><a href="#a">팬</a></li>
+                    </ul>
+                </div>
+                <div><a id="nike" href="#a"></a></div>
+                <div><a id="yoko" href="#a"></a></div>
+                <div><a id="carabao" href="#a"></a></div>
+                <ul>
+                    <div id="menu_btn"></div>
+                    <li id="menu1">뉴스
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">최신 뉴스</a></li>
+                            <li><a href="#a">블로그</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li id="menu2">영상
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">최신 영상</a></li>
+                            <li><a href="#a">첼시TV</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li id="menu3">경기
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">경기 일정</a></li>
+                            <li><a href="#a">결과</a></li>
+                            <li><a href="#a">리그 테이블</a></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li id="menu4">첼시의 팀
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">퍼스트 팀</a></li>
+                            <li><a href="#a">아카데미</a></li>
+                            <li><a href="#a">레이디스</a></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li id="menu5">쇼핑<i class="fas fa-shopping-cart"></i>
+                        <div class="menu_img"></div>
+                        <span></span>
+                        <ul class="sub" style="">
+                            <li><a href="#a">축구 유니폼</a></li>
+                            <li><a href="#a">트레이닝</a></li>
+                            <li><a href="#a">의류</a></li>
+                            <li><a href="#a">레트로</a></li>
+                            <li><a href="#a">클리어런스</a></li>
+                        </ul>
+                    </li>
+                   
+                    <div id="search"><i class="fas fa-search"></i></div>
+                    <div id="login">로그인</div>
+                    <div id="join">등록해주세요</div>
+                    <div id="search_action">
+                        <input type="text" value="검색">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div id="news_tt"><span>뉴스</span></div>
+        <div id="news_sl">
+            <select class="sl_box" name="" id="">
+                <option value="">전체 팀</option>
+                <option value="">첼시 맨스</option>
+                <option value="">Academy</option>
+                <option value="">우먼</option>
+            </select>
+            <select class="sl_box" name="" id="">
+                <option value="">전체 종류</option>
+                <option value="">분석</option>
+                <option value="">블로그</option>
+                <option value="">첼시 파운데이션</option>
+                <option value="">구단 파트너</option>
+                <option value="">구단 성명서</option>
+                <option value="">이벤트</option>
+                <option value="">구단의 역사</option>
+                <option value="">A매치</option>
+                <option value="">인터뷰</option>
+                <option value="">매치 프리뷰</option>
+                <option value="">매치 리포트</option>
+                <option value="">임대 중인 블루스</option>
+                <option value="">스탬포드 브릿지</option>
+                <option value="">티켓</option>
+                <option value="">뉴스</option>
+            </select>
+            <select class="sl_box" name="" id="">
+                <option value="">전체</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+                <option value="">2017</option>
+                <option value="">2016</option>
+                <option value="">2015</option>
+                <option value="">2014</option>
+                <option value="">2012</option>
+                <option value="">2011</option>
+                <option value="">2010</option>
+            </select>
+        </div>
+        <div id="news">
+            <ul class="news_content_01">
+                <a href="#a">
+                    <span>뉴스</span>
+                    <div>미국이 에콰도르를 상대로 거둔 승리를 도운 크리스티안 풀리시치</div>
+                    <span>3 시간 전</span>
+                </a>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
