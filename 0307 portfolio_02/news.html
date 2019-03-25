@@ -139,6 +139,22 @@
                     $('#sm_2').hide();
             });
         });
+        
+//        border 효과
+        $(document).ready(function() {
+
+		$('.textbox').mouseenter(function() {
+			  $(this).removeClass('active');
+			  setTimeout(function(){
+			    $(this).addClass('temp');
+			  },500);
+		});
+		$('.textbox').mouseleave(function() {
+			$(this).addClass('active');
+			$(this).removeClass('temp');
+		});
+
+	});	
 
     </script>
     <style>
@@ -344,11 +360,196 @@
             overflow: hidden;
         }
         
+/*        border 효과*/
+        @keyframes bottomright {
+          0% {
+            width: 0;
+            height: 0;
+            padding-top: 0;
+            visibility: visible;
+          }
+          25% {
+            width: 100%;
+            height: 0;
+            padding-top: 0;
+            visibility: visible;
+          }
+          50% {
+            height: 100%;
+            width: 100%;
+            visibility: visible;
+          }
+          75% {
+            visibility: visible;
+          }
+          100% {
+            visibility: visible;
+          }
+        }
+
+        @keyframes revbottomright {
+          0% {
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+          }
+          25% {
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+          }
+          50% {
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+          }
+          75% {
+            width: 100%;
+            height: 0;
+            padding-top: 0;
+            visibility: visible;
+          }
+          100% {
+            width: 0;
+            height: 0;
+            padding-top: 0;
+            visibility: hidden;
+          }
+        }
+
+        @keyframes topleft {
+          0% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+          25% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+          50% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+          75% {
+            width: 100%;
+            height: 0;
+            padding-bottom: 0;
+            visibility: visible;
+          }
+          100% {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        @keyframes revtopleft {
+          0% {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+          }
+          25% {
+            width: 100%;
+            height: 0;
+            padding-bottom: 0;
+            visibility: visible;
+          }
+          50% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+          75% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+          100% {
+            width: 0;
+            height: 0;
+            padding-bottom: 0;
+            visibility: hidden;
+          }
+        }
+        .textbox:hover {
+          color: #333;
+          transition: color 0.75s ease-in-out;
+        }
+
+        .textbox:after {
+          content: "";
+          position: absolute;
+          bottom: -14px;
+          padding-right: 14px;
+          left: -14px;
+          width: 100%;
+          height: 100%;
+          border-bottom: 14px solid #001489;
+          border-right: 14px solid #001489;
+          _visibility: hidden;
+        }
+
+        .textbox:before {
+          content: "";
+          position: absolute;
+          top: -14px;
+          right: -14px;
+          padding-left: 14px;
+          width: 100%;
+          height: 100%;
+          border-top: 14px solid #001489;
+          border-left: 14px solid #001489;
+          _visibility: hidden;
+        }
+
+        .textbox:hover:before {
+          animation: revtopleft 0.5s ease-in-out forwards;
+        }
+
+        .textbox:hover:after {
+          animation: revbottomright 0.5s ease-in-out forwards;
+        }
+
+        .textbox.active:before {
+          animation: topleft 0.5s ease-in-out forwards;
+        }
+
+        .textbox.active:after {
+          animation: bottomright 0.5s ease-in-out forwards;
+        }
+
+        .textbox.active:before,
+        .textbox.active:after {
+          width: 100%;
+          height: 100%;
+          visibility: visible;
+        }
+
+        .textbox.temp:before, .textbox.temp:after {
+          width: 100%;
+          height: 100%;
+          visibility: visible;
+        }
+        
         .textbox{
             width: 24%;
             height: 400px;
             position: relative;
-            border: 14px solid #001489;
+            transition: color 0.75s ease-in-out;
+	        border: 14px solid blue;
+            text-decoration: none;
+	        text-transform: uppercase;
         }
         .textbox span{
             color: black;
