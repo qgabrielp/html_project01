@@ -53,6 +53,19 @@
         
         });  
         
+//        탑 무비
+        $(function(){
+            $("#tm_next").click(function(){
+                $("#top_movie>div").stop().animate({
+                   'left':'-19%',
+                }, 600);
+            });
+            $("#tm_prev").click(function(){
+                $("#top_movie>div").stop().animate({
+                   'left':'0%',
+                }, 600);
+            });
+        });
 //        <---페이지4 하단 슬라이드업메뉴--->
         $(function() {
             $('#page4_bot_slide_menu_01').click(
@@ -140,21 +153,7 @@
             });
         });
         
-//        border 효과
-        $(document).ready(function() {
 
-		$('.textbox').mouseenter(function() {
-			  $(this).removeClass('active');
-			  setTimeout(function(){
-			    $(this).addClass('temp');
-			  },500);
-		});
-		$('.textbox').mouseleave(function() {
-			$(this).addClass('active');
-			$(this).removeClass('temp');
-		});
-
-	});	
 
     </script>
     <style>
@@ -164,7 +163,7 @@
             height: 100%;
         }
 */
-        body{background-color: #ebe6df}
+        body{background-color: white;}
         /*        헤더*/
         header{width: 100%; height: 115px; position: relative;}
         
@@ -221,73 +220,53 @@
         
 /*        본문*/
         section{
-            width: 70%;
-            height: 100%;
-            margin: 0 auto;
-            position: relative;
-        }
-        section>div{
-            float: left;
-        }
-        section #news_tt{
-            width: 50%;
-            height: 100px;
-        }
-        section #news_tt span{
-            font-size: 5em;
-            font-weight: bold;
-            color: #140a47;
-        }
-        #news_sl{
-            width: 50%;
-            height: 100px;
-            position: absolute;
-            right: 0px;
-        }
-        .sl_box{
-            width: 32%;
-            height: 100%;
-            color: blue;
-            font-size: 1.8em;
-            text-indent: 40%;
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            border-bottom: 0.5px solid #001489;
-            background-color: rgb(0,0,0,0)
-        }
-        .sl_box option{
-            margin-top: 10px;
-        }
-        #news{
             width: 100%;
-            height: 100%;
-            margin-top: 50px;
+        }
+        
+        #top_movie{
+            width: 100%;
+            height: 800px;
+            background: url(movie_img/top_bg.jpg)no-repeat;
+            background-size: cover;
             position: relative;
+            overflow: hidden;
+        }
+        #top_movie>div{
+            width: 115%;
+            height: 70%;
+            position: absolute;
+            bottom: 0px;
+            margin: 2%;
             
         }
-        #news>div{
+        #top_movie>div>ul{
+            width: 25%;
+            height: 100%;
+            position: relative;
             float: left;
-            margin: 0.66%;
-        }        
-        .news_content{
-            width: 100%;
-            height: 100%;
+            border: 1px solid #000;
+            overflow: hidden;
         }
-        .news_content a{
+        #top_movie>div>ul>li{
             width: 100%;
             height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: block;
+            background: rgb(0,0,0,0.2);
         }
-        .news_content a img{
+        #top_movie>div>ul:hover img{
+            transform: scale(1.1);
+            transition: all 0.6s;
+        }
+        #top_movie>div>ul>img{
             width: 100%;
             height: 100%;
+            background-size: 100% 100%;
+            position: absolute;
         }
-        .news_content a img:hover{
-            transform: scale(1.1);
-            transition: 0.6s;
-        }
-        .news_content h4{
+        #top_movie>div>ul>h4{
             padding-left: 1%;
             padding-right: 1%;
             font-size: 0.8em;
@@ -299,374 +278,70 @@
             left: 0;
             margin: 10px;
         }
-        .news_content div{
+        #top_movie>div>ul>div{
             width: 90%;
             height: 2.8em;
-            font-size: 2.2em;
+            font-size: 2.8em;
             text-align: center;
             color: white;
             position: absolute;
-            bottom: 10%;
+            bottom: 0;
             left: 5%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: normal;
             line-height: 1.4;
         }
-        .news_content span{
+        #top_movie>div>ul>span{
+            width: 60px;
+            height: 60px;
             position: absolute;
-            bottom: 5%;
-            left: 5%;
+            display: block;
+            bottom: 0%;
+            right: 0%;
             color: white;
-            font-size: 0.9em;
+            font-size: 3.0em;
+            text-align: center;
             font-weight: 900;
+            background-color: blue;
+            cursor: pointer;
         }
-        .news_content h5{
-            width: 90%;
-            height: 5.6em;
+        #top_movie>div>ul>span:hover{
+            background-color: #001489;
+        }
+        #tm_next{
+            width: 50px;
+            height: 50px;
             position: absolute;
-            display: inline-block;
-            top: 10%;
-            left: 5%;
-            font-size: 2.2em;
-            font-weight: 100;
-            color: #001489;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: normal;
-            line-height: 1.4;
+            top: 40%;
+            right: 0;
+            cursor: pointer;
+            display: block;
         }
-        .news_content p{
-            width: 90%;
-            height: 5.2em;
+        #tm_prev{
+            width: 50px;
+            height: 50px;
             position: absolute;
-            display: inline-block;
-            top: 50%;
-            left: 5%;
-            font-size: 1.45em;
-            font-weight: 100;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            word-wrap: break-word;
-            white-space: normal;
-            line-height: 1.3;
+            top: 40%;
+            left: 0;
+            cursor: pointer;
         }
         
-/*        개별박스*/
-        .imgbox1{
-            width: 48%;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-        }
         
-/*        border 효과*/
-        @keyframes bottomright {
-          0% {
-            width: 0;
-            height: 0;
-            padding-top: 0;
-            visibility: visible;
-          }
-          25% {
-            width: 100%;
-            height: 0;
-            padding-top: 0;
-            visibility: visible;
-          }
-          50% {
-            height: 100%;
-            width: 100%;
-            visibility: visible;
-          }
-          75% {
-            visibility: visible;
-          }
-          100% {
-            visibility: visible;
-          }
-        }
-
-        @keyframes revbottomright {
-          0% {
-            width: 100%;
-            height: 100%;
-            visibility: visible;
-          }
-          25% {
-            width: 100%;
-            height: 100%;
-            visibility: visible;
-          }
-          50% {
-            width: 100%;
-            height: 100%;
-            visibility: visible;
-          }
-          75% {
-            width: 100%;
-            height: 0;
-            padding-top: 0;
-            visibility: visible;
-          }
-          100% {
-            width: 0;
-            height: 0;
-            padding-top: 0;
-            visibility: hidden;
-          }
-        }
-
-        @keyframes topleft {
-          0% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-          25% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-          50% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-          75% {
-            width: 100%;
-            height: 0;
-            padding-bottom: 0;
-            visibility: visible;
-          }
-          100% {
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            visibility: visible;
-          }
-        }
-
-        @keyframes revtopleft {
-          0% {
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            visibility: visible;
-          }
-          25% {
-            width: 100%;
-            height: 0;
-            padding-bottom: 0;
-            visibility: visible;
-          }
-          50% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-          75% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-          100% {
-            width: 0;
-            height: 0;
-            padding-bottom: 0;
-            visibility: hidden;
-          }
-        }
-        .textbox:hover {
-          color: #333;
-          transition: color 0.75s ease-in-out;
-        }
-
-        .textbox:after {
-          content: "";
-          position: absolute;
-          bottom: -14px;
-          padding-right: 14px;
-          left: -14px;
-          width: 100%;
-          height: 100%;
-          border-bottom: 14px solid #001489;
-          border-right: 14px solid #001489;
-          _visibility: hidden;
-        }
-
-        .textbox:before {
-          content: "";
-          position: absolute;
-          top: -14px;
-          right: -14px;
-          padding-left: 14px;
-          width: 100%;
-          height: 100%;
-          border-top: 14px solid #001489;
-          border-left: 14px solid #001489;
-          _visibility: hidden;
-        }
-
-        .textbox:hover:before {
-          animation: revtopleft 0.5s ease-in-out forwards;
-        }
-
-        .textbox:hover:after {
-          animation: revbottomright 0.5s ease-in-out forwards;
-        }
-
-        .textbox.active:before {
-          animation: topleft 0.5s ease-in-out forwards;
-        }
-
-        .textbox.active:after {
-          animation: bottomright 0.5s ease-in-out forwards;
-        }
-
-        .textbox.active:before,
-        .textbox.active:after {
-          width: 100%;
-          height: 100%;
-          visibility: visible;
-        }
-
-        .textbox.temp:before, .textbox.temp:after {
-          width: 100%;
-          height: 100%;
-          visibility: visible;
-        }
         
-        .textbox{
-            width: 24%;
-            height: 400px;
-            position: relative;
-            transition: color 0.75s ease-in-out;
-	        border: 14px solid blue;
-            text-decoration: none;
-	        text-transform: uppercase;
-        }
-        .textbox span{
-            color: black;
-        }
-        .imgbox2{
-           width: 24%;
-           height: 400px;
-           position: relative;
-           overflow: hidden;
-        }
-        .nb1 img{
-            width: auto;
-            display: block;
-            background: url(news_img/davidluiz-220319.jpg)no-repeat;
-            background-position: 15% 0;
-            background-size: 200% 100%;
-        }
-        .nb2 img{
-            width: auto;
-            display: block;
-            background: url(news_img/willian-2019-DSC_5970.jpg)no-repeat;
-            background-size: cover;
-            background-position: 40% 0;
-        }
-        .nb3 p{
-            top: 30%;
-            height: 6.5em;
-        }
-        .nb4 img{
-            width: auto;
-            display: block;
-            background: url(news_img/willian-210319.jpg)no-repeat;
-            background-size: cover;
-            background-position: 15% 0;
-        }
-        .nb5 img{
-            width: auto;
-            background: url(news_img/hazard-200319.jpg)no-repeat;
-            display: block;
-            background-size: 200% 180%;
-            background-position: 20% 10%;
-        }
-        .nb6 p{
-            top: 35%;
-            height: 7.8em;
-        }
-        .nb7 img{
-            width: auto;
-            background: url(news_img/hazard-1063216756.jpg)no-repeat;
-            display: block;
-            background-size: 100% 100%;
-        }
-        .nb8 img{
-            width: auto;
-            background: url(news_img/Abraham-England-close-up-GettyImages-1060700704.jpg)no-repeat;
-            display: block;
-            background-size: 100% 100%;
-        }
-        .nb9 img{
-            width: auto;
-            background: url(news_img/willian-2018-DSC_5614.jpg)no-repeat;
-            display: block;
-            background-size: 200% 100%;
-            background-position: 40% 0;
-        }
-        .nb10 img{
-            width: auto;
-            background: url(news_img/transparent-club_badge_crest.jpg)no-repeat;
-            display: block;
-            background-size: 200% 100%;
-            background-position: 50% -20px;
-            background-color: rgb(164, 166, 168,0.5);
-        }
-        .nb11 img{
-            width: auto;
-            background: url(news_img/rudiger-everton-away.jpg)no-repeat;
-            display: block;
-            background-size: 100% 100%;
-        }
-        .nb12 img{
-            width: auto;
-            background: url(news_img/)no-repeat;
-            display: block;
-            background-size: 200% 100%;
-            background-position: 40% 0;
-        }
         
-        #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-        }
-        #morenews>ul{
-            width: 15%; 
-            height: 100%; 
-            margin: 0 auto; 
-            border: 0.5px solid #001489;
-        }
-        #morenews>ul>li{
-            font-size: 22px; 
-            line-height: 50px; 
-            color: #0033ff; 
-            font-weight: 600;
-        }
-        #morenews>ul>li:hover{
-            background-color: #0033ff; 
-            color: white; 
-            transition: 0.6s;
-        }
-        #morenews>ul>li>a{
-            display: block;
-        }
-        #morenews>ul>li:hover a{
-            color: white;
-        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         #page4{
             width: 100%;
@@ -1425,232 +1100,42 @@
         </div>
     </header>
     <section>
-        <div id="news_tt"><span>뉴스</span></div>
-        <div id="news_sl">
-            <select class="sl_box" name="" id="">
-                <option value="">전체 팀</option>
-                <option value="">첼시 맨스</option>
-                <option value="">Academy</option>
-                <option value="">우먼</option>
-            </select>
-            <select class="sl_box" name="" id="">
-                <option value="">전체 종류</option>
-                <option value="">분석</option>
-                <option value="">블로그</option>
-                <option value="">첼시 파운데이션</option>
-                <option value="">구단 파트너</option>
-                <option value="">구단 성명서</option>
-                <option value="">이벤트</option>
-                <option value="">구단의 역사</option>
-                <option value="">A매치</option>
-                <option value="">인터뷰</option>
-                <option value="">매치 프리뷰</option>
-                <option value="">매치 리포트</option>
-                <option value="">임대 중인 블루스</option>
-                <option value="">스탬포드 브릿지</option>
-                <option value="">티켓</option>
-                <option value="">뉴스</option>
-            </select>
-            <select class="sl_box" name="" id="">
-                <option value="">전체</option>
-                <option value="">2019</option>
-                <option value="">2018</option>
-                <option value="">2017</option>
-                <option value="">2016</option>
-                <option value="">2015</option>
-                <option value="">2014</option>
-                <option value="">2012</option>
-                <option value="">2011</option>
-                <option value="">2010</option>
-            </select>
-        </div>
-        <div id="news">
-            <div class="imgbox1">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="news_img/pulisic-GettyImages-1064033978.jpg" style="background-size: cover" alt="">
-                    <h4>뉴스</h4>
-                    <div>미국이 에콰도르를 상대로 거둔 승리를 도운 크리스티안 풀리시치</div>
-                    <span>3 시간 전</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>A매치</h4>
-                    <h5>벨기에의 승리를 이끈 에당 아자르; 마테오 코바시치, A매치 50경기 출전</h5>
-                    <p>유로 2020 대회를 위한 예선 캠페인이 시작된 가운데 오늘의 A매치 일정에 참여한 블루스 선수들이 득점에 성공하고 새로운 기록을 달성했다. </p>
-                    <span>8 시간 전</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb1">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>미디어 워치: 다비드 루이스의 화려한 프로포즈, 칼럼 허드슨-오도이를 선발명단에 올릴 마음이 있는 가레스 사우스게이트</div>
-                    <span>2019/03/22</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb2">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>윌리안 – 런던에서 꿈을 이루기 – 2부</div>
-                    <span>2019/03/22</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox1">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="news_img/madrid_legends_launch_2.jpg" style="background-size: cover" alt="">
-                    <h4>뉴스</h4>
-                    <div>레알 마드리드와의 만남을 위해 스페인을 방문하게 된 첼시 레전드</div>
-                    <span>2019/03/21</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox nb3">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>블로그</h4>
-                    <h5>첼시의 아시아 방문</h5>
-                    <p>첼시가 아시아를 다시 방문해 현지 팀을 상대하게 됐다는 소식이 발표된 가운데 블루스가 과거 그곳에서 치른 비숫한 경기에 대해 알아봤다.</p>
-                    <span>2019/03/21</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb4">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>미디어 워치: 첼시에서 머물기를 원하는 윌리안, 모교를 방문한 허드슨-오도이, 미국 A매치 경기에 출전할 준비가 된 크리스티안 풀리시치</div>
-                    <span>2019/03/18</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>A매치</h4>
-                    <h5>독일이 세르비아를 상대로 무승부를 거둔 경기를 위해 벤치에 오른 뤼디거</h5>
-                    <p>안토니오 뤼디거가 벤치에 오른 경기에서 독일이 세르비아를 상대로 1-1 무승부를 거뒀다.</p>
-                    <span>2019/03/17</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox1">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="news_img/euro-2020-trophy-view-european-championships.jpg" style="background-size: cover" alt="">
-                    <h4>A매치</h4>
-                    <div>유로 2020 - 예선 캠페인</div>
-                    <span>2019/03/17</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>뉴스</h4>
-                    <h5>7월에 일본 챔피언을 만나게 된 첼시</h5>
-                    <p>첼시가 올 여름 일본을 방문하게 됐고, 일본에서 만나게 된 상대가 확정됐다!</p>
-                    <span>2019/03/15</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox1 nb5">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>미디어 워치: 첼시에 완전히 집중하고있는 에당 아자르, 칼럼 허드슨-오도이의 잉글랜드 대표팀 합류에 대한 생각을 전한 해리 케인</div>
-                    <span>2019/03/13</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox nb6">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>뉴스</h4>
-                    <h5>브라이튼전을 위한 새로운 일정 발표</h5>
-                    <p>첼시가 스탬포드 브릿지에서 브라이튼 앤 호브 알비온을 상대로 치르는 프리미어리그 경기의 일정이 발표됐고, 경기는 한국시간으로 4월 4일 목요일 오전 4시 45분에 시작된다.</p>
-                    <span>2019/03/13</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox1 nb7">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>A매치</h4>
-                    <div>A매치 일정에 나서는 블루스</div>
-                    <span>2019/03/13</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb8">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>허드슨-오도이가 잉글랜드 대표팀의 부름을 받은 것과 자신의 미래에 대한 생각을 전한 태미 아브라함</div>
-                    <span>2019/03/10</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb9">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>뉴스</h4>
-                    <div>윌리안 – 런던에서 꿈을 이루기 – 1부</div>
-                    <span>2019/03/10</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="textbox">
-                <ul class="news_content">
-                    <a href="#a">
-                    <h4>뉴스</h4>
-                    <h5>미디어 워치: 올 여름 칼럼 허드슨-오도이의 합류를 원하는 잉글랜드 U-21팀의 보스, 마리오 발로텔리의 이적에 대한 조언을 한 디디에 드로그바, 아스톤 빌라의 수비수가 칭찬한 존 테리의 영향력</h5>
-                    <p>미디어에서 보도된 첼시 관련 소식을 확인해본 결과 아이디 부스로이드는 칼럼 허드슨-오도이를 올 여름 U-21 챔피언십에 출전시키기를 원한다는 것과 마리오 발로텔리에게 여름에 마르세유로 이적할 것을 조언해준 드로그바 그리고 자신이 새롭게 맡게 된 수비 포지션에 대해 존 테리의 결정이라고 한 코트니 허스의 소식을 확인할 수 있었다.</p>
-                    <span>2019/03/09</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox2 nb10">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>구단 성명서</h4>
-                    <div>키예프 사건에 대한 구단 성명서</div>
-                    <span>2019/03/08</span>
-                    </a>
-                </ul>
-            </div>
-            <div class="imgbox1 nb11">
-                <ul class="news_content">
-                    <a href="#a">
-                    <img src="" alt="">
-                    <h4>분석</h4>
-                    <div>에버튼을 상대로 거둔 패배와 첼시가 후반전에 접근한 방식에 대해 이야기한 토니 뤼디거</div>
-                    <span>2019/03/08</span>
-                    </a>
-                </ul>
-            </div>
-            <div id="morenews">
+        <div id="top_movie">
+            <div>
                 <ul>
-                    <li><a href="#a">더 보기</a></li>
+                    <img src="movie_img/tm_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul>
+                    <img src="movie_img/tm_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>뉴스</h4>
+                    <div>일본을 다시 방문하게 된 첼시</div>
+                    <span>▶</span>
+                </ul>
+                <ul>
+                    <img src="movie_img/tm_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>에버튼 (A) PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul>
+                    <img src="movie_img/tm_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>뉴스</h4>
+                    <div>아자르의 골로 거둔 무승부 | 처음보는 첼시</div>
+                    <span>▶</span>
                 </ul>
             </div>
-            <div class="section pages" id="page4" data-anchor="4st">
+        </div>
+        <div id="tm_next"><img src="img/next_arrow_img.png" alt=""></div>
+        <div id="tm_prev"><img src="img/prev_arrow_img.png" alt=""></div> 
+    </section>
+    <footer class="section pages" id="page4" data-anchor="4st">
             <div id="page4_top">
                 <div id="page4_top_section">
                     <div id="page4_top_section_01" class="wow rollIn" data-wow-delay = "0.5s">
@@ -1729,10 +1214,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-        
-    </section>
+        </footer>
 </body>
 </html>
 
