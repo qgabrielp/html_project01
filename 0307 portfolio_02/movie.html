@@ -55,17 +55,43 @@
         
 //        탑 무비
         $(function(){
+            var tml = $("#top_movie>div");
+            $("#tm_prev").hide();
             $("#tm_next").click(function(){
-                $("#top_movie>div").stop().animate({
+                $(tml).stop().animate({
                    'left':'-19%',
                 }, 600);
+                $("#tm_prev").show();
             });
             $("#tm_prev").click(function(){
-                $("#top_movie>div").stop().animate({
-                   'left':'0%',
+                $(tml).stop().animate({
+                   'left':'0',
                 }, 600);
+                $("#tm_prev").hide();
             });
         });
+        
+//        미드 무비
+        $(function(){
+            var mml = $(".mm_section");
+            $("#mm_prev").hide();
+            $("#mm_next").click(function(){
+                $(mml).stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $("#mm_prev").show();
+                $("#mm_next").hide();
+            });
+            $("#mm_prev").click(function(){
+                $(mml).stop().animate({
+                   'left':'0',
+                }, 600);
+                $("#mm_prev").hide();
+                $("#mm_next").show();
+            });
+        });
+        
+        
 //        <---페이지4 하단 슬라이드업메뉴--->
         $(function() {
             $('#page4_bot_slide_menu_01').click(
@@ -161,9 +187,9 @@
             width: 100%;
 /*            height: 100%;*/
         }
-        body{background-color: white;}
+        body{background-color: #ebe6df;}
         /*        헤더*/
-        header{width: 100%; height: 115px; position: relative;}
+        header{width: 100%; height: 115px; position: fixed; top: 0; left: 0; z-index: 10;}
         
 /*        탑메뉴*/
         #top_menu{width: 100%; height: 50px; position: absolute; z-index: 2; background: #fff; _box-shadow:1px 1px 6px #000; background: #001489;}
@@ -188,7 +214,7 @@
     
 /*        탑메뉴 서브메뉴*/
         #menu_btn{display: none; background: url(img/arrow02.png)no-repeat; background-position: -0.5px -51px; width: 50px; height: 50px; background-color: white; position: relative; cursor: pointer; border-radius: 5px 5px 5px 5px; border: 2px solid black; box-shadow: 1px 1px 1px black; left: 50px; top: 50px;}
-        #top_menu>ul{width: 100%; position: relative;}
+        #top_menu>ul{width: 100%; position: relative; box-shadow:1px 1px 6px #000; background-color: #fff;}
         #top_menu>ul:hover{background: white; box-shadow:1px 1px 6px #000;}
         #top_menu>ul:after{content: ""; display: block; clear: both;}
         #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 6%; line-height: 50px; color: black; font-weight: bold; cursor: pointer;}
@@ -238,33 +264,34 @@
             
         }
         #top_movie>div>ul{
-            width: 25%;
+            width: 24.7%;
             height: 100%;
             position: relative;
             float: left;
-            border: 1px solid #000;
+            margin: 0.1%;
             overflow: hidden;
+            cursor: pointer;
         }
-        #top_movie>div>ul>li{
+        .movie_box>li{
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
             display: block;
-            background: rgb(0,0,0,0.2);
+            background: rgb(0,0,0,0.4);
         }
-        #top_movie>div>ul:hover img{
+        .movie_box:hover img{
             transform: scale(1.1);
             transition: all 0.6s;
         }
-        #top_movie>div>ul>img{
+        .movie_box>img{
             width: 100%;
             height: 100%;
             background-size: 100% 100%;
             position: absolute;
         }
-        #top_movie>div>ul>h4{
+        .movie_box>h4{
             padding-left: 1%;
             padding-right: 1%;
             font-size: 0.8em;
@@ -276,7 +303,7 @@
             left: 0;
             margin: 10px;
         }
-        #top_movie>div>ul>div{
+        .movie_box>div{
             width: 90%;
             height: 2.8em;
             font-size: 2.8em;
@@ -290,43 +317,45 @@
             white-space: normal;
             line-height: 1.4;
         }
-        #top_movie>div>ul>span{
-            width: 60px;
-            height: 60px;
+        .movie_box>span{
+            width: 50px;
+            height: 50px;
             position: absolute;
             display: block;
             bottom: 0%;
             right: 0%;
             color: white;
-            font-size: 3.0em;
+            font-size: 2.6em;
             text-align: center;
             font-weight: 900;
             background-color: blue;
             cursor: pointer;
         }
-        #top_movie>div>ul>span:hover{
+        .movie_box:hover span{
             background-color: #001489;
         }
         #tm_next{
             width: 50px;
             height: 50px;
             position: absolute;
-            top: 40%;
+            top: 50%;
             right: 0;
             cursor: pointer;
             display: block;
+            transform: translateY(-50%);
         }
         #tm_prev{
             width: 50px;
             height: 50px;
             position: absolute;
-            top: 40%;
+            top: 50%;
             left: 0;
             cursor: pointer;
+            transform: translateY(-50%);
         }
         #mid_movie{
-            width: 70%;
-            height: 600px;
+            width: 80%;
+            height: 200px;
             margin: 0 auto;
             position: relative;
         }
@@ -366,9 +395,71 @@
             margin-top: 10px;
         }
         
-        
-        
-        
+        #mid_movie_wrap{
+            width: 80%;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        #mm_01{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .mm_section{
+            width: 200%;
+            height: 100%;
+            position: absolute;   
+        }
+        .movie_box{
+            width: 11.5%;
+            height: 99%;
+            position: relative;
+            float: left;
+            margin: 0.05%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #mm_next{
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 50%;
+            right: -1.5%;
+            cursor: pointer;
+            display: block;
+            transform: translateY(-50%);
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2.5;
+            color: blue;
+            background-color: #fff;
+            border: 0.5px solid #140a47;
+        }
+        #mm_prev{
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 50%;
+            left: -1.5%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2.5;
+            color: blue;
+            background-color: #fff;
+            border: 0.5px solid #140a47;
+        }
+        #mm_next:hover{
+            border: 0.5px solid blue;
+        }
+        #mm_prev:hover{
+            border: 0.5px solid blue;
+        }
         
         
         
@@ -443,12 +534,6 @@
             .wrap{width: 100%; height: 60%; padding-top: 100px;}
             ul.slider>li{position: relative;}
             ul.slider li img{width: 100%; height: 1000px; margin: 0 auto; background-size: cover;}
-            section{
-                width: 80%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
             
             #page4_mid{width: 60%; height: 20%; margin: 0 auto; padding-top: 30px;}
             #page4_mid>div{width: 20%; float: left; text-align: center; font-size: 20px;}
@@ -496,12 +581,6 @@
             #top_menu>ul>li{font-size: 1.4em; float: left; text-align: center; width: 8%; line-height: 50px; color: black; font-weight: bold;}
             #menu1{margin-left: 17%;}
             ul.sub>li{font-size: 0.8em;}
-            section{
-                width: 85%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
             
             
         }
@@ -536,46 +615,7 @@
             .wrap{width: 100%; height: 60%; padding-top: 100px;}
             ul.slider>li{position: relative;}
             ul.slider li img{width: 100%; height: 950px; margin: 0 auto; background-size: cover;}
-            section{
-                width: 90%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
-            .imgbox1, .imgbox2, .textbox{
-                width: 48%;
-            }
-            
-            #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-            }
-            #morenews>ul{
-                width: 35%; 
-                height: 100%; 
-                margin: 0 auto; 
-                border: 0.5px solid #001489;
-            }
-            #morenews>ul>li{
-                font-size: 22px; 
-                line-height: 50px; 
-                color: #0033ff; 
-                font-weight: 600;
-            }
-            #morenews>ul>li:hover{
-                background-color: #0033ff; 
-                color: white; 
-                transition: 0.6s;
-            }
-            #morenews>ul>li>a{
-                display: block;
-            }
-            #morenews>ul>li:hover a{
-                color: white;
-            }
+
             
             #page4_bot_footer{width: 100%; height: 100%; background:url(img/footer_bg2.png); overflow: hidden; z-index: 5; position: relative;}
             #page4_bot_footer_01{width: 100%; height: 30%; padding-top: 20px;}
@@ -628,50 +668,7 @@
             ul.slider li h2,
             ul.slider li p,
             ul.slider>li>.btn_more{width: 100%; height: 100%; position: absolute; margin: 0 auto; color: white; text-align: center; font-size: 1.8em; top: 15%;}
-            section{
-                width: 95%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
-            .imgbox1, .imgbox2, .textbox{
-                width: 48%;
-            }
-            .nb6 p{
-                top: 40%;
-                height: 10.4em;
-            }
-            
-            #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-            }
-            #morenews>ul{
-                width: 35%; 
-                height: 100%; 
-                margin: 0 auto; 
-                border: 0.5px solid #001489;
-            }
-            #morenews>ul>li{
-                font-size: 22px; 
-                line-height: 50px; 
-                color: #0033ff; 
-                font-weight: 600;
-            }
-            #morenews>ul>li:hover{
-                background-color: #0033ff; 
-                color: white; 
-                transition: 0.6s;
-            }
-            #morenews>ul>li>a{
-                display: block;
-            }
-            #morenews>ul>li:hover a{
-                color: white;
-            }
+
             
             #page4_bot_footer{width: 100%; height: 100%; background:url(img/footer_bg2.png); overflow: hidden; z-index: 5; position: relative;}
             #page4_bot_footer_01{width: 100%; height: 30%; padding-top: 20px;}
@@ -724,46 +721,7 @@
             ul.slider li h2,
             ul.slider li p,
             ul.slider>li>.btn_more{width: 100%; height: 100%; position: absolute; margin: 0 auto; color: white; text-align: center; font-size: 1.4em; top: 15%;}
-            section{
-                width: 98%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
-            .imgbox1, .imgbox2, .textbox{
-                width: 97%;
-            }
-            
-            #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-            }
-            #morenews>ul{
-                width: 35%; 
-                height: 100%; 
-                margin: 0 auto; 
-                border: 0.5px solid #001489;
-            }
-            #morenews>ul>li{
-                font-size: 22px; 
-                line-height: 50px; 
-                color: #0033ff; 
-                font-weight: 600;
-            }
-            #morenews>ul>li:hover{
-                background-color: #0033ff; 
-                color: white; 
-                transition: 0.6s;
-            }
-            #morenews>ul>li>a{
-                display: block;
-            }
-            #morenews>ul>li:hover a{
-                color: white;
-            }
+
             
             #page4_top{width: 100%; height: 60%; margin: 0 auto; background: white;}
             #page4_top_section{width: 100%; height: 100%; margin: 0 auto;}
@@ -840,46 +798,7 @@
             #join:after{content: ""; position: absolute; border-bottom: 3px solid #fff; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
             #join:hover:after{width: 100%;}
             #join:hover{color: white;}
-            section{
-                width: 98%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
-            .imgbox1, .imgbox2, .textbox{
-                width: 97%;
-            }
-            
-            #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-            }
-            #morenews>ul{
-                width: 35%; 
-                height: 100%; 
-                margin: 0 auto; 
-                border: 0.5px solid #001489;
-            }
-            #morenews>ul>li{
-                font-size: 22px; 
-                line-height: 50px; 
-                color: #0033ff; 
-                font-weight: 600;
-            }
-            #morenews>ul>li:hover{
-                background-color: #0033ff; 
-                color: white; 
-                transition: 0.6s;
-            }
-            #morenews>ul>li>a{
-                display: block;
-            }
-            #morenews>ul>li:hover a{
-                color: white;
-            }
+
             
             #page4_top{width: 100%; height: 60%; margin: 0 auto; background: white;}
             #page4_top_section{width: 100%; height: 80%; margin: 0 auto;}
@@ -962,47 +881,8 @@
             #join:hover:after{width: 100%;}
             #join:hover{color: white;}
             #side_menu{display: none;}
-            section{
-                width: 98%;
-                margin: 0 auto;
-                position: relative;
-                background-color: white;
-            }
-            .imgbox1, .imgbox2, .textbox{
-                width: 97%;
-            }
             
-            #morenews{
-            width: 100%; 
-            height: 50px; 
-            margin: 0 auto; 
-            text-align: center; 
-            position: relative;
-            }
-            #morenews>ul{
-                width: 35%; 
-                height: 100%; 
-                margin: 0 auto; 
-                border: 0.5px solid #001489;
-            }
-            #morenews>ul>li{
-                font-size: 22px; 
-                line-height: 50px; 
-                color: #0033ff; 
-                font-weight: 600;
-            }
-            #morenews>ul>li:hover{
-                background-color: #0033ff; 
-                color: white; 
-                transition: 0.6s;
-            }
-            #morenews>ul>li>a{
-                display: block;
-            }
-            #morenews>ul>li:hover a{
-                color: white;
-            }
-        
+            
             #page4_top{width: 100%; height: 60%; margin: 0 auto; background: white;}
             #page4_top_section{width: 100%; height: 80%; margin: 0 auto;}
             #page4_top_section:after{content: ""; display: block; clear: both;}
@@ -1055,7 +935,7 @@
     <header>
         <div>
             <nav id="top_menu">
-                <div><a id="logo" href="#a"></a></div>
+                <div><a id="logo" href="index.html"></a></div>
                 <div id="top_menu_bar">
                     <ul>
                         <li><a href="#a">첼시에 대해</a></li>
@@ -1073,7 +953,7 @@
                         <div class="menu_img"></div>
                         <span></span>
                         <ul class="sub" style="">
-                            <li><a href="#a">최신 뉴스</a></li>
+                            <li><a href="news.html">최신 뉴스</a></li>
                             <li><a href="#a">블로그</a></li>
                             <li></li>
                             <li></li>
@@ -1084,7 +964,7 @@
                         <div class="menu_img"></div>
                         <span></span>
                         <ul class="sub" style="">
-                            <li><a href="#a">최신 영상</a></li>
+                            <li><a href="movie.html">최신 영상</a></li>
                             <li><a href="#a">첼시TV</a></li>
                             <li></li>
                             <li></li>
@@ -1139,28 +1019,28 @@
     <section>
         <div id="top_movie">
             <div>
-                <ul>
+                <ul class="movie_box">
                     <img src="movie_img/tm_01.jpg" alt="">
                     <li class="bg"></li>
                     <h4>피쳐</h4>
                     <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
                     <span>▶</span>
                 </ul>
-                <ul>
+                <ul class="movie_box">
                     <img src="movie_img/tm_02.jpg" alt="">
                     <li class="bg"></li>
                     <h4>뉴스</h4>
                     <div>일본을 다시 방문하게 된 첼시</div>
                     <span>▶</span>
                 </ul>
-                <ul>
+                <ul class="movie_box">
                     <img src="movie_img/tm_03.jpg" alt="">
                     <li class="bg"></li>
                     <h4>하이라이트</h4>
                     <div>에버튼 (A) PREM 18/19</div>
                     <span>▶</span>
                 </ul>
-                <ul>
+                <ul class="movie_box">
                     <img src="movie_img/tm_04.jpg" alt="">
                     <li class="bg"></li>
                     <h4>뉴스</h4>
@@ -1174,44 +1054,108 @@
         <div id="mid_movie">
             <div id="news_tt"><span>최신</span></div>
             <div id="news_sl">
-            <select class="sl_box" name="" id="">
-                <option value="">전체 팀</option>
-                <option value="">첼시 맨스</option>
-                <option value="">Academy</option>
-                <option value="">우먼</option>
-            </select>
-            <select class="sl_box" name="" id="">
-                <option value="">전체 종류</option>
-                <option value="">분석</option>
-                <option value="">블로그</option>
-                <option value="">첼시 파운데이션</option>
-                <option value="">구단 파트너</option>
-                <option value="">구단 성명서</option>
-                <option value="">이벤트</option>
-                <option value="">구단의 역사</option>
-                <option value="">A매치</option>
-                <option value="">인터뷰</option>
-                <option value="">매치 프리뷰</option>
-                <option value="">매치 리포트</option>
-                <option value="">임대 중인 블루스</option>
-                <option value="">스탬포드 브릿지</option>
-                <option value="">티켓</option>
-                <option value="">뉴스</option>
-            </select>
-            <select class="sl_box" name="" id="">
-                <option value="">전체</option>
-                <option value="">2019</option>
-                <option value="">2018</option>
-                <option value="">2017</option>
-                <option value="">2016</option>
-                <option value="">2015</option>
-                <option value="">2014</option>
-                <option value="">2012</option>
-                <option value="">2011</option>
-                <option value="">2010</option>
-            </select>
+                <select class="sl_box" name="" id="">
+                    <option value="">전체 팀</option>
+                    <option value="">첼시 맨스</option>
+                    <option value="">Academy</option>
+                    <option value="">우먼</option>
+                </select>
+                <select class="sl_box" name="" id="">
+                    <option value="">전체 종류</option>
+                    <option value="">분석</option>
+                    <option value="">블로그</option>
+                    <option value="">첼시 파운데이션</option>
+                    <option value="">구단 파트너</option>
+                    <option value="">구단 성명서</option>
+                    <option value="">이벤트</option>
+                    <option value="">구단의 역사</option>
+                    <option value="">A매치</option>
+                    <option value="">인터뷰</option>
+                    <option value="">매치 프리뷰</option>
+                    <option value="">매치 리포트</option>
+                    <option value="">임대 중인 블루스</option>
+                    <option value="">스탬포드 브릿지</option>
+                    <option value="">티켓</option>
+                    <option value="">뉴스</option>
+                </select>
+                <select class="sl_box" name="" id="">
+                    <option value="">전체</option>
+                    <option value="">2019</option>
+                    <option value="">2018</option>
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                    <option value="">2014</option>
+                    <option value="">2012</option>
+                    <option value="">2011</option>
+                    <option value="">2010</option>
+                </select>
+            </div>
         </div>
-        </div> 
+        <div id="mid_movie_wrap">
+            <div id="mm_01">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_01_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div id="mm_next">〉</div>
+            <div id="mm_prev">〈</div>
+        </div>
     </section>
     <footer class="section pages" id="page4" data-anchor="4st">
             <div id="page4_top">
