@@ -37,9 +37,10 @@
              $("#search").click(function(){
                  $("#search_action").toggle();
              });
-             $("").click(function(){
+             $("section").click(function(){
                 $("#top_menu>ul>li>ul").stop().slideUp(500);
                 $("#search_action").hide(500);
+                $("#top_menu>ul").removeClass("bg");
              });
 //            $("#menu_btn").click(function(){
 //                $("#top_menu>ul>li").toggle(500);
