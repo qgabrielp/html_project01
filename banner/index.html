@@ -24,7 +24,7 @@
             $(".banner>ul").css("width",wrapWidth*liCount);
             
             $(window).resize(function(){
-                wrapWidth = $(window).outerWidth();
+//                wrapWidth = $(window).outerWidth();
                 $(".banner>ul>li").css("width",wrapWidth);
                 $(".banner>ul").css("width",wrapWidth*liCount);
                 $(".banner>ul").css({left:current*wrapWidth*-1})
