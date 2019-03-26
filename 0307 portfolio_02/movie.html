@@ -73,21 +73,139 @@
         
 //        미드 무비
         $(function(){
-            var mml = $(".mm_section");
-            $("#mm_prev").hide();
-            $("#mm_next").click(function(){
-                $(mml).stop().animate({
+            $(".mp_01").hide();
+            $(".mn_01").click(function(){
+                $("#mm_01>.mm_section").stop().animate({
                    'left':'-90%',
                 }, 600);
-                $("#mm_prev").show();
-                $("#mm_next").hide();
+                $(".mp_01").show();
+                $(".mn_01").hide();
             });
-            $("#mm_prev").click(function(){
-                $(mml).stop().animate({
+            $(".mp_01").click(function(){
+                $("#mm_01>.mm_section").stop().animate({
                    'left':'0',
                 }, 600);
-                $("#mm_prev").hide();
-                $("#mm_next").show();
+                $(".mp_01").hide();
+                $(".mn_01").show();
+            });
+        });
+        $(function(){
+            $(".mp_02").hide();
+            $(".mn_02").click(function(){
+                $("#mm_02>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_02").show();
+                $(".mn_02").hide();
+            });
+            $(".mp_02").click(function(){
+                $("#mm_02>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_02").hide();
+                $(".mn_02").show();
+            });
+        });
+        $(function(){
+            $(".mp_03").hide();
+            $(".mn_03").click(function(){
+                $("#mm_03>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_03").show();
+                $(".mn_03").hide();
+            });
+            $(".mp_03").click(function(){
+                $("#mm_03>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_03").hide();
+                $(".mn_03").show();
+            });
+        });
+        $(function(){
+            $(".mp_04").hide();
+            $(".mn_04").click(function(){
+                $("#mm_04>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_04").show();
+                $(".mn_04").hide();
+            });
+            $(".mp_04").click(function(){
+                $("#mm_04>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_04").hide();
+                $(".mn_04").show();
+            });
+        });
+        $(function(){
+            $(".mp_05").hide();
+            $(".mn_05").click(function(){
+                $("#mm_05>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_05").show();
+                $(".mn_05").hide();
+            });
+            $(".mp_05").click(function(){
+                $("#mm_05>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_05").hide();
+                $(".mn_05").show();
+            });
+        });
+        $(function(){
+            $(".mp_06").hide();
+            $(".mn_06").click(function(){
+                $("#mm_06>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_06").show();
+                $(".mn_06").hide();
+            });
+            $(".mp_06").click(function(){
+                $("#mm_06>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_06").hide();
+                $(".mn_06").show();
+            });
+        });
+        $(function(){
+            $(".mp_07").hide();
+            $(".mn_07").click(function(){
+                $("#mm_07>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_07").show();
+                $(".mn_07").hide();
+            });
+            $(".mp_07").click(function(){
+                $("#mm_07>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_07").hide();
+                $(".mn_07").show();
+            });
+        });
+        $(function(){
+            $(".mp_08").hide();
+            $(".mn_08").click(function(){
+                $("#mm_08>.mm_section").stop().animate({
+                   'left':'-90%',
+                }, 600);
+                $(".mp_08").show();
+                $(".mn_08").hide();
+            });
+            $(".mp_08").click(function(){
+                $("#mm_08>.mm_section").stop().animate({
+                   'left':'0',
+                }, 600);
+                $(".mp_08").hide();
+                $(".mn_08").show();
             });
         });
         
@@ -97,6 +215,7 @@
             $('#page4_bot_slide_menu_01').click(
                 function () {
                     var $this = $(this);
+                    $('#sm_1').show();
                     $('#sm_1').stop().animate({
                             'bottom':'450px',
                             'opacity':'1',
@@ -294,7 +413,7 @@
         .movie_box>h4{
             padding-left: 1%;
             padding-right: 1%;
-            font-size: 0.8em;
+            font-size: 0.5vw;
             text-align: center;
             color: white;
             background-color: blue;
@@ -306,7 +425,7 @@
         .movie_box>div{
             width: 90%;
             height: 2.8em;
-            font-size: 2.8em;
+            font-size: 1.4vw;
             text-align: center;
             color: white;
             position: absolute;
@@ -315,7 +434,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: normal;
-            line-height: 1.4;
+            line-height: 150%;
         }
         .movie_box>span{
             width: 50px;
@@ -338,20 +457,20 @@
             width: 50px;
             height: 50px;
             position: absolute;
-            top: 50%;
+            top: 30%;
             right: 0;
             cursor: pointer;
             display: block;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
         }
         #tm_prev{
             width: 50px;
             height: 50px;
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 0;
             cursor: pointer;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
         }
         #mid_movie{
             width: 80%;
@@ -362,29 +481,44 @@
         #mid_movie>div{
             float: left;
         }
-        section #news_tt{
+        .news_tt{
             width: 50%;
-            height: 100px;
-            position: absolute;
-            top: 150px;
+            height: 20%;
+            position: relative;
+            display: inline;
         }
-        section #news_tt span{
-            font-size: 3em;
+        .news_tt span{
+            font-size: 2.2vw;
             font-weight: bold;
             color: #140a47;
         }
+        .news_tt2{
+            width: auto;
+            height: 20%;
+            position: absolute;
+            display: inline;
+            right: 0;
+        }
+        .news_tt2 span{
+            font-size: 1.2em;
+            font-weight: bold;
+            color: blue;
+        }
+        .news_tt2:hover span{
+            color: black;
+        }
         #news_sl{
-            width: 50%;
+            width: 60%;
             height: 100px;
             position: absolute;
             right: 0px;
         }
         .sl_box{
-            width: 32%;
+            width: 33%;
             height: 100%;
             color: blue;
-            font-size: 1.8em;
-            text-indent: 40%;
+            font-size: 1vw;
+            text-indent: 50%;
             border-top: 0;
             border-left: 0;
             border-right: 0;
@@ -395,15 +529,17 @@
             margin-top: 10px;
         }
         
-        #mid_movie_wrap{
+        .mid_movie_wrap{
             width: 80%;
-            height: 400px;
+            height: 450px;
             position: relative;
             margin: 0 auto;
+            margin-bottom: 50px;
+            
         }
-        #mm_01{
+        .mm_box{
             width: 100%;
-            height: 100%;
+            height: 80%;
             position: relative;
             overflow: hidden;
         }
@@ -421,15 +557,20 @@
             overflow: hidden;
             cursor: pointer;
         }
-        #mm_next{
+        .mm_section div{
+            text-align: left;
+            font-size: 1vw;
+            bottom: 10%;
+        }
+        .mm_next{
             width: 45px;
             height: 45px;
             position: absolute;
-            top: 50%;
+            top: 60%;
             right: -1.5%;
             cursor: pointer;
             display: block;
-            transform: translateY(-50%);
+            transform: translateY(-60%);
             font-size: 1.4em;
             font-weight: bold;
             text-align: center;
@@ -438,14 +579,14 @@
             background-color: #fff;
             border: 0.5px solid #140a47;
         }
-        #mm_prev{
+        .mm_prev{
             width: 45px;
             height: 45px;
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: -1.5%;
             cursor: pointer;
-            transform: translateY(-50%);
+            transform: translateY(-60%);
             font-size: 1.4em;
             font-weight: bold;
             text-align: center;
@@ -454,10 +595,10 @@
             background-color: #fff;
             border: 0.5px solid #140a47;
         }
-        #mm_next:hover{
+        .mm_next:hover{
             border: 0.5px solid blue;
         }
-        #mm_prev:hover{
+        .mm_prev:hover{
             border: 0.5px solid blue;
         }
         
@@ -472,8 +613,9 @@
         
         
         #page4{
-            width: 100%;
+            width: 80%;
             height: 600px;
+            margin: 0 auto;
             position: relative
         }
         #page4_top{width: 100%; height: 60%; margin: 0 auto; background: white;}
@@ -481,8 +623,8 @@
         #page4_top_section:after{content: ""; display: block; clear: both;}
         #page4_top_section>div{width: 100%; height: 50%; text-align: center; margin-bottom: 30px;}
         #page4_top_section>div>ul{width: 100%; margin: 0 auto;}
-        #page4_top_section_01>ul>li{width: 20%; height: 100%; display: inline-block;}
-        #page4_top_section_02>ul>li{width: 11%; height: 50%; display: inline-block;}
+        #page4_top_section_01>ul>li{width: 13%; height: 50%; display: inline-block;}
+        #page4_top_section_02>ul>li{width: 9%; height: 50%; display: inline-block;}
         #page4_top_section div{color: white; font-size: 28px;}
         #page4_top_section div a{color: white;}
 
@@ -496,24 +638,30 @@
         #page4_bot{width: 100%; height: 20%; position: relative;}
         #page4_bot_slide_menu{width: 100%; height: 40%; background: url(img/footer_bg.png); position: relative;}
         #page4_bot_slide_menu:after{content: ""; display: block; clear: both;}
-        #page4_bot_slide_menu>div{width: 50%; height: 100%; float: left; text-align: center; cursor: pointer;}
-        #page4_bot_slide_menu>div:first-child{border-left: 1px solid #fff; margin-left: 0;}
+        #page4_bot_slide_menu>div{width: 25%; height: 100%; float: left; text-align: center; cursor: pointer;}
+        #page4_bot_slide_menu>div:first-child{border-left: 1px solid #fff; margin-left: 25%;}
         #page4_bot_slide_menu>div:last-child{border-left: 1px solid #fff; border-right: 1px solid #fff; margin-right: 0;}
         #page4_bot_slide_menu>div>span{width: 100%; color: white; font-size: 20px; line-height: 250%; display: block;}
-        #page4_bot_slide_menu>div>span>img{width: 30px; height: 20px; left: 70%; top: 27%; position: absolute;}
+        #page4_bot_slide_menu>div>span>img{width: 30px; height: 20px; left: 60%; top: 27%; position: absolute;}
         #page4_bot_slide_menu>div>p{width: 30px; height: 30px; background: url(img/arrow01.png)no-repeat; position: absolute; bottom: 20%; margin-left: 10px; z-index: 5; display: block;}
         #page4_bot_slide_menu>div>ul{width: 100%; height: 0; background: url(img/footer_bg.png); position: relative; bottom: 50px; z-index: 1; opacity: 0; padding-top: 5px;}
         #page4_bot_slide_menu>div>ul>li{width: auto;}
         #page4_bot_slide_menu>div>ul>li>a{width: auto; display: inline; color: white; font-size: 20px; line-height: 20px;}
 
         #page4_bot_slide_menu>div>ul>li>a:hover{text-decoration: underline; transition: 2s;}
-
+        
+        #sm_1{
+            display: none;
+        }
+        #sm_2{
+            display: none;
+        }
         #sm_1>li>a>img{width: 35px; height: 25px; left: 30%; position: absolute;}
         #sm_2>li>a>img{width: 30px; height: 20px; left: 40%; position: absolute;}
 
         #page4_bot_footer{width: 100%; height: 100%; background:url(img/footer_bg2.png); overflow: hidden; z-index: 5; position: relative;}
         #page4_bot_footer_01{width: 100%; height: 30%; padding-top: 20px;}
-        #page4_bot_footer_01>ul{width: 50%; height: 100%; margin: 0 auto; left: 50%; transform: translateX(-20%); position: absolute;}
+        #page4_bot_footer_01>ul{width: 50%; height: 100%; margin: 0 auto; left: 50%; transform: translateX(-13%); position: absolute;}
         #page4_bot_footer_01>ul>li{width: auto; float: left; font-size: 1.4em; margin-right: 20px;}
         #page4_bot_footer_01>ul>li:hover a{color: blue;}
         #page4_bot_footer_01>ul>li>a{color: white; line-height: 50px;}
@@ -1052,7 +1200,7 @@
         <div id="tm_next"><img src="img/next_arrow_img.png" alt=""></div>
         <div id="tm_prev"><img src="img/prev_arrow_img.png" alt=""></div>
         <div id="mid_movie">
-            <div id="news_tt"><span>최신</span></div>
+            
             <div id="news_sl">
                 <select class="sl_box" name="" id="">
                     <option value="">전체 팀</option>
@@ -1092,69 +1240,533 @@
                 </select>
             </div>
         </div>
-        <div id="mid_movie_wrap">
-            <div id="mm_01">
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>최신</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_01" class="mm_box">
             <div class="mm_section">
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_01.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>훈련</h4>
+                    <div>A매치 휴식기에도 열심히 훈련 중인 코밤...</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_02.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>훈련</h4>
+                    <div>탑10 | 훈련장에서 포착된 골장면!</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_03.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>빈티지</h4>
+                    <div>OTD: 아스날을 상대로 두골을 넣은 드로그바</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_04.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>빈티지</h4>
+                    <div>OTD: 벵거의 1000번째 경기에서 6골을 넣은 블루스</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_05.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>빈티지</h4>
+                    <div>OTD: 맨시티를 꺽은 블루스!</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_06.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>빈티지</h4>
+                    <div>OTD: 하미레스의 시즌 최고 골!</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_07.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>득점</h4>
+                    <div>탑 5 - UEFA 우먼스 챔피언스리그 골 18/19</div>
                     <span>▶</span>
                 </ul>
                 <ul class="movie_box">
                     <img src="movie_img/mid_01_08.jpg" alt="">
                     <li class="bg"></li>
-                    <h4>피쳐</h4>
-                    <div>월디: 지루의 완벽한 해트트릭 3️⃣</div>
+                    <h4>빈티지</h4>
+                    <div>해피 버스데이 페르난도 토레스!🎂 🎈</div>
                     <span>▶</span>
                 </ul>
             </div>
             </div>
-            <div id="mm_next">〉</div>
-            <div id="mm_prev">〈</div>
+            <div class="mm_next mn_01">〉</div>
+            <div class="mm_prev mp_01">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>FA컵 결승</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_02" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>다시 돌아온 FA컵</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>후반전: 셰필드 웬즈데이(H) <br>FA컵 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>셰필드 웬즈데이(H) FA컵 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>확장판: 셰필드 웬즈데이(H) <br>FA컵 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>윌리안과 허드슨-오도이의 골로 웬즈데이를 물리치고 다음 라운드에 진출한 블루스!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>전반전: 셰필드 웬즈데이(H) <br>FA컵 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>인터뷰</h4>
+                    <div>리액션: 윌리안 - "이과인이 페널티킥을 넣기를 바랬다"</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_02_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>인터뷰</h4>
+                    <div>리액션: 허드슨-오도이 -- "우리의 멘탈리티는 완벽했다"</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_02">〉</div>
+            <div class="mm_prev mp_02">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>하이라이트</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_03" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>후반전: 에버튼 (A) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>확장판: 에버튼 (A) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>전반전: 에버튼 (A) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>후반전: 울버햄튼 (H) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>전반전: 울버햄튼 (H) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>울버햄튼 (H) PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>확장판: 울버햄튼 (H) <br>PREM 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_03_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>하이라이트</h4>
+                    <div>마지막 경기: 첼시 3️⃣ 디나모 키예프 0️⃣</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_03">〉</div>
+            <div class="mm_prev mp_03">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>전체 액세스</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_04" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>훈련</h4>
+                    <div>A매치 휴식기에도 열심히 훈련 중인 코밤...</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>훈련</h4>
+                    <div>탑 10 | 훈련장에서 포착된 골장면!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>스킬</h4>
+                    <div>월디: 윌리안의 프리킥 🚀</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>훈련</h4>
+                    <div>아자르가 캉테를 상대로 성공시킨 넛메그 라보나 골</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>훈련</h4>
+                    <div>인사이드 트레이닝: 이과인의 첫 훈련!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>스킬</h4>
+                    <div>월디: 크로스 킹 허드슨-오도이!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>재밌는 영상</h4>
+                    <div>모라타의 파브레가스 에그 장난</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_04_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>훈련</h4>
+                    <div>탑 10 | 트레이닝 골 2018</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_04">〉</div>
+            <div class="mm_prev mp_04">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>골, 골, 골!</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_05" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 5 - UEFA 우먼스 챔피언스리그 골 18/19</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 5 - 트레이닝 골</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>첼시의 완벽한 해트트릭! 🎯</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 10 | 골 VS 에버튼!⚽️</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 5 | 드로그바의 골!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>울버햄튼을 만날 준비...🎯</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 5 | 골 VS 울버햄튼!⚽️</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_05_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>득점</h4>
+                    <div>탑 5 - 토트넘을 상대로 뒤늦게 성공시킨 골!</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_05">〉</div>
+            <div class="mm_prev mp_05">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>뉴스 & 피쳐</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_06" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>뉴스</h4>
+                    <div>마이클 에시엔의 행운을 빕니다!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>FEEL GOOD! 유로파리그의 최다 득점자가 된 지루! 🎯</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>1점을 얻게해준 아자르</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>복수에 도전하는 블루스 🦁</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>월허드슨-오도이와 다비드 루이스는 무얼하고 있을까요? | 처음보는 첼시</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>1차전에서 지배적인 경기를 치른 블루스 | 처음보는 첼시</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>16강 라운드! 강한 스타트를 끊기 💪</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_06_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>피쳐</h4>
+                    <div>페널티킥 선방 & 완벽한 슈팅 🔥</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_06">〉</div>
+            <div class="mm_prev mp_06">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>레전드 & 클래식</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_07" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>OTD: 아스날을 상대로 두 골을 넣은 드로그바</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>OTD: 벵거의 1000번째 경기에서 6골을 넣은 블루스</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>OTD: 맨시티를 꺾은 블루스!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>OTD: 하미레스의 시즌 최고 골!</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>해피 버스데이 페르난도 토레스! 🎂 🎈</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>잊지못할 밤: 2012년 나폴리를 상대로 거둔 역전승 🏆</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_07.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>해피 버스데이 아넬카! 🎂 🎈</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_07_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>빈티지</h4>
+                    <div>해피 버스데이 드로그바! 🎂 🎈</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_07">〉</div>
+            <div class="mm_prev mp_07">〈</div>
+        </div>
+        <div class="mid_movie_wrap">
+            <div class="news_tt"><span>2017/18 올해의 선수상 시상식</span></div>
+            <a class="news_tt2" href="#a"><span>전체 보기 〉</span></a>
+            <div id="mm_08" class="mm_box">
+            <div class="mm_section">
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_01.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>크리스텐센: '동료들에게 감사의 인사를 전하고싶다'</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_02.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>캉테: '매우 자랑스럽다'</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_03.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>커비: '모두 너무 자랑스럽다'</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_04.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>'대단한 퀄리티' - 올 시즌의 골 상을 수상한 윌리안</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>올 시즌의 골 | 윌리안</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_06.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>올 시즌의 골 | 후보</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_05.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>제임스: '우리는 수비적으로 강했다'</div>
+                    <span>▶</span>
+                </ul>
+                <ul class="movie_box">
+                    <img src="movie_img/mid_08_08.jpg" alt="">
+                    <li class="bg"></li>
+                    <h4>AWARDS</h4>
+                    <div>루이스: '챔피언! 챔피언! 챔피언!'</div>
+                    <span>▶</span>
+                </ul>
+            </div>
+            </div>
+            <div class="mm_next mn_08">〉</div>
+            <div class="mm_prev mp_08">〈</div>
         </div>
     </section>
     <footer class="section pages" id="page4" data-anchor="4st">
