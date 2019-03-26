@@ -348,7 +348,7 @@
         ul.sub>li{width: 100%; _float: left; font-size: 0.8em; _line-height: 20px; }
         ul.sub:after{content: ""; display: block; clear: both;}
         ul.sub>li:hover{background: #001489; border-radius: 0px 0px 10px 0px;}
-        ul.sub>li:hover a{color: white; text-decoration: underline;}
+        ul.sub>li:hover a{color: white; border-bottom: 0.5px solid white;}
         ul.sub>li>a{display: inline; text-align: center; padding: 5px 10px; line-height: 50px;}
         
         #search{position: absolute; right: 25%; font-size: 20px; float: left; text-align: center; width: 5%; line-height: 50px; color: black; cursor: pointer;}
@@ -362,6 +362,14 @@
         #join:after{content: ""; position: absolute; border-bottom: 3px solid #001489; width: 0; left:50%;	transform:translateX(-50%); transition-duration: 0.5s; margin-top: 45px;}
         #join:hover:after{width: 100%;}
         #join:hover{color: darkblue;}
+        
+        .icon:after{
+            content: '●';
+            height: 100%;
+            font-size: 1vw;
+            position: relative;
+            color: red;
+        }
         
 /*        본문*/
         section{
@@ -1311,7 +1319,7 @@
                         <div class="menu_img"></div>
                         <span></span>
                         <ul class="sub" style="">
-                            <li><a href="news.html">최신 뉴스</a></li>
+                            <li><a class="icon" href="news.html">최신 뉴스</a></li>
                             <li><a href="#a">블로그</a></li>
                             <li></li>
                             <li></li>
@@ -1322,7 +1330,7 @@
                         <div class="menu_img"></div>
                         <span></span>
                         <ul class="sub" style="">
-                            <li><a href="movie.html">최신 영상</a></li>
+                            <li><a class="icon" href="movie.html">최신 영상</a></li>
                             <li><a href="#a">첼시TV</a></li>
                             <li></li>
                             <li></li>
