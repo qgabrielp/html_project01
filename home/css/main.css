@@ -3,7 +3,14 @@ html,body{
     height: 100%;
 }
 header{
+    width: 50%;
+    height: 10%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     position: fixed;
+    background-color: #000;
+    z-index: 10;
 }
 main{
     width: 100%;
@@ -15,8 +22,11 @@ main .page{
     position: relative;
 }
 .page:nth-child(1){
-    background-color: blue;
+    background-image: url(../img/social-networking-2187996_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     overflow: hidden;
+    background-attachment: fixed;
 }
 #top_red{
     width: 100%;
@@ -28,7 +38,7 @@ main .page{
 #content{
     width: 50%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);;
+    background-color: rgba(255,255,255,0.5);;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,7 +52,7 @@ main .page{
     width: 100%;
     height: 100%;
     border-top: 0vh solid transparent;
-    border-left: 30vh solid rgba(255,0,0,1);
+    border-left: 30vh solid rgba(255,0,0,0.3);
     border-right: 0vh solid transparent;
     border-bottom: 20vh solid transparent;  
 }
@@ -51,11 +61,11 @@ main .page{
     position: absolute;
     top: 10%;
     right: 0;
-    width: 100%;
+    width: 70%;
     height: 100%;
     border-top: 100vh solid transparent;
     border-left: 0vh solid transparent;
-    border-right: 160vh solid rgba(255,0,0,1);
+    border-right: 100vh solid rgba(255,0,0,0.3);
     border-bottom: 0vh solid transparent;  
 }
 
