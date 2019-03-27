@@ -2,16 +2,44 @@ html,body{
     width: 100%;
     height: 100%;
 }
+
+/*헤더영역*/
+
 header{
     width: 30%;
-    height: 10%;
+    height: 5%;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    background-color: #fff;
+    background-color: rgba(0,0,0,0.7);
     z-index: 10;
 }
+
+#logo{
+    
+}
+
+#menu{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+#menu>li{
+    width: auto;
+    height: 100%;
+    font-size: 0.8vw;
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/*홈 영역*/
+
 main{
     width: 100%;
     height: 100%;
@@ -22,7 +50,7 @@ main .page{
     position: relative;
 }
 .page:nth-child(1){
-    background-image: url(../img/social-networking-2187996_1920.jpg);
+    background-image: url(..);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -38,11 +66,11 @@ main .page{
 #content{
     width: 50%;
     height: 100%;
-    background-color: rgba(255,255,255,0.5);;
+    background-color: rgba(255,255,255,0.5);
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
 }
 #top_red:before{
     content: '';
@@ -54,7 +82,7 @@ main .page{
     border-top: 0vh solid transparent;
     border-left: 30vh solid rgba(255,0,0,0.3);
     border-right: 0vh solid transparent;
-    border-bottom: 20vh solid transparent;  
+    border-bottom: 50vh solid transparent;  
 }
 #top_red:after{
     content: '';

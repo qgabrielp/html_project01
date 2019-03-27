@@ -2,10 +2,10 @@
     $(window).scroll(function() {
         if ($(this).scrollTop() > 50) { 
             
-            $('header').css({'position': 'fixed','left': '50%','width': '50%','height': '5%','top': '0px'});
+            $('header').stop().animate({'position': 'fixed','left': '50%','width': '50%','height': '5%','top': '0px'});
             
         } else {
-            $('header').css({'position': 'fixed','left': '50%','width': '30%','height': '10%','top': '10%'});
+            $('header').stop().animate({'position': 'fixed','left': '50%','width': '30%','height': '5%','top': '10%'});
         }
 //        if ($(this).scrollTop() < 50) { 
 //            
