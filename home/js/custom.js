@@ -23,6 +23,9 @@
         if($(this).scrollTop() > page2top-50 && $(this).scrollTop() < page3top){
 //            $('#menu').removeClass('on');
             $('#skill span').addClass('on');
+            if($(this).scrollTop() == page2top){
+                $(".ch").gaugeMeter();
+               }
         }else{
             $('#skill span').removeClass('on');
         }
@@ -50,6 +53,9 @@ $(document).ready(function(){
         $("html,body").stop().animate({
         "scrollTop":moveTop+"px"
         },600);
+        if(i == 1){
+            $(".ch").gaugeMeter();
+           }
     });
     
 });
