@@ -15,7 +15,7 @@ header{
     top: 0%;
     left: 0%;
     position: fixed;
-/*    background-color: rgba(0,0,0,0.7);*/
+    background-color: rgba(0,0,0,0.0);
     z-index: 10;
 }
 
@@ -106,7 +106,7 @@ main .page{
     width: 100%;
     height: 100%;
     border-top: 0vh solid transparent;
-    border-left: 30vh solid rgba(0,0,0,0.3);
+    border-left: 30vh solid rgba(255,255,255,0.5);
     border-right: 0vh solid transparent;
     border-bottom: 50vh solid transparent;  
 }
@@ -142,13 +142,13 @@ main .page{
     background-color: rgba(255,0,0,0.5);
 }
 #ch7{
-    width: 180px;
-    height: 180px;
+    width: 125px;
+    height: 125px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000;
+    background-color: #454547;
     border-radius: 50%;
 }
 /*
@@ -174,10 +174,11 @@ main .page{
     display: inline-block;
 }
 .ch B{
-    Margin:          0 23%;
-    Width:           54%;
+    Margin:          0% 0%;
+    Width:           100%;
     Position:        Absolute;
-    top: 20%;
+    bottom: 21%;
+    left: -1%;
     Text-align:      Center;
     Display:         Inline-Block;
     Color:           RGBa(0,0,0,.8);
@@ -216,10 +217,12 @@ main .page{
 .ch B{
     Color:           white;
     Font-Weight:     bold;
-    Font-Size:       1.2em;
+    Font-Size:       1.3em;
     Opacity:         .8;
 }
-
+#ch1:hover{
+    background-color: gray;
+}
 
 
 
