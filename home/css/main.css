@@ -34,16 +34,18 @@ header{
     width: auto;
     height: 100%;
     font-family: Montserrat;
-    font-size: 1.3vh;
+    font-size: 0.6vw;
     font-weight: 600;
     line-height: 300%;
-    margin-left: 15%;
+    letter-spacing: 0.3vh;
+    margin-left: 12%;
     text-align: left;
     cursor: pointer;
     color: black;
 }
 #menu>li:hover .num{
     border-bottom: 1.3px solid black;
+    transition: all 1s;
 }
 .on{
     border-bottom: 1.3px solid black;
@@ -67,6 +69,16 @@ main .page{
     overflow: hidden;
     position: relative;
 }
+#video1{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-attachment: fixed;
+    z-index: 9;
+}
 #top_red{
     width: 100%;
     height: 100%;
@@ -75,18 +87,18 @@ main .page{
     left: 0;
 }
 #content{
-    width: 50%;
-    height: 100%;
-/*    background-color: rgba(255,255,255,0.5);*/
+    width: 60%;
+    height: 10%;
+/*    background-color: rgba(255,255,5,0.5);*/
     position: absolute;
-    top: 70%;
-    right: 0;
-    font-family: Nanum Gothic Coding;
-    font-size: 3vh;
-    font-weight: bold;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-family: Hi Melody;
+    font-size: 2vw;
     text-align: right;
     color: black;
-    text-shadow: 1px 1px 1px black;
+/*    text-shadow: 1px 1px 1px black;*/
 }
 #top_red:before{
     content: '';
@@ -96,7 +108,7 @@ main .page{
     width: 100%;
     height: 100%;
     border-top: 0vh solid transparent;
-    border-left: 30vh solid rgba(255,255,255,0.6);
+    border-left: 30vh solid rgba(0,0,0,0.3);
     border-right: 0vh solid transparent;
     border-bottom: 50vh solid transparent;  
 }
@@ -109,9 +121,126 @@ main .page{
     height: 100%;
     border-top: 100vh solid transparent;
     border-left: 0vh solid transparent;
-    border-right: 100vh solid rgba(255,0,0,0.3);
+    border-right: 100vh solid rgba(205,255,255,0.3);
     border-bottom: 0vh solid transparent;  
 }
+
+
+/*스킬 영역*/
+
+#page2_wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+/*    background-color: #000;*/
+}
+#ch_wrap{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,0,0,0.5);
+}
+#ch7{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border-radius: 50%;
+}
+/*
+#ch2{
+    width: 125px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 54.5%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    border-radius: 0 125px 125px 0;
+}
+*/
+.ch{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: Center;
+    overflow: Hidden;
+    cursor: Default;
+    display: inline-block;
+}
+.ch B{
+    Margin:          0 23%;
+    Width:           54%;
+    Position:        Absolute;
+    top: 20%;
+    Text-align:      Center;
+    Display:         Inline-Block;
+    Color:           RGBa(0,0,0,.8);
+    Font-Weight:     100;
+    Font-Family:     "Open Sans", Arial;
+    Overflow:        Hidden;
+    White-Space:     NoWrap;
+    Text-Overflow:   Ellipsis;
+}
+.ch SPAN{
+    Margin:          -40% 23%;
+    Width:           54%;
+    Position:        Absolute;
+    top: %;
+    Text-align:      Center;
+    Display:         Inline-Block;
+    Color:           RGBa(0,0,0,.8);
+    Font-Weight:     100;
+    Font-Family:     "Open Sans", Arial;
+    Overflow:        Hidden;
+    White-Space:     NoWrap;
+    Text-Overflow:   Ellipsis;
+}
+.ch[data-style="Semi"] B{
+    Margin:          0 10%;
+    Width:           80%;
+}
+.ch S,
+.ch U{
+    Text-Decoration: None;
+    Font-Size:       .5em;
+    Opacity:         .5;
+}
+
+.ch B{
+    Color:           white;
+    Font-Weight:     bold;
+    Font-Size:       1.5em;
+    Opacity:         .8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
