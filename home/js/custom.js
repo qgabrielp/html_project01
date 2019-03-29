@@ -25,9 +25,6 @@
             $('#skill span').addClass('on');
             $(".ch_tx").addClass('ct_tx_d');
             $("#ch7").stop().animate({"width":"125px", "height":"125px"}, 1000);
-            if($(this).scrollTop() == page2top){
-                $(".ch").gaugeMeter();
-               }
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
@@ -72,9 +69,9 @@ $(document).ready(function(){
 
 
 
-//$(document).ready(function(){
-//    $(".ch").gaugeMeter();
-//});
+$(document).ready(function(){
+    $(".ch").gaugeMeter();
+});
 
 
 

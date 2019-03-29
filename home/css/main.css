@@ -264,18 +264,25 @@ main .page{
     position: relative;
 }
 #po_sec{
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    top: 15%;
-    left: 15%;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    top: 20%;
+    border-radius: 50%;
     background-color: rgba(255, 244, 182,0.3);
+}
+#po_sec>div{
+    position: absolute;
 }
 
 .img{
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
-
+.ih-item.square.effect9.colored .info .info-back{
+    background-color: #fff;
+}
 
 
 
