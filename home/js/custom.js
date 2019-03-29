@@ -24,12 +24,14 @@
 //            $('#menu').removeClass('on');
             $('#skill span').addClass('on');
             $(".ch_tx").addClass('ct_tx_d');
+            $("#ch7").stop().animate({"width":"125px", "height":"125px"}, 1000);
             if($(this).scrollTop() == page2top){
                 $(".ch").gaugeMeter();
                }
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
+            $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 600);
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
 //            $('#menu').removeClass('on');
@@ -56,11 +58,13 @@ $(document).ready(function(){
         "scrollTop":moveTop+"px"
         },1000,);
         if(i == 1){
-            e.preventDefault();
+//            e.preventDefault();
             $(".ch").gaugeMeter();
             $(".ch_tx").addClass('ct_tx_d');
+            $("#ch7").stop().animate({"width":"125px", "height":"125px"}, 1000);
            }else{
                $(".ch_tx").removeClass('ct_tx_d');
+               $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 600);
            }
     });
     
