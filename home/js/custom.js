@@ -52,7 +52,7 @@ $(document).ready(function(){
         console.log(i+"aa");
         $("html,body").stop().animate({
         "scrollTop":moveTop+"px"
-        },600);
+        },1400,"easeOutBounce");
         if(i == 1){
             $(".ch").gaugeMeter();
            }
