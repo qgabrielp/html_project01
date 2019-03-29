@@ -23,11 +23,13 @@
         if($(this).scrollTop() > page2top-50 && $(this).scrollTop() < page3top){
 //            $('#menu').removeClass('on');
             $('#skill span').addClass('on');
+            $(".ch_tx").addClass('ct_tx_d');
             if($(this).scrollTop() == page2top){
                 $(".ch").gaugeMeter();
                }
         }else{
             $('#skill span').removeClass('on');
+            $(".ch_tx").removeClass('ct_tx_d');
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
 //            $('#menu').removeClass('on');
@@ -52,9 +54,13 @@ $(document).ready(function(){
         console.log(i+"aa");
         $("html,body").stop().animate({
         "scrollTop":moveTop+"px"
-        },1400,"easeOutBounce");
+        },1000,);
         if(i == 1){
+            e.preventDefault();
             $(".ch").gaugeMeter();
+            $(".ch_tx").addClass('ct_tx_d');
+           }else{
+               $(".ch_tx").removeClass('ct_tx_d');
            }
     });
     
@@ -62,9 +68,9 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    $(".ch").gaugeMeter();
-});
+//$(document).ready(function(){
+//    $(".ch").gaugeMeter();
+//});
 
 
 

@@ -130,16 +130,15 @@ main .page{
     width: 100%;
     height: 100%;
     position: relative;
-/*    background-color: #000;*/
+    background-color: rgba(128, 222, 229,0.3);
 }
 #ch_wrap{
-    width: 80%;
-    height: 80%;
+    width: 1000px;
+    height: 1000px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255,0,0,0.5);
 }
 #ch7{
     width: 125px;
@@ -169,9 +168,71 @@ main .page{
     transform: translate(-50%, -50%);
     position: absolute;
     text-align: Center;
-    overflow: Hidden;
+/*    overflow: Hidden;*/
     cursor: Default;
     display: inline-block;
+}
+
+#ch_tt{
+    margin: 0 auto;
+    overflow: hidden;
+    float: right;
+    position: relative;
+    top: 45%;
+    right: 5%;
+}
+.ch_tx{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    right: -200px;
+/*
+    left: 50%;
+    transform: translate(-50%, -50%);
+*/
+    text-align: center;
+    color: white;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.ct_tx_d{
+    right:0px;
+}
+#ch1_tx{
+    background: #e5d714;
+/*    top: 53%;*/
+/*    left: 45%;*/
+    transition: 0.8s;
+}
+#ch2_tx{
+    background: #448c4a;
+/*    top: 62%;*/
+/*    left: 50%;*/
+    transition: 1s;
+}
+#ch3_tx{
+    background: #36c4ea;  
+/*    top: 34%;*/
+/*    left: 50%;*/
+    transition: 1.2s;
+}
+#ch4_tx{
+    background: #ffa500;  
+/*    top: 26%;*/
+    transition: 1.4s;
+
+}
+#ch5_tx{
+    background: #9932c9;
+/*    top: 72%;*/
+    transition: 1.6s;
+
+}
+#ch6_tx{
+    background: #e8277a;
+/*    top: 18%;*/
+    transition: 1.8s;
 }
 .ch B{
     Margin:          0% 0%;
@@ -184,7 +245,7 @@ main .page{
     Color:           RGBa(0,0,0,.8);
     Font-Weight:     100;
     Font-Family:     "Open Sans", Arial;
-    Overflow:        Hidden;
+/*    Overflow:        Hidden;*/
     White-Space:     NoWrap;
     Text-Overflow:   Ellipsis;
 }
@@ -198,7 +259,7 @@ main .page{
     Color:           RGBa(0,0,0,.8);
     Font-Weight:     100;
     Font-Family:     "Open Sans", Arial;
-    Overflow:        Hidden;
+/*    Overflow:        Hidden;*/
     White-Space:     NoWrap;
     Text-Overflow:   Ellipsis;
     display: none;
