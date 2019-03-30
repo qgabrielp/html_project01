@@ -84,7 +84,7 @@ main .page{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    background: url(../img/computer-1245714_1920.jpg)no-repeat;
+/*    background: url(../img/computer-1245714_1920.jpg)no-repeat;*/
     background-size: cover;
     background-attachment: fixed;
 }
@@ -168,9 +168,10 @@ main .page{
     height: 100%;
     position: relative;
 /*    background-color: rgba(128, 222, 229,0.3);*/
-    background: url(../img/road-2672010_1920.jpg)no-repeat;
+    background: url(../img/computer-1245714_1920.jpg)no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 #ch_wrap{
     width: 900px;
@@ -179,7 +180,7 @@ main .page{
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0%);
-    background-color: rgba(128, 222, 229,0.3);
+    background-color: rgba(128, 222, 229,0.2);
 }
 #ch7{
     width: 100%;
