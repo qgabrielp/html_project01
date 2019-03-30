@@ -28,7 +28,7 @@
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
-//            $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 1000);
+//            $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 1000);
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
             $('#portfolio span').addClass('on');
@@ -60,7 +60,7 @@ $(document).ready(function(){
            }else{
                $(".ch").gaugeMeter();
                $(".ch_tx").removeClass('ct_tx_d');
-               $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 100);
+               $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 100);
            }
     });
     

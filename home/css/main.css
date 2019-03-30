@@ -84,9 +84,10 @@ main .page{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-/*    background: url(../img/computer-1245714_1920.jpg)no-repeat;*/
+    background: url(../img/wood-3271749_1920.jpg)no-repeat;
     background-size: cover;
     background-attachment: fixed;
+/*    background: linear-gradient(to right, white , #60ad4f);*/
 }
 #video1{
     width: 115%;
@@ -218,48 +219,56 @@ main .page{
     overflow: hidden;
     float: right;
     position: relative;
-    top: 45%;
-    right: 5%;
+    top: 5%;
+    right: 0%;
 }
 .ch_tx{
     width: 100px;
-    height: 50px;
+    height: 100px;
     position: relative;
     right: -200px;
+    top: -500px;
     text-align: center;
     color: white;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 50%;
     font-size: 0.9rem;
     font-weight: bold;
+    line-height: 30px;
+    padding-top: 10px;
 }
 .ct_tx_d{
     right:0px;
+    top: 0px;
 }
 #ch1_tx{
     background: #e5d714;
     transition: 0.8s;
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 #ch2_tx{
     background: #448c4a;
     transition: 1s;
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 #ch3_tx{
     background: #36c4ea;  
     transition: 1.2s;
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 #ch4_tx{
     background: #ffa500;  
     transition: 1.4s;
-
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 #ch5_tx{
     background: #9932c9;
     transition: 1.6s;
-
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 #ch6_tx{
     background: #e8277a;
     transition: 1.8s;
+    box-shadow: inset 0px 0px 5px 0px #000;
 }
 .ch B{
     Margin:          0% 0%;
@@ -320,7 +329,7 @@ main .page{
 }
 #po_wrap{
     width: 80%;
-    height: 60%;
+    height: 70%;
     position: relative;
     top: 20%;
     margin: 0 auto;
@@ -351,10 +360,15 @@ main .page{
 }
 
 
+/*컨택트 영억*/
 
 
-
-
+.page4{
+    background: url(../img/background-1587514_1920.jpg)no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 
 
 
