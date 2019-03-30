@@ -218,8 +218,8 @@ main .page{
     margin: 0 auto;
     overflow: hidden;
     float: right;
-    position: relative;
-    top: 5%;
+    position: fixed;
+    top: 15%;
     right: 0%;
 }
 .ch_tx{
@@ -227,7 +227,6 @@ main .page{
     height: 100px;
     position: relative;
     right: -200px;
-    top: -500px;
     text-align: center;
     color: white;
     border-radius: 50%;
@@ -238,7 +237,6 @@ main .page{
 }
 .ct_tx_d{
     right:0px;
-    top: 0px;
 }
 #ch1_tx{
     background: #e5d714;
