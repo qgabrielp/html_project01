@@ -28,14 +28,14 @@
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
-            $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 600);
+//            $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 1000);
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
             $('#portfolio span').addClass('on');
         }else{
             $('#portfolio span').removeClass('on');
         }
-        if($(this).scrollTop() > page4top-200){
+        if($(this).scrollTop() > page4top-50){
             $('#contact span').addClass('on');
         }else{
             $('#contact span').removeClass('on');
@@ -52,14 +52,15 @@ $(document).ready(function(){
         $("html,body").stop().animate({
         "scrollTop":moveTop+"px"
         },1000,);
-        if(i == 1){
+        if(i == 2){
             e.preventDefault();
             $(".ch").gaugeMeter();
             $(".ch_tx").addClass('ct_tx_d');
             $("#ch7").stop().animate({"width":"125px", "height":"125px"}, 1000);
            }else{
+               $(".ch").gaugeMeter();
                $(".ch_tx").removeClass('ct_tx_d');
-               $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 600);
+               $("#ch7").stop().animate({"width":"100%", "height":"100%"}, 100);
            }
     });
     
