@@ -97,6 +97,16 @@ main .page{
     transform: translate(-50%, 0%);
     background-attachment: fixed;
 }
+#hello{
+    width: 30%;
+    height: 7%;
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    background: url(../img/hello.gif)no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
 #top_red{
     width: 100%;
     height: 100%;
@@ -169,7 +179,7 @@ main .page{
     height: 100%;
     position: relative;
 /*    background-color: rgba(128, 222, 229,0.3);*/
-    background: url(../img/computer-1245714_1920.jpg)no-repeat;
+/*    background: url(../img/computer-1245714_1920.jpg)no-repeat;*/
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -181,7 +191,7 @@ main .page{
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0%);
-    background-color: rgba(128, 222, 229,0.2);
+/*    background-color: rgba(128, 222, 229,0.2);*/
 }
 #ch7{
     width: 100%;
@@ -241,32 +251,32 @@ main .page{
 #ch1_tx{
     background: #e5d714;
     transition: 0.8s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch2_tx{
     background: #448c4a;
     transition: 1s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch3_tx{
     background: #36c4ea;  
     transition: 1.2s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch4_tx{
     background: #ffa500;  
     transition: 1.4s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch5_tx{
     background: #9932c9;
     transition: 1.6s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch6_tx{
     background: #e8277a;
     transition: 1.8s;
-    box-shadow: inset 0px 0px 5px 0px #000;
+    box-shadow: inset 0px 0px 5px 0px #fff;
 }
 .ch B{
     Margin:          0% 0%;
@@ -362,7 +372,7 @@ main .page{
 
 
 .page4{
-    background: url(../img/background-1587514_1920.jpg)no-repeat;
+/*    background: url(../img/background-1587514_1920.jpg)no-repeat;*/
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
