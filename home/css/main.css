@@ -35,11 +35,11 @@ header{
     background-size: cover;
     position: relative;
     top: 0%;
-    left: 5%;
+    left: 13%;
 }
 
 #menu{
-    width: 100%;
+    width: 80%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -79,10 +79,11 @@ header{
     font-size: 1.8vh;
     font-weight: bold;
     text-align: center;
-    color: black;
+    color: #5382f1;
     cursor: pointer;
-    line-height: 15px;
+    line-height: 180%;
     display: none;
+    background-color: rgba(29,31,33,1);
 }
 
 /*홈 영역*/
@@ -102,7 +103,8 @@ main .page{
     overflow: hidden;
     position: relative;
     background: url(../img/wood-3271749_1920.jpg)no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
     background-attachment: fixed;
 /*    background: linear-gradient(to right, white , #60ad4f);*/
 }
@@ -198,7 +200,7 @@ main .page{
 /*    background-color: rgba(29, 31, 33,0.7);*/
     background: url(../img/computer-1245714_1920.jpg)no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 }
 #ch_wrap{
@@ -349,8 +351,9 @@ main .page{
 .page3{
     position: relative;
     background: url(../img/desk-3139127_1920.jpg)no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
+    background-position: center;
     position: relative;
 }
 #po_wrap{
@@ -433,12 +436,12 @@ main .page{
 #po_sec div:nth-child(1){
     background: url(../img/po01_size.png)no-repeat;
     background-size: 100% 100%;
-    
+    background-position: center;
 }
 #po_sec div:nth-child(2){
     background: url(../img/po02_size.png)no-repeat;
     background-size: 100% 100%;
-    
+    background-position: center;
 }
 
 
@@ -446,15 +449,50 @@ main .page{
 
 
 .page4{
-/*    background: url(../img/background-1587514_1920.jpg)no-repeat;*/
-    background-size: cover;
+    background: url(../img/background-1587514_1920.jpg)no-repeat;
+    background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
 }
-
-
-
-
+#con_wrap{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(29,31,33,1);
+}
+#con_wrap>div{
+    float: left;
+}
+#profile{
+    width: 50%;
+    height: 100%;
+}
+#send{
+    width: 50%;
+    height: 100%;
+}
+#send input{
+    width: 80%;
+    height: 10%;
+    text-indent: 5%;
+    border-radius: 15px;
+    display: block;
+    margin-top: 3%;
+    font-weight: bold;
+}
+#message{
+    width: 80%;
+    height: 30%;
+    text-indent: 5%;
+    border-radius: 15px;
+    display: block;
+    margin-top: 3%;
+    padding-top: 3%;
+    font-weight: bold;
+}
 
 
 
