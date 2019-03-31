@@ -63,7 +63,16 @@ $(document).ready(function(){
                $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 100);
            }
     });
-    
+    $(window).scroll(function(){
+                if ($(this).scrollTop() > 1000){
+                    $('#gototop').fadeIn();
+                } else {
+                    $('#gototop').fadeOut();
+                }
+            });
+    $("#gototop").click(function(){
+        $("html,body").stop().animate({"scrollTop":"0"}, 600);
+    });
 });
 
 

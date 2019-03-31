@@ -68,6 +68,23 @@ header{
 }
 
 
+/*고투탑*/
+
+#gototop{
+    width: auto;
+    height: 30px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 1.8vh;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    line-height: 15px;
+    display: none;
+}
+
 /*홈 영역*/
 
 main{
