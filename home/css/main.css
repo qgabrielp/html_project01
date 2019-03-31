@@ -368,10 +368,10 @@ main .page{
     position: relative;
     overflow: hidden;
 }
-#po_sec div a{
+#po_sec a{
     display: block;
 }
-#po_sec div h4{
+#po_sec h4{
     width: 100%;
     height: auto;
     font-size: 2vh;
@@ -408,15 +408,21 @@ main .page{
     box-shadow: 1px 1px 5px 5px #000;
     background-color: rgba(0,0,0,0.5);
 }
+#po_sec div:hover p{
+    top: 0;
+    transition: all 0.6s;
+}
 #po_sec div:nth-child(1){
     background: url(../img/po01_size.png)no-repeat;
     background-size: 100% 100%;
     
 }
-#po_sec div:hover p{
-    top: 0;
-    transition: all 0.6s;
+#po_sec div:nth-child(2){
+    background: url(../img/po02_size.png)no-repeat;
+    background-size: 100% 100%;
+    
 }
+
 
 /*컨택트 영억*/
 
