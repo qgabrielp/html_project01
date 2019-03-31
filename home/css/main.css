@@ -455,13 +455,16 @@ main .page{
     background-position: center;
 }
 #con_wrap{
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 65%;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(29,31,33,1);
+    background: url(../img/envelope-3172770_1280.png)no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 }
 #con_wrap>div{
     float: left;
