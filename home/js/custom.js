@@ -28,7 +28,7 @@
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
-//            $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 1000);
+            $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 100);
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
             $('#portfolio span').addClass('on');
@@ -73,6 +73,32 @@ $(document).ready(function(){
     $("#gototop").click(function(){
         $("html,body").stop().animate({"scrollTop":"0"}, 600);
     });
+    
+    $("main .page").each(function(){
+            $(this).on("mousewheel",function(e){
+                e.preventDefault();
+                var delta = 0; // delta 마우스휠 델타값(-120:내렸을때,120:올렸을때)
+                delta = event.wheelDelta/120;
+                var moveTop = null; // 각 페이지의 top을 계산
+                if(delta < 0){
+                    
+                    if($(this).next() !== undefined){
+                        moveTop=$(this).next().offset().top;   
+                       }else{
+                           moveTop=$(this).prev().offset().top;
+                       }
+                   }else{
+                    if($(this).prev() !== undefined){
+                        moveTop=$(this).prev().offset().top;   
+                       }else{
+                           moveTop=$(this).next().offset().top;
+                       }
+                   }
+                $("html,body").stop().animate({
+                    "scrollTop":moveTop+"px"
+                },600);
+            });
+        });
 });
 
 
