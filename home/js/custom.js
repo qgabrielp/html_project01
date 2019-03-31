@@ -25,6 +25,7 @@
             $('#skill span').addClass('on');
             $(".ch_tx").addClass('ct_tx_d');
             $("#ch7").stop().animate({"width":"125px", "height":"125px"}, 600);
+            $(".ch").gaugeMeter();
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');

@@ -268,32 +268,32 @@ main .page{
 }
 #ch1_tx{
     background: #e5d714;
-    transition: 0.8s;
+    transition: 0.9s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch2_tx{
     background: #448c4a;
-    transition: 1s;
+    transition: 1.1s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch3_tx{
     background: #36c4ea;  
-    transition: 1.2s;
+    transition: 1.3s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch4_tx{
     background: #ffa500;  
-    transition: 1.4s;
+    transition: 1.5s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch5_tx{
     background: #9932c9;
-    transition: 1.6s;
+    transition: 1.7s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 #ch6_tx{
     background: #e8277a;
-    transition: 1.8s;
+    transition: 1.9s;
     box-shadow: inset 0px 0px 5px 0px #fff;
 }
 .ch B{
