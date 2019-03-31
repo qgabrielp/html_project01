@@ -261,6 +261,7 @@ main .page{
     font-weight: bold;
     line-height: 30px;
     padding-top: 10px;
+    cursor: context-menu;
 }
 .ct_tx_d{
     right:0px;
@@ -353,7 +354,7 @@ main .page{
     position: relative;
 }
 #po_wrap{
-    width: 80%;
+    width: 70%;
     height: 70%;
     position: relative;
     top: 20%;
