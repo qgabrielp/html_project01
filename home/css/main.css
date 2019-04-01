@@ -202,6 +202,7 @@ main .page{
     background-attachment: fixed;
     background-size: 100% 100%;
     background-position: center;
+    overflow: hidden;
 }
 #ch_wrap{
     width: 900px;
@@ -521,40 +522,7 @@ main .page{
 }
 
 
-/*미디어 커리*/
 
-@media screen and (min-width:2000px){
-    
-}
-
-@media screen and (min-width:1600px) and (max-width:1999px){
-    
-}
-
-
-@media screen and (min-width:1280px) and (max-width:1599px){
-    
-}
-
-@media screen and (min-width:1024px) and (max-width:1279px){
-    
-}
-
-@media screen and (min-width:780px) and (max-width:1023px){
-    
-}
-
-@media screen and (min-width:640px) and (max-width:779px){
-    
-}
-
-@media screen and (min-width:480px) and (max-width:639px){
-    
-}
-
-@media screen and (max-width:479px){
-    
-}
 
 
 
