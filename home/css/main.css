@@ -207,7 +207,7 @@ main .page{
     width: 900px;
     height: 900px;
     position: absolute;
-    bottom: 0px;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
 /*    background-color: rgba(128, 222, 229,0.2);*/
@@ -223,8 +223,8 @@ main .page{
     border-radius: 50%;
 }
 #ch7>span{
-    width: 40px;
-    height: 65px;
+    width: 50%;
+    height: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -470,7 +470,7 @@ main .page{
     float: left;
 }
 #profile{
-    width: 50%;
+    width: 35%;
     height: 100%;
 }
 #send{
