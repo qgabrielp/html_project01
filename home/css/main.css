@@ -76,12 +76,12 @@ header{
     position: fixed;
     bottom: 5%;
     right: 5%;
-    font-size: 1.8vh;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #5382f1;
     cursor: pointer;
-    line-height: 180%;
+    line-height: 150%;
     display: none;
     background-color: rgba(29,31,33,1);
 }
@@ -471,13 +471,22 @@ main .page{
 }
 #profile{
     width: 35%;
-    height: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: black;
+    font-size: 1.8vh;
+    font-weight: bold;
+    font-family: Gaegu;
 }
 #send{
     width: 50%;
     height: 100%;
+    margin-left: 35%;
+    position: relative;
 }
-#send input{
+#cp_na, #you_na, #ph_nb, #email{
     width: 80%;
     height: 10%;
     text-indent: 5%;
@@ -496,7 +505,17 @@ main .page{
     padding-top: 3%;
     font-weight: bold;
 }
-
+#send_btn{
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%, 0);
+/*    border: 0px dotted #960319;*/
+    border-radius: 50%;
+    background-color: #960319;
+    font-size: 
+}
 
 
 
