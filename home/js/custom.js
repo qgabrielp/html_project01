@@ -9,7 +9,8 @@
             $('header').removeClass('header_sm');
             $('header').addClass('header_la');
             $('#menu').css({'left':'10%'});
-            $('#menu>li').css({'float':'left'});
+//            $('#menu>li').css({'float':'left'});
+            $('#menu>li').addClass('menu_li_la');
             $('#top_red').addClass('dnone');
             $('#logo').addClass('logo_sm');
         } else {
@@ -17,7 +18,8 @@
             $('header').addClass('header_sm');
             $('header').removeClass('header_la');
             $('#menu').css({'left':'0%'});
-            $('#menu>li').css({'float':'none'});
+//            $('#menu>li').css({'float':'none'});
+            $('#menu>li').removeClass('menu_li_la');
             $('#top_red').removeClass('dnone');
             $('#logo').removeClass('logo_sm');
         }

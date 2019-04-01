@@ -78,6 +78,9 @@ header{
     color: black;
     display: block;
 }
+.menu_li_la{
+    float: left;
+}
 #menu>li>span{
     cursor: pointer;
 }
@@ -255,6 +258,11 @@ main .page{
     background-color: #454547;
     border-radius: 50%;
 }
+.ch7_sm{
+    width: 125px;
+    height: 125px;
+    transition: all 0.6s;
+}
 #ch7>span{
     width: 50%;
     height: 50%;
@@ -275,6 +283,9 @@ main .page{
     cursor: Default;
     display: inline-block;
 }
+#ch_wrap>div:nth-child(7), #ch_wrap>div:nth-child(8), #ch_wrap>div:nth-child(9), #ch_wrap>div:nth-child(10), #ch_wrap>div:nth-child(11), #ch_wrap>div:nth-child(12){
+        display: none;
+    }
 
 #ch_tt{
     margin: 0 auto;

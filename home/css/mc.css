@@ -122,6 +122,26 @@ header{
     background-color: rgba(0,0,0,0.0);
     z-index: 10;
 }
+.header_sm{
+    width: 50%;
+    height: 30%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0,0,0,0.0);
+    z-index: 10;
+    transition: 0.8s;
+}
+.header_la{
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    left: 0%;
+    top: 0px;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 10;
+    transition: 0.8s;
+}
 .logo{
     width: 100px;
     height: 100px;
@@ -132,36 +152,39 @@ header{
     left: 10%;
 }
 .logo_sm{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: url(../logo/logo_09.png)no-repeat;
     background-size: cover;
-    position: relative;
+    position: absolute;
     top: 0%;
-    left: 13%;
+    left: 0%;
 }
 #menu{
     width: 100%;
     height: 100%;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 70%;
+    transform: translateY(-20%);
 /*    display: none;*/
     
 }
 #menu>li{
-    width: 100%;
     font-family: Montserrat;
     font-size: 6px;
     font-weight: 600;
     line-height: 300%;
     letter-spacing: 0.3vh;
-    margin-left: 12%;
+    margin-right: 2.5%;
+    margin-left: 0%;
     text-align: left;
     color: black;
     display: block;
 }
-
+.menu_li_la{
+    float: left;
+}
+/*
 #menu2{
     display: none;
     position: relative;
@@ -181,14 +204,15 @@ header{
     z-index: 10;
     cursor: pointer;
 }
+*/
     
 /*홈 영역*/
     
 #hello{
-    width: 50%;
+    width: 100%;
     height: 7%;
     position: absolute;
-    top: 70.3%;
+    top: 75.3%;
     right: 0%;
     background: url(../img/hello.gif)no-repeat;
     background-size: 100% 100%;
@@ -198,9 +222,9 @@ header{
 /*    width: 80%;*/
     height: 10%;
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -25%);
     color: white;
     font-size: 6.6vh;
     text-align: right;
@@ -213,11 +237,11 @@ header{
     height: 5%;
 /*    background-color: rgba(255,255,5,0.5);*/
     position: absolute;
-    bottom: 0%;
+    bottom: 2%;
     right: 2%;
     transform: translate(0,0);
     font-family: Gaegu;
-    font-size: 2vw;
+    font-size: 4vw;
     text-align: left;
     color: black;
 /*    text-shadow: 1px 1px 1px black;*/
@@ -226,15 +250,152 @@ header{
 /*스킬 영역*/
     
 #ch_wrap{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     position: absolute;
-    bottom: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
 /*    background-color: rgba(128, 222, 229,0.2);*/
 }
+#ch7{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #454547;
+    border-radius: 50%;
+}
+#ch7>span{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2vh;
+    color: white;
+    text-align: center;
+}
+#ch_wrap>div:nth-child(1), #ch_wrap>div:nth-child(2), #ch_wrap>div:nth-child(3), #ch_wrap>div:nth-child(4), #ch_wrap>div:nth-child(5), #ch_wrap>div:nth-child(6){
+        display: none;
+    }
+#ch_wrap>div:nth-child(7), #ch_wrap>div:nth-child(8), #ch_wrap>div:nth-child(9), #ch_wrap>div:nth-child(10), #ch_wrap>div:nth-child(11), #ch_wrap>div:nth-child(12){
+        display: block;
+    }
+.ch_sm{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: Center;
+    cursor: Default;
+    display: inline-block;
+}
 
+#ch_tt{
+    margin: 0 auto;
+    overflow: hidden;
+    float: right;
+    position: fixed;
+    top: -10%;
+    right: 0%;
+}
+.ch_tx{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    right: -200px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    font-weight: bold;
+    line-height: 30px;
+    padding-top: 10px;
+    cursor: context-menu;
+}
+.ct_tx_d{
+    right:0px;
+}
+#ch1_tx{
+    background: #e5d714;
+    transition: 0.9s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+#ch2_tx{
+    background: #448c4a;
+    transition: 1.1s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+#ch3_tx{
+    background: #36c4ea;  
+    transition: 1.3s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+#ch4_tx{
+    background: #ffa500;  
+    transition: 1.5s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+#ch5_tx{
+    background: #9932c9;
+    transition: 1.7s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+#ch6_tx{
+    background: #e8277a;
+    transition: 1.9s;
+    box-shadow: inset 0px 0px 5px 0px #fff;
+}
+.ch_sm B{
+    Margin:          0% 0%;
+    Width:           100%;
+    Position:        Absolute;
+    bottom: 21%;
+    left: -1%;
+    Text-align:      Center;
+    Display:         Inline-Block;
+    Color:           RGBa(0,0,0,.8);
+    Font-Weight:     100;
+    Font-Family:     "Open Sans", Arial;
+    White-Space:     NoWrap;
+    Text-Overflow:   Ellipsis;
+}
+.ch_sm SPAN{
+    Margin:          -40% 23%;
+    Width:           54%;
+    Position:        Absolute;
+    top: %;
+    Text-align:      Center;
+    Display:         Inline-Block;
+    Color:           RGBa(0,0,0,.8);
+    Font-Weight:     100;
+    Font-Family:     "Open Sans", Arial;
+    Overflow:        Hidden;
+    White-Space:     NoWrap;
+    Text-Overflow:   Ellipsis;
+    display: none;
+}
+.ch_sm[data-style="Semi"] B{
+    Margin:          0 20%;
+    Width:           80%;
+}
+.ch_sm S,
+.ch_sm U{
+    Text-Decoration: None;
+    Font-Size:       .5em;
+    Opacity:         .5;
+}
+
+.ch_sm B{
+    Color:           white;
+    Font-Weight:     bold;
+    Font-Size:       1.3em;
+    Opacity:         .8;
+}
     
 /*포트폴리오 영역*/
     
@@ -250,7 +411,7 @@ header{
 /*컨택트 영억*/
     
 #con_wrap{
-    width: 80%;
+    width: 100%;
     height: 65%;
     position: relative;
     top: 50%;
