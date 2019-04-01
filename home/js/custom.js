@@ -31,7 +31,7 @@
         }else{
             $('#skill span').removeClass('on');
             $(".ch_tx").removeClass('ct_tx_d');
-            $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 100);
+//            $("#ch7").stop().animate({"width":"70%", "height":"70%"}, 100);
         }
         if($(this).scrollTop() > page3top-50 && $(this).scrollTop() < page4top){
             $('#portfolio span').addClass('on');
