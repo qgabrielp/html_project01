@@ -49,7 +49,7 @@
         }
         
         $("#menu_btn").click(function(){
-            $("#menu2").show();
+            $("#menu").toggle();
         });
         
     });
