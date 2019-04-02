@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html,body{
+			width: 100%;
+			height:100%;
+		}
+		
+		main{
+			width: 100%;
+			height:100%;
+		}
+		.box{
+			width: 100%;
+			height: 100%;				
+			position: relative;
+		}	
+		.box:nth-child(1){
+			background:linear-gradient(-45deg,orange,yellow,orange);
+			overflow:hidden;			
+		}
+		#ani{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			perspective: 800px; 
+			transform-style: preserve-3d;
+		}
+		#ani:before{
+			content:'';
+			display:block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-top: 100vh solid transparent;
+			border-left:100vh solid rgba(255,255,255,0.3);
+		}
+		#ani:after{
+			content:'';
+			display:block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			border-top: 100vh solid transparent;
+			border-right:100vh solid rgba(255,255,255,0.3);
+		}
+		
+		#ani div{
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			width: 150px;
+			height: 100px;
+			transform-style: preserve-3d;
+			animation: move 5s linear infinite;
+/*			background-color: #fff;*/
+		}
+		#ani div:before{
+			content:'';
+			position: absolute;
+			display:block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;			
+		}
+		#ani div:after{
+			content:'';
+			position: absolute;
+			display:block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #e3e3e3;	
+			transform: rotateY(90deg);
+		}
+		
+		@keyframes move{
+			0%{transform: rotateY(0deg);}
+			100%{transform: rotateY(360deg);}
+		}
+		
+		
+		.box:nth-child(2){
+			background-image: url(../images/1.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+/*			앞의것-left, 뒤의것 -top*/
+			background-size: 100% 100%;
+	/*			앞의것-width, 뒤의것 -height*/		
+			background-attachment: fixed;
+		}
+		.box:nth-child(3){
+			background-color: #ff0;
+			background-image: url(../images/2.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+/*			앞의것-left, 뒤의것 -top*/
+			background-size: 100% 100%;
+	/*			앞의것-width, 뒤의것 -height*/		
+/*			background-attachment: fixed;*/
+		}
+		.box:nth-child(4){
+			background-image: url(../images/1.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+/*			앞의것-left, 뒤의것 -top*/
+			background-size: 100% 100%;
+	/*			앞의것-width, 뒤의것 -height*/		
+			background-attachment: fixed;
+			
+		}
+		.box:nth-child(5){
+			background-color: #00f;
+		}		
+		.box .content{
+			position: absolute;
+			width: 80%;
+			height: 10%;
+			background-color: rgba(255,255,255,0.5);
+		  top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			padding-top: 2%;			
+		}
+		
+   .box .content:hover{
+	    box-shadow: inset 0px 0px 0px 20px rgba(0,0,0,0.5);		
+		}
+	</style>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<main>
+	<div class="box">
+	   <section id="ani">
+	   	 <div></div>
+	   </section>	
+	</div>
+	<div class="box">
+	   <div class="content">	i love you </div>
+	</div>
+	<div class="box">
+		<div class="content">	you love me</div>
+	</div>
+	<div class="box">page4</div>
+	<div class="box">page5</div>
+</main>
+<script>
+	 $("main .box").each(function(){
+		 $(this).on("mousewheel",function(e){
+			 e.preventDefault();
+			 var delta=0; // delta 마우스휠 델타값(-120:내렸을때,120:올렸을때)
+			 delta=event.wheelDelta/120;
+			 var moveTop=null; // 각페이지의 톱을 계산
+			 if(delta < 0){
+				 
+				   if($(this).next() !== undefined){
+							moveTop=$(this).next().offset().top;
+							}	  
+				 
+					}else{
+					 if($(this).prev() !== undefined){
+							moveTop=$(this).prev().offset().top;
+							}							
+					}
+			  $("html,body").stop().animate({"scrollTop":moveTop+"px"},1000); 
+		 });
+	 });
+		 
+	// a=2; a==2; a===2	 
+	</script>	
+	
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+
+</html>

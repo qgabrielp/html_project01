@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 500px;
+            height: 300px;
+            background-color: yellow;
+            position: relative;
+        }
+        .box{
+            width: 0px;
+            height: 0px;
+            border-top: 0px solid transparent;
+            border-left: 0px solid transparent;
+            border-right: 250px solid transparent;
+            border-bottom: 300px solid red;
+        }
+        .wrap:hover .box{
+            border-top: 0px solid transparent;
+            border-left: 250px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 300px solid red;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">i love</div>
+    </div>
+</body>
+</html>

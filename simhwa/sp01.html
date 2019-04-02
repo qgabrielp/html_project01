@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a1, .a2, .a3{
+            background: url(images/sprite.png)no-repeat;
+        }
+        .a1{
+            width: 40px;
+            height: 40px;
+            background-position: 0 0;
+        }
+        .a1>span{
+            display: block;
+            margin-left: 50px;
+            padding-top: 10px;
+        }
+        .a2{
+            width: 40px;
+            height: 40px;
+            background-position: -40px -40px;
+        }
+        .a3{
+            width: 40px;
+            height: 40px;
+            background-position: -80px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="a1"><span>aaa1</span></div>
+    <div class="a2">aaa2</div>
+    <div class="a3"></div>
+</body>
+</html>

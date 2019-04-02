@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .slide{
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .slider{
+            width: 100%;     
+        }
+        .slider li{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            padding-top: 30%;
+        }
+        .slider img{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .slider .content{
+            font-size: 1.5rem;
+            color: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul class="slider">
+            <li>
+                <img src="images/1.jpg" alt="">
+                <div class="content">aaa</div>
+            </li>
+        </ul>
+        <ul class="slider">
+            <li>
+                <img src="images/2.jpg" alt="">
+                <div class="content">bbb</div>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        var im=$(".slider li");
+        var imsu=im.length;
+        var imgpos=0;
+        
+        $(im[imgpos]).css({"left":"0%"});
+        
+        function next(){
+            $(im[imgpos]).animate({"left":"100%"},1000,function(){
+                $(this).css({"left":"-100%", "opacity":"0"});
+            });
+            
+            imgpos++;
+            imgpos=imgpos%imsu;
+            $(im[imgpos]).animate({"left":"0", "opacity":"1"},1000);
+        }
+        
+        setInterval(next, 2000);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

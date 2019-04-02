@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        body{
+            font-family: "fontAwesome",sans-serif;
+            background-color: lightcyan;
+        }
+        input[id=a1]{
+            width: 200px;
+            height: 30px;
+            display: block;
+            border-bottom: 2px solid blue;
+            border-top: 0 solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 0 solid transparent;
+            float: left;
+        }
+        input[id=a1]:focus{
+            background-color: beige;
+        }
+        input[id=a2]{
+            display: none;
+        }
+        label{
+            font-size: 1.5rem;
+            display: block;
+            float: left;
+            cursor: pointer;
+        }
+        .clearfix:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .log{
+            width: 200px;
+            height: 40px;
+            background-color: yellow;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        .modal{
+            width: 400px;
+            height: 500px;
+            background-color: #0f0;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        .mo_con{
+            width: 80%;
+            height: 80%;
+            margin: 10%;
+            background-color: #fff;
+        }
+        .close{
+            font-size: 1.5rem;
+            float: right;
+            cursor: pointer;
+        }
+        .content{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <form action="aa.html" name="form" id="fo" class="clearfix">
+    <input type="text" name="id" id="a1">
+    <input type="button" id="a2" onclick="form_submit();">
+    <label for="a2">&#xf002;</label>
+    </form>
+    <div class="log">login</div>
+    <div class="modal">
+        <div class="mo_con">
+            <div class="close">&times;</div>
+            <div class="content">
+                모달 연습입니다.
+            </div>
+        </div>
+    </div>
+    <script>
+        function form_submit(){
+            var f1 = $("#a1").val();
+//            alert(f1);
+            if(!f1){
+                alert("다시 입력해 주세요");
+                $("#a1").focus();
+                return false;
+               }else{
+                   $("#fo").submit();
+               }
+        }
+        
+
+        $(".log").click(function(){
+            $(".modal").fadeIn(1000);
+        });
+        $(".close").click(function(){
+            $(".modal").fadeOut('slow');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

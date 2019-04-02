@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        .box{
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+            margin-right: 200px;
+            perspective: 400px;
+            position: relative;
+            background-color: #0f0;
+            float: left;
+        }
+        .in>img{
+            width: 100%;
+            height: 100%;
+        }
+        .in{
+            width: 100%;
+            height: 100%;
+            
+            transform-origin: right center;
+            transition: all 1s;
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box:hover .in{
+            transform: translateZ(-3200px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><span>111</span>
+        <div class="in"><img src="images/1.jpg" alt=""></div>
+    </div>
+    <div class="box"><span>222</span>
+        <div class="in"><img src="images/1.jpg" alt=""></div>
+    </div>
+    <div class="box"><span>333</span>
+        <div class="in"><img src="images/1.jpg" alt=""></div>
+    </div>
+</body>
+</html>

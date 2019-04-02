@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .a{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #f00;
+            top: 300px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">1</div>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <p>dd dd</p>
+    <script>
+//        문서 전체
+        var dh = $(document).height();
+        var dw = $(document).width();
+        
+//        한 화면 전체
+        var wh = $(window).height();
+        var ww = $(window).width();
+        
+//        left,top을 같이 가지고 있다/설정을 가져 오는것(getter) 
+//        (ch.top = $(".a").offset().top/ ch.left = $(".a").offset().left)
+        var ch = $(".a").offset();
+        
+//        설정을 해 주는 것(setter)
+//        var tt = $(".a").html("asd");
+//        $(".a").offset({left:200,top:400});
+        
+        $(window).scroll(function(){
+            var sww = $(window).scrollTop();
+            if(sww=ch.top){
+                $(".a").css({"color":"white", "font-size":"50px"});
+            }
+        });
+        var dw = $(document).scrollTop();
+    </script>
+</body>
+</html>

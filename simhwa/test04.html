@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        input[type=checkbox]{
+            display: none;
+        }
+        input[type=checkbox]:checked + label{
+            transition: all 1s;
+            right: 300px;
+        }
+        input[id=aa]+ label{
+            display: block;
+            position: fixed;
+            width: 40px;
+            height: 25px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+/*            border: 1px solid #f00;*/
+
+        }
+        input[id=aa]+ label span{
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: #000;
+            border-radius: 5px;
+            position: absolute;
+            transition: all 1s;
+        }
+        input[id=aa]+ label span:nth-child(1){
+            top: 0%;
+        }
+        input[id=aa]+ label span:nth-child(2){
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        input[id=aa]+ label span:nth-child(3){
+            bottom: 0%;
+        }
+        
+        input[id=aa]:checked+ label span:nth-child(1){
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        input[id=aa]:checked+ label span:nth-child(2){
+            opacity: 0;
+        }
+        input[id=aa]:checked+ label span:nth-child(3){
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+        
+        .menu{
+            width: 300px;
+            height: 400px;
+            background-color: #0f0;
+            position: fixed;
+            top: 50%;
+            right: -300px;
+            transform: translateY(-50%);
+        }
+        input[id=aa]:checked~ .menu{
+            right: 0px;
+            transition: all 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="ch" id="aa">  
+    <label for="aa">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>  
+    <div class="menu">
+        menu
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

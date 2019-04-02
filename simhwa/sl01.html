@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .slide{
+            width: 1002px;
+            height: 302px;
+            border: 1px solid red;
+            margin: 0 auto;
+            position: relative;
+        }
+        .slider{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .slider img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 1;
+        }
+        .slider .caption{
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .caption h1{
+            font-size: 2rem;
+        }
+        .caption p{
+            font-size: 1.2rem;
+        }
+        .left, .right, .page{
+            position: absolute;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            text-shadow: 5px 5px 5px #000;
+        }
+        .left{
+            top: 50%;
+            left: 2%;
+            transform: translateY(-50%);
+        }
+        .right{
+            top: 50%;
+            right: 2%;
+            transform: translateY(-50%);
+        }
+        .page{
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul class="slider">
+            <li>
+                <img src="images/1.jpg" alt="">
+                <section class="caption">
+                    <h1>111</h1>
+                    <p>111-111-111</p>
+                </section>
+            </li>
+        </ul>
+        <ul class="slider">
+            <li>
+                <img src="images/2.jpg" alt="">
+                <section class="caption">
+                    <h1>222</h1>
+                    <p>222-222-222</p>
+                </section>
+            </li>
+        </ul><ul class="slider">
+            <li>
+                <img src="images/3.jpg" alt="">
+                <section class="caption">
+                    <h1>333</h1>
+                    <p>333-333-333</p>
+                </section>
+            </li>
+        </ul><ul class="slider">
+            <li>
+                <img src="images/4.jpg" alt="">
+                <section class="caption">
+                    <h1>444</h1>
+                    <p>444-444-444</p>
+                </section>
+            </li>
+        </ul><ul class="slider">
+            <li>
+                <img src="images/5.jpg" alt="">
+                <section class="caption">
+                    <h1>555</h1>
+                    <p>555-555-555</p>
+                </section>
+            </li>
+        </ul>
+        <div class="left">◀</div>
+        <div class="right">▶</div>
+        <div class="page">
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+        </div>
+    </div>
+    <script>
+        var im=$(".slider li");
+        var imsu=im.length;
+        var page=$(".page span");
+        var pagesu=page.length;
+        var imgpos=0;
+        var pagepos=0;
+        
+        $(im).hide();
+        $(im.eq(0)).fadeIn(700);
+        
+        $(page).css({"color":"#fff"});
+        $(page.eq(0)).css({"color":"#f00"});
+        
+        $(".right").click(next);
+        
+        function next(){
+            imgpos++;
+//            if(imgpos>imsu-1) imgpos=0;
+            imgpos=imgpos%imsu;
+            
+            $(im).fadeOut();
+            $(im[imgpos]).fadeIn(700);
+            $(page).css({"color":"#fff"});
+            $(page.eq(imgpos)).css({"color":"#f00"});    
+        }
+        
+        $(".left").click(prev);
+        function prev(){
+            imgpos--;
+            console.log(imgpos);
+            if(imgpos<0) imgpos=4;
+//            imgpos=imgpos%imsu;
+            
+            $(im).fadeOut();
+            $(im[imgpos]).fadeIn(700);
+            $(page).css({"color":"#fff"});
+            $(page[imgpos]).css({"color":"#f00"});    
+        }
+        
+        $(page).click(pagesl);
+        function pagesl(){
+            pagepos=$(this).index();
+            imgpos = pagepos
+            $(im).fadeOut();
+            $(im[pagepos]).fadeIn(700);
+            $(page).css({"color":"#fff"});
+            $(page[pagepos]).css({"color":"#f00"});
+        }
+        
+        setInterval(next,6000);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
