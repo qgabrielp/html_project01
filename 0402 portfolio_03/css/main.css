@@ -193,8 +193,35 @@ header{
 #img_s{
     position: absolute;
 }
-
-
+#light{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    perspective: 400px;
+    transform-style: preserve-3d;
+    animation: light 7s linear infinite;
+}
+#light img{
+    position: absolute;
+    transform: translate(-50, -50%);
+/*    animation: onoff 5s linear infinite;*/
+}
+@keyframes light{
+    0%{transform: rotateY(0);}
+    5%{transform: rotateY(-45deg);}
+    10%{transform: rotateY(-90deg);}
+    15%{transform: rotateY(-135deg);}
+    20%{transform: rotateY(-180deg);}
+    40%{opacity: 0}
+    55%{opacity: 0}
+    100%{opacity: 0}
+}
+@keyframes onoff{
+    0%{opacity: 1;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
 
 
 
