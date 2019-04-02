@@ -7,7 +7,8 @@
 	<title> 문서의 제목  </title>
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
-	<link href="https://fonts.googleapis.com/css?family=Cute+Font|Jua|Varela+Round" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font|Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -19,7 +20,7 @@
 <header>
     <div id="header_wrap">
         <div id="logo"><a href="#a">한국알콜산업 <span>KaI</span></a></div>
-        <span id="menu_bg"></span>
+        <div id="menu_bg"><span>kaI</span></div>
         <div id="menu">
             <ul id="menu_u">
                 <li>
@@ -77,6 +78,15 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+        <div id="search"><i class="fas fa-search"></i></div>
+        <div id="search_ac">
+            <div>
+                <label class="search_label" for="search_field">검색어를 입력해주세요</label>
+                <input type="text">
+                <i class="fas fa-search"></i>
+            </div>
+            <div id="search_close"><i class="fas fa-times"></i></div>
         </div>
     </div>
 </header>

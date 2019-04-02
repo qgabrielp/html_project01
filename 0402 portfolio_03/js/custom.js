@@ -9,6 +9,13 @@
         $("#menu_u>li>ul").stop().slideUp(300);
         $("#menu_bg").stop().slideUp(300);
     });
+    $("#search_ac").hide();
+    $("#search").click(function(){
+        $("#search_ac").stop().slideDown(300);
+    });
+    $("#search_close").click(function(){
+        $("#search_ac").stop().slideUp(300);
+    });
 });
 
 
