@@ -1,7 +1,11 @@
 ﻿$(document).ready(function(){
-
-	// 실제 스크립트 코드를 입력할 공간입니다.
-	
+    $("#menu_u>li>ul").hide();
+    $("#menu_u>li").hover(function(){
+        var i = $(this).index();
+        $("#menu_u>li>ul").stop().slideDown();
+    }).mouseleave(function(){
+        $("#menu_u>li>ul").stop().slideUp();
+    });
 });
 
 
