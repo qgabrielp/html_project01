@@ -16,7 +16,16 @@
     $("#search_close").click(function(){
         $("#search_ac").stop().slideUp(300);
     });
+    
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 10){
+            $('header').addClass('hd_big');
+        } else {
+            $('header').removeClass('hd_big');
+            }
+    });
 });
+
 
 
 
