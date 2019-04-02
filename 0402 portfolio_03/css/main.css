@@ -1,9 +1,12 @@
+/*헤더*/
+
 header{
     width: 90%;
     height: 90px;
     position: fixed;
     top: 20px;
     left: 5%;
+    z-index: 100;
 }
 #header_wrap{
     width: 100%;
@@ -15,7 +18,7 @@ header{
     width: 100%;
     height: 288px;
     position: absolute;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.75);
     top: 90px;
     left: 0;
     overflow: hidden;
@@ -27,6 +30,7 @@ header{
     font-size: 220px;
     font-weight: bold;
     font-family: 'Varela Round';
+    opacity: 0.5;
 }
 #logo{
     width: 180px;
@@ -50,12 +54,13 @@ header{
 }
 #menu{
     width: 100%;
+    height: 100%;
     background-color: #fff;
     position: relative;
 }
 #menu_u{
     width: 100%;
-    background-color: #fff;
+/*    background-color: #fff;*/
 }
 /*
 #menu_u:after{
@@ -69,7 +74,7 @@ header{
     float: left;
     text-align: center;
     display: block;
-    background-color: #fff;
+/*    background-color: #fff;*/
 }
 #menu_u>li:first-child{
     margin-left: 26%;
@@ -84,7 +89,8 @@ header{
     height: 288px;
     top: 90px;
     left: 0;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.0);
+/*    border-right: 1px solid #fff;*/
 }
 #menu_u>li>ul>li{
     width: 100%;
@@ -114,6 +120,8 @@ header{
     width: 100%;
     height: 300px;
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: #fff;
     
 }
@@ -160,6 +168,38 @@ header{
 #search_close{
     cursor: pointer;
 }
+
+/*메인*/
+
+
+
+/*슬라이드*/
+.ms_wrap{
+    width: 100%;
+    overflow: hidden;
+}
+#img_m{
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: absolute;
+/*    animation: main_slider_01 1s linear infinite;*/
+}
+@keyframes main_slider_01{
+    0%{right: 0px;}
+    50%{right: 20px;}
+    100%{right: 40px;}
+}
+#img_s{
+    position: absolute;
+}
+
+
+
+
+
+
+
 
 
 
