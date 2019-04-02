@@ -11,21 +11,37 @@ header{
     margin: 0 auto;
     position: relative;
 }
-#logo{
-    width: 151px;
-    height: 27px;
+#menu_bg{
+    width: 100%;
+    height: 288px;
     position: absolute;
-    top: 33px;
+    background-color: rgba(0,0,0,0.8);
+    top: 90px;
+    left: 0;
+}
+.menu_bg_full{
+    height: 288px;
+    transition: all 0.6s;
+}
+#logo{
+    width: 180px;
+    height: 90px;
+    position: absolute;
+    top: 20px;
     left: 50px;
     z-index: 100;
 }
 #logo>a{
     width: 100%;
     height: 100%;
-    color: #71d2ff;
-    font-size: 1.2em;
+    color: #109ad6;
+    font-size: 1.5em;
     font-weight: bold;
-    font-family: 'NotoSansKR', sans-serif;
+    font-family: 'Cute+Font','Varela Round';      
+}
+#logo>a>span{
+    font-size: 2em;
+    flow-from: 'Varela Round';
 }
 #menu{
     width: 100%;
@@ -34,13 +50,15 @@ header{
 }
 #menu_u{
     width: 100%;
-    background-color: #222121;
+    background-color: #fff;
 }
+/*
 #menu_u:after{
     content: '';
     clear: both;
     display: block;
 }
+*/
 #menu_u>li{
     width: 8%;
     float: left;
@@ -61,10 +79,21 @@ header{
     height: 288px;
     top: 90px;
     left: 0;
-    background-color: #222121;
+    background-color: rgba(0,0,0,0.8);
 }
-
-
+#menu_u>li>ul>li{
+    width: 100%;
+}
+#menu_u>li>ul>li>a{
+    font-size: 16px;
+    line-height: 270%;
+    font-weight: 550;
+    color: gray;
+    display: block;
+}
+#menu_u>li>ul>li>a:hover{
+    color: white;
+}
 
 
 
