@@ -34,7 +34,27 @@
             }
     });
     
-    
+    $(".slide").eq(1).fadeOut();
+    $(".slide").eq(2).fadeOut();
+    $(".sl_btn").eq(0).addClass('sl_btn_on');
+    $(".sl_btn").eq(0).click(function(){
+        $(".slide").fadeOut();
+        $(".slide").eq(0).fadeIn();
+        $(".sl_btn").removeClass('sl_btn_on');
+        $(".sl_btn").eq(0).addClass('sl_btn_on');
+    });
+    $(".sl_btn").eq(1).click(function(){
+        $(".slide").fadeOut();
+        $(".slide").eq(1).fadeIn();
+        $(".sl_btn").removeClass('sl_btn_on');
+        $(".sl_btn").eq(1).addClass('sl_btn_on');
+    });
+    $(".sl_btn").eq(2).click(function(){
+        $(".slide").fadeOut();
+        $(".slide").eq(2).fadeIn();
+        $(".sl_btn").removeClass('sl_btn_on');
+        $(".sl_btn").eq(2).addClass('sl_btn_on');
+    });
 });
 
 

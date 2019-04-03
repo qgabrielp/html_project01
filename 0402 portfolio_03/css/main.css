@@ -104,6 +104,12 @@ header{
 #menu_u>li>ul>li{
     width: 100%;
 }
+#menu_u>li>a:hover{
+    color: #1c9ad6;
+}
+#menu_u>li:hover>a{
+    color: #1c9ad6;
+}
 #menu_u>li>ul>li>a{
     font-size: 16px;
     line-height: 270%;
@@ -316,6 +322,38 @@ main{
     background-position: center;
     background-size: cover;
     transition: all 1s;
+}
+
+#sl_btn_wrap{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-10%, -50%);
+    color: white;
+}
+.sl_btn{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 0px solid white;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: 20px;
+}
+#sl_btn_wrap>div:hover{
+    background-color: #109ad6;
+    transition: all 0.4s;
+}
+.sl_btn_on{
+    width: 15px;
+    height: 30px;
+    cursor: pointer;
+    border: 0px solid white;
+    border-radius: 15px;
+    background-color: #109ad6;
+    margin-top: 20px;
 }
 
 
