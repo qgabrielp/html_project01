@@ -252,7 +252,7 @@ main{
     transform: translate(-50%, -48%);
     perspective: 400px;
     transform-style: preserve-3d;
-    animation: light 1s linear infinite;
+    animation: light 5s ease infinite;
 }
 #light img{
     position: absolute;
@@ -265,7 +265,6 @@ main{
     10%{transform: rotateY(-90deg);}
     15%{transform: rotateY(-135deg);}
     20%{transform: rotateY(-180deg);}
-    40%{opacity: 0}
     55%{opacity: 0}
     100%{opacity: 0}
 }
