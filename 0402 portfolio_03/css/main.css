@@ -12,12 +12,12 @@ header{
     left: 5%;
     transition: all 0.4s;
     z-index: 100;
+/*    transition: top 0.2s ease-in-out;*/
 }
 .hd_big{
     width: 100%;
     top: 0;
     left: 0%;
-/*    transition: top 0.2s ease-in-out;*/
 }
 .hd_hide{
     top: -90px;
