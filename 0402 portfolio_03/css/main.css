@@ -183,9 +183,28 @@ header{
     width: 100%;
     overflow: hidden;
 }
+#slide01{
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translate(50%, 0);
+}
 #img_m{
     width: 100%;
-    background-size: 100% 100%;
+    min-width: 2560px;
+/*    min-height: 100%;*/
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+/*
+    position: static;
+    vertical-align: baseline;
+*/
+    transform: translate(-50%, 0);
+}
+#img_s{
+    width: 100%;
+    background-size: cover;
     background-position: center center;
     position: absolute;
 /*    animation: main_slider_01 1s linear infinite;*/
