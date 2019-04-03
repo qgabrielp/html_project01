@@ -1,3 +1,7 @@
+html,body{
+    height: 100%;
+}
+
 /*헤더*/
 
 header{
@@ -174,61 +178,76 @@ header{
     cursor: pointer;
 }
 
+#m_menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 2.4em;
+    color: black;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    display: none;
+}
+
 /*메인*/
 
-
+main{
+    height: 100%;
+}
 
 /*슬라이드*/
+
+#main_slider{
+    height: 100%;
+}
 .ms_wrap{
-    width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
 #slide01{
-    width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
-    transform: translate(50%, 0);
+    overflow: hidden;
+/*    transform: translate(50%, 0);*/
 }
 #img_m{
-    width: 100%;
-    min-width: 2560px;
-/*    min-height: 100%;*/
-    height: auto;
-    background-size: cover;
-    background-position: center center;
-/*
-    position: static;
-    vertical-align: baseline;
-*/
-    transform: translate(-50%, 0);
+     width: 100%;
+     height: 100%;
+     position: relative;
+     background: url(../img/main-visual-01-motion.jpg)no-repeat;
+     background-position: center;
+     background-size: cover;
+     transition: all 1s;
+     animation: main_slider_01 60s linear infinite;
 }
 #img_s{
     width: 100%;
-    background-size: cover;
-    background-position: center center;
+    height: 100%;
     position: absolute;
-/*    animation: main_slider_01 1s linear infinite;*/
+    top: 0;
+    left: 0;
+    background: url(../img/main-visual-01-fg-motion.png)no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 @keyframes main_slider_01{
-    0%{right: 0px;}
-    50%{right: 20px;}
-    100%{right: 40px;}
-}
-#img_s{
-    position: absolute;
+    0%{right: 0px; transform: scale(1.1)}
+    100%{right: 20px; transform: scale(1.1)}
 }
 #light{
     position: absolute;
-    top: 52%;
+    top: 48%;
     left: 50%;
-    transform: translate(-50%, -52%);
+    transform: translate(-50%, -48%);
     perspective: 400px;
     transform-style: preserve-3d;
-    animation: light 7s linear infinite;
+    animation: light 1s linear infinite;
 }
 #light img{
     position: absolute;
-    transform: translate(-50, -50%);
+    transform: translate(-0, -50%);
 /*    animation: onoff 5s linear infinite;*/
 }
 @keyframes light{
@@ -246,7 +265,21 @@ header{
     50%{opacity: 0.5;}
     100%{opacity: 1;}
 }
+.sl_tx1{
+    width: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 2em;
+    color: white;
+}
 
+#test{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
 
 
 

@@ -9,6 +9,11 @@
         $("#menu_u>li>ul").stop().slideUp(300);
         $("#menu_bg").stop().slideUp(300);
     });
+    $("main").click(function(){
+        $("#menu_u>li>ul").stop().slideUp(300);
+        $("#menu_bg").stop().slideUp(300);
+        $("#search_ac").stop().slideUp(300);
+    });
     $("#search_ac").hide();
     $("#search").click(function(){
         $("#search_ac").stop().slideDown(300);
@@ -16,6 +21,10 @@
     $("#search_close").click(function(){
         $("#search_ac").stop().slideUp(300);
     });
+    $("#m_menu").click(function(){
+        $("#menu_u>li>ul").stop().slideDown(300);
+    });
+    
     
     $(window).scroll(function(){
         if ($(this).scrollTop() > 10){
@@ -24,6 +33,8 @@
             $('header').removeClass('hd_big');
             }
     });
+    
+    
 });
 
 
