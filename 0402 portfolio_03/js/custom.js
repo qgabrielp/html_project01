@@ -56,6 +56,30 @@
         $(".sl_btn").eq(2).addClass('sl_btn_on');
     });
     
+    var timeID;
+    timer();
+    var current = 0;
+    current++;
+    function timer(){
+        timeID = setInterval(function(){
+            $(".sl_btn").eq(current++).trigger("click");
+            if(current > 3){
+                current = 0;
+               $(".sl_btn").eq(current++).trigger("click");
+               };
+        }, 5000);
+    };
+    $(".banner").on({mouseover:function(){
+        clearInterval(timeID);
+    },
+                     
+    mouseout:function(){
+        timer();
+    }
+    });
+    
+    
+    
 });
 
 

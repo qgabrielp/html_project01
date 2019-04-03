@@ -333,8 +333,8 @@ main{
     color: white;
 }
 .sl_btn{
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     cursor: pointer;
     border: 0px solid white;
     border-radius: 50%;
@@ -346,7 +346,7 @@ main{
     transition: all 0.4s;
 }
 .sl_btn_on{
-    width: 15px;
+    width: 10px;
     height: 30px;
     cursor: pointer;
     border: 0px solid white;
