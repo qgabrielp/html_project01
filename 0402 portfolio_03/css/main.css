@@ -446,6 +446,17 @@ main{
     color: black;
     font-family: 'Jura';
 }
+
+#sec1_mimg{
+    width: 35%;
+    height: 60%;
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    background: url(../img/main-business-03.jpg)no-repeat center center;
+    background-size: cover;
+}
+
 #sec1_1{
     width: 60%;
     height: 30%;
@@ -484,6 +495,7 @@ main{
     line-height: 50px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 #view_more::before{
     content: '';
@@ -521,6 +533,14 @@ main{
     bottom: 0;
     right: 10%;
     transform: translate(-10%, 0%);
+}
+
+#sec1_2{
+    width: 50%;
+    height: 30%;
+    position: relative;
+    margin: 0 auto;
+    background-color: #0ff;
 }
 
 .sec2{
