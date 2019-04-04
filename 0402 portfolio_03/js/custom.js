@@ -55,9 +55,10 @@
         if(Math.abs(lastScrollTop - st) <= delta) 
         return;
         if (st > lastScrollTop && st > 850 ){
-            $('header').addClass('hd_hide'); 
+            $('header').addClass('hd_hide');
+            $('#search_ac').slideUp();
         } else {
-            if(st + $(window).height() < $(document).height()) {            $('header').removeClass('hd_hide'); 
+            if(st + $(window).height() < $(document).height()) {            $('header').removeClass('hd_hide');
             } 
         } lastScrollTop = st; 
     }
@@ -93,30 +94,30 @@
         $(".sl_tx2").addClass('sl_tx_up2');
     });
     
-    var timeID;
-    timer();
-    var current = 0;
-    current++;
-    function timer(){
-        timeID = setInterval(function(){
-            $(".sl_btn").eq(current++).trigger("click");
-            if(current > 3){
-                current = 0;
-               $(".sl_btn").eq(current++).trigger("click");
-               };
-        }, 5000);
-    };
-    
-    $("#stop").click(function(){
-        clearInterval(timeID);
-        $("#start").stop().show();
-        $("#stop").stop().hide();
-    });
-    $("#start").click(function(){
-        timer();
-        $("#stop").stop().show();
-        $("#start").stop().hide();
-    });
+//    var timeID;
+//    timer();
+//    var current = 0;
+//    current++;
+//    function timer(){
+//        timeID = setInterval(function(){
+//            $(".sl_btn").eq(current++).trigger("click");
+//            if(current > 3){
+//                current = 0;
+//               $(".sl_btn").eq(current++).trigger("click");
+//               };
+//        }, 10000);
+//    };
+//    
+//    $("#stop").click(function(){
+//        clearInterval(timeID);
+//        $("#start").stop().show();
+//        $("#stop").stop().hide();
+//    });
+//    $("#start").click(function(){
+//        timer();
+//        $("#stop").stop().show();
+//        $("#start").stop().hide();
+//    });
     
     
     

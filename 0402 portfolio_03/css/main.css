@@ -59,7 +59,7 @@ header{
     color: #109ad6;
     font-size: 1.5em;
     font-weight: bold;
-    font-family: 'Cute+Font','Varela Round';      
+    font-family: 'Varela Round';      
 }
 #logo>a>span{
     font-size: 2em;
@@ -124,6 +124,22 @@ header{
 #menu_u>li>ul>li>a:hover{
     color: white;
 }
+#len{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 4.5%;
+    transform: translate(-4.5%, -50%);
+    font-weight: bold;
+    word-spacing: 10px;
+}
+#len span{
+    cursor: pointer;
+}
+#len span:first-child{
+    color: #1c9ad6;
+}
 #search{
     width: auto;
     height: auto;
@@ -131,8 +147,8 @@ header{
     color: black;
     position: absolute;
     top: 50%;
-    right: 10%;
-    transform: translate(-10%, -50%);
+    right: 2.5%;
+    transform: translate(-2.5%, -50%);
     cursor: pointer;
 }
 #search_ac{
@@ -210,10 +226,10 @@ main{
 /*슬라이드*/
 
 #main_slider{
-    height: 100%;
+    height: 120%;
 }
 .ms_wrap{
-    height: 120%;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -406,11 +422,114 @@ main{
     background-color: rgba(255,255,255,0.3);
     transition: all 0.4s;
 }
-#test{
+
+/*컨탠츠*/
+
+#content{
     width: 100%;
-    height: 200%;
+    height: 350%;
+}
+
+.sec1{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    padding-top: 5%;
+/*    background-color: #ff0;*/
+}
+#sec1_tt{
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Jura';
+}
+#sec1_1{
+    width: 60%;
+    height: 30%;
+    position: relative;
+    margin: 0 auto;
+/*    background-color: #0ff;*/
+}
+#sec1_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+}
+.text_ko{
+    font-size: 24px;
+    color: black;
+}
+.text_en{
+    font-size: 70px;
+    color: black;
+    font-family: 'Jura';
+}
+.text_sec{
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    display: block;
+    margin-bottom: 2%;
+}
+#view_more{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+#view_more::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border: 1px solid #000;
+}
+#view_more a{
+    color: black;
+    display: block;
+}
+
+#sec1_1 figure{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    transform: translate(-10%, 0%);
+}
+
+.sec2{
+    width: 100%;
+    height: 20%;
+    background-color: #f00;
+}
+
+.sec3{
+    width: 100%;
+    height: 25%;
     background-color: #0f0;
 }
+
+.sec4{
+    width: 100%;
+    height: 15%;
+    background-color: #00f;
+}
+
+
+
+
+
+
+
 
 
 
