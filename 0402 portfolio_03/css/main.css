@@ -483,20 +483,37 @@ main{
     text-align: center;
     line-height: 50px;
     position: relative;
+    overflow: hidden;
 }
 #view_more::before{
     content: '';
-    position: absolute;
-    top: 0;
-    left: -110%;
-    width: 100%;
+    display: block;
+    width: 120%;
     height: 100%;
+    position: absolute;
+    left: -10px;
+    top: 0;
     background-color: #000;
-    border: 1px solid #000;
+    transform: translateX(-101%) skewX(-17.62deg);
+    backface-visibility: hidden;
+    z-index: 1;
 }
 #view_more a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: black;
     display: block;
+    z-index: 10;
+}
+#view_more:hover::before{
+    left: 220px;
+    transition: all 1s;
+}
+#view_more:hover a{
+    color: white;
+    transition: all 1s;
 }
 
 #sec1_1 figure{
