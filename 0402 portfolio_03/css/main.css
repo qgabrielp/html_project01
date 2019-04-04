@@ -31,7 +31,7 @@ header{
     width: 100%;
     height: 288px;
     position: absolute;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(1,1,1,0.9);
     top: 90px;
     left: 0;
     overflow: hidden;
@@ -345,7 +345,7 @@ main{
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../img/main-visual-03-v2.gif)no-repeat;
+    background: url(../img/main-visual-03-v2.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     transition: all 1s;
@@ -422,17 +422,36 @@ main{
     background-color: rgba(255,255,255,0.3);
     transition: all 0.4s;
 }
+#gtt{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 15px;
+    right: 5%;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    background-color: #222;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+#gtt:hover{
+    background-color: #1c9ad6;
+    transition: all 0.4s;
+}
 
 /*컨탠츠*/
 
 #content{
     width: 100%;
-    height: 350%;
+    height: 400%;
 }
 
 .sec1{
     width: 100%;
-    height: 40%;
+    height: 50%;
     position: relative;
     padding-top: 2%;
 /*    background-color: #ff0;*/
@@ -440,7 +459,7 @@ main{
 #sec1_tt{
     width: auto;
     height: auto;
-    margin-left: 30%;
+    margin-left: 20%;
     font-size: 40px;
     font-weight: 600;
     color: black;
@@ -448,19 +467,22 @@ main{
 }
 
 #sec1_mimg{
-    width: 35%;
-    height: 70%;
+    width: 90%;
+    height: 65%;
+    max-width: 1723px;
     position: absolute;
     top: 10%;
-    right: 15%;
-    background: url(../img/main-business-03.jpg)no-repeat center center;
-    background-size: cover;
+    right: 5%;
+/*    transform: translate(-0%, -20%);*/
+    background: url(../img/main-business-03.jpg)no-repeat center right;
+    background-size: contain;
     z-index: 9;
 }
 
 #sec1_1{
-    width: 70%;
+    width: 90%;
     height: 27%;
+    max-width: 1723px;
     position: relative;
     margin: 0 auto;
     z-index: 10;
@@ -525,23 +547,28 @@ main{
 }
 #view_more:hover::before{
     left: 220px;
-    transition: all 1s;
+    transition: all 0.6s;
 }
 #view_more:hover a{
     color: white;
-    transition: all 1s;
+    transition: all 0.6s;
 }
 
 #sec1_1 figure{
     position: absolute;
     bottom: -15%;
-    right: 10%;
-    transform: translate(-10%, 0%);
+    right: 16.5%;
+/*    transform: translate(-10%, 0%);*/
+}
+#sec1_1 figure video{
+    width: 100%;
+    height: 100%;
 }
 
 #sec1_2{
-    width: 70%;
+    width: 90%;
     height: 27%;
+    max-width: 1723px;
     position: relative;
     margin: 0 auto;
     z-index: 11;
@@ -612,19 +639,21 @@ main{
 }
 #sec2_text #view_more:hover::before{
     left: 220px;
-    transition: all 1s;
+    transition: all 0.6s;
 }
 #sec2_text #view_more:hover a{
     color: #000;
-    transition: all 1s;
+    transition: all 0.6s;
 }
 
 #sec1_3{
-    width: 70%;
-    height: 30%;
+    width: 90%;
+    height: 35%;
+    max-width: 1723px;
     position: absolute;
     bottom: 0;
-    left: 15%; 
+    left: 50%;
+    transform: translate(-50%, -0);
 /*    background-color: #ff0;*/
 }
 #sec1_3_img{
@@ -635,12 +664,181 @@ main{
     background: url(../img/business-colorpaste-bg.jpg)no-repeat center center;
     background-size: 100% 100%;
 }
+#sec3_text{
+    padding-top: 20%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -15%;
+    left: 17%;
+}
+#sec3_text .text_ko{
+    font-size: 24px;
+    color: white;
+}
+#sec3_text .text_en{
+    font-size: 70px;
+    color: white;
+    font-family: 'Jura';
+}
+#sec3_text .text_sec{
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
+#sec3_text #view_more{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#sec3_text #view_more::before{
+    content: '';
+    display: block;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    background-color: #fff;
+    transform: translateX(-101%) skewX(-17.62deg);
+    backface-visibility: hidden;
+    z-index: 1;
+}
+#sec3_text #view_more a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: block;
+    z-index: 10;
+}
+#sec3_text #view_more:hover::before{
+    left: 220px;
+    transition: all 0.6s;
+}
+#sec3_text #view_more:hover a{
+    color: #000;
+    transition: all 0.6s;
+}
 
 .sec2{
     width: 100%;
-    height: 20%;
-    background-color: #f00;
+    height: 25%;
+    padding-top: 100px;
+    position: relative;
+/*    background-color: #f00;*/
 }
+.sec2>h1{
+    display: block;
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Jura';
+    padding-bottom: 60px;
+    color: #222;
+}
+#sec2_wrap{
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+.sec2_con{
+    width: 33.33%;
+    padding: 0 12px;
+    float: left;
+/*    background-color: #ff0;*/
+}
+.sec2_con:nth-child(1) .s2c_img{
+    width: 100%;
+    height: 400px;
+    background: url(../img/main-chemical-01.jpg)no-repeat center center;
+    background-size: cover;
+}
+.sec2_con:nth-child(2) .s2c_img{
+    width: 100%;
+    height: 400px;
+    background: url(../img/main-chemical-02.jpg)no-repeat center center;
+    background-size: cover;
+}
+.sec2_con:nth-child(3) .s2c_img{
+    width: 100%;
+    height: 400px;
+    background: url(../img/main-chemical-03.jpg)no-repeat center center;
+    background-size: cover;
+}
+.s2c_text{
+    padding-top: 20px;
+}
+.s2c_text h2{
+    font-size: 24px;
+    line-height: 1.65;
+    color: #222;
+}
+.s2c_text p{
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+}
+#site_more{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin-top: 30px;
+}
+#site_more::before{
+    content: '';
+    display: block;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    background-color: #000;
+    transform: translateX(-101%) skewX(-17.62deg);
+    backface-visibility: hidden;
+    z-index: 1;
+}
+#site_more a{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+    color: black;
+    display: block;
+    z-index: 10;
+}
+#site_more a i{
+    position: absolute;
+    top: 50%;
+    right: -80%;
+    transform: translate(-50%, -50%);
+}
+#site_more:hover::before{
+    left: 220px;
+    transition: all 0.6s;
+}
+#site_more:hover a{
+    color: white;
+    transition: all 0.6s;
+}
+
 
 
 .sec3{
@@ -649,11 +847,6 @@ main{
     background-color: #0f0;
 }
 
-.sec4{
-    width: 100%;
-    height: 15%;
-    background-color: #00f;
-}
 
 
 
