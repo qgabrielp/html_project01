@@ -131,8 +131,9 @@
     
     $(window).scroll(function(){
         var sec1top = $("#sec1_1").offset().top - 1200;
-        var sec2top = $("#sec1_2").offset().top - 1000;
-        var sec3top = $("#sec1_3").offset().top - 1000;
+        var sec2top = $("#sec1_2").offset().top - 1200;
+        var sec3top = $("#sec1_3").offset().top - 1200;
+        var sc2top = $(".sec2").offset().top -1000;
 
         if ($(this).scrollTop() > 950){
             $('#gtt').fadeIn();
@@ -148,7 +149,11 @@
         if ($(this).scrollTop() > sec3top){
             $('#sec3_text').addClass('text_ko_up');
         }
-        
+        if ($(this).scrollTop() > sc2top){
+            $('.sc1').addClass('sc1img_up');
+            $('.sc2').addClass('sc2img_up');
+            $('.sc3').addClass('sc3img_up');
+        }
         
     });
     $('#gtt').click(function(){

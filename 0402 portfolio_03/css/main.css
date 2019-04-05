@@ -581,7 +581,7 @@ main{
     
 }
 #sec2_text{
-    padding-top: 20%;
+    padding-top: 10%;
     width: auto;
     height: auto;
     position: absolute;
@@ -667,11 +667,11 @@ main{
     background-size: 100% auto;
 }
 #sec3_text{
-    padding-top: 20%;
+    padding-top: 10%;
     width: auto;
     height: auto;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 17%;
 }
 #sec3_text .text_ko{
@@ -741,11 +741,11 @@ main{
 }
 
 @keyframes tkup{
-    0%{transform: translateY(70%); opacity: 0;}
-    50%{transform: translateY(-0%); opacity: 0.8;}
-    60%{transform: translateY(3%); opacity: 0.8;}
-    80%{transform: translateY(-1%); opacity: 0.9;}
-    100%{transform: translateY(0%); opacity: 1;}
+    0%{padding-top: 20%; opacity: 0;}
+    50%{padding-top: 10%; opacity: 0.8;}
+    60%{padding-top: 11%; opacity: 0.8;}
+    80%{padding-top: -11%; opacity: 0.9;}
+    100%{padding-top: 10%; opacity: 1;}
 }
 
 .sec2{
@@ -857,7 +857,22 @@ main{
     transition: all 0.6s;
 }
 
-
+.sc1img_up{
+    animation: tkup2 5s ease 1;
+}
+.sc2img_up{
+    animation: tkup2 5.5s ease 1;
+}
+.sc3img_up{
+    animation: tkup2 6s ease 1;
+}
+@keyframes tkup2{
+    0%{padding-top: 20%; opacity: 0;}
+    50%{padding-top: 0%; opacity: 0.8;}
+    60%{padding-top: 1%; opacity: 0.8;}
+    80%{padding-top: -1%; opacity: 0.9;}
+    100%{padding-top: 0%; opacity: 1;}
+}
 
 .sec3{
     width: 100%;
