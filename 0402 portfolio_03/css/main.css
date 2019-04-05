@@ -678,6 +678,7 @@ main{
 #sec3_text .text_ko{
     font-size: 24px;
     color: white;
+    position: absolute;
 }
 #sec3_text .text_en{
     font-size: 70px;
@@ -733,6 +734,16 @@ main{
 #sec3_text #view_more:hover a{
     color: #000;
     transition: all 0.6s;
+}
+
+.text_ko_up{
+    animation: tkup 2s cubic-bezier(.42,1.76,.65,.12) 1;
+}
+
+@keyframes tkup{
+    0%{transform: translateY(100%);}
+    90%{transform: translateY(-5%);}
+    100%{transform: translateY(0%);}
 }
 
 .sec2{
