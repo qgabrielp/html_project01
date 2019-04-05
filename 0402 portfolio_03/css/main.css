@@ -472,10 +472,10 @@ main{
     max-width: 1723px;
     position: absolute;
     top: 10%;
-    right: 5%;
-/*    transform: translate(-0%, -20%);*/
+    left: 50%;
+    transform: translate(-50%, -0%);
     background: url(../img/main-business-03.jpg)no-repeat center right;
-    background-size: contain;
+    background-size: 55% 100%;
     z-index: 9;
 }
 
@@ -662,15 +662,16 @@ main{
     top: 0;
     right: 0;
     background: url(../img/business-colorpaste-bg.jpg)no-repeat center center;
-    background-size: 100% 100%;
+    background-size: 100% auto;
 }
 #sec3_text{
     padding-top: 20%;
     width: auto;
     height: auto;
     position: absolute;
-    top: -15%;
+    top: 30%;
     left: 17%;
+    transform: translate(0%, -30%);
 }
 #sec3_text .text_ko{
     font-size: 24px;
@@ -749,8 +750,10 @@ main{
 }
 #sec2_wrap{
     width: 60%;
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .sec2_con{
     width: 33.33%;
