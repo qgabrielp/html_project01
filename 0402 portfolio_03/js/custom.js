@@ -130,11 +130,26 @@
     });
     
     $(window).scroll(function(){
+        var sec1top = $("#sec1_1").offset().top - 1200;
+        var sec2top = $("#sec1_2").offset().top - 1000;
+        var sec3top = $("#sec1_3").offset().top - 1000;
+
         if ($(this).scrollTop() > 950){
             $('#gtt').fadeIn();
         } else {
             $('#gtt').fadeOut();
             }
+        if ($(this).scrollTop() > sec1top){
+            $('#sec1_text').addClass('text_ko_up');
+        }
+        if ($(this).scrollTop() > sec2top){
+            $('#sec2_text').addClass('text_ko_up');
+        }
+        if ($(this).scrollTop() > sec3top){
+            $('#sec3_text').addClass('text_ko_up');
+        }
+        
+        
     });
     $('#gtt').click(function(){
         $('html, body').stop().animate({scrollTop : 0}, 400);
