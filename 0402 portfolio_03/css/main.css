@@ -1035,7 +1035,7 @@ main{
     line-height: 1.75;
     color: #333;
     font-weight: 500;
-    padding-bottom: 5%;
+    padding-bottom: 0%;
 }
 .tx_ho:hover{
     border-bottom: 1px solid #000;
@@ -1097,7 +1097,6 @@ main{
     width: 50%;
     height: 30%;
     margin: 0 auto;
-    background-color: #0ff;
 }
 .sec3_3_top{
     width: 100%;
@@ -1216,7 +1215,6 @@ main{
     position: relative;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
-    background-color: #fff;
 }
 .sec3_3_top_2:hover{
     border-bottom: 1px solid #71d2ff;
@@ -1285,10 +1283,102 @@ main{
 }
 .sec3_3_bot{
     width: 100%;
-    height: 25%;
-    margin-top: 5%;
-    background-color: #ff0;
+    height: 23%;
+    margin-top: 7%;
 }
+.sec3_3_bot:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec3_3_bot>div{
+    float: left;
+}
+.sec3_3_bot_1{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+.sec3_3_bot_1>div:first-child{
+    display: block;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+}
+.sec3_3_bot_1>div:last-child span{
+    float: left;
+}
+.sec3_3_bot_1>div:last-child #sp1{
+    width: 40%;
+    display: inline-block;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 200;
+    color: #1c9ad6;
+}
+.sec3_3_bot_1>div:last-child #sp2{
+    width: 60%;
+    display: inline-block;
+    padding-top: 14px;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 300;
+    text-align: right;
+    color: #888;
+    padding-right: 10%;
+}
+.sec3_3_bot_1>div:last-child i{
+    color: #ec429a;
+}
+
+.sec3_3_bot_2{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding-left: 5%;
+}
+.sec3_3_bot_2 h2{
+    display: block;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+}
+.sec3_3_bot_2 ul{
+    width: 100%;
+}
+.sec3_3_bot_2 ul li{
+    display: block;
+    font-size: 16px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sec3_3_bot_2 ul li:hover a span{
+    color: #1c9ad6;
+    transition: 0.4s;
+}
+.sec3_3_bot_2 ul time{
+    position: absolute;
+    right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
