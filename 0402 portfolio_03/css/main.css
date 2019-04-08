@@ -38,20 +38,13 @@ header{
     overflow: hidden;
 }
 #menu_bg>span{
-    width: 20%;
-    height: 40%;
+    width: 17%;
+    height: 50%;
     position: absolute;
     bottom: 0;
     right: 5%;
     background: url(../img/menu-typo.png)no-repeat center center;
     background-size: 100% 100%;
-    
-/*
-    font-size: 220px;
-    font-weight: bold;
-    font-family: 'Varela Round';
-    opacity: 0.5;
-*/
 }
 #logo{
     width: 180px;
