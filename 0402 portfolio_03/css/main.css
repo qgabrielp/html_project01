@@ -997,7 +997,7 @@ main{
     font-family: 'Kanit';
     font-weight: 100;
 }
-#s3_2_1_img{
+.s3_2_1_img{
     width: 50%;
     height: 105%;
     position: absolute;
@@ -1006,6 +1006,13 @@ main{
     background: url(../img/main-recruit.png)no-repeat center center;
     background-size: 100% 100%;
     z-index: 1;
+}
+.s3_2_1_img_up{
+    animation: s3_2_1_img_up 1s linear 1;
+}
+@keyframes s3_2_1_img_up{
+    0%{bottom: -100%; opacity: 0}
+    100%{bottom: 0; opacity: 1}
 }
 #s3_2_1_text{
     width: 100%;
@@ -1110,6 +1117,7 @@ main{
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
+    color: #333;
 }
 
 .sec3_3_top_1{

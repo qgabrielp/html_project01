@@ -133,7 +133,8 @@
         var sec1top = $("#sec1_1").offset().top - 1200;
         var sec2top = $("#sec1_2").offset().top - 1200;
         var sec3top = $("#sec1_3").offset().top - 1200;
-        var sc2top = $(".sec2").offset().top -1000;
+        var sc2top = $(".sec2").offset().top - 1000;
+        var sc3_2top = $(".sec3_2").offset().top - 1500;
 
         if ($(this).scrollTop() > 950){
             $('#gtt').fadeIn();
@@ -153,6 +154,9 @@
             $('.sc1').addClass('sc1img_up');
             $('.sc2').addClass('sc2img_up');
             $('.sc3').addClass('sc3img_up');
+        }
+        if($(this).scrollTop() > sc3_2top){
+            $('.s3_2_1_img').addClass('s3_2_1_img_up');
         }
         
     });
