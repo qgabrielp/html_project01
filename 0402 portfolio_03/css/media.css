@@ -327,7 +327,158 @@
 }
 
 @media screen and (min-width:1024px) and (max-width:1279px){
+    #logo{
+    width: 180px;
+    height: 90px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+    #logo>a{
+    width: 100%;
+    height: 100%;
+    color: #109ad6;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'Varela Round';      
+}
     
+    #menu_u>li{
+    width: 10%;
+    float: left;
+    text-align: center;
+    display: block;
+}
+    #menu_u>li:first-child{
+    margin-left: 20%;
+}
+    #menu_u>li>a{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 90px;
+}
+    #menu_u>li>ul>li>a{
+    font-size: 14px;
+    line-height: 270%;
+    font-weight: 550;
+    color: gray;
+    display: block;
+}
+    .sl_tx2{
+    width: 90%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    font-size: 5em;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    font-family: 'Jura';
+}  
+    
+    #sec1_tt{
+    width: 90%;
+    height: auto;
+    max-width: 1723px;
+    position: absolute;
+    left: 50%;
+    padding-left: 5%;
+    transform: translateX(-50%);
+    font-size: 34px;
+    font-weight: 300;
+    color: black;
+    font-family: 'Jura';
+}
+    #sec1_mimg{
+    width: 100%;
+    height: 55%;
+    max-width: 1723px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    transform: translate(-50%, -0%);
+    background: url(../img/main-business-03.jpg)no-repeat center right;
+    background-size: 45% 60%;
+    z-index: 9;
+}
+    #sec1_1{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    padding-left: 5%;
+}
+    .text_ko{
+    font-size: 22px;
+    color: black;
+}
+    .text_en{
+    font-size: 60px;
+    color: black;
+    font-family: 'Jura';
+}
+    .text_sec{
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+    display: block;
+    margin-bottom: 2%;
+}
+    #sec1_1 figure{
+    width: 50%;
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+/*    transform: translate(-10%, 0%);*/
+}
+    #sec1_1 figure video{
+    width: 100%;
+    height: 100%;
+}
+    #sec1_2{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 11;
+    padding-left: 5%;
+}
+    #sec1_2_img{
+    width: 50%;
+    height: 50%;
+    
+}
+    #sec2_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+    #sec2_text .text_ko{
+    font-size: 22px;
+    color: white;
+}
+    #sec2_text .text_en{
+    font-size: 60px;
+    color: white;
+    font-family: 'Jura';
+}
+    #sec2_text .text_sec{
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
 }
 
 @media screen and (min-width:780px) and (max-width:1023px){

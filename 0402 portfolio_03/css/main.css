@@ -96,6 +96,7 @@ header{
     font-size: 18px;
     font-weight: 600;
     line-height: 90px;
+    color: black;
 }
 #menu_u>li>ul{
     width: 100%;
