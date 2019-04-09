@@ -425,31 +425,13 @@ main{
     line-height: 60px;
     color: white;
     cursor: pointer;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255,0.6);
 }
 #skdw:hover{
     background-color: rgba(255,255,255,0.3);
     transition: all 0.4s;
 }
-#gtt{
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    bottom: 15px;
-    right: 5%;
-    font-size: 1.6em;
-    text-align: center;
-    line-height: 60px;
-    color: white;
-    background-color: #222;
-    cursor: pointer;
-    z-index: 100;
-    display: none;
-}
-#gtt:hover{
-    background-color: #1c9ad6;
-    transition: all 0.4s;
-}
+
 
 /*컨탠츠*/
 
@@ -1589,6 +1571,35 @@ footer{
     letter-spacing: 0.015em;
 }
 
+.gtt{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 15px;
+    right: 5%;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    background-color: #222;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+.gtt:hover{
+    background-color: #1c9ad6;
+    transition: all 0.4s;
+}
+.gtt_ab{
+    display: block;
+    width: 59px;
+    height: 59px;
+    position: absolute;
+    top: -22px;
+    right: 5%;
+    cursor: pointer;
+    background: #222;
+}
 
 
 

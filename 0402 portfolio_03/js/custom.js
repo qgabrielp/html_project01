@@ -96,30 +96,30 @@
         $(".sl_tx2").addClass('sl_tx_up2');
     });
     
-//    var timeID;
-//    timer();
-//    var current = 0;
-//    current++;
-//    function timer(){
-//        timeID = setInterval(function(){
-//            $(".sl_btn").eq(current++).trigger("click");
-//            if(current > 3){
-//                current = 0;
-//               $(".sl_btn").eq(current++).trigger("click");
-//               };
-//        }, 10000);
-//    };
-//    
-//    $("#stop").click(function(){
-//        clearInterval(timeID);
-//        $("#start").stop().show();
-//        $("#stop").stop().hide();
-//    });
-//    $("#start").click(function(){
-//        timer();
-//        $("#stop").stop().show();
-//        $("#start").stop().hide();
-//    });
+    var timeID;
+    timer();
+    var current = 0;
+    current++;
+    function timer(){
+        timeID = setInterval(function(){
+            $(".sl_btn").eq(current++).trigger("click");
+            if(current > 3){
+                current = 0;
+               $(".sl_btn").eq(current++).trigger("click");
+               };
+        }, 10000);
+    };
+    
+    $("#stop").click(function(){
+        clearInterval(timeID);
+        $("#start").stop().show();
+        $("#stop").stop().hide();
+    });
+    $("#start").click(function(){
+        timer();
+        $("#stop").stop().show();
+        $("#start").stop().hide();
+    });
     
     
     $("#skdw").click(function(){
@@ -135,11 +135,12 @@
         var sec3top = $("#sec1_3").offset().top - 1200;
         var sc2top = $(".sec2").offset().top - 1000;
         var sc3_2top = $(".sec3_2").offset().top - 1500;
+        var fttop = $(".footer_bot").offset().top -1400;
 
         if ($(this).scrollTop() > 950){
-            $('#gtt').fadeIn();
+            $('.gtt').fadeIn();
         } else {
-            $('#gtt').fadeOut();
+            $('.gtt').fadeOut();
             }
         if ($(this).scrollTop() > sec1top){
             $('#sec1_text').addClass('text_ko_up');
@@ -158,9 +159,14 @@
         if($(this).scrollTop() > sc3_2top){
             $('.s3_2_1_img').addClass('s3_2_1_img_up');
         }
+        if($(this).scrollTop() > fttop){
+            $('.gtt').addClass('gtt_ab');
+        }else{
+            $('.gtt').removeClass('gtt_ab');
+        }
         
     });
-    $('#gtt').click(function(){
+    $('.gtt').click(function(){
         $('html, body').stop().animate({scrollTop : 0}, 400);
         return false;
     });
