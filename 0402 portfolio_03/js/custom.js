@@ -29,9 +29,13 @@
     $(window).scroll(function(){
         if ($(this).scrollTop() > 50){
             $('header').addClass('hd_big');
+            $('.c_logo').addClass('logo_b');
+            $('.c_m_menu').addClass('m_menu_b');
         } else {
             $('header').removeClass('hd_big');
             $('header').removeClass('hd_hide');
+            $('.c_logo').removeClass('logo_b');
+            $('.c_m_menu').removeClass('m_menu_b');
             }
     });
     

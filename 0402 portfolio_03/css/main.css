@@ -54,7 +54,7 @@ header{
     left: 50px;
     z-index: 100;
 }
-#logo>a{
+.c_logo{
     width: 100%;
     height: 100%;
     color: #109ad6;
@@ -62,7 +62,7 @@ header{
     font-weight: bold;
     font-family: 'Varela Round';      
 }
-#logo>a>span{
+.c_logo>span{
     font-size: 2em;
     flow-from: 'Varela Round';
 }
@@ -211,17 +211,21 @@ header{
     cursor: pointer;
 }
 
-#m_menu{
-    width: 50px;
-    height: 50px;
+.c_m_menu{
+    width: 60px;
+    height: 60px;
     position: absolute;
     top: 50%;
     right: 0;
-    font-size: 2.4em;
-    color: black;
+    font-size: 2.0em;
+    line-height: 60px;
+    color: white;
     transform: translate(0, -50%);
     cursor: pointer;
     display: none;
+}
+.m_menu_b{
+    color: black;
 }
 
 /*메인*/
