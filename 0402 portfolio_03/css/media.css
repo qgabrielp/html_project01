@@ -1,0 +1,343 @@
+
+@media screen and (min-width:2000px) {
+    
+}
+
+@media screen and (min-width:1600px) and (max-width:1999px) {
+    .sl_tx2{
+    width: 80%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    font-size: 6em;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    font-family: 'Jura';
+}
+    
+    #sec1_tt{
+    width: 90%;
+    height: auto;
+    max-width: 1723px;
+    position: absolute;
+    left: 50%;
+    padding-left: 10%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Jura';
+}  
+    #sec1_1{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    padding-left: 10%;
+}
+    #sec1_2{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 11;
+    padding-left: 10%;
+}
+    #sec3_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 12%;
+}
+    
+    #sec2_wrap{
+    width: 80%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+    
+    .sec3_1{
+    width: 80%;
+    height: 30%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    
+    .sec3_2{
+    width: 70%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 0%;
+    position: relative;
+    top: -3%;
+}
+    
+    .sec3_3_top{
+    width: 80%;
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+    
+    .sec3_3_bot{
+    width: 80%;
+    height: 23%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+}
+    
+    .fb_1{
+    width: 80%;
+    margin: 0 auto;
+}
+    .ft_2{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+}
+
+@media screen and (min-width:1280px) and (max-width:1599px){
+    #menu_u>li{
+    width: 10%;
+    float: left;
+    text-align: center;
+    display: block;
+}
+    #menu_u>li:first-child{
+    margin-left: 20%;
+}
+    
+    .sl_tx2{
+    width: 80%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    font-size: 6em;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+    font-family: 'Jura';
+}
+    
+    #sec1_tt{
+    width: 90%;
+    height: auto;
+    max-width: 1723px;
+    position: absolute;
+    left: 50%;
+    padding-left: 5%;
+    transform: translateX(-50%);
+    font-size: 34px;
+    font-weight: 300;
+    color: black;
+    font-family: 'Jura';
+}
+    #sec1_mimg{
+    width: 100%;
+    height: 55%;
+    max-width: 1723px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    transform: translate(-50%, -0%);
+    background: url(../img/main-business-03.jpg)no-repeat center right;
+    background-size: 55% 100%;
+    z-index: 9;
+}
+    #sec1_1{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    padding-left: 5%;
+}
+    .text_ko{
+    font-size: 22px;
+    color: black;
+}
+    .text_en{
+    font-size: 60px;
+    color: black;
+    font-family: 'Jura';
+}
+    .text_sec{
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+    display: block;
+    margin-bottom: 2%;
+}
+    #sec1_1 figure{
+    position: absolute;
+    bottom: -15%;
+    right: 6.5%;
+/*    transform: translate(-10%, 0%);*/
+}
+    #sec1_1 figure video{
+    width: 80%;
+    height: 80%;
+}
+    
+    #sec1_2{
+    width: 90%;
+    height: 27%;
+    max-width: 1723px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 11;
+    padding-left: 5%;
+}
+    #sec2_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+    #sec2_text .text_ko{
+    font-size: 22px;
+    color: white;
+}
+    #sec2_text .text_en{
+    font-size: 60px;
+    color: white;
+    font-family: 'Jura';
+}
+    #sec2_text .text_sec{
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
+    
+    #sec1_3{
+    width: 90%;
+    height: 30%;
+    max-width: 1723px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -0);
+}
+    #sec1_3_img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(../img/business-colorpaste-bg.jpg)no-repeat center center;
+    background-size: 100% 90%;
+}
+    #sec3_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+    #sec3_text .text_ko{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+}
+    #sec3_text .text_en{
+    font-size: 60px;
+    color: white;
+    font-family: 'Jura';
+}
+    #sec3_text .text_sec{
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
+    
+    #sec2_wrap{
+    width: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+    .sec3_1{
+    width: 90%;
+    height: 30%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    .sec3_2{
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 0%;
+    position: relative;
+    top: -3%;
+}
+    .sec3_3_top{
+    width: 90%;
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+    
+    .sec3_3_bot{
+    width: 90%;
+    height: 23%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+}
+    
+    .fb_1{
+    width: 95%;
+    margin: 0 auto;
+}
+    .ft_2{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+    
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){
+    
+}
+
+@media screen and (min-width:780px) and (max-width:1023px){
+    
+}
+
+@media screen and (min-width:640px) and (max-width:779px){
+    
+}
+
+@media screen and (min-width:480px) and (max-width:639px){
+    
+}
