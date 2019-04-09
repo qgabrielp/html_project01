@@ -377,7 +377,14 @@
     color: white;
     font-family: 'Jura';
 }  
-    
+  
+    .sec1{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    padding-top: 2%;
+    margin-bottom: -10%;
+}
     #sec1_tt{
     width: 90%;
     height: auto;
@@ -525,6 +532,234 @@
     display: block;
     margin-bottom: 2%;
 }
+    .sec2>h1{
+    display: block;
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Jura';
+    padding-bottom: 60px;
+    color: #222;
+    position: relative;
+    top: -30%;
+}
+    #sec2_wrap{
+    width: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+    .sec2_con:nth-child(1) .s2c_img{
+    width: 100%;
+    height: 300px;
+    background: url(../img/main-chemical-01.jpg)no-repeat center center;
+    background-size: cover;
+}
+    .sec2_con:nth-child(2) .s2c_img{
+    width: 100%;
+    height: 300px;
+    background: url(../img/main-chemical-02.jpg)no-repeat center center;
+    background-size: cover;
+}
+    .sec2_con:nth-child(3) .s2c_img{
+    width: 100%;
+    height: 300px;
+    background: url(../img/main-chemical-03.jpg)no-repeat center center;
+    background-size: cover;
+}
+    
+    #sec_bg{
+    width: 90%;
+    height: 35%;
+    display: inline;
+    position: absolute;
+    margin-left: 5%;
+    background: #f8f8f8;
+
+}
+    .sec3_1{
+    width: 90%;
+    height: 30%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    .sec3_1_img{
+    font-size: 50px;
+}
+    .sec3_box h2{
+    font-size: 18px;
+    line-height: 3;
+    color: #222;
+}
+    .sec3_box p{
+    font-size: 12px;
+    line-height: 1.75;
+    color: #666;
+}
+    .sec3_2{
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 0%;
+    position: relative;
+    top: 2%;
+}
+    .sec3_3_top{
+    width: 90%;
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+    .sec3_3_date{
+    width: 10%;
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1;
+}
+    .sec3_3_date span{
+    font-size: 40px;
+}
+    .sec3_3_text span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    padding: 0 17px;
+    color: #1c9ad6;
+    border: 1px solid #1c9ad6;
+    line-height: 1.75;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+    .sec3_3_text h2{
+    max-width: calc(100% - 85px);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-indent: 20px;
+}
+    .sec3_3_text p{
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+    #list_more{
+    width: 60px;
+    height: 40px;
+    border: 1px solid #222;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 40px;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    #list_more::before{
+    content: '';
+    display: block;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    background-color: #000;
+    transform: translateX(-101%) skewX(-17.62deg);
+    backface-visibility: hidden;
+    z-index: 1;
+}
+    #list_more:hover::before{
+    left: 80px;
+    transition: all 0.6s;
+}
+    .sec3_3_bot{
+    width: 90%;
+    height: 23%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 13%;
+}
+    .sec3_3_bot_1>div:first-child{
+    display: block;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+}
+    .sec3_3_bot_1>div:last-child #sp1{
+    width: 40%;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 200;
+    color: #1c9ad6;
+}
+    .sec3_3_bot_1>div:last-child #sp2{
+    width: 60%;
+    display: inline-block;
+    padding-top: 14px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 300;
+    text-align: right;
+    color: #888;
+    padding-right: 10%;
+}
+    .sec3_3_bot_2 h2{
+    display: block;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+}
+    .sec3_3_bot_2 ul li{
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+    
+    footer{
+    width: 100%;
+    height: 60%;
+    padding-top: 5%;
+    position: relative;
+}
+    .fb_1{
+    width: 90%;
+    margin: 0 auto;
+}
+    .ft_2{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+    
 }
 
 @media screen and (min-width:780px) and (max-width:1023px){
