@@ -384,7 +384,7 @@
     max-width: 1723px;
     position: absolute;
     left: 50%;
-    padding-left: 5%;
+    padding-left: 0%;
     transform: translateX(-50%);
     font-size: 34px;
     font-weight: 300;
@@ -410,7 +410,7 @@
     position: relative;
     margin: 0 auto;
     z-index: 10;
-    padding-left: 5%;
+    padding-left: 0%;
 }
     .text_ko{
     font-size: 22px;
@@ -447,11 +447,14 @@
     position: relative;
     margin: 0 auto;
     z-index: 11;
-    padding-left: 5%;
+    padding-left: 0%;
 }
     #sec1_2_img{
-    width: 50%;
-    height: 50%;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: -30%;
+    left: 0%;
     
 }
     #sec2_text{
@@ -472,6 +475,49 @@
     font-family: 'Jura';
 }
     #sec2_text .text_sec{
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
+    #sec1_3{
+    width: 90%;
+    height: 30%;
+    max-width: 1723px;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translate(-50%, -0);
+}
+    #sec1_3_img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(../img/business-colorpaste-bg.jpg)no-repeat center center;
+    background-size: 100% 90%;
+}
+    #sec3_text{
+    padding-top: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+    #sec3_text .text_ko{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+}
+    #sec3_text .text_en{
+    font-size: 60px;
+    color: white;
+    font-family: 'Jura';
+}
+    #sec3_text .text_sec{
     max-width: 300px;
     font-size: 14px;
     line-height: 1.75;
