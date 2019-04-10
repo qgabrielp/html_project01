@@ -249,6 +249,7 @@ header{
 }
 .m_menu_u{
     width: 30%;
+    min-width: 300px;
     height: 100%;
     position: absolute;
     right: -30%;
@@ -307,6 +308,7 @@ header{
 }
 #m_search_ac{
     width: 30%;
+    min-width: 300px;
     height: 5%;
     position: absolute;
     right: 0;
@@ -352,6 +354,17 @@ header{
     left: 0;
     font-size: 15px;
     font-weight: bold;
+    transform: translateY(-50%);
+}
+.m_menu_sl{
+    width: 3px;
+    height: 3px;
+    background-color: #1c9ad6;
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 0%;
     transform: translateY(-50%);
 }
 .m_menu_u>li>a>i{
@@ -1468,7 +1481,7 @@ main{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 7%;
+    margin-top: 3.5%;
 }
 .sec3_3_bot:after{
     content: '';
