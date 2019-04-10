@@ -356,7 +356,8 @@ header{
     font-weight: bold;
     transform: translateY(-50%);
 }
-.m_menu_sl{
+/*
+.m_menu_u>li>a:checked:after{
     width: 3px;
     height: 3px;
     background-color: #1c9ad6;
@@ -367,6 +368,7 @@ header{
     left: 0%;
     transform: translateY(-50%);
 }
+*/
 .m_menu_u>li>a>i{
     position: absolute;
     top: 50%;
@@ -682,6 +684,7 @@ main{
 }
 .text_ko{
     font-size: 24px;
+    font-weight: 600;
     color: black;
 }
 .text_en{
