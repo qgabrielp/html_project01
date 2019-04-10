@@ -69,6 +69,40 @@
         } lastScrollTop = st; 
     }
 
+    $("#m_menu").click(function(){
+        $("#m_menu_wrap").fadeIn();
+        $(".m_menu_u").addClass('m_menu_u_left');
+        $(".m_menu_close").addClass('m_menu_close_left');
+    });
+    
+    $("#m_menu_bg").click(function(){
+        $("#m_menu_wrap").fadeOut();
+        $(".m_menu_u").removeClass('m_menu_u_left');
+        $(".m_menu_close").removeClass('m_menu_close_left');
+        $("#m_search_ac").fadeOut('slow');
+    });
+    
+    $(".m_menu_close").click(function(){
+        $("#m_menu_wrap").fadeOut();
+        $(".m_menu_u").removeClass('m_menu_u_left');
+        $(".m_menu_close").removeClass('m_menu_close_left');
+        $("#m_search_ac").fadeOut('slow');
+    });
+    
+    $("#m_search").click(function(){
+        $("#m_search_ac").toggle('slow');
+    });
+    
+    $("#m_search_close").click(function(){
+        $("#m_search_ac").fadeOut('slow');
+    });
+    
+    
+    $(".m_menu_u>li>a").click(function(){
+        var i = $(this).index();
+        $(".m_menu_u>li ul").eq(i).fadeIn();
+    });
+    
     
     $(".sl_tx1").addClass('sl_tx_up1');
     $(".sl_tx2").addClass('sl_tx_up2');
