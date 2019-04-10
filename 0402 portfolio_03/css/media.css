@@ -808,7 +808,13 @@
 }
     #menu{
         display: none;
-    }   
+    }
+    #menu_bg{
+        display: none;
+    }
+    #menu_u ul{
+        display: none;
+    }
     #len{
         display: none;
     }
