@@ -449,12 +449,12 @@ main{
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
     background: url(../img/main-visual-01-motion.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     transition: all 1s;
-    animation: main_slider_01 60s linear infinite;
+    animation: main_slider_01 3s linear infinite;
 }
 #img01_s{
     width: 100%;
@@ -468,8 +468,8 @@ main{
     
 }
 @keyframes main_slider_01{
-    0%{right: 0px; transform: scale(1.1)}
-    100%{right: 20px; transform: scale(1.1)}
+    0%{transform: translateZ(0)}
+    100%{transform: translateZ(45deg)}
 }
 #light{
     position: absolute;
