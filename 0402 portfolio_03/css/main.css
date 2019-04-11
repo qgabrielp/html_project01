@@ -499,6 +499,92 @@ main{
     50%{opacity: 0.5;}
     100%{opacity: 1;}
 }
+.star01{
+    width: 5%;
+    height: 5%;
+    background: url(../img/star.png)no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: star01 7s linear infinite;
+}
+.star02{
+    width: 3%;
+    height: 3%;
+    background: url(../img/star.png)no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 10%;
+    right: 40%;
+    
+    animation: star02 8s linear infinite;
+}
+.star03{
+    width: 3%;
+    height: 3%;
+    background: url(../img/star2.png)no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5%;
+    right: 80%;
+    transform: skewX(45deg);
+    animation: star03 5s linear infinite;
+}
+.star04{
+    width: 3%;
+    height: 3%;
+    background: url(../img/star3.png)no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    animation: star04 4s linear infinite;
+}
+.star05{
+    width: 3%;
+    height: 3%;
+    background: url(../img/star3.png)no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: star05 10s linear infinite;
+}
+@keyframes star01{
+    0%{top: 0; right: 0; opacity: 0;}
+    67%{top: 0; right: 0; opacity: 0;}
+    68%{top: 30%; right: 30%; opacity: 1;}
+    79%{top: 60%; right: 60%; opacity: 0;}
+    100%{top: 40%; right: 40%; opacity: 0;}  
+}
+@keyframes star02{
+    0%{top: 10%; right: 40%; opacity: 0;}
+    34%{top: 15%; right: 45%; opacity: 0.3;}
+    36%{top: 20%; right: 50%; opacity: 1;}
+    38%{top: 25%; right: 55%; opacity: 0.5;}
+    40%{top: 30%; right: 60%; opacity: 0;}
+    100%{top: 30%; right: 60%; opacity: 0;}
+    
+}
+@keyframes star03{
+    0%{top: 5%; right: 80%; opacity: 0;}
+    8%{top: 30%; right: 89%; opacity: 1;}
+    16%{top: 60%; right: 98%; opacity: 0;}
+    100%{top: 37%; right: 92%; opacity: 0;} 
+}
+@keyframes star04{
+    0%{top: 5%; left: 25%; opacity: 0;}
+    8%{top: 25%; left: 45%; opacity: 1;}
+    16%{top: 45%; left: 65%; opacity: 0;}
+    100%{top: 45%; left: 65%; opacity: 0;} 
+}
+@keyframes star05{
+    0%{top: 0%; left: 50%; opacity: 0;}
+    8%{top: 25%; left: 75%; opacity: 1;}
+    16%{top: 45%; left: 100%; opacity: 0;}
+    100%{top: 45%; left: 100%; opacity: 0;} 
+}
 .sl_tx1{
     width: auto;
     position: absolute;
@@ -555,6 +641,52 @@ main{
     background-position: center;
     background-size: cover;
     transition: all 1s;
+}
+#cl01{
+    width: 55%;
+    height: 35%;
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    background: url(../img/fog.png)no-repeat center center;
+    background-size: 100% 100%;
+    
+    animation: cl01 40s linear infinite;
+}
+#cl02{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    bottom: -10%;
+    right: 30%;
+    background: url(../img/fog.png)no-repeat center center;
+    background-size: 100% 100%;
+    
+    animation: cl02 30s linear infinite;
+}
+#cl03{
+    width: 55%;
+    height: 55%;
+    position: absolute;
+    bottom: -10%;
+    right: 60%;
+    background: url(../img/fog.png)no-repeat center center;
+    background-size: 100% 100%;
+    
+    animation: cl03 25s linear infinite;
+}
+
+@keyframes cl01{
+    0%{right: -5%; bottom: -10%;}
+    100%{right: 105%; bottom: 70%;}
+}
+@keyframes cl02{
+    0%{right: 30%; bottom: -10%;}
+    100%{right: 105%; bottom: 40%;}
+}
+@keyframes cl03{
+    0%{right: 60%; bottom: -10%;}
+    100%{right: 105%; bottom: 30%;}
 }
 
 #sl_btn_wrap{
