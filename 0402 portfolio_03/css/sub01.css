@@ -717,7 +717,7 @@ section{
     padding-right: 90px;
 }
 .sec2_1{
-    padding-bottom: 120px;
+    padding-bottom: 420px;
 }
 .sec2_1>div{
     min-height: 300px;
@@ -730,18 +730,23 @@ section{
 .sec2_1_top{
     padding: 180px 0 230px;
     position: relative;
+    margin-bottom: 250px;
 }
 .sec2_1_top>figure{
-    transform: translate3d(0px, 38.4179px, 0px);
-    right: 0;
     z-index: 1;
     position: absolute;
-    top: 0;
+    right: 0;
+    top: 0%;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
+}
+sec2_1_wrap img{
+    transform-style: preserve-3d;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    visibility: inherit;
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .sec2_1_top_tx{
     float: left;
@@ -777,11 +782,182 @@ section{
     color: #666;
     white-space: nowrap;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
+.sec2_1_mid{
+    padding: 160px 0 68px;
+    position: relative;
+    margin-bottom: 350px;
+}
+.sec2_1_mid>figure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+.sec2_1_mid_tx{
+    float: right;
+    width: 589px;
+}
+.sec2_1_mid_tx b{
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    display: block;
+    padding-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    font-weight: 200;
+    color: #222;
+}
+.sec2_1_mid_tx h2{
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    padding-bottom: 13px;
+    margin-left: -4px;
+    font-size: 70px;
+    font-weight: 200;
+    line-height: 1;
+    color: #222;
+}
+.sec2_1_mid_tx p{
+    padding-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    white-space: nowrap;
+}
+.sec2_1_mid_tx p:last-child{
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    white-space: nowrap;
+}
+.sec2_1_bot{
+    padding: 188px 0 271px;
+    position: relative;
+}
+.sec2_1_bot>figure{
+    transform: translate3d(0px, 40.6499px, 0px);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+}
+.sec2_1_bot_tx{
+    float: left;
+    width: 589px;
+}
+.sec2_1_bot_tx b{
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    display: block;
+    padding-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    font-weight: 200;
+    color: #222;
+}
+.sec2_1_bot_tx h2{
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    padding-bottom: 13px;
+    margin-left: -4px;
+    font-size: 70px;
+    font-weight: 200;
+    line-height: 1;
+    color: #222;
+}
+.sec2_1_bot_tx p{
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    white-space: nowrap;
+    display: block;
+}
+
+.sec2_2{
+    height: 757px;
+    position: relative;
+    background: #88b5db url(../img/about-banner-bg.jpg)no-repeat center center;
+    background-size: cover;
+}
+.sec2_2:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: #fff;
+    position: absolute;
+    bottom: -100%;
+}
+.sec2_2>figure{
+    transform: translate3d(0, 0, 0);
+    transition: transform 1.8s cubic-bezier(.03, .44, .33, 1.18);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+.sec2_2>figure>img{
+    min-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.sec2_3{
+    margin-top: -100px;
+    position: relative;
+}
+.sec2_3>div{
+    width: 50%;
+    padding: 100px 0;
+    background: #fff;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+.sec2_3>div>ul{
+    display: table;
+    width: 100%;
+    max-width: 792px;
+    margin: 0 auto;
+    border-top: 1px solid #222;
+}
+.sec2_3>div>ul:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.sec2_3>div>ul>li{
+    display: table-row;
+}
+.sec2_3>div>ul>li>b{
+    width: 180px;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    display: table-cell;
+    padding: 13px 18px 13px 0;
+    border-bottom: 1px solid #ddd;
+}
+.sec2_3>div>ul>li>span{
+    padding-left: 23px;
+    font-size: 16px;
+    color: #666;
+    display: table-cell;
+    padding: 13px 18px 13px 0;
+    border-bottom: 1px solid #ddd;
+}
+
 
 
 /*풋터*/
