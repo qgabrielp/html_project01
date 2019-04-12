@@ -918,10 +918,9 @@ sec2_1_wrap img{
     position: relative;
 }
 .sec2_3>div{
-    width: 50%;
     padding: 100px 0;
     background: #fff;
-    min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .sec2_3>div>ul{
@@ -958,6 +957,39 @@ sec2_1_wrap img{
     border-bottom: 1px solid #ddd;
 }
 
+.sec2_4{
+/*    width: 50%;*/
+    max-width: 1200px;
+    padding-top: 37px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.sec2_4 h2{
+    padding-bottom: 66px;
+    font-size: 55px;
+    margin-left: 0.5em;
+    font-weight: 200;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: #222;    
+}
+.sec2_4_img{
+    
+}
+.sec2_4_img>figure{
+    height: 445px;
+    float: left;
+    width: 24.9%;
+    margin-right: 1px;
+    background: #f1f1f1;
+}
+.sec2_4_img>figure>img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
 
 
 /*풋터*/
