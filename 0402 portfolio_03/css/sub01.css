@@ -975,8 +975,10 @@ sec2_1_wrap img{
     letter-spacing: 0.5em;
     color: #222;    
 }
-.sec2_4_img{
-    
+.sec2_4_img:after{
+    content: '';
+    clear: both;
+    display: table;
 }
 .sec2_4_img>figure{
     height: 445px;
@@ -990,13 +992,70 @@ sec2_1_wrap img{
     height: auto;
     vertical-align: middle;
 }
+.sec2_4_img>figure>figcaption{
+    padding: 23px 20px 25px;
+
+}
+.sec2_4_img>figure>figcaption>time{
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+    color: #222;
+}
+.sec2_4_img>figure>figcaption>p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #666;
+}
+.sec2_4_tx{
+    margin-top: 20px;
+}
+.sec2_4_tx>li{
+    float: left;
+    width: 100%;
+    padding: 53px 0;
+    border-bottom: 1px solid #ddd;
+}
+.sec2_4_tx>li>b{
+    float: left;
+    width: 25.6%;
+    margin-top: -4px;
+    padding-right: 15px;
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: 300;
+    color: #222;
+}
+.sec2_4_tx>li>ul{
+    float: left;
+    width: 74.4%;
+}
+.sec2_4_tx>li>ul>li{
+    margin-bottom: 12px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.75;
+}
+.sec2_4_tx>li>ul>li>time{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    color: #222;
+}
+.sec2_4_tx>li>ul>li>p{
+    padding-left: 77px;
+    color: #666;
+}
+
 
 
 /*풋터*/
 
 footer{
     width: 100%;
-    height: 70%;
+/*    height: 35%;*/
     padding-top: 5%;
     position: relative;
 }
@@ -1071,7 +1130,7 @@ footer{
 
 .footer_bot{
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 58px 0 110px;
     position: relative;
     background-color: #333;
