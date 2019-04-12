@@ -454,6 +454,7 @@ main{
     background-position: center;
     background-size: cover;
     transition: all 1s;
+    backface-visibility: hidden;
     animation: main_slider_01 60s linear infinite;
 }
 #img01_s{
