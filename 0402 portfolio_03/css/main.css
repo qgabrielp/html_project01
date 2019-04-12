@@ -449,12 +449,12 @@ main{
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0px;
+    right: 0;
     background: url(../img/main-visual-01-motion.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     transition: all 1s;
-    animation: main_slider_01 3s linear infinite;
+    animation: main_slider_01 60s linear infinite;
 }
 #img01_s{
     width: 100%;
@@ -465,11 +465,14 @@ main{
     background: url(../img/main-visual-01-fg-motion.png)no-repeat;
     background-position: center;
     background-size: cover;
+    backface-visibility: hidden;
+    overflow: hidden;
     
 }
 @keyframes main_slider_01{
-    0%{transform: translateZ(0)}
-    100%{transform: translateZ(45deg)}
+    0%{transform: scale(1.2); right: 0;}
+    50%{transform: scale(1); right: 0;}
+    100%{transform: scale(1.2); right: 0px;}
 }
 #light{
     position: absolute;
@@ -668,8 +671,8 @@ main{
     width: 55%;
     height: 55%;
     position: absolute;
-    bottom: -10%;
-    right: 60%;
+    bottom: -40%;
+    right: 50%;
     background: url(../img/fog.png)no-repeat center center;
     background-size: 100% 100%;
     
@@ -685,7 +688,7 @@ main{
     100%{right: 105%; bottom: 40%;}
 }
 @keyframes cl03{
-    0%{right: 60%; bottom: -10%;}
+    0%{right: 50%; bottom: -40%;}
     100%{right: 105%; bottom: 30%;}
 }
 

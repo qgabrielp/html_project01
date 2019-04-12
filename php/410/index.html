@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="jquery-2.1.1.min.js"></script>
+<body>
+    <h3>회원가입</h3>
+    <hr>
+    <form action="insert.php" name="form" method="post" enctype="multipart/form-data">
+        <input type="text" name="id" id="id" placeholder="ID">
+        <input type="button" value="중복확인" onclick="fn_check();"><br><br>
+        <input type="password" name="pass1" placeholder="Pass"><br><br>
+        <input type="password" name="pass2" placeholder="Pass confirm"><br><br>
+        <input type="text" name="name" placeholder="Name"><br><br>
+        <input type="file" name="photo"><br><br>
+        <input type="hidden" name="dg" value="일반회원">
+        <input type="button" onclick="confirm();" value="가입하기">&nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="reset" value="취소하기">
+    </form>
+    <hr>
+    
+    <script>
+//        function fn_check(){
+//            var id = $("#id").val();
+//            alert(id);
+//        }
+        function fn_check(){
+            var id=document.form.id.value;
+            window.open("ch.php?id="+id,"aaa","width=200 height=300 top=200 left=500");
+            document.form.id.focus();
+        }
+        function confirm(){
+            var pass1=document.form.pass1.value;
+            var pass2=document.form.pass2.value;
+            if(pass1==pass2){
+               document.form.submit();
+               }else{
+                   alert("비밀번호가 일치하지 않습니다.");
+                   document.form.pass1.focus();
+               }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+0000.001 (0) Opened log file at time: Fri, 12 Apr 2019 02:26:29 +0000 on http://localhost/wordpress
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.11 WP: 5.1.1 PHP: 7.3.3 (apache2handler, Windows NT 103-06-PC 6.1 build 7601 (Windows 7 Professional Edition Service Pack 1) AMD64) MySQL: 10.1.38-MariaDB WPLANG: ko_KR Server: Apache/2.4.38 (Win64) OpenSSL/1.1.1b PHP/7.3.3 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 36.6M | 6M) multisite: N openssl: OpenSSL 1.1.1a  20 Nov 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.008 (0) Free space on disk containing Updraft's temporary directory: 67862.9 MB
+0000.013 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.017 (0) Semaphore (fd, wp_options) being initialised
+0000.022 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.031 (0) Set semaphore last lock (fd) time to 2019-04-12 02:26:30
+0000.033 (0) Semaphore lock (fd) complete
+0000.039 (0) Backup run: resumption=0, nonce=3a84d3cba3af, file_nonce=3a84d3cba3af begun at=1555035989 (1s ago), job type=backup
+0000.043 (0) Scheduling a resumption (1) after 300 seconds (1555036290) in case this run gets aborted
+0000.054 (0) Checking if we have a zip executable available
+0000.058 (0) Creation of backups of directories: beginning
+0000.065 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.463 (0) Total entities for the zip file: 338 directories, 1882 files (0 skipped as non-modified), 31.4 MB
+0000.485 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.507 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.528 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.548 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.569 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.573 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.5 MB, 1882 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0001.171 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 600 files added (on-disk size: 2676 KB)
+0001.187 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 700 files added (on-disk size: 2676 KB)
+0001.203 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 800 files added (on-disk size: 2676 KB)
+0001.218 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 900 files added (on-disk size: 2676 KB)
+0001.250 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1000 files added (on-disk size: 2676 KB)
+0001.250 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (18.9 MB, 1882 files batched, 501 (1002) added so far); re-opening (prior size: 2676 KB)
+0002.662 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1100 files added (on-disk size: 8067.5 KB)
+0002.683 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1200 files added (on-disk size: 8067.5 KB)
+0002.696 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1300 files added (on-disk size: 8067.5 KB)
+0002.711 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1400 files added (on-disk size: 8067.5 KB)
+0002.747 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1500 files added (on-disk size: 8067.5 KB)
+0002.749 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 1882 files batched, 501 (1503) added so far); re-opening (prior size: 8067.5 KB)
+0002.952 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1600 files added (on-disk size: 8775 KB)
+0002.983 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1700 files added (on-disk size: 8775 KB)
+0002.999 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip.tmp: 1800 files added (on-disk size: 8775 KB)
+0003.401 (0) Created plugins zip (0) - 9419.1 KB in 3.3 s (2825.7 KB/s) (sha1: d0770b6d10f872a03665b673c6253380aa5bd242, sha256: 3f3fa74200976c361e4c1cae0fcb12d3f763df7f4438316b794a829486b70e6e)
+0003.401 (0) Beginning creation of dump of themes (split every: 400 MB)
+0003.479 (0) Total entities for the zip file: 66 directories, 310 files (0 skipped as non-modified), 6.2 MB
+0003.495 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0003.511 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0003.526 (0) Zip: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0003.854 (0) Created themes zip (0) - 3854.1 KB in 0.5 s (8519.2 KB/s) (sha1: 7fae0058709b78eca9a0731990f66481faa158fe, sha256: 8dfc3202bc7a27e13de24ae8073b65ce9e86a50334c04cb191acbf46cebd1207)
+0003.869 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0003.869 (0) Looking for candidates to backup in: C:\xampp\htdocs\wordpress/wp-content/uploads
+0003.869 (0) finding files: 2019: adding to list (1)
+0003.885 (0) finding files: elementor: adding to list (2)
+0003.885 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0003.901 (0) Total entities for the zip file: 4 directories, 31 files (0 skipped as non-modified), 0.6 MB
+0003.932 (0) Created uploads zip (0) - 589.8 KB in 0 s (12601.8 KB/s) (sha1: 51280c7ec7a7c20a35d159b37fd692e057e519a2, sha256: 547ad7e6061dea832155ac398192b93b69a81664cd24fb670ae9715174ccfb29)
+0003.947 (0) Beginning backup of other directories found in the content directory (index: 0)
+0003.947 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0003.947 (0) Looking for candidates to backup in: C:\xampp\htdocs\wordpress/wp-content
+0003.947 (0) finding files: index.php: adding to list (1)
+0003.963 (0) finding files: languages: adding to list (2)
+0003.963 (0) finding files: plugins: skipping: this is the plugins directory
+0003.963 (0) finding files: themes: skipping: this is the themes directory
+0003.963 (0) finding files: updraft: skipping: this is the updraft directory
+0003.963 (0) finding files: upgrade: skipping: excluded by options
+0003.963 (0) finding files: uploads: skipping: this is the uploads directory
+0003.994 (0) Total entities for the zip file: 3 directories, 30 files (0 skipped as non-modified), 2.1 MB
+0004.213 (0) Created others zip (0) - 615.5 KB in 0.2 s (2630.2 KB/s) (sha1: 882c5c477cbd5c9b7106df49473c1fa09a518913, sha256: 280f4bb2d3829ffb1537cf5fd7276ebaea4adb157b2c85f6c57cbc0f83ef0fc2)
+0004.228 (0) Saving backup status to database (elements: 8)
+0004.228 (0) Beginning creation of database dump (WordPress DB)
+0004.244 (0) Table wp_options: Total expected rows (approximate): 195
+0004.291 (0) Table wp_options: Total rows added: 195 in 0.05 seconds
+0004.291 (0) Table wp_options: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_options.table.gz - 168.4 KB)
+0004.306 (0) Table wp_users: Total expected rows (approximate): 1
+0004.306 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0004.306 (0) Table wp_users: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_users.table.gz - 0.5 KB)
+0004.306 (0) Table wp_usermeta: Total expected rows (approximate): 21
+0004.322 (0) Table wp_usermeta: Total rows added: 21 in 0.00 seconds
+0004.322 (0) Table wp_usermeta: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_usermeta.table.gz - 1 KB)
+0004.337 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0004.337 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.337 (0) Table wp_commentmeta: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0004.353 (0) Table wp_comments: Total expected rows (approximate): 1
+0004.353 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0004.353 (0) Table wp_comments: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_comments.table.gz - 0.8 KB)
+0004.369 (0) Table wp_links: Total expected rows (approximate): 0
+0004.384 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0004.384 (0) Table wp_links: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_links.table.gz - 0.4 KB)
+0004.402 (0) Table wp_postmeta: Total expected rows (approximate): 101
+0004.417 (0) Table wp_postmeta: Total rows added: 101 in 0.02 seconds
+0004.417 (0) Table wp_postmeta: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_postmeta.table.gz - 10.2 KB)
+0004.417 (0) Table wp_posts: Total expected rows (approximate): 33
+0004.433 (0) Table wp_posts: Total rows added: 33 in 0.00 seconds
+0004.433 (0) Table wp_posts: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_posts.table.gz - 6.9 KB)
+0004.449 (0) Table wp_term_relationships: Total expected rows (approximate): 4
+0004.449 (0) Table wp_term_relationships: Total rows added: 4 in 0.00 seconds
+0004.449 (0) Table wp_term_relationships: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0004.464 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0004.464 (0) Table wp_term_taxonomy: Total rows added: 2 in 0.00 seconds
+0004.464 (0) Table wp_term_taxonomy: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0004.480 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0004.480 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0004.480 (0) Table wp_termmeta: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_termmeta.table.gz - 0.4 KB)
+0004.495 (0) Table wp_terms: Total expected rows (approximate): 2
+0004.495 (0) Table wp_terms: Total rows added: 2 in 0.00 seconds
+0004.511 (0) Table wp_terms: finishing file (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_terms.table.gz - 0.4 KB)
+0004.527 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_options.table.gz (1/12): adding to final database dump
+0004.558 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_users.table.gz (2/12): adding to final database dump
+0004.558 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_usermeta.table.gz (3/12): adding to final database dump
+0004.573 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_commentmeta.table.gz (4/12): adding to final database dump
+0004.573 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_comments.table.gz (5/12): adding to final database dump
+0004.573 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_links.table.gz (6/12): adding to final database dump
+0004.573 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_postmeta.table.gz (7/12): adding to final database dump
+0004.589 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_posts.table.gz (8/12): adding to final database dump
+0004.589 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_term_relationships.table.gz (9/12): adding to final database dump
+0004.589 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_term_taxonomy.table.gz (10/12): adding to final database dump
+0004.589 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_termmeta.table.gz (11/12): adding to final database dump
+0004.589 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db-table-wp_terms.table.gz (12/12): adding to final database dump
+0004.605 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db.gz: finished writing out complete database file (160 KB)
+0004.620 (0) Total database tables backed up: 12 (backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db.gz, size: 192126, sha256)
+0004.620 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0004.620 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0004.620 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0004.636 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-others.zip: others: This file has not yet been successfully uploaded: will queue
+0004.636 (0) backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db.gz: db: This file has not yet been successfully uploaded: will queue
+0004.636 (0) Saving backup history. Total backup size: 14.3 MB
+0004.636 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0004.636 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0004.651 (0) No remote despatch: user chose no remote backup service
+0004.651 (0) Recording as successfully uploaded: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-plugins.zip
+0004.651 (0) Recording as successfully uploaded: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-themes.zip
+0004.651 (0) Recording as successfully uploaded: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-uploads.zip
+0004.667 (0) Recording as successfully uploaded: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-others.zip
+0004.667 (0) Recording as successfully uploaded: backup_2019-04-12-1126_localhost_wordpress_3a84d3cba3af-db.gz
+0004.683 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0004.683 (0) Number of backup sets in history: 1; groups (db): 1
+0004.698 (0) Examining (for databases) backup set with group_id=0, nonce=3a84d3cba3af, datestamp=1555035989 (Apr 12 2019 02:26:29)
+0004.698 (0) This backup set is the backup set just made, so will not be deleted.
+0004.698 (0) Number of backup sets in history: 1; groups (files): 1
+0004.698 (0) Examining (for files) backup set with nonce=3a84d3cba3af, datestamp=1555035989 (Apr 12 2019 02:26:29)
+0004.698 (0) This backup set is the backup set just made, so will not be deleted.
+0004.698 (0) This backup set is the backup set just made, so will not be deleted.
+0004.698 (0) This backup set is the backup set just made, so will not be deleted.
+0004.698 (0) This backup set is the backup set just made, so will not be deleted.
+0004.698 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0004.698 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0004.714 (0) Resume backup (3a84d3cba3af, 0): finish run
+0004.714 (0) Decremented the semaphore (fd) by 1
+0004.729 (0) Semaphore (fd) unlocked
+0004.729 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0004.745 (0) No email will/can be sent - the user has not configured an email address.
+0004.745 (0) The backup apparently succeeded and is now complete
