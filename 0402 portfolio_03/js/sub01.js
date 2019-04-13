@@ -187,7 +187,7 @@
 //        var sc2top = $(".sec2").offset().top - 1000;
 //        var sc3_2top = $(".sec3_2").offset().top - 1500;
 //        var fttop = $(".footer_bot").offset().top -1400;
-        var ftbot = $(".footer_bot").offset().top -1400;
+//        var ftbot = $(".footer_bot").offset().top -1400;
 
         if ($(this).scrollTop() > 950){
             console.log("aaa"+$(this).scrollTop());
@@ -195,7 +195,7 @@
         } else {
             $('.gtt').fadeOut();
             }
-        if($(this).scrollTop() > 5400){
+        if($(this).scrollTop() > 5300){
             $('.gtt').addClass('gtt_ab');
         }else{
             $('.gtt').removeClass('gtt_ab');
