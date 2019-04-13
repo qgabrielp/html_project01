@@ -883,7 +883,7 @@ main{
 
 #sec1_1 figure{
     position: absolute;
-    bottom: -15%;
+    top: -25%;
     right: 16.5%;
 /*    transform: translate(-10%, 0%);*/
 }
