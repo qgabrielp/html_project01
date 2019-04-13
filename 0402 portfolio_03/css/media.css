@@ -3756,12 +3756,12 @@ footer{
     cursor: pointer;
     z-index: 100;
     display: none;
-
-
+    opacity: 0;
 }
 .gtt:hover{
     background-color: #1c9ad6;
     transition: all 0.4s;
+    opacity: 0;
 }
 .gtt_ab{
     display: block;
@@ -3769,10 +3769,10 @@ footer{
     height: 59px;
     position: absolute;
     top: -22px;
-    right: -15%;
+    right: 0%;
     cursor: pointer;
     background: #222;
-
+    opacity: 0;
 }
 
 }
