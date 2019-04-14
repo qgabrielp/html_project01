@@ -195,7 +195,7 @@
         } else {
             $('.gtt').fadeOut();
             }
-        if($(this).scrollTop() > 5400){
+        if($(this).scrollTop() > 1050){
             $('.gtt').addClass('gtt_ab');
         }else{
             $('.gtt').removeClass('gtt_ab');
@@ -205,6 +205,15 @@
     $('.gtt').click(function(){
         $('html, body').stop().animate({scrollTop : 0}, 400);
         return false;
+    });
+    
+    $(".search_category_btn").click(function(){
+        $(".search_category_total").toggleClass('search_category_total_ch');
+        $(".search_category_btn_arrow").toggleClass('search_category_btn_arrow_rt');
+    });
+    $(".search_category_total").click(function(){
+        $(".search_category_total").removeClass('search_category_total_ch');
+        $(".search_category_btn_arrow").removeClass('search_category_btn_arrow_rt');
     });
     
 });

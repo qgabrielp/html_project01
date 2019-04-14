@@ -195,7 +195,7 @@
         } else {
             $('.gtt').fadeOut();
             }
-        if($(this).scrollTop() > 4150){
+        if($(this).scrollTop() > 900){
             $('.gtt').addClass('gtt_ab');
         }else{
             $('.gtt').removeClass('gtt_ab');

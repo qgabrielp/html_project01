@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<title> 문서의 제목  </title>
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/sub04.css" />
+	<link rel="stylesheet" href="css/sub05.css" />
 	<link rel="stylesheet" href="css/media.css" />
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round|Raleway|Poiret+One|Jura|Kanit:100" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -15,7 +15,7 @@
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script type="text/javascript" src="js/sub04.js"></script>
+	<script type="text/javascript" src="js/sub05.js"></script>
 </head>
 <body>
 <header class="">
@@ -207,7 +207,7 @@
                             <div class="sec1_arrow_tx">
                                 <div>
                                     <div>
-                                        <p><span>IR자료실</span></p>
+                                        <p><span>사회공헌</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                             <div class="sec1_arrow_tx">
                                 <div>
                                     <div>
-                                        <p><span>주가정보</span></p>
+                                        <p><span>CI소개</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -226,11 +226,11 @@
                     <div class="sec1_in_tx">
                         <div>
                             <div>
-                                <span>경영정보</span>
-                                <h1>INVESTMENT</h1>
+                                <span>KAI소식</span>
+                                <h1>MEDIA</h1>
                                 <p>
-                                    성장을 위한 지속적인 투자와 끊임없는 연구개발로<br>
-                                    한국알콜산업은 현실에 안주하지 않고 더욱 큰 도약을 향해 나아갑니다.
+                                    혁신적 제품개발을 통해 한국 케미컬 기업의 대표에서<br>
+                                    아시아시장을 선점하는 아시아리더로 도약합니다.
                                 </p>
                             </div>
                         </div>
@@ -242,11 +242,11 @@
             <div>
                 <nav class="top_nav">
                     <ul>
-                        <li><a href="#a"><i class="fas fa-home"></i> 투자정보</a></li>
+                        <li><a href="#a"><i class="fas fa-home"></i> 홍보센터</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
-                        <li><a href="#a">경영정보</a></li>
+                        <li><a href="#a">KAI소식</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
-                        <li><span>총칙</span></li>
+                        <li><span>공지사항</span></li>
                     </ul>
                 </nav>
             </div>
@@ -256,62 +256,158 @@
                 <div>
                     <div>
                         <div>
-                            <div class="sec2_wrap">
-                                <nav class="sec2_nav">
-                                    <ul>
-                                        <li>
-                                            <a href="#a"><span>총칙</span></a>
+                            <div>
+                                <div>
+                                    <form class="search" action="">
+                                        <div class="search_category">
+                                            <label for="search">검색조건을 선택해주세요</label>
+                                            <div>
+                                                <div>
+                                                    <select name="type" id="search" tabindex="-1">
+                                                        <option value="all">전체</option>
+                                                        <option value="title">제목</option>
+                                                        <option value="content">내용</option>
+                                                    </select>
+                                                </div>
+                                                <div class="search_category_btn">
+                                                    <span class="label">전체</span>
+                                                    <b class="search_category_btn_arrow">
+                                                        ▾
+                                                    </b>
+                                                </div>
+                                                <div class="search_category_total">
+                                                    <div>
+                                                        <ul>
+                                                            <li data-index="0" class="selected">전체</li>
+                                                            <li data-index="1" class="">제목</li>
+                                                            <li data-index="2" class="last">내용</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <label aria-hidden="true">
+                                                    <span>
+                                                        이필드를 무시해주세요
+                                                        <input class="selectric-input" tabindex="0">
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="search_field">
+                                            <label>
+                                                <span>검색내용을 입력해주세요</span>
+                                                <input name="search" type="text" value="">
+                                            </label>
+                                            <button class="search_button">검색</button>
+                                        </div>
+                                    </form>
+                                    <ul class="news_list">
+                                        <li class="news_con">
+                                            <div class="news_time">
+                                                <time datetime="2019-03-26">
+                                                    <b>26</b>
+                                                    <span>2019.03</span>
+                                                </time>
+                                            </div>
+                                            <div class="news_tx">
+                                                <div class="news_tx_tt">
+                                                    <span>공지</span>
+                                                    <h2>
+                                                        <span>한국알콜산업 2018년 결산보고</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="news_ex">
+                                                    <p>
+                                                        제35기 결 산 공 고 재 무 상 태 표 (2018년 12월 31일 현재) 단위 : 원 자산 Ⅰ. 유동자산 112,892,760,262 1. 현금및현금성자산 31,785,767,335 예금 31,785,767,335 2. 매출채권및기타채권 61,428,529,852 단기매출채권 60,062,836,719 단기미수금 428,233,598 대손충당금 △142,257,000 단기미수수익 42,914,833 선급금 884,410,839 단기선급비용 152,390,863 3. 재고자산 18,672,764,152 상품 61,500,468 제품 11,443,157,918 평가충당금 △91,263,213 원재료 4,381,350,190 저장품 530,246,078 미착품 […]
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="news_more">
+                                                <a href="#a">
+                                                    <span><i class="fas fa-chevron-right"></i></span>
+                                                </a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="#a"><span>내부정보의 관리</span></a>
+                                        <li class="news_con">
+                                            <div class="news_time">
+                                                <time datetime="2019-03-08">
+                                                    <b>08</b>
+                                                    <span>2019.03</span>
+                                                </time>
+                                            </div>
+                                            <div class="news_tx">
+                                                <div class="news_tx_tt">
+                                                    <span>공지</span>
+                                                    <h2>
+                                                        <span>한국알콜산업 제 35기 정기주주총회 개최 안내</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="news_ex">
+                                                    <p>
+                                                        한국알콜산업 제 35기 정기주주총회 개최 안내 올 한해에도 더욱 번창하시기를 앙망합니다. 당사 정관 제19조에 의거 제35기 (2018. 1. 1 ～ 2018. 12. 31) 정기주주총회를 아래와 같이 개최하오니 참석하여 주시기 바랍니다. 1. 개최일시2019년 3월 26일 (화) 오전 08:30 2. 개최장소경기도 용인시 기흥구 탑실로35번길 14(공세동) 당사 대회의실 3. 회의 목적사항가. 보고사항 : 감사보고, 영업보고, 내부회계운영실태보고 나. 부의안건 […]
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="news_more">
+                                                <a href="#a">
+                                                    <span><i class="fas fa-chevron-right"></i></span>
+                                                </a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="#a"><span>내부정보의 공개</span></a>
+                                        <li class="news_con">
+                                            <div class="news_time">
+                                                <time datetime="2018-03-09">
+                                                    <b>09</b>
+                                                    <span>2018.03</span>
+                                                </time>
+                                            </div>
+                                            <div class="news_tx">
+                                                <div class="news_tx_tt">
+                                                    <span>공지</span>
+                                                    <h2>
+                                                        <span>한국알콜산업 제 34기 정기주주총회 개최 안내</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="news_ex">
+                                                    <p>
+                                                       당사 정관 제19조에 의거 제34기 (2017. 1. 1 ～ 2017. 12. 31) 정기주주총회를 개최하오니 안내내용을 확인후 참석하여 주시기 바랍니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="news_more">
+                                                <a href="#a">
+                                                    <span><i class="fas fa-chevron-right"></i></span>
+                                                </a>
+                                            </div>
                                         </li>
-                                        <li>
-                                            <a href="#a"><span>내부자 거래 등에 대한 규제</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#a"><span>보칙</span></a>
+                                        <li class="news_con">
+                                            <div class="news_time">
+                                                <time datetime="2018-03-09">
+                                                    <b>09</b>
+                                                    <span>2018.03</span>
+                                                </time>
+                                            </div>
+                                            <div class="news_tx">
+                                                <div class="news_tx_tt">
+                                                    <span>공지</span>
+                                                    <h2>
+                                                        <span>한국알콜산업 홈페이지가 개편되었습니다.</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="news_ex">
+                                                    <p>
+                                                        새로 리뉴얼된 사이트는 모바일 접근성과 기업의 새로운 비전과 이미지가 잘 나타날 수 있도록 하였습니다. 많은 이용과 관심 부탁드립니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="news_more">
+                                                <a href="#a">
+                                                    <span><i class="fas fa-chevron-right"></i></span>
+                                                </a>
+                                            </div>
                                         </li>
                                     </ul>
-                                </nav>
-                                <div class="sec2_tx">
-                                    <div>
-                                        <div>
-                                            <b>
-                                                제1조 ( 목 적 )
-                                            </b>
-                                            <p>
-                                                이 규정은 자본시장과 금융투자업에 관한 법률 (이하 “법”이라 한다) 및 제반 법규에 따른 신속·정확한 공시 및 임원·직원의 내부자거래 방지를 위하여 회사 내부정보의 종합관리 및 적절한 공개 등에 관한 사항을 정함을 목적으로 한다.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <b>제2조 ( 용어의 정의 )
-                                            </b>
-                                            <ol>
-                                                <li>
-                                                    이 규정에서 “내부정보”라 함은 한국거래소(이하 “거래소”라 한다)의 코스닥 시장 공시규정 (이하 “공시규정”이라 한다) 제1편에 의한 공시의무사항과 그 밖에 회사의 경영 또는 재산상황 등에 관한 것으로서 투자자의 투자판단에 영향을 미칠 수 있는 사항을 말한다. (개정 2017.5.23.)
-                                                </li>
-                                                <li>
-                                                    이 규정에서 “공시책임자”라 함은 공시규정 제2조제4항에 따라 회사를 대표하여 신고업무를 수행할 수 있는 자를 말한다.
-                                                </li>
-                                                <li>
-                                                    규정에서 “임원”이라 함은 이사 (상법 제401조의2제1항 각 호의 어느 하나에 해당하는 자를 포함한다) 및 감사를 말한다.
-                                                </li>
-                                                <li>
-                                                    제1항부터 제3항 이외에 이 규정에서 사용하는 용어의 정의에 관하여는 관련법령과 규정에서 사용하는 용어의 정의에 의한다.
-                                                </li>
-                                            </ol>
-                                        </div>
-                                        <div>
-                                            <b>
-                                                제3조 ( 적용범위 )
-                                            </b>
-                                            <p>
-                                                공시, 내부자거래 및 내부정보관리에 관한 사항은 관련 법규 또는 정관에 정한 것을 제외하고는 이 규정에 따른다.
-                                            </p>
-                                        </div>
+                                    <div class="page">
+                                        <span>1</span>
                                     </div>
                                 </div>
                             </div>
