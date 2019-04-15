@@ -238,7 +238,13 @@ main .page{
 
 }
 .skill{
-/*    position: relative;*/
+    width: 100%;
+    height: 800px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .skill>div{}
 .skill_wrap{
@@ -262,7 +268,7 @@ main .page{
     height: 166.67px;
     float: left;
     position: relative;
-    border: 1px solid #fff;  
+    border: 1px solid #eee;
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
@@ -291,15 +297,15 @@ main .page{
     transform: rotate(90deg) rotateY(180deg);
 }
 @keyframes li01{
-    0%{top: -5px; left: -5px}
+    0%{}
     25%{}
-    50%{top: 5px; left: 5px}
+    50%{transform: rotate(45deg)}
     75%{}
-    100%{top: 0; left: 0;}
+    100%{transform: rotate(0)}
 }
 
 .skill_wrap>ul>li:nth-child(2){
-    background-color: #e69b81;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(2):hover{
     transform: rotateX(-90deg);
@@ -313,11 +319,11 @@ main .page{
     left: 0%;
     transform: rotateX(90deg) translateY(-83px);
     
-    background-color: #f00;
+    background-color: #e69b81;
 }
 
 .skill_wrap>ul>li:nth-child(3){
-    background-color: #5d83b4;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(3):hover{
     transform: rotateZ(90deg) rotateX(90deg);
@@ -331,11 +337,11 @@ main .page{
     left: 0%;
     transform: rotateX(90deg) translateY(83px);
     
-    background-color: #f00;
+    background-color: #5d83b4;
 }
 
 .skill_wrap>ul>li:nth-child(4){
-    background-color: #70c3d6;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(4):hover{
     transform: rotateY(90deg);
@@ -349,11 +355,11 @@ main .page{
     left: -50%;
     transform: rotateY(90deg) translateX(83px);
     
-    background-color: #f00;
+    background-color: #70c3d6;
 }
 
 .skill_wrap>ul>li:nth-child(5){
-    background-color: #c1db8c;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(5):hover{
     transform: rotateY(180deg);
@@ -367,11 +373,11 @@ main .page{
     left: 0%;
     transform: rotateY(180deg) translateX(0px);
     
-    background-color: #f00;
+    background-color: #c1db8c;
 }
 
 .skill_wrap>ul>li:nth-child(6){
-    background-color: #d7afd1;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(6):hover{
     transform: rotateY(-90deg);
@@ -382,15 +388,15 @@ main .page{
     height: 100%;
     position: absolute;
     top: 0%;
-    left: 50%;
+    left: 0%;
     transform: rotateY(90deg) translateX(83px);
     
-    background-color: #f00;
+    background-color: #d7afd1;
 }
 
 
 .skill_wrap>ul>li:nth-child(7){
-    background-color: #7467a0;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(7):hover{
     transform: rotateZ(-90deg) rotateX(-90deg);
@@ -404,11 +410,11 @@ main .page{
     left: 0%;
     transform: rotateX(90deg) translateY(-83px);
     
-    background-color: #f00;
+    background-color: #7467a0;
 }
 
 .skill_wrap>ul>li:nth-child(8){
-    background-color: #545953;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(8):hover{
     transform: rotateX(90deg);
@@ -422,11 +428,11 @@ main .page{
     left: 0%;
     transform: rotateX(90deg) translateY(-83px);
     
-    background-color: #f00;
+    background-color: #545953;
 }
 
 .skill_wrap>ul>li:nth-child(9){
-    background-color: #65b482;
+    background-color: #fff;
 }
 .skill_wrap>ul>li:nth-child(9):hover{
     transform: rotateZ(90deg) rotateY(-90deg);
@@ -441,7 +447,7 @@ main .page{
     left: -50%;
     transform: rotateY(90deg) translateX(83px);
     
-    background-color: #f00;
+    background-color: #65b482;
 }
 
 
