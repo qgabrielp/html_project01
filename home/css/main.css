@@ -137,19 +137,14 @@ main .page{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    background: url(../img/wood-3271749_1920.jpg)no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
 /*    background: linear-gradient(to right, white , #60ad4f);*/
 }
 #video1{
-    width: 115%;
-    height: 115%;
     position: absolute;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, 0%);
-    background-attachment: fixed;
+    transform: translateX(-50%);
+    background-color: #fff;
 }
 #hello{
     width: 30%;
@@ -232,13 +227,232 @@ main .page{
     width: 100%;
     height: 100%;
     position: relative;
-/*    background-color: rgba(29, 31, 33,0.7);*/
-    background: url(../img/computer-1245714_1920.jpg)no-repeat;
+/*    background-color: rgba(220, 220, 220, 0.7);*/
+/*    background: url(../img/computer-1245714_1920.jpg)no-repeat;*/
     background-attachment: fixed;
     background-size: 100% 100%;
     background-position: center;
     overflow: hidden;
 }
+.page2_top{
+
+}
+.skill{
+/*    position: relative;*/
+}
+.skill>div{}
+.skill_wrap{
+    width: 500px;
+    padding-top: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/*    perspective: 1200px;*/
+}
+.skill_wrap>ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+      
+}
+.skill_wrap>ul>li{
+    width: 166.67px;
+    height: 166.67px;
+    float: left;
+    position: relative;
+    border: 1px solid #fff;  
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.skill_wrap>ul>li:nth-child(1){
+    background-color: #eddf62;
+    transform: translateZ(0px);
+    animation: li01 5s linear infinite;
+}
+.skill_wrap>ul>li:nth-child(1):hover{
+    transform: rotateZ(90deg) rotateY(90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(1) span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transform: rotateY(90deg) translateX(83px);
+    
+    background-color: #f00;
+}
+.skill_wrap>ul>li:nth-child(1) span b{
+    position: absolute;
+    transform: rotate(90deg) rotateY(180deg);
+}
+@keyframes li01{
+    0%{top: -5px; left: -5px}
+    25%{}
+    50%{top: 5px; left: 5px}
+    75%{}
+    100%{top: 0; left: 0;}
+}
+
+.skill_wrap>ul>li:nth-child(2){
+    background-color: #e69b81;
+}
+.skill_wrap>ul>li:nth-child(2):hover{
+    transform: rotateX(-90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(2) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    transform: rotateX(90deg) translateY(-83px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(3){
+    background-color: #5d83b4;
+}
+.skill_wrap>ul>li:nth-child(3):hover{
+    transform: rotateZ(90deg) rotateX(90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(3) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    transform: rotateX(90deg) translateY(83px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(4){
+    background-color: #70c3d6;
+}
+.skill_wrap>ul>li:nth-child(4):hover{
+    transform: rotateY(90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(4) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    transform: rotateY(90deg) translateX(83px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(5){
+    background-color: #c1db8c;
+}
+.skill_wrap>ul>li:nth-child(5):hover{
+    transform: rotateY(180deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(5) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: rotateY(180deg) translateX(0px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(6){
+    background-color: #d7afd1;
+}
+.skill_wrap>ul>li:nth-child(6):hover{
+    transform: rotateY(-90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(6) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: rotateY(90deg) translateX(83px);
+    
+    background-color: #f00;
+}
+
+
+.skill_wrap>ul>li:nth-child(7){
+    background-color: #7467a0;
+}
+.skill_wrap>ul>li:nth-child(7):hover{
+    transform: rotateZ(-90deg) rotateX(-90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(7) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    transform: rotateX(90deg) translateY(-83px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(8){
+    background-color: #545953;
+}
+.skill_wrap>ul>li:nth-child(8):hover{
+    transform: rotateX(90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(8) span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: rotateX(90deg) translateY(-83px);
+    
+    background-color: #f00;
+}
+
+.skill_wrap>ul>li:nth-child(9){
+    background-color: #65b482;
+}
+.skill_wrap>ul>li:nth-child(9):hover{
+    transform: rotateZ(90deg) rotateY(-90deg);
+    transition: all 0.6s;
+}
+.skill_wrap>ul>li:nth-child(9) span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transform: rotateY(90deg) translateX(83px);
+    
+    background-color: #f00;
+}
+
+
+
+
+
+
+
+
+
+
 #ch_wrap{
     width: 900px;
     height: 900px;
@@ -390,6 +604,10 @@ main .page{
 }
 
 
+
+
+
+
 /*포트폴리오 영역*/
 
 .page3{
@@ -402,11 +620,12 @@ main .page{
 }
 #po_wrap{
     width: 70%;
-    height: 70%;
+    height: 80%;
     position: relative;
-    top: 20%;
+    top: 15%;
     margin: 0 auto;
-    background-color: rgba(255,255,255,0.5);
+    background: url(../img/kangkd78910_55761.jpg);
+    border-radius: 5%;
 }
 #po_wrap span{
     width: 100%;
@@ -423,18 +642,40 @@ main .page{
     height: 90%;
 /*    background-color: lightgray;*/
 }
-#po_sec div{
+.po_box{
     width: 30%;
     height: 45%;
     float: left;
-    background-color: #fff;
     margin: 1%;
     margin-left: 2%;
     position: relative;
     overflow: hidden;
 }
-#po_sec a{
+.po_box:nth-child(1){
+    background: url(../img/post_it01.png)no-repeat center center;
+    background-size: 100% 100%;
+/*    transform: rotate(-5deg);*/
+}
+.po_box:nth-child(2){
+    background: url(../img/post_it02.png)no-repeat center center;
+    background-size: 100% 100%;
+/*    transform: rotate(10deg);*/
+}
+.po_box:nth-child(3){
+    background: url(../img/post_it03.png)no-repeat center center;
+    background-size: 100% 100%;
+/*    transform: rotate(10deg);*/
+}
+.po_box>a{
     display: block;
+}
+.po_box>a>img{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #po_sec h4{
     width: 100%;
@@ -448,7 +689,7 @@ main .page{
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,1.7);
 }
 #po_sec div p{
     width: 100%;
@@ -477,12 +718,12 @@ main .page{
     top: 0;
     transition: all 0.6s;
 }
-#po_sec div:nth-child(1){
+.po_box:nth-child(1) a img{
     background: url(../img/po01_size.png)no-repeat;
     background-size: 100% 100%;
     background-position: center;
 }
-#po_sec div:nth-child(2){
+.po_box:nth-child(2) a img{
     background: url(../img/po02_size.png)no-repeat;
     background-size: 100% 100%;
     background-position: center;
