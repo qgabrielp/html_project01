@@ -1266,12 +1266,12 @@
     line-height: 1;
 }
     .sec3_3_date span{
-    font-size: 40px;
+    font-size: 30px;
 }
     .sec3_3_text span{
     display: inline-block;
     vertical-align: middle;
-    font-size: 11px;
+    font-size: 9px;
     padding: 0 17px;
     color: #1c9ad6;
     border: 1px solid #1c9ad6;
@@ -1286,7 +1286,7 @@
     max-width: calc(100% - 85px);
     display: inline-block;
     vertical-align: middle;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75;
     color: #333;
     overflow: hidden;
