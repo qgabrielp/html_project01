@@ -534,6 +534,7 @@ main .page{
     left: 10%;
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
     color: #0f7f20;
 }
 .skill_cube:hover ul:nth-child(5) b{
@@ -561,6 +562,37 @@ main .page{
     transform: rotateY(90deg) translateX(83px);
     
     background-color: #d7afd1;
+}
+.skill_wrap>ul>ul:nth-child(6) b{
+    position: absolute;
+    top: 100%;
+    left: 0;
+/*    transform: rotate(90deg) rotateX(180deg);*/
+    font-size: 18px;
+    font-family: 'Nanum Gothic', cursive;
+    color: white;
+    opacity: 0;
+    line-height: 30px;
+}
+.skill_wrap>ul>ul:nth-child(6):hover b{
+    top: 25%;
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(6) strong{
+    position: absolute;
+    top: -100%;
+    left: 10%;
+/*    transform: rotate(90deg) rotateX(180deg);*/
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
+    color: #f9e636;
+    line-height: 30px;
+}
+.skill_wrap>ul>ul:nth-child(6):hover strong{
+    top: 10%;
+    transition: 1s;
 }
 
 
