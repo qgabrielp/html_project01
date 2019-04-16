@@ -1,0 +1,5 @@
+https://caniuse.com/#search=margin
+
+https://validator.w3.org/#validate_by_uri
+
+https://idangero.us/swiper/

@@ -385,7 +385,7 @@ main .page{
     background-color: #e69b81;
 }
 .skill_wrap>ul>ul:nth-child(2) b{
-    top: 0;
+    top: 100%;
     left: 0;
     font-size: 18px;
     font-family: 'Nanum Gothic', cursive;
@@ -393,18 +393,20 @@ main .page{
     opacity: 0;
 }
 .skill_wrap>ul>ul:nth-child(2):hover b{
+    top: 0;
     opacity: 1;
     transition: 2s;
 }
-.skill_wrap>ul>ul:nth-child(2) b strong{
+.skill_wrap>ul>ul:nth-child(2) strong{
     position: absolute;
     top: -100%;
     left: 10%;
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
     color: #4584e8;
 }
-.skill_wrap>ul>ul:nth-child(2):hover b strong{
+.skill_wrap>ul>ul:nth-child(2):hover strong{
     top: -20%;
     transition: 1s;
 }
@@ -435,29 +437,32 @@ main .page{
 .cb_tx3{
     background-color: none;
 }
-skill_wrap>ul>ul:nth-child(3) p{
+.skill_wrap>ul>ul:nth-child(3) b{
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
-    transform: rotate(90deg);
+    transform: rotate(90deg) rotateX(180deg);
     font-size: 18px;
     font-family: 'Nanum Gothic', cursive;
     color: white;
     opacity: 0;
 }
 .skill_wrap>ul>ul:nth-child(3):hover b{
+    top: 0%;
     opacity: 1;
     transition: 2s;
 }
-.skill_wrap>ul>ul:nth-child(3) b strong{
+.skill_wrap>ul>ul:nth-child(3) strong{
     position: absolute;
     top: -100%;
     left: 10%;
+    transform: rotate(90deg) rotateX(180deg);
     font-size: 24px;
     font-weight: bold;
-    color: #4584e8;
+    font-family: 'Noto Sans KR', cursive;
+    color: #c91e29;
 }
-.skill_wrap>ul>ul:nth-child(3):hover b strong{
+.skill_wrap>ul>ul:nth-child(3):hover strong{
     top: -20%;
     transition: 1s;
 }
