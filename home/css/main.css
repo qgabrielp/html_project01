@@ -239,13 +239,15 @@ main .page{
 
 }
 .skill{
-    width: 100%;
+    width: 800px;
     height: 800px;
     background-color: #eee;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px 0px #000;
 }
 .skill>div{}
 .skill_wrap{
@@ -264,20 +266,25 @@ main .page{
     backface-visibility: hidden;
       
 }
-.skill_wrap>ul>li{
+.skill_wrap>ul>ul{
     width: 166.67px;
     height: 166.67px;
     float: left;
+    display: block;
+}
+.skill_wrap>ul>ul>li{
+    width: 166.67px;
+    height: 166.67px;
     position: relative;
-    border: 1px solid #eee;
     transition: all 0.4s;
     transform-style: preserve-3d;
+    border: 1px solid #eee;
     backface-visibility: hidden;
-    font-size: 80px;
     text-align: center;
     line-height: 166px;
+    display: block;
 }
-.skill_wrap>ul>li img{
+.skill_wrap>ul>ul>li img{
     width: 60%;
     height: 60%;
     position: absolute;
@@ -285,10 +292,28 @@ main .page{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.skill_wrap>ul>li>span{
+.skill_wrap>ul>ul>li>span{
     overflow: hidden;
 }
-.skill_wrap>ul>li:nth-child(1){
+.skill_wrap>ul>ul>li>span>b{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 16px;
+}
+.skill_wrap>ul>ul>li>b{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 16px;
+}
+.skill_wrap>ul>ul:nth-child(1) li{
     background-color: #545953;
     transform: translateZ(0px);
     animation: li01 6s linear infinite;
@@ -299,11 +324,13 @@ main .page{
     transition: all 0.6s;
 }
 */
+/*
 .skill_cube:hover li:nth-child(1){
     transform: rotateZ(90deg) rotateY(90deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(1) span{
+*/
+.skill_wrap>ul>ul>li:nth-child(1) span{
     width: 100%;
     height: 100%;
     display: block;
@@ -314,13 +341,15 @@ main .page{
     
     background-color: #f00;
 }
-.skill_wrap>ul>li:nth-child(1) b{
+.skill_wrap>ul>ul:nth-child(1) b{
+    top: 0;
+    left: 0;
     font-size: 50px;
     font-family: 'Nanum Gothic', cursive;
     color: white;
     opacity: 0;
 }
-.skill_cube:hover li:nth-child(1) b{
+.skill_cube:hover ul:nth-child(1) b{
     opacity: 1;
     transition: 2s;
 }
@@ -332,10 +361,10 @@ main .page{
     100%{transform: scale(1) rotate(0); top: 0px; left: 0px;}
 }
 
-.skill_wrap>ul>li:nth-child(2){
+.skill_wrap>ul>ul:nth-child(2) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(2):hover{
+.skill_wrap>ul>ul:nth-child(2):hover li{
     transform: rotateX(-90deg);
     transition: all 0.6s;
 }
@@ -345,7 +374,7 @@ main .page{
     transition: all 0.6s;
 }
 */
-.skill_wrap>ul>li:nth-child(2) span{
+.skill_wrap>ul>ul:nth-child(2) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -355,11 +384,35 @@ main .page{
     
     background-color: #e69b81;
 }
+.skill_wrap>ul>ul:nth-child(2) b{
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    font-family: 'Nanum Gothic', cursive;
+    color: white;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(2):hover b{
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(2) b strong{
+    position: absolute;
+    top: -100%;
+    left: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4584e8;
+}
+.skill_wrap>ul>ul:nth-child(2):hover b strong{
+    top: -20%;
+    transition: 1s;
+}
 
-.skill_wrap>ul>li:nth-child(3){
+.skill_wrap>ul>ul:nth-child(3) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(3):hover{
+.skill_wrap>ul>ul:nth-child(3):hover li{
     transform: rotateZ(90deg) rotateX(90deg);
     transition: all 0.6s;
 }
@@ -369,7 +422,7 @@ main .page{
     transition: all 0.6s;
 }
 */
-.skill_wrap>ul>li:nth-child(3) span{
+.skill_wrap>ul>ul:nth-child(3) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -379,11 +432,40 @@ main .page{
     
     background-color: #5d83b4;
 }
+.cb_tx3{
+    background-color: none;
+}
+skill_wrap>ul>ul:nth-child(3) p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    font-size: 18px;
+    font-family: 'Nanum Gothic', cursive;
+    color: white;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(3):hover b{
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(3) b strong{
+    position: absolute;
+    top: -100%;
+    left: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4584e8;
+}
+.skill_wrap>ul>ul:nth-child(3):hover b strong{
+    top: -20%;
+    transition: 1s;
+}
 
-.skill_wrap>ul>li:nth-child(4){
+.skill_wrap>ul>ul:nth-child(4) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(4):hover{
+.skill_wrap>ul>ul:nth-child(4):hover li{
     transform: rotateY(90deg);
     transition: all 0.6s;
 }
@@ -393,7 +475,7 @@ main .page{
     transition: all 0.6s;
 }
 */
-.skill_wrap>ul>li:nth-child(4) span{
+.skill_wrap>ul>ul:nth-child(4) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -404,7 +486,7 @@ main .page{
     background-color: #70c3d6;
 }
 
-.skill_wrap>ul>li:nth-child(5){
+.skill_wrap>ul>ul:nth-child(5) li{
     background-color: #fff;
 }
 /*
@@ -413,11 +495,11 @@ main .page{
     transition: all 0.6s;
 }
 */
-.skill_cube:hover li:nth-child(5){
+.skill_cube:hover ul:nth-child(5) li{
     transform: rotateY(180deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(5) span{
+.skill_wrap>ul>ul:nth-child(5) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -425,9 +507,9 @@ main .page{
     left: 0%;
     transform: rotateY(180deg) translateX(0px);
 
-    background-color: #f93b3b;
+    background-color: #eee;
 }
-.skill_wrap>ul>li:nth-child(5) b{
+.skill_wrap>ul>ul:nth-child(5) li span b{
     position: absolute;
     top: 20%;
     left: 0%;
@@ -441,31 +523,31 @@ main .page{
     color: #000;
     opacity: 0;
 }
-.skill_wrap>ul>li:nth-child(5) b strong{
+.skill_wrap>ul>ul:nth-child(5) b strong{
     position: absolute;
     top: -100%;
-    left: 5%;
+    left: 10%;
     font-size: 24px;
     font-weight: bold;
     color: #0f7f20;
 }
-.skill_cube:hover li:nth-child(5) b{
+.skill_cube:hover ul:nth-child(5) b{
     opacity: 1;
     transition: 4s;
 }
-.skill_cube:hover li:nth-child(5) b strong{
+.skill_cube:hover ul:nth-child(5) b strong{
     top: -5%;
     transition: 1s;
 }
 
-.skill_wrap>ul>li:nth-child(6){
+.skill_wrap>ul>ul:nth-child(6) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(6):hover{
+.skill_wrap>ul>ul:nth-child(6):hover li{
     transform: rotateY(-90deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(6) span{
+.skill_wrap>ul>ul:nth-child(6) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -477,14 +559,14 @@ main .page{
 }
 
 
-.skill_wrap>ul>li:nth-child(7){
+.skill_wrap>ul>ul:nth-child(7) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(7):hover{
+.skill_wrap>ul>ul:nth-child(7):hover li{
     transform: rotateZ(-90deg) rotateX(-90deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(7) span{
+.skill_wrap>ul>ul:nth-child(7) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -495,14 +577,14 @@ main .page{
     background-color: #7467a0;
 }
 
-.skill_wrap>ul>li:nth-child(8){
+.skill_wrap>ul>ul:nth-child(8) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(8):hover{
+.skill_wrap>ul>ul:nth-child(8):hover li{
     transform: rotateX(90deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(8) span{
+.skill_wrap>ul>ul:nth-child(8) li span{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -513,14 +595,14 @@ main .page{
     background-color: #eddf62;
 }
 
-.skill_wrap>ul>li:nth-child(9){
+.skill_wrap>ul>ul:nth-child(9) li{
     background-color: #fff;
 }
-.skill_wrap>ul>li:nth-child(9):hover{
+.skill_wrap>ul>:nth-child(9):hover li{
     transform: rotateZ(90deg) rotateY(-90deg);
     transition: all 0.6s;
 }
-.skill_wrap>ul>li:nth-child(9) span{
+.skill_wrap>ul>ul:nth-child(9) li span{
     width: 100%;
     height: 100%;
     display: block;
