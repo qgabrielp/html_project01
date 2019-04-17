@@ -315,7 +315,7 @@ main .page{
 }
 .skill_wrap>ul>ul:nth-child(1) li{
     background-color: #545953;
-    transform: translateZ(0px);
+    border: none;
     animation: li01 6s linear infinite;
 }
 /*
@@ -346,8 +346,14 @@ main .page{
     left: 0;
     font-size: 50px;
     font-family: 'Nanum Gothic', cursive;
-    color: white;
+    color: #545953;
     opacity: 0;
+}
+.skill_cube:hover ul:nth-child(1) li{
+    background-color: #fff;
+    box-shadow: inset 0px 0px 15px 0px #000;
+    border-radius: 50%;
+    transition: 1s;
 }
 .skill_cube:hover ul:nth-child(1) b{
     opacity: 1;
@@ -434,9 +440,6 @@ main .page{
     
     background-color: #5d83b4;
 }
-.cb_tx3{
-    background-color: none;
-}
 .skill_wrap>ul>ul:nth-child(3) b{
     position: absolute;
     top: 100%;
@@ -460,7 +463,7 @@ main .page{
     font-size: 24px;
     font-weight: bold;
     font-family: 'Noto Sans KR', cursive;
-    color: #c91e29;
+    color: #f24b9e;
 }
 .skill_wrap>ul>ul:nth-child(3):hover strong{
     top: -20%;
@@ -489,6 +492,35 @@ main .page{
     transform: rotateY(90deg) translateX(83px);
     
     background-color: #70c3d6;
+}
+.skill_wrap>ul>ul:nth-child(4) b{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: rotate(135deg) rotateX(180deg);
+    font-size: 18px;
+    font-family: 'Nanum Gothic', cursive;
+    color: white;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(4):hover b{
+    top: 0%;
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(4) strong{
+    position: absolute;
+    top: -100%;
+    left: 10%;
+    transform: rotate(135deg) rotateX(180deg);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
+    color: #e0864e;
+}
+.skill_wrap>ul>ul:nth-child(4):hover strong{
+    top: -20%;
+    transition: 1s;
 }
 
 .skill_wrap>ul>ul:nth-child(5) li{
@@ -566,7 +598,7 @@ main .page{
 .skill_wrap>ul>ul:nth-child(6) b{
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 10%;
 /*    transform: rotate(90deg) rotateX(180deg);*/
     font-size: 18px;
     font-family: 'Nanum Gothic', cursive;
@@ -613,6 +645,35 @@ main .page{
     
     background-color: #7467a0;
 }
+.skill_wrap>ul>ul:nth-child(7) b{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: rotate(135deg) rotateX(0deg);
+    font-size: 24px;
+    font-family: 'Nanum Gothic', cursive;
+    color: #37e5c5;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(7):hover b{
+    top: 10%;
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(7) strong{
+    position: absolute;
+    top: -100%;
+    left: 5%;
+    transform: rotate(135deg) rotateX(0deg);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
+    color: #fff;
+}
+.skill_wrap>ul>ul:nth-child(7):hover strong{
+    top: -15%;
+    transition: 1s;
+}
 
 .skill_wrap>ul>ul:nth-child(8) li{
     background-color: #fff;
@@ -631,6 +692,38 @@ main .page{
     
     background-color: #eddf62;
 }
+.skill_wrap>ul>ul:nth-child(8) b{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: rotate(180deg) rotateY(180deg);
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Nanum Gothic', cursive;
+    color: #fff;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(8):hover b{
+    top: -10%;
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(8) strong{
+    position: absolute;
+    top: -100%;
+    left: 15%;
+    transform: rotate(180deg) rotateY(180deg);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
+    color: #e22863;
+}
+.skill_wrap>ul>ul:nth-child(8):hover strong{
+    top: 50%;
+    transition: 1s;
+}
+
 
 .skill_wrap>ul>ul:nth-child(9) li{
     background-color: #fff;
@@ -649,6 +742,35 @@ main .page{
     transform: rotateY(90deg) translateX(83px);
     
     background-color: #65b482;
+}
+.skill_wrap>ul>ul:nth-child(9) b{
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    transform: rotate(90deg) rotateX(180deg) rotateY(180deg);
+    font-size: 18px;
+    font-family: 'Nanum Gothic', cursive;
+    color: white;
+    opacity: 0;
+}
+.skill_wrap>ul>ul:nth-child(9):hover b{
+    top: 0%;
+    opacity: 1;
+    transition: 2s;
+}
+.skill_wrap>ul>ul:nth-child(9) strong{
+    position: absolute;
+    top: -100%;
+    left: 10%;
+    transform: rotate(90deg) rotateX(180deg) rotateY(180deg);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', cursive;
+    color: #783e87;
+}
+.skill_wrap>ul>ul:nth-child(9):hover strong{
+    top: 0%;
+    transition: 1s;
 }
 
 
