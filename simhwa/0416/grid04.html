@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			li{
+				list-style: none;
+			}
+		a{
+			color:#000;
+			text-decoration: none;
+		}
+		.box{
+			width: 100%;			
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 100px 300px;
+		}
+		.sub{
+			background-color: #0f0;
+		}
+		.sub:nth-child(1){			
+			background-color: #ff0;
+			grid-column:1/3;
+			display:flex;
+		}
+		.sub01:nth-child(1){
+			flex:1;
+		}
+		.sub01:nth-child(2){
+			flex:3;
+			display:flex;
+		}
+		.menu{
+			flex:1;
+			line-height: 100px;
+			z-index:9;
+		}
+		.menu a{
+			display:block;
+			
+		}	
+		.menu:hover{
+			background-color: #888;
+		}
+		.menu li{
+			width: 100%;
+			line-height: 60px;
+			background-color: #ccc;
+			
+		}
+		.menu li:hover{
+			background-color: #888;
+		}
+		.menu>ul{
+			display: none;
+		}
+		.logo{
+			width: 66px;
+			height: 63px;
+			background: url(12.png) no-repeat;
+			cursor:pointer;
+		}
+		.ab{
+			width: 66px;
+			height: 63px;
+			background: url(11.png) no-repeat;
+			cursor:pointer;
+		}
+	</style>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="box">
+		<div class="sub">
+			<div class="sub01"> <div class="logo"></div> </div>
+			<div class="sub01">
+				<div class="menu">
+				  <a href="#">Company</a>
+				  <ul>
+				  	<li>aaa1</li>
+				  	<li>aaa2</li>
+				  	<li>aaa3</li>
+				  </ul>
+				</div>
+				<div class="menu">
+			  	<a href="#">Product</a>
+			  	<ul>
+				  	<li>aaa1</li>
+				  	<li>aaa2</li>
+				  	<li>aaa3</li>
+				  </ul>
+				</div>
+				<div class="menu">
+				  <a href="#">Gallery</a>
+				  <ul>
+				  	<li>aaa1</li>
+				  	<li>aaa2</li>
+				  	<li>aaa3</li>
+				  </ul>
+				</div>
+				<div class="menu">
+				  <a href="#">contact us</a>
+				  <ul>
+				  	<li>aaa1</li>
+				  	<li>aaa2</li>
+				  	<li>aaa3</li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="sub">2</div>
+		<div class="sub">3</div>
+		
+	</div>
+	
+	<script>
+//		$(".logo").click(function(){
+//		  $(this).toggleClass("ab");	
+//		});
+	
+		var i=0;
+		$(".logo").click(function(){
+			if(i==0){
+		  $(this).css({"background-image":"url(12.png)"});	
+			i=1;
+		}else{
+			$(this).css({"background-image":"url(11.png)"});	
+	   	i=0;								 
+		 }
+		});
+		
+		
+		
+		
+	 $(".menu a").click(function(){
+		 $(this).next().slideToggle().parent().siblings().children("ul").hide();
+	 });
+	</script>
+</body>
+</html>
