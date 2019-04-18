@@ -39,6 +39,7 @@ header{
     background-color: rgba(255,255,255,0.6);
     z-index: 10;
     transition: 0.6s;
+    box-shadow: 0px -2px 5px 0px #000;
 }
 
 .logo{
@@ -116,7 +117,7 @@ header{
     text-align: center;
     color: #5382f1;
     cursor: pointer;
-    line-height: 150%;
+    line-height: 30px;
     display: none;
     background-color: rgba(29,31,33,1);
 }
@@ -998,9 +999,10 @@ main .page{
     height: 33.33%;
     float: left;
     position: relative;
+    cursor: pointer;
 }
 .pz_wrap>div:hover{
-    transform: translateZ(100px);
+    transform: translateZ(100px) scale(1.1);
     z-index: 100;
     transition: 0.6s;
 }
@@ -1041,45 +1043,44 @@ main .page{
     left: -51px;
 }
 
-.pz_wrap>div>img{
+
+.pz_wrap>div>div{
     width: 100%;
     height: 100%;
-    display: block;
-    background-color: #00f;
 }
-.pz_wrap>div:nth-child(1) img{
+.pz_wrap>div:nth-child(1) div{
     background: url(../img/pu01b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(2) img{
+.pz_wrap>div:nth-child(2) div{
     background: url(../img/pu02b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(3) img{
+.pz_wrap>div:nth-child(3) div{
     background: url(../img/pu03b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(4) img{
+.pz_wrap>div:nth-child(4) div{
     background: url(../img/pu04b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(5) img{
+.pz_wrap>div:nth-child(5) div{
     background: url(../img/pu05b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(6) img{
+.pz_wrap>div:nth-child(6) div{
     background: url(../img/pu06b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(7) img{
+.pz_wrap>div:nth-child(7) div{
     background: url(../img/pu07b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(8) img{
+.pz_wrap>div:nth-child(8) div{
     background: url(../img/pu08b.png)no-repeat center center;
     background-size: auto;
 }
-.pz_wrap>div:nth-child(9) img{
+.pz_wrap>div:nth-child(9) div{
     background: url(../img/pu09b.png)no-repeat center center;
     background-size: auto;
 }
@@ -1095,7 +1096,7 @@ main .page{
 .modal_bg{
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
 }
 .modal_in{
     width: 70%;
@@ -1105,17 +1106,50 @@ main .page{
     left: 15%;
     background-color: #fff;
 }
-.modal_in>div{
+.modal_in>.modal{
     position: absolute;
     width: 100%;
     height: 100%;
     display: none;
 }
+.modal_close{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    background-color: #000;
+}
 .modal1{
-    background-color: #ff0;
+    
 }
 .modal2{
-    background-color: #f00;
+    
+}
+.modal3{
+    
+}
+.modal4{
+    
+}
+.modal5{
+    
+}
+.modal6{
+    
+}
+.modal7{
+    
+}
+.modal8{
+    
+}
+.modal9{
+    
 }
 
 

@@ -123,15 +123,22 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    var i = $(this).index();
-    
     $(".pz_wrap>div").click(function(){
+        var i = $(this).index();
         $("html").css("overflow","hidden");
+        $(".modal_close").stop().fadeIn();
         $(".modal_wrap").stop().fadeIn();
+        $(".modal_in>div").eq(i).stop().fadeIn();
     });
     
     $(".modal_bg").click(function(){
         $(".modal_wrap").stop().fadeOut();
+        $(".modal_in>div").stop().fadeOut();
+    });
+    
+    $(".modal_close").click(function(){
+        $(".modal_wrap").stop().fadeOut();
+        $(".modal_in>div").stop().fadeOut();
     });
 });
 
