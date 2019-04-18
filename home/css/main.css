@@ -979,6 +979,7 @@ main .page{
 #po_sec{
     width: 90%;
     height: 90%;
+    margin-top: 5%;
     margin-left: 5%;
     transform-style: preserve-3d;
 }
