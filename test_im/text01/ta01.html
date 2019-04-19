@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Typer.js Example</title>
+
+
+    <style>
+        .box {
+            width: 700px;
+/*            margin: 150px auto;*/
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Roboto Condensed';
+            text-align: center;
+        }
+			.box01 {
+            width: 700px;
+/*            margin: 150px auto;*/
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Roboto Condensed';
+            text-align: center;
+        }
+        .typed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    Typer.js
+    <h1 id="example"></h1>
+</div>
+<div class="box01">
+    Typer.js
+    <h1 id="exam"></h1>
+</div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="typer.min.js"></script>
+
+    <script type="text/javascript">
+        $("#example").typer({
+            strings: [
+                "is a great free jQuery plugin",
+                "animates typing string",
+                "is hosted in jQueryScript.net"
+            ]
+        });
+			$("#exam").typer({
+            strings: [
+                "is a great free jQuery plugin",
+                "animates typing string",
+                "is hosted in jQueryScript.net"
+            ]
+        });
+    </script>
+
+</body>
+</html>

@@ -125,10 +125,12 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".pz_wrap>div").click(function(){
         var i = $(this).index();
-        $("html").css("overflow","hidden");
+//        $("html").css("overflow","hidden");
         $(".modal_close").stop().fadeIn();
         $(".modal_wrap").stop().fadeIn();
         $(".modal_in>div").eq(i).stop().fadeIn();
+        $(".modal1 .mo_pi").addClass('mo_pi1_move');
+        $(".modal2 .mo_pi").addClass('mo_pi2_move');
     });
     
     $(".modal_bg").click(function(){
@@ -139,6 +141,7 @@ $(document).ready(function(){
     $(".modal_close").click(function(){
         $(".modal_wrap").stop().fadeOut();
         $(".modal_in>div").stop().fadeOut();
+        
     });
 });
 

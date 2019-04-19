@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>jQuery TextFX Plugin Examples</title>
+<meta name="viewport" content="width=device-width, minimal-ui">
+
+</head>
+<body>
+
+<h1 style="margin-top:150px;">jQuery TextFX Plugin Examples</h1>
+<div class="examples">
+<h4><a class="d1">Example 1: fadeIn (Click to try) </a></h4>
+<h3 class="test">jQueryScript.Net</h3>
+<h4><a class="d2">Example 2: rotate (Click to try) </a></h4>
+<h3 class="test3">jQueryScript.Net</h3>
+<h4><a class="d3">Example 3: Scale (Click to try) </a></h4>
+<h3 class="test4">jQueryScript.Net</h3>
+<h4><a class="d4">Example 4: slideIn (Click to try) </a></h4>
+<h3 class="test2">jQueryScript.Net</h3>
+</div>
+<script src="jquery-3.3.1.min.js"></script> 
+<script type="text/javascript" src="jquery.transit.js"></script> 
+<script type="text/javascript" src="jquery.textFx.js"></script> 
+<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('.d1').click(function() {
+				$('.test').textFx({
+					type: 'fadeIn',
+					iChar: 100,
+					iAnim: 1000
+				});
+			});
+			$('.d4').click(function() {
+				$('.test2').textFx({
+					type: 'slideIn',
+					direction: 'bottom',
+					iChar: 250,
+					iAnim: 1000
+				});
+			});
+			$('.d2').click(function() {
+				$('.test3').textFx({
+					type: 'rotate',
+					iChar: 100,
+					iAnim: 2000
+				});
+			});
+			$('.d3').click(function() {
+				$('.test4').textFx({
+					type: 'scale',
+					iAnim: 2000
+				});
+			});
+		});
+		
+
+		</script>
+        
+
+</body>
+</html>

@@ -950,11 +950,11 @@ main .page{
 
 .page3{
     position: relative;
-/*    background: url(../img/puzzle-91235_1920.jpg)no-repeat;*/
-    background-size: auto;
-    background-attachment: fixed;
+    background-image: url(../img/puzzle-1816470_1920.png);
+    background-size: 35% 35%;
+/*    background-attachment: fixed;*/
     background-position: center;
-    position: relative;
+    background-repeat: no-repeat;
 }
 #po_wrap{
     width: 800px;
@@ -963,11 +963,13 @@ main .page{
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
+/*
     background: url(../img/Puzzle.png)no-repeat center center;
     background-size: auto;
     border-radius: 5%;
     background-color: #fff;
     box-shadow: 0px 0px 50px #000;
+*/
 }
 /*
 #po_wrap span{
@@ -1017,11 +1019,11 @@ main .page{
 }
 
 .pz_wrap>div:nth-child(1){
-    top: 98px;
+    top: 208px;
     left: 29px;
 }
 .pz_wrap>div:nth-child(2){
-    top: 124px;
+    top: 224px;
     left: 117px;
 }
 .pz_wrap>div:nth-child(3){
@@ -1057,12 +1059,14 @@ main .page{
     height: 100%;
 }
 .pz_wrap>div:nth-child(1) div{
-    background: url(../img/puimg1.png)no-repeat center center;
-    background-size: auto;
+    background: url(../img/puimg1_em.png)no-repeat center center;
+    background-size: 60% 60%;
+    transform: rotate(45deg);
 }
 .pz_wrap>div:nth-child(2) div{
-    background: url(../img/puimg2.png)no-repeat center center;
-    background-size: auto;
+    background: url(../img/puimg2_em.png)no-repeat center center;
+    background-size: 70% 70%;
+    transform: rotateX(45deg);
 }
 .pz_wrap>div:nth-child(3) div{
     background: url(../img/pu03b.png)no-repeat center center;
@@ -1110,13 +1114,15 @@ main .page{
     background-color: rgba(0,0,0,0.9);
 }
 .modal_in{
-    width: 70%;
-    height: 70%;
+    width: 900px;
+    height: 1100px;
     position: absolute;
     top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
+    perspective: 400px;
+    transform-style: preserve-3d;
 }
 .modal_in>.modal{
     position: absolute;
@@ -1136,31 +1142,115 @@ main .page{
     cursor: pointer;
     background-color: #000;
 }
-.go_stie{
-    width: 20%;
-    height: 20%;
+.go_site{
+    width: 200px;
+    height: 50px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: block;
+    background-color: #000;
+    border: 2px solid #fff;
+    transition: 0.6s;
+    overflow: hidden;
 }
-
-.modal1 .mo_img{
-    width: 80%;
+.go_site span{
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 10;
+    transition: 0.6s;
+}
+.go_site:before{
+    content: '';
+    display: block;
+    width: 120%;
     height: 100%;
     position: absolute;
+    left: 250%;
     top: 0;
-    left: 0;
-    background: url(../../po_img/po01.jpg)no-repeat center center;
+    background-color: #fff;
+    transform: translateX(-101%) skewX(-17.62deg);
+    backface-visibility: hidden;
+    z-index: 1;
+    transition: 0.6s;
+}
+.go_site:hover span{
+    color: #e2d70f;
+    animation: font_big 2s linear infinite;
+}
+@keyframes font_big{
+    0%{font-size: 22px}
+    25%{font-size: 26px}
+    50%{font-size: 22px}
+    75%{font-size: 26px}
+    100%{font-size: 22px}
+}
+.go_site:hover.go_site:before{
+    left: 110%;
+}
+.modal1 .mo_img{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: url(../../po_img/po1_pu.png)no-repeat center center;
     background-size: 100% 100%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px #000;
+}
+.modal1 .mo_pi{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 43.6%;
+    right: 35.4%;
+    background: url(../img/puimg1.png)no-repeat center center;
+    background-size: auto;
+}
+.mo_pi1_move{
+    animation: mo_pi_move 1s linear 1;
+}
+@keyframes mo_pi_move{
+    0%{top: -10%; right: 110%; transform: rotate(0deg) scale(2.5);}
+    50%{transform: rotate(180deg)}
+    100%{top: 43.6%; right: 35.4%; transform: rotate(360deg) scale(1);}
 }
 .modal2 .mo_img{
-    width: 80%;
-    height: 100%;
+     width: 800px;
+    height: 800px;
     position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../../po_img/wp01.jpg)no-repeat center center;
+    top: 50px;
+    left: 50px;
+    background: url(../../po_img/wp01_pu.png)no-repeat center center;
     background-size: 100% 100%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px #000;
+}
+.modal2 .mo_pi{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 25.95%;
+    right: 26.8%;
+    background: url(../img/puimg2.png)no-repeat center center;
+    background-size: auto;
+}
+.mo_pi2_move{
+    animation: mo_pi2_move 1s linear 1;
+}
+@keyframes mo_pi2_move{
+    0%{top: -10%; right: -10%; transform: rotate(0deg) scale(2.5);}
+    50%{transform: rotate(180deg)}
+    100%{top: 25.95%; right: 26.8%; transform: rotate(360deg) scale(1);}
 }
 .modal3{
     
@@ -1169,6 +1259,7 @@ main .page{
     
 }
 .modal5 .mo_img{
+    
 }
 .modal6{
     
