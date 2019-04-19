@@ -950,22 +950,26 @@ main .page{
 
 .page3{
     position: relative;
-/*    background: url(../img/desk-3139127_1920.jpg)no-repeat;*/
-    background-size: 100% 100%;
+/*    background: url(../img/puzzle-91235_1920.jpg)no-repeat;*/
+    background-size: auto;
     background-attachment: fixed;
     background-position: center;
     position: relative;
 }
 #po_wrap{
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     position: relative;
-    top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0 auto;
-/*    background: url(../img/kangkd78910_55761.jpg);*/
+    background: url(../img/Puzzle.png)no-repeat center center;
+    background-size: auto;
     border-radius: 5%;
-    background-color: #eee;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px #000;
 }
+/*
 #po_wrap span{
     width: 100%;
     height: 10%;
@@ -976,6 +980,7 @@ main .page{
     font-weight: bold;
     font-family: Montserrat;
 }
+*/
 #po_sec{
     width: 90%;
     height: 90%;
@@ -998,9 +1003,12 @@ main .page{
 .pz_wrap>div{
     width: 33.33%;
     height: 33.33%;
+    display: inline;
     float: left;
     position: relative;
     cursor: pointer;
+    
+/*    display: none;*/
 }
 .pz_wrap>div:hover{
     transform: translateZ(100px) scale(1.1);
@@ -1009,12 +1017,12 @@ main .page{
 }
 
 .pz_wrap>div:nth-child(1){
-    top: 50px;
-    left: 52px;
+    top: 98px;
+    left: 29px;
 }
 .pz_wrap>div:nth-child(2){
-    top: 60px;
-    left: -7px;
+    top: 124px;
+    left: 117px;
 }
 .pz_wrap>div:nth-child(3){
     top: 50px;
@@ -1044,17 +1052,16 @@ main .page{
     left: -51px;
 }
 
-
 .pz_wrap>div>div{
     width: 100%;
     height: 100%;
 }
 .pz_wrap>div:nth-child(1) div{
-    background: url(../img/pu01b.png)no-repeat center center;
+    background: url(../img/puimg1.png)no-repeat center center;
     background-size: auto;
 }
 .pz_wrap>div:nth-child(2) div{
-    background: url(../img/pu02b.png)no-repeat center center;
+    background: url(../img/puimg2.png)no-repeat center center;
     background-size: auto;
 }
 .pz_wrap>div:nth-child(3) div{
@@ -1086,6 +1093,9 @@ main .page{
     background-size: auto;
 }
 
+
+
+
 .modal_wrap{
     width: 100%;
     height: 100%;
@@ -1103,8 +1113,9 @@ main .page{
     width: 70%;
     height: 70%;
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 15%;
+    transform: translateY(-50%);
     background-color: #fff;
 }
 .modal_in>.modal{
@@ -1125,11 +1136,31 @@ main .page{
     cursor: pointer;
     background-color: #000;
 }
-.modal1{
-    
+.go_stie{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-.modal2{
-    
+
+.modal1 .mo_img{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../po_img/po01.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.modal2 .mo_img{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../po_img/wp01.jpg)no-repeat center center;
+    background-size: 100% 100%;
 }
 .modal3{
     
@@ -1137,8 +1168,7 @@ main .page{
 .modal4{
     
 }
-.modal5{
-    
+.modal5 .mo_img{
 }
 .modal6{
     
