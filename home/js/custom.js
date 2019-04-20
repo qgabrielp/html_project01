@@ -132,6 +132,7 @@ $(document).ready(function(){
         $(".modal1 .mo_pi").addClass('mo_pi1_move');
         $(".modal2 .mo_pi").addClass('mo_pi2_move');
         $(".modal3 .mo_pi").addClass('mo_pi3_move');
+        $(".modal4 .mo_pi").addClass('mo_pi4_move');
     });
     
     $(".modal_bg").click(function(){
