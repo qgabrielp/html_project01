@@ -1,0 +1,534 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title> Pixar Animation Studios  </title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script> new WOW().init(); </script>
+	
+	<style>
+        *{padding: 0; margin: 0; box-sizing: border-box; transition: all 0.6s;}
+        li {list-style: none;}
+        a:link,a:visited{text-decoration: none; color: #000000;}
+        .clearfix:after {content: ""; display: block; clear: both;}
+        img{display: block;}
+        
+        header{width: 100%; position: relative; z-index: 1;}
+        #top_menubar_1{display: none; width: 1600px; height: 100px; background: url(edit_img/header_back.jpg); margin: 0 auto; position: relative;}
+        #top_menubar_1>div{width: 1200px; margin: 0 auto;}
+        #top_menubar_1>div>img{width: 7%; height: 100px; float: left; margin-left: 30px;}
+        
+        #top_menubar_2{width: 100%; height: 100px; background: white; margin: 0 auto;}
+        
+        #top_menubar_2>#top_logo>a{width: 150px; height: 100px; background: url(img/pixar_logo.png)no-repeat center center; float: left;}
+        #menu_icon{display: none;}
+        
+        #top_menu_1{height: 100px; float: right;}
+        #top_menu_1>li{width: 160px; float: left; font-size: 18px; font-weight: bold; _margin-left: 20px; line-height: 50px; padding-top: 20px; text-align: center;}
+        
+        ul.submenu {display: none;}
+        ul.submenu>li{margin-top: -10px;}
+        ul.submenu>li>a{display: block;}
+        ul.submenu>li>a{font-size: 16px; line-height: 28px; color: white; padding: 5px;}
+        #top_menu_1>li:after{content: ""; display: block; clear: both;}
+        #top_menu_1>li:hover .submenu{display: block; background-color: black; transition: 0.5s;}
+        ul.submenu>li>a:hover{color: gray;}
+        
+        .nav{display: none;}
+        
+        #mon{display: none; background: url(edit_img/mon.png)no-repeat center center; background-size: contain; width: 70px; height: 90px; float: right; right: 20%; position: relative; margin-top: 10px;}
+        
+        .nav {_overflow: hidden; position: absolute; right: 0; top: 50%; width: auto; height: 90px; margin-top: -40px; background: #fff; border-radius: 5px;
+        -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);}
+        .nav__cb {z-index: -1000; position: absolute; left: 0; top: 0; opacity: 0; pointer-events: none;}
+        .nav__content {position: relative; width: 90px; height: 100%;
+          -webkit-transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
+          transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23); left: -500px;}
+        .nav__cb:checked ~ .nav__content {
+          -webkit-transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          width: 90px;}
+        .nav__items {position: relative; width: 630px; height: 100%; padding-left: 20px; padding-right: 110px; list-style-type: none; font-size: 0;}
+        .nav__item {display: inline-block; vertical-align: top; width: 120px; text-align: center; color: #6C7784; font-size: 14px; line-height: 90px; font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+          -webkit-perspective: 1000px;
+                  perspective: 1000px;
+          -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+          cursor: pointer;}
+        .nav__item:hover {color: black;}
+        .nav__item:hover .submenu2{background-color: #6C7784}
+        .submenu2>li:hover a{color: black;}
+        .nav__item-text {display: none; height: 100%; background-color: white;
+          -webkit-transform: rotateY(-70deg);
+                  transform: rotateY(-70deg);
+          opacity: 0;
+          -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);}
+        .nav__cb:checked ~ .nav__content .nav__item-text {
+          -webkit-transform: rotateY(0);
+                  transform: rotateY(0);
+          opacity: 1; display: block;
+          -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+        }
+        .submenu2 {display: none; height: 100%;
+          -webkit-transform: rotateY(-70deg);
+                  transform: rotateY(-70deg);
+          opacity: 0;
+          -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);}
+        .nav__cb:checked ~ .nav__content .submenu2{
+          -webkit-transform: rotateY(0);
+                  transform: rotateY(0);
+          opacity: 1; display: block;
+          -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s;
+          transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
+        }
+        .nav__item:nth-child(1) .nav__item-text {
+          -webkit-transition-delay: 0.3s;
+                  transition-delay: 0.3s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(1) .nav__item-text {
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+        }
+        .nav__item:nth-child(2) .nav__item-text {
+          -webkit-transition-delay: 0.2s;
+                  transition-delay: 0.2s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(2) .nav__item-text {
+          -webkit-transition-delay: 0.1s;
+                  transition-delay: 0.1s;
+        }
+        .nav__item:nth-child(3) .nav__item-text {
+          -webkit-transition-delay: 0.1s;
+                  transition-delay: 0.1s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(3) .nav__item-text {
+          -webkit-transition-delay: 0.2s;
+                  transition-delay: 0.2s;
+        }
+        .nav__item:nth-child(4) .nav__item-text {
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+        }
+        .nav__cb:checked ~ .nav__content .nav__item:nth-child(4) .nav__item-text {
+          -webkit-transition-delay: 0.3s;
+                  transition-delay: 0.3s;
+        }
+        .nav__btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 90px;
+          height: 90px;
+          padding: 36px 31px;
+          cursor: pointer;
+        }
+        .nav__btn:before, .nav__btn:after {
+          content: "";
+          display: block;
+          width: 28px;
+          height: 4px;
+          border-radius: 2px;
+          background: #6C7784;
+          -webkit-transform-origin: 50% 50%;
+                  transform-origin: 50% 50%;
+          -webkit-transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+          transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
+          transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+        }
+        .nav__btn:before {
+          margin-bottom: 10px;
+        }
+        .nav__btn:hover:before, .nav__btn:hover:after {
+          background: black;
+        }
+        .nav__cb:checked ~ .nav__btn:before {
+          -webkit-transform: translateY(7px) rotate(-225deg);
+                  transform: translateY(7px) rotate(-225deg);
+        }
+        .nav__cb:checked ~ .nav__btn:after {
+          -webkit-transform: translateY(-7px) rotate(225deg);
+                  transform: translateY(-7px) rotate(225deg);
+        }
+        .submenu2{width: 120px; height: 150px; line-height: 30px; text-align: center; margin: 5px; font-size: 11px; background-color: black;}
+        .submenu2>li>a{color: white;}
+        
+        #main_img{overflow: hidden; position: relative; margin-bottom: 200px;}
+        #main_img>div{background: url(FEATURE_FILMS/pic_001.jpg)no-repeat center center; width: 100%; height: 700px; background-size: cover; background-attachment: fixed;}
+        #main_img>div>div{position: absolute; width: 100%; top: 50%; text-align: center;}
+        #main_img>div>div>h1{font-size: 51px; color: white; text-align: center; white-space: pre-wrap; letter-spacing: .29em; line-height: 1em; text-transform: uppercase; font-style: normal; font-family: brandon-grotesque;}
+        
+        #list_box{width: 100%; margin: 0 auto; padding-left:200px; padding-right: 200px; margin-bottom: 200px;}
+        #list_box>ul{width: 100%; margin: 0 auto;}
+        #list_box>ul>li{float: left; width: 33.3%; _max-width: 600px; height: auto; _max-height: 720px; margin-bottom: 100px; _margin-left: 10px; overflow: hidden;}
+        #list_box>ul>li>a{display: block;}
+        #list_box img{background-size: contain;}
+        
+        footer{width: 100%; background: white; margin: 0 auto; text-align: center; clear: both;}
+        
+        div#sns{width: 100%; height: 50px; margin-bottom: 100px;}
+        div#sns>div>nav {width: 200px; margin: 0 auto; pointer-events: auto;}
+/*
+        div#sns>div:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav:hover {opacity: 0.5;}
+*/
+        div#sns>div>nav>a {width: 25%; font-size: 30px; display: block; float: left; color: gray;}
+        div#sns>div>nav>a:after{content: ""; display: block; clear: both;}
+        div#sns>div>nav>a i:hover {opacity: 1; transform: scale(1.2); color: black;}
+        
+        #info{width: 100%; height: 50px; margin: 0 auto; display: block;}
+        #info_top{width: 210px; margin: 0 auto;}
+        #info_top>div{float: left; border-bottom: 1px solid #000; margin-bottom: 50px; margin-right: 5px;}
+        #info>h3{width: 200px; margin: 0 auto; margin-bottom: 100px;}
+        
+        a.top{position: fixed; right: 5%; bottom: 50px; display: none; text-align: center; font-weight: bold; font-size: 20px;}
+        a.top>img{width: 100px; height: 170px; background: url(edit_img/Top_02.png)no-repeat; background-size: contain;}
+        
+        @media screen and (min-width:1280px) and (max-width:1599px){
+            
+        }
+        
+        @media screen and (min-width:1024px) and (max-width:1279px){
+            
+        }
+        
+        @media screen and (min-width:780px) and (max-width:1023px){
+            #top_menu_1>li{width: 140px; font-size: 16px;}
+            #list_box{width: 100%; margin: 0 auto; padding-left:50px; padding-right: 50px; margin-bottom: 100px;}
+            #main_img>div{background: url(FEATURE_FILMS/pic_001.jpg)no-repeat -900px -100px; width: 100%; height: 500px; background-size: cover; background-attachment: fixed;}
+        }
+        
+        @media screen and (min-width:640px) and (max-width:779px){
+            #top_menu_1>li{width: 100px; font-size: 14px;}
+            #list_box{width: 100%; margin: 0 auto; padding-left:50px; padding-right: 50px; margin-bottom: 100px;}
+            #main_img>div{background: url(FEATURE_FILMS/pic_001.jpg)no-repeat -1150px -150px; width: 100%; height: 400px; background-size: cover; background-attachment: fixed;}
+        }
+        
+        @media screen and (min-width:480px) and (max-width:639px){
+/*            #top_menu_1>li{width: 100px; font-size: 14px;}*/
+            #list_box{width: 100%; margin: 0 auto; padding-left:0px; padding-right: 0px; margin-bottom: 100px;}
+            #main_img>div{background: url(FEATURE_FILMS/pic_001.jpg)no-repeat -1150px -200px; width: 100%; height: 400px; background-size: cover; background-attachment: fixed;}
+            #list_box>ul>li{float: left; width: 50%; _max-width: 600px; height: auto; _max-height: 720px; margin-bottom: 100px; _margin-left: 10px; overflow: hidden;}
+            
+            #top_menubar_1{display: none;}
+            #top_menubar_2{width: 100%; height: 50px; margin: 0 auto;}
+            #top_menubar_2>#top_logo>a{width: 220px; height: 50px; background: url(edit_img/logo_01.png)no-repeat center center; float: left;}
+            
+            #top_menu_1{height: 80px; float: right;}
+            #top_menu_1>li{display: none;}
+            .nav{display: block;}
+            #mon{display: block; right: 13%; height: 40px;}
+            
+            .nav {position: absolute; right: 0px; width: auto; height: 50px; margin-top: -25px; background: #fff; border-radius: 2px;
+            -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);}
+            .nav__content {position: relative; width: 50px; height: 100%; -webkit-transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23); transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23); left: -380px; top: 0px;}
+            .nav__cb:checked ~ .nav__content {
+            -webkit-transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            width: 50px;}
+            .nav__items {position: relative; width: 380px; height: 100%; _padding-left: 20px; _padding-right: 110px; list-style-type: none; font-size: 0;}
+            .nav__item {display: inline-block; vertical-align: top; width: 120px; text-align: center; color: #6C7784; font-size: 14px; line-height: 50px; font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            -webkit-perspective: 1000px;
+                    perspective: 1000px;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s;
+             cursor: pointer;}
+            .submenu2{width: 120px; height: 150px; line-height: 30px; text-align: center; margin: 0px; font-size: 12px; background-color: black;}
+            .nav__btn {position: absolute; right: 0; top: 0;
+            width: 50px; height: 50px; padding: 16px 12px; cursor: pointer;}
+            .nav__btn:before, .nav__btn:after {content: ""; display: block; width: 28px; height: 4px; border-radius: 2px; background: #6C7784;
+            -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+            -webkit-transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
+            transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);}
+        }
+        
+        @media screen and (max-width:479px){
+            #list_box{width: 100%; margin: 0 auto; padding-left:0px; padding-right: 0px; margin-bottom: 100px;}
+            #main_img>div{background: url(FEATURE_FILMS/pic_001.jpg)no-repeat -450px -10px; width: 100%; height: 400px; background-size: cover; background-attachment: fixed;}
+            #list_box>ul>li{float: left; width: 50%; _max-width: 600px; height: auto; _max-height: 720px; margin-bottom: 100px; _margin-left: 10px; overflow: hidden;}
+            
+            #top_menubar_1{display: none;}
+            #top_menubar_2{width: 100%; height: 50px; margin: 0 auto;}
+            #top_menubar_2>#top_logo>a{width: 220px; height: 50px; background: url(edit_img/logo_01.png)no-repeat center center; float: left;}
+            
+            #top_menu_1{height: 80px; float: right;}
+            #top_menu_1>li{display: none;}
+            .nav{display: block;}
+            #mon{display: block; right: 13%; height: 40px;}
+            
+            .nav {position: absolute; right: 0px; width: auto; height: 50px; margin-top: -25px; background: #fff; border-radius: 2px;
+            -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);}
+            .nav__content {position: relative; width: 50px; height: 100%; -webkit-transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23); transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23); left: -380px; top: 0px;}
+            .nav__cb:checked ~ .nav__content {
+            -webkit-transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            width: 50px;}
+            .nav__items {position: relative; width: 380px; height: 100%; _padding-left: 20px; _padding-right: 110px; list-style-type: none; font-size: 0;}
+            .nav__item {display: inline-block; vertical-align: top; width: 120px; text-align: center; color: #6C7784; font-size: 14px; line-height: 50px; font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            -webkit-perspective: 1000px;
+                    perspective: 1000px;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s;
+             cursor: pointer;}
+            .submenu2{width: 120px; height: 150px; line-height: 30px; text-align: center; margin: 0px; font-size: 12px; background-color: black;}
+            .nav__btn {position: absolute; right: 0; top: 0;
+            width: 50px; height: 50px; padding: 16px 12px; cursor: pointer;}
+            .nav__btn:before, .nav__btn:after {content: ""; display: block; width: 28px; height: 4px; border-radius: 2px; background: #6C7784;
+            -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+            -webkit-transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+            transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
+            transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);}
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var mySlider = $(".slider").bxSlider({
+                auto:true,
+                pause:5000,
+                controls:false,
+                mode:'horizontal'
+            });
+            $(".nextBtn").on("click",function(){
+                mySlider.goToNextSlide();
+            });
+            $(".prevBtn").on("click",function(){
+                mySlider.goToPrevSlide();
+            });
+//            $(window).scroll(function() {
+//                if ($(this).scrollTop() > 50) { 
+//                    $("#top_menubar_1").hide();
+//                    $("#top_menubar_2").css({'position': 'fixed', 'left': '50%','margin-left': '-800px','width': '1600px','height': '50px'});
+//                    $("#top_menu_1>li").css('padding-top','0px'); $("#top_menubar_2>#top_logo>a").css('height','50px');
+//                } else {
+//                    $("#top_menubar_1").show();
+//                    $("#top_menubar_2").show();
+//                }
+//                if ($(this).scrollTop() < 50) { 
+//                    $("#top_menubar_1").show();
+//                    $("#top_menubar_2").css({'position': 'inherit','margin-left': '-700px','width': '1400px','height': '100px'});
+//                    $("#top_menu_1>li").css('padding-top','20px'); $("#top_menubar_2>#top_logo>a").css('height','100px');
+//                } 
+//            });
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 2000){
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+            $('.top').click(function(){
+            $('html, body').animate({scrollTop : 0}, 400);
+            return false;
+        });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="top_menubar_1">
+           <div>
+               <img class="wow bounceInLeft"data-wow-delay = "0.1s" src="edit_img/topicon_01.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.2s" src="edit_img/topicon_02.png" alt="">
+               <img class="wow fadeInUp"data-wow-delay = "0.3s" src="edit_img/topicon_03.png" alt="">
+               <img class="wow bounce"data-wow-delay = "0.4s" src="edit_img/topicon_04.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.5s" src="edit_img/topicon_05.png" alt="">
+               <img class="wow flash"data-wow-delay = "0.6s" src="edit_img/topicon_06.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.7s" src="edit_img/topicon_07.png" alt="">
+               <img class="wow swing"data-wow-delay = "0.8s" src="edit_img/topicon_08.png" alt="">
+               <img class="wow bounceInDown"data-wow-delay = "0.9s" src="edit_img/topicon_09.png" alt="">
+               <img class="wow bounceInRight"data-wow-delay = "1s" src="edit_img/topicon_10.png" alt="">
+           </div>
+        </div>
+        <div id="top_menubar_2">
+            <ul id="top_logo">
+                <a href="index.html"></a>
+            </ul>
+            <ul id="top_menu_1">
+                <li><a href="#a">FILMS</a>
+                    <ul class="submenu">
+                          <li><a href="FEATURE_FILMS.html">FEATURE FILMS</a></li>
+                          <li><a href="#a">SHORT FILMS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">TECHNOLOGY</a>
+                    <ul class="submenu">
+                          <li><a href="#a">RENDERMAN</a></li>
+                          <li><a href="#a">CRAPHIC TECHNOLOGIES</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">CAREERS</a>
+                    <ul class="submenu">
+                          <li><a href="#a">CAREERS AT PIXAR</a></li>
+                          <li><a href="#a">INTERNSHIPS</a></li>
+                          <li><a href="#a">LIFE AT PIXAR</a></li>
+                    </ul>
+                </li>
+                <li><a href="#a">ABOUT</a>
+                    <ul class="submenu">
+                          <li><a href="#a">CONTACT US</a></li>
+                          <li><a href="#a">COMING SOON</a></li>
+                          <li><a href="#a">OUR STORY</a></li>
+                          <li><a href="#a">PIXAR PROFILES</a></li>
+                          <li><a href="#a">COMPANY FAQ'S</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="mon"></div>
+            <nav class="nav">
+              <input type="checkbox" class="nav__cb" id="menu-cb"/>
+              <div class="nav__content">
+                <ul class="nav__items">
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      FILMS
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">FEATURE FILMS</a></li>
+                        <li><a href="#a">SHORT FILMS</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      TECHNOLOGY
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">RENDERMAN</a></li>
+                        <li><a href="#a">CRAPHIC TECHNOLOGIES</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      CAREERS
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">CAREERS AT PIXAR</a></li>
+                        <li><a href="#a">INTERNSHIPS</a></li>
+                        <li><a href="#a">LIFE AT PIXAR</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item">
+                    <span class="nav__item-text">
+                      ABOUT
+                    </span>
+                    <ul class="submenu2">
+                        <li><a href="#a">CONTACT US</a></li>
+                        <li><a href="#a">COMING SOON</a></li>
+                        <li><a href="#a">OUR STORY</a></li>
+                        <li><a href="#a">PIXAR PROFILES</a></li>
+                        <li><a href="#a">COMPANY FAQ'S</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <label class="nav__btn" for="menu-cb"></label>
+            </nav>
+        </div>
+    </header>
+    <div id="main_img">
+        <div>
+            <div><h1>FEATURE FILMS</h1></div>
+        </div>
+    </div>
+    <div id="list_box">
+        <ul>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_002.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_003.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_004.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_005.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_006.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_007.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_008.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_009.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_010.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_011.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_012.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_013.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_014.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_015.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_016.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_017.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_018.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_019.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_020.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_021.jpg" width="95%" height="100%" alt=""></a></li>
+            <li><a href="#a"><img src="FEATURE_FILMS/edit/pic_022.jpg" width="95%" height="100%" alt=""></a></li>
+        </ul>
+    </div>
+    <footer>
+        <div id="sns">
+            <div>
+                <nav>
+                    <a href="#a"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#a"><i class="fab fa-twitter"></i></a>
+                    <a href="#a"><i class="fab fa-instagram"></i></a>
+                    <a href="#a"><i class="fab fa-tumblr"></i></a>
+                </nav>
+            </div>
+        </div>
+        <div id="info">
+            <div id="info_top">
+                <div><a href="#a">PRIVACY POLICY |</a></div> 
+                <div><a href="#a">TERMS OF USE</a></div>
+            </div>
+            <h3>© 1986-2019 DISNEY / PIXAR</h3>
+        </div>
+    </footer>
+    <div>
+        <a href="#" class="top"><img src="" alt=""></a>    
+    </div>    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
