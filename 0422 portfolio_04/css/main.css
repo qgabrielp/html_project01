@@ -192,6 +192,48 @@ html,body{
     50%{transform: rotate(180deg); opacity: .6;}
     100%{transform: rotate(360deg); opacity: .1;}
 }
+.ship01{
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 30%;
+    right: -2%;
+    background: url(../img/ship01.png)no-repeat center center;
+    background-size: cover;
+    animation: shipmove01 200s linear infinite;
+}
+.ship02{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: 35%;
+    right: -2%;
+    background: url(../img/ship01.png)no-repeat center center;
+    background-size: cover;
+    animation: shipmove02 200s linear infinite;
+}
+.ship03{
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    top: 26%;
+    right: -2%;
+    background: url(../img/ship01.png)no-repeat center center;
+    background-size: cover;
+    animation: shipmove03 200s linear infinite;
+}
+@keyframes shipmove01{
+    0%{right: -2%;}
+    100%{right: 110%;}
+}
+@keyframes shipmove02{
+    0%{right: -5%;}
+    100%{right: 110%;}
+}
+@keyframes shipmove03{
+    0%{right: -3.5%;}
+    100%{right: 110%;}
+}
 
 .inner_text{
     height: 100vh;
@@ -226,8 +268,22 @@ html,body{
     0%{opacity: 0; transform: translateY(0);}
     100%{opacity: 1; transform: translateX(-80px) translateY(80px);}
 }
-
-
+.wrap.main .cont_01 .wrap_tit .txt_tit, .wrap.main .cont_01 .wrap_tit .txt_tit .txt_line {
+    transition: 400ms;
+}
+.wrap.main .cont_01 .wrap_tit .txt_tit {
+    width: auto;
+}
+.wrap .container .comm_cont .txt_tit {
+    font-family: Montserrat;
+    color: #fff;
+}
+.wrap .cont_01 .txt_tit {
+    overflow: hidden;
+    font-size: 140px;
+    color: #fff;
+    font-weight: 800;
+}
 
 
 
