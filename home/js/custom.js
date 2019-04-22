@@ -123,7 +123,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    $(".pz_wrap>div").click(function(){
+    $(".pz_wrap>.pu").click(function(){
         var i = $(this).index();
 //        $("html").css("overflow","hidden");
         $(".modal_close").stop().fadeIn();
@@ -131,6 +131,8 @@ $(document).ready(function(){
         $(".modal_in>div").eq(i).stop().fadeIn();
         $(".modal1 .mo_pi").addClass('mo_pi1_move');
         $(".modal2 .mo_pi").addClass('mo_pi2_move');
+        $(".modal3 .mo_pi").addClass('mo_pi3_move');
+        $(".modal4 .mo_pi").addClass('mo_pi4_move');
     });
     
     $(".modal_bg").click(function(){

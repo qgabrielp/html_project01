@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<style>
+	/*css reset*/
+		*{padding:0;margin:0;box-sizing:border-box}
+		li{list-style:none}
+		a:link,a:visited{text-decoration:none;color:#000000;}
+		.clearfix:after{content:"";display: block;clear: both;}
+	
+	/*main_header*/
+	header#container{position: relative;z-index:1}
+	header#container>div.gnb_wrap{border-bottom: 1px solid #ccc;}
+		div.gnb{width: 980px;margin:0 auto;}
+		
+		nav.gnb_menu{float: right;}
+		/*nav.gnb_menu>ul:after{content:"";clear: both;display: block;}*/
+		nav.gnb_menu>ul>li{float: left;position: relative;} /*ctrl+shift+Y*/
+		nav.gnb_menu>ul>li:after{content:"";position: absolute;width:1px;height:12px;background: #cdcdcd;top:17px;}
+		nav.gnb_menu>ul>li:first-child:after{content:"";width:0;}
+		nav.gnb_menu>ul>li>a{display: block;text-align: center;line-height:40px;padding:0 10px;}
+		nav.gnb_menu>ul>li:hover{background:yellow;}
+	header#container>h1{text-align: center;line-height:70px;margin-bottom:5px;}
+
+	header#container>div.lnb_wrap{background:#1c5da3;}
+	header#container>div.lnb_wrap>div.lnb{width:980px;margin:0 auto;}
+		ul.lnb_menu{width:100%;}
+		/*ul.lnb_menu:after{content:"";display: block;clear: both;}*/
+		ul.lnb_menu>li{float: left;width:16.66%;border-right:1px solid #fff;box-sizing:border-box;height:45px;transition:0.3s;} /*li높이값지정
+*/		ul.lnb_menu>li:first-child{border-left:1px solid #fff;}
+		ul.lnb_menu>li>a{display: block;text-align:center;line-height:45px;color:white;font-weight:bold;}
+
+		ul.lnb_menu ul.submenu{_display:none;opacity:0;transition:0.3s;background:#fff;}
+
+		ul.lnb_menu>li:hover a{color:#1c5da3;}
+		ul.lnb_menu>li:hover{background:skyblue;}
+
+		ul.lnb_menu>li:hover ul.submenu{_display:block;opacity:1;} /*hover 지정*/
+		/*ul.lnb_menu:hover ul.submenu{display:block;}*/ /*hover 지정*/
+
+
+	div.visual_wrap{height:400px;background:skyblue}
+	.p-5{padding:5em;}
+	.pl-5{padding-left:5em;}
+	</style>
+</head>
+<body>
+	<header id="container"> <!-- width 100% -->
+		<div class="gnb_wrap"> <!-- width 100% -->
+			<div class="gnb clearfix"> <!-- width:980 -->
+				<nav class="gnb_menu">
+					<!-- ul>li*4>a[#]>{menu$} -->
+					<ul class="clearfix">
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Join</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">English</a></li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<h1>한국직업전문학교</h1>
+		<div class="lnb_wrap"> <!-- width 100% background #1c5da3 -->
+			<div class="lnb"> <!-- width:980 -->
+					<ul class="lnb_menu clearfix"> <!-- width 100% -->
+						<li><a href="#">menu1</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+						<li><a href="#">menu2</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+						<li><a href="#">menu3</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+						<li><a href="#">menu4</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+						<li><a href="#">menu5</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+						<li><a href="#">menu6</a>
+							<ul class="submenu">
+								<li>submenu1</li>
+								<li>submenu2</li>
+								<li>submenu3</li>
+								<li>submenu4</li>
+							</ul>
+						</li>
+
+					</ul>
+			</div>
+		</div>
+		
+	</header>
+	<div class="visual_wrap">
+		<div style="width:980px;margin:0 auto">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis molestias, ab voluptas hic ut, est doloremque. Nostrum quidem tenetur illum sunt saepe! Pariatur dolorum nam quia ullam aliquam sapiente enim.
+		</div>
+	</div>
+	
+	
+</body>
+</html>
