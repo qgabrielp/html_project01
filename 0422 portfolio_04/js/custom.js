@@ -38,8 +38,21 @@
         },
     });
     $('.scroll_down').click(function(){
-        var cont2top = $('.cont02').offset().top + 50;
+        var cont2top = $('.cont02').offset().top + 150;
         $('html, body').stop().animate({scrollTop : cont2top}, 800);
         return false;
+    });
+    $('#news').addClass('on');
+    $('#news').click(function(){
+        $('#news').addClass('on');
+        $('#video').removeClass('on');
+        $('#tab1').stop().fadeIn();
+        $('#tab2').stop().hide();
+    });
+    $('#video').click(function(){
+        $('#video').addClass('on');
+        $('#news').removeClass('on');
+        $('#tab2').stop().fadeIn();
+        $('#tab1').stop().hide();
     });
 });
