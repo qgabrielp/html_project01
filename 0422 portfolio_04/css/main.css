@@ -400,6 +400,7 @@ html,body{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 .scroll_down div{
     display: inline-block;
@@ -464,7 +465,7 @@ html,body{
 }
 .cont02_1_text{
     position: absolute;
-    top: -133px;
+    top: -160px;
     z-index: 10;
 }
 .cont02_1_text h2{
@@ -474,6 +475,7 @@ html,body{
     width: 1200px;
     max-width: 1200px;
     display: block;
+    line-height: 1.2;
 }
 .cont02_1_text h2 span:nth-child(1){
     display: block;
@@ -506,7 +508,7 @@ html,body{
 .c2_sl_text{
     overflow: hidden;
     position: absolute;
-    bottom: -190px;
+    bottom: -200px;
     padding: 0 30px;
 }
 .c2_sl_text:after{
@@ -528,12 +530,24 @@ html,body{
     font-size: 30px;
     margin-top: 20px;
     line-height: 40px;
+/*    animation: text_up 0.6s linear infinite;*/
+}
+.c2_sl_text_right p{
+    font-size: 16px;
+    margin-top: 180px;
+    line-height: 30px;
+    word-break: keep-all;
+}
+.swiper-button-next, .swiper-button-prev{
+}
+@keyframes text_up{
+    0%{font-size: 0;}
+    100%{font-size: 30px;}
 }
 
-
-
-
-
+.cont02_2{
+    min-height: 900px;
+}
 
 
 

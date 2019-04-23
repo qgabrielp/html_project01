@@ -9,7 +9,7 @@
         $('.rei').stop().fadeIn(1000);
         $('.gr_sow').addClass('cross_gr');
         $('.red_sow').addClass('cross_red');
-        $("html").css("overflow","hidden");
+//        $("html").css("overflow","hidden");
     });
     $('.close_text').click(function(){
         $('.close_text').stop().fadeOut(1);
@@ -19,13 +19,27 @@
         $('.rei').stop().fadeOut();
         $('.gr_sow').removeClass('cross_gr');
         $('.red_sow').removeClass('cross_red');
-        $("html").css("overflow","scroll");
+//        $("html").css("overflow","scroll");
+    });
+    $('.swiper-button-next').click(function(){
+        $('.c2_sl_text').on(function(){
+            new WOW().init();
+        });  
     });
     
     var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        coverflowEffect: {
+            rotate: 30,
+            slideShadows: false,
+        },
+    });
+    $('.scroll_down').click(function(){
+        var cont2top = $('.cont02').offset().top + 50;
+        $('html, body').stop().animate({scrollTop : cont2top}, 800);
+        return false;
     });
 });
