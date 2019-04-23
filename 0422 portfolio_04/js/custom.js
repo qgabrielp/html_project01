@@ -55,4 +55,20 @@
         $('#tab2').stop().fadeIn();
         $('#tab1').stop().hide();
     });
+    $(window).scroll(function(){
+        var mttop = $('.move_text').offset().top-300;
+        var tst = $(this).scrollTop();
+        console.log("aaa"+tst);
+        if ($(this).scrollTop() > mttop){
+            $('.move_text').stop().animate({"opacity":"0", "top":tst/8+"%"},300);
+//            $('.move_text').stop().animate({"top":tst/8+"%"},300);
+        }else{
+            $('.move_text').stop().animate({"opacity":"1", "top":"50%"},300);
+//            $('.move_text').stop().animate({"top":"50%"},300);
+        }
+        
+        
+    });
+    
+    
 });

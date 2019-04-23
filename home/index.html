@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/mc.css" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Gaegu|Hi+Melody" rel="stylesheet">
-	<link href="css/ihover.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Gaegu|Hi+Melody|Cute+Font|Nanum+Gothic|Noto+Sans+KR" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -17,6 +18,8 @@
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 	<script type="text/javascript" src="js/GaugeMeter.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
 </head>
 <body>
     <header class="header_sm">
@@ -60,67 +63,218 @@
         </div>
         <div class="page page2">
             <div id="page2_wrap">
-                <div id="ch_wrap">
-                    <div id="ch1" class="ch" data-percent="50" data-label="" data-size="200" data-width="40" data-text_size="0.075" data-color="#e5d714" data-style="null"></div>
-                    <div id="ch2" class="ch" data-percent="100" data-label="" data-size="300" data-width="40" data-text_size="0.06" data-color="#448c4a" data-style="Semi"></div>
-                    <div id="ch3" class="ch" data-percent="50" data-label="" data-size="400" data-width="40" data-text_size="0.05" data-color="#36c4ea"></div>
-                    <div id="ch4" class="ch" data-percent="0" data-label="" data-size="500" data-width="40" data-text_size="0.05" data-color="#ffa500" data-style="Arch" data-min="0" data-total="100" data-used="70"></div>
-                    <div id="ch5" class="ch" data-percent="0" data-label="" data-size="600" data-width="40" data-text_size="0.05" data-color="#9932c9" data-style="Arch" data-min="-10" data-total="100" data-used="100"></div>
-                    <div id="ch6" class="ch" data-percent="85" data-label="" data-size="700" data-width="40" data-text_size="0.05" data-color="#e8277a" data-style="Null"></div>
-                    
-                    <div id="ch1" class="ch" data-percent="50" data-label="" data-size="150" data-width="20" data-text_size="0.075" data-color="#e5d714" data-style="null"></div>
-                    <div id="ch2" class="ch" data-percent="100" data-label="" data-size="200" data-width="20" data-text_size="0.06" data-color="#448c4a" data-style="Semi"></div>
-                    <div id="ch3" class="ch" data-percent="50" data-label="" data-size="250" data-width="20" data-text_size="0.05" data-color="#36c4ea"></div>
-                    <div id="ch4" class="ch" data-percent="0" data-label="" data-size="300" data-width="20" data-text_size="0.05" data-color="#ffa500" data-style="Arch" data-min="0" data-total="100" data-used="70"></div>
-                    <div id="ch5" class="ch" data-percent="0" data-label="" data-size="350" data-width="20" data-text_size="0.05" data-color="#9932c9" data-style="Arch" data-min="-10" data-total="100" data-used="100"></div>
-                    <div id="ch6" class="ch" data-percent="85" data-label="" data-size="400" data-width="20" data-text_size="0.05" data-color="#e8277a" data-style="Null"></div>
-                    <div id="ch7"><span>My Skill</span></div>
-                    <div id="ch_tt">
-                        <div class="ch_tx" id="ch1_tx">70 <br> 웹표준/접근성</div>
-                        <div class="ch_tx" id="ch2_tx">75 <br> 반응형</div>
-                        <div class="ch_tx" id="ch3_tx">60 <br> JAVASCRIPT</div>
-                        <div class="ch_tx" id="ch4_tx">70 <br> JQUERY</div>
-                        <div class="ch_tx" id="ch5_tx">80 <br> CSS</div>
-                        <div class="ch_tx" id="ch6_tx">85 <br> HTML</div>
+                <span class="play">
+                    <strong>P</strong>
+                    <strong>L</strong>
+                    <strong>A</strong>
+                    <strong>Y</strong>
+                </span>
+                <span class="cube">
+                    <strong>C</strong>
+                    <strong>U</strong>
+                    <strong>B</strong>
+                    <strong>E</strong>
+                </span>
+                <div class="page2_top"></div>
+                <div class="skill">
+                    <div>
+                        <div class="skill_wrap">
+                            <ul class="skill_cube">
+                                <ul>
+                                    <li>
+                                        <span></span>
+                                        <b>저는</b>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/html-5.png" alt="">
+                                        <span>
+                                            <strong>기본</strong>
+                                            <b>&nbsp;&nbsp;&nbsp;&nbsp;의 충실한 마크업</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/css.png" alt="">
+                                        <span>
+                                            <strong>섬세한</strong>
+                                            <b>&nbsp;&nbsp;&nbsp;&nbsp;스타일 적용</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/iconfinder_jquery_308442.png" alt="">
+                                        <span>
+                                            <strong>간단 명료한</strong>
+                                            <b>&nbsp;&nbsp;&nbsp;&nbsp;코드</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/iconfinder_about_us_465047.png" alt="">
+                                        <span><b><strong>이런</strong> &nbsp;&nbsp;&nbsp;&nbsp;것들을<br> 할 수있습니다.</b></span>
+                                    </li>
+                                    
+                                </ul>
+                                <ul>
+                                    <li><img src="img/illustrator.png" alt="">
+                                        <span>
+                                            <strong>&nbsp;노<br>&nbsp;&nbsp;력<br>&nbsp;&nbsp;&nbsp;하<br>&nbsp;&nbsp;&nbsp;&nbsp;는</strong>
+                                            <b>&nbsp;디<br>&nbsp;&nbsp;자<br>&nbsp;&nbsp;&nbsp;인</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/wordpress.png" alt="">
+                                        <span>
+                                            <strong>플러그인 사용</strong>
+                                            <b>&nbsp;&nbsp;&nbsp;&nbsp;다양한</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/javascript.png" alt="">
+                                        <span>
+                                            <strong>정<br>확<br>한</strong>
+                                            <b>프<br>로<br>그<br>래<br>밍<br>언<br>어</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><img src="img/photoshop.png" alt="">
+                                        <span>
+                                            <strong>기발한</strong>
+                                            <b>&nbsp;&nbsp;&nbsp;&nbsp;발상</b>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-<!--
-                <div class="page2_in">
-                    <div class="brain">
-                        
-                    </div>
-                </div>
--->
             </div>
         </div>
         <div class="page page3">
+            <span class="pick">
+                    <strong>P</strong>
+                    <strong>I</strong>
+                    <strong>C</strong>
+                    <strong>K</strong>
+            </span>
+            <span class="puzzle">
+                    <strong>P</strong>
+                    <strong>U</strong>
+                    <strong>Z</strong>
+                    <strong>Z</strong>
+                    <strong>L</strong>
+                    <strong>E</strong>
+            </span>
             <div id="po_wrap">
-                <span>PORTFOLIO</span>
                 <div id="po_sec">
-                    <div class="po_box">
-                        <a href="#a">
-                            <img src="" alt="">
-                            <p>
-                                <span>HTML,CSS,JQUERY</span>
+                    <div class="pz_wrap">
+                        <div class="pu pu1">
+                            <div></div>
+                        </div>
+                        <div class="pu pu2">
+                            <div></div>
+                        </div>
+                        <div class="pu pu3">
+                            <div></div>
+                        </div>
+                        <div class="pu pu4">
+                            <div></div>
+                        </div>
+<!--
+                        <div class="pu5">
+                            <div></div>
+                        </div>
+-->
+                        <div class="pu6">
+                            <div></div>
+                        </div>
+                        <div class="pu7">
+                            <div></div>
+                        </div>
+                        <div class="pu8">
+                            <div></div>
+                        </div>
+                        <div class="pu9">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_wrap">
+                <div class="modal_bg"></div>
+                <div class="modal_in">
+                    <div class="modal modal1">
+                        <div class="mo_img"></div>
+                        <div class="mo_pi"></div>
+                        <div class="mo_text">
+                            <p class="mo_text_tt">
+                                <b class="html">HTML</b> / <b class="css">CSS</b> / <b class="jq">JQUERY</b> / <b class="res">반응형</b>
                             </p>
-                            <h4>Pixar Animation Studios</h4>
+                            <p class="mo_text_sec">
+                                한국산업알콜 홈페이지를<br> 카피하였습니다.
+                            </p>
+                        </div>
+                        <a class="go_site" href="https://qgabrielp.github.io/html_project01/0402 portfolio_03/" target="_blank">
+                            <span>VIEW SITE</span>
                         </a>
                     </div>
-                    <div class="po_box">
-                        <a href="#a">
-                           <img src="" alt="">
-                            <p>
-                                <span>HTML,CSS,JQUERY</span>
+                    <div class="modal modal2">
+                        <div class="mo_img"></div>
+                        <div class="mo_pi"></div>
+                        <div class="mo_text">
+                            <p class="mo_text_tt">
+                                <b class="css">CSS</b> / <b class="wp">WORDPRESS</b>
                             </p>
-                            <h4>Chelsea Football Club</h4>
+                            <p class="mo_text_sec">
+                                Eidetic Marketing 홈페이지를<br> 워드프레스로 카피하였습니다.
+                            </p>
+                        </div>
+                        <a class="go_site" href="http://qgabrielp.dothome.co.kr/wordpress/" target="_blank">
+                            <span>VIEW SITE</span>
                         </a>
                     </div>
-                    <div class="po_box">
-                        
+                    <div class="modal modal3">
+                        <div class="mo_img"></div>
+                        <div class="mo_pi"></div>
+                        <div class="mo_text">
+                            <p class="mo_text_tt">
+                                <b class="html">HTML</b> / <b class="css">CSS</b> / <b class="jq">JQUERY</b> / <b class="res">반응형</b>
+                            </p>
+                            <p class="mo_text_sec">
+                                첼시 FC 홈페이지를 풀페이지로<br> 리뉴얼 하였습니다.
+                            </p>
+                        </div>
+                        <a class="go_site" href="https://qgabrielp.github.io/html_project01/0307%20portfolio_02/index.html" target="_blank">
+                            <span>VIEW SITE</span>
+                        </a>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="modal modal4">
+                        <div class="mo_img"></div>
+                        <div class="mo_pi"></div>
+                        <div class="mo_text">
+                            <p class="mo_text_tt">
+                                <b class="html">HTML</b> / <b class="css">CSS</b> / <b class="jq">JQUERY</b> / <b class="res">반응형</b>
+                            </p>
+                            <p class="mo_text_sec">
+                                픽사 스튜디오 홈페이지를<br> 리뉴얼 하였습니다.
+                            </p>
+                        </div>
+                        <a class="go_site" href="https://qgabrielp.github.io/html_project01/0225%20portfolio_01/" target="_blank">
+                            <span>VIEW SITE</span>
+                        </a>
+                    </div>
+                    <div class="modal modal5">
+                        <div class="mo_img"></div>
+                    </div>
+                    <div class="modal modal6">66</div>
+                    <div class="modal modal7">77</div>
+                    <div class="modal modal8">88</div>
+                    <div class="modal modal9">99</div>
+                    <div class="modal_close"><i class="fas fa-times"></i></div>
                 </div>
             </div>
         </div>
@@ -148,6 +302,8 @@
     </main>
 </body>
 </html>
+
+
 
 
 

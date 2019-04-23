@@ -1290,13 +1290,13 @@ main .page{
     background-color: rgba(0,0,0,0.9);
 }
 .modal_in{
-    width: 1200px;
+    width: 850px;
     height: 850px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+/*    background-color: #fff;*/
     perspective: 400px;
     transform-style: preserve-3d;
 }
@@ -1323,8 +1323,8 @@ main .page{
     height: 50px;
     position: absolute;
     bottom: 0;
-    left: 33%;
-    transform: translate(-33%, 0%);
+    left: 50%;
+    transform: translate(-50%, 0%);
     display: block;
     background-color: #000;
     border: 2px solid #fff;
@@ -1372,6 +1372,41 @@ main .page{
 .go_site:hover.go_site:before{
     left: 110%;
 }
+.mo_text{
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.9);
+}
+.html{
+    color: #e69b81 !important;
+}
+.css{
+    color: #5d83b4 !important;
+}
+.jq{
+    color: #70c3d6 !important;
+}
+.res{
+    color: green !important;
+}
+.wp{
+    color: #7467a0 !important;
+}
+.mo_text_tt{
+    font-size: 16px;
+    color: #000;
+}
+.mo_text_sec{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
 .modal1 .mo_img{
     width: 800px;
     height: 800px;
@@ -1388,7 +1423,7 @@ main .page{
     height: 200px;
     position: absolute;
     top: 53.5%;
-    right: 53.8%;
+    right: 34.7%;
     background: url(../img/puimg1.png)no-repeat center center;
     background-size: auto;
 }
@@ -1398,7 +1433,7 @@ main .page{
 @keyframes mo_pi_move{
     0%{top: -10%; right: 110%; transform: rotate(0deg) scale(2.5);}
     50%{transform: rotate(180deg)}
-    100%{top: 53.5%; right: 53.8%;; transform: rotate(360deg) scale(1);}
+    100%{top: 53.5%; right: 34.7%;; transform: rotate(360deg) scale(1);}
 }
 
 .modal2 .mo_img{
@@ -1417,7 +1452,7 @@ main .page{
     height: 200px;
     position: absolute;
     top: 30.6%;
-    right: 47.3%;
+    right: 25.45%;
     background: url(../img/puimg2.png)no-repeat center center;
     background-size: auto;
 }
@@ -1425,9 +1460,9 @@ main .page{
     animation: mo_pi2_move 1s linear 1;
 }
 @keyframes mo_pi2_move{
-    0%{top: 0%; right: 0%; transform: rotate(0deg) scale(2.5);}
+    0%{top: -20%; right: -20%; transform: rotate(0deg) scale(2.5);}
     50%{transform: rotate(180deg)}
-    100%{top: 30.6%; right: 47.3%; transform: rotate(360deg) scale(1);}
+    100%{top: 30.6%; right: 25.45%; transform: rotate(360deg) scale(1);}
 }
 
 .modal3 .mo_img{
@@ -1446,7 +1481,7 @@ main .page{
     height: 200px;
     position: absolute;
     top: 29.68%;
-    right: 58.7%;
+    right: 41.6%;
     background: url(../img/puimg3.png)no-repeat center center;
     background-size: auto;
 }
@@ -1454,9 +1489,9 @@ main .page{
     animation: mo_pi3_move 1s linear 1;
 }
 @keyframes mo_pi3_move{
-    0%{top: 0%; right: 0%; transform: rotate(0deg) scale(2.5);}
+    0%{top: -20%; right: -20%; transform: rotate(0deg) scale(2.5);}
     50%{transform: rotate(180deg)}
-    100%{top: 29.68%; right: 58.7%; transform: rotate(360deg) scale(1);}
+    100%{top: 29.68%; right: 41.6%; transform: rotate(360deg) scale(1);}
 }
 
 .modal4 .mo_img{
@@ -1475,7 +1510,7 @@ main .page{
     height: 200px;
     position: absolute;
     top: 29.7%;
-    right: 58.7%;
+    right: 41.6%;
     background: url(../img/puimg4.png)no-repeat center center;
     background-size: auto;
 }
@@ -1483,9 +1518,9 @@ main .page{
     animation: mo_pi4_move 1s linear 1;
 }
 @keyframes mo_pi4_move{
-    0%{top: 100%; right: 0%; transform: rotate(0deg) scale(2.5);}
+    0%{top: 100%; right: -20%; transform: rotate(0deg) scale(2.5);}
     50%{transform: rotate(180deg)}
-    100%{top: 29.7%; right: 58.7%; transform: rotate(360deg) scale(1);}
+    100%{top: 29.7%; right: 41.6%; transform: rotate(360deg) scale(1);}
 }
 
 .modal5 .mo_img{

@@ -1,4 +1,5 @@
-﻿    $(window).scroll(function() {
+﻿   
+    $(window).scroll(function() {
         var page1top = $('.page1').offset().top;
         var page2top = $('.page2').offset().top;
         var page3top = $('.page3').offset().top;
@@ -125,7 +126,6 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".pz_wrap>.pu").click(function(){
         var i = $(this).index();
-//        $("html").css("overflow","hidden");
         $(".modal_close").stop().fadeIn();
         $(".modal_wrap").stop().fadeIn();
         $(".modal_in>div").eq(i).stop().fadeIn();
