@@ -9,6 +9,7 @@
         $('.rei').stop().fadeIn(1000);
         $('.gr_sow').addClass('cross_gr');
         $('.red_sow').addClass('cross_red');
+        $("html").css("overflow","hidden");
     });
     $('.close_text').click(function(){
         $('.close_text').stop().fadeOut(1);
@@ -18,6 +19,7 @@
         $('.rei').stop().fadeOut();
         $('.gr_sow').removeClass('cross_gr');
         $('.red_sow').removeClass('cross_red');
+        $("html").css("overflow","scroll");
     });
     
     var swiper = new Swiper('.swiper-container', {
