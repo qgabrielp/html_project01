@@ -600,6 +600,7 @@ html,body{
     margin-top: 90px;
 }
 .tab_sec{
+    height: 1500px;
     overflow: hidden;
 }
 .tab_sec:after{
@@ -639,16 +640,43 @@ html,body{
 #tab2 div{
     width: 100%;
     height: 450px;
+    position: relative;
 }
 .tab_sec_video{
+    display: block;
     width: 70%;
     height: 100%;
+}
+.video1{
     background: url(../img/806.jpg)no-repeat center center;
     background-size: 100% 100%;
 }
-
-
-
+.video1:before{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #ff0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.video2{
+    background: url(../img/807.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.video3{
+    background: url(../img/808.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+#tab2 .tab_sec_text{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 
