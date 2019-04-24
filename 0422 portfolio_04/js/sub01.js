@@ -44,7 +44,6 @@
     });
    
     $(window).scroll(function(){
-        var mttop = $('.move_text').offset().top-300;
         var tst = $(this).scrollTop();
         var op = 1;
         console.log("aaa"+tst);

@@ -316,13 +316,17 @@ html,body{
     position: absolute;
     font-size: 100px;
     font-family: Montserrat;
-    color: #3273c5;
+    color: #fff;
 }
 .cont02_tt span{
     visibility: visible;
     display: block;
     line-height: 1;
     font-weight: 800;
+}
+.cont02_tt span:nth-child(1){
+    text-stroke: 1px #fff;
+    color: transparent;
 }
 #form input{
     vertical-align: middle;
