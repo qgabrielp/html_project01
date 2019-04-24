@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/media.css" />
 	<link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/selectric.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -20,6 +21,8 @@
 	<script type="text/javascript" src="js/sub01.js"></script>
 	<script src="js/wow.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.selectric.js"></script>
 </head>
 <body>
 <div class="main">
@@ -74,6 +77,340 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="cont02">
+                <div class="cont02_wrap">
+                    <div class="bg_l"></div>
+                    <div class="bg_r"></div>
+                    <div class="cont02_inner">
+                        <div class="cont02_inner_tt">
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="cont02_list">
+                            <div class="cont02_tt">
+                                <span>LATEST FROM</span>
+                                <span>NEWS + BLOG</span>
+                            </div>
+                            <form action="" method="get" id="form">
+                                <input type="hidden" name="csrf_token">
+                                <div class="select_box">
+                                    <div class="selectric-wrapper">
+                                        <div class="selectric-hide-select">
+                                            <select name="construct_year" class="news_select" tabindex="-1">
+                                                <option value="">All works</option>
+                                                <option value="7">2019</option>
+                                                <option value="6">2018</option>
+                                                <option value="5">2017</option>
+                                                <option value="4">2016</option>
+                                                <option value="3">2015</option>
+                                                <option value="2">ETC</option>
+                                            </select>
+                                        </div>
+                                        <div class="selectric">
+                                            <span class="label">All news</span>
+                                            <b class="button">▼</b>
+                                        </div>
+                                        <div class="selectric-items" tabindex="-1">
+                                            <div class="selectric-scroll">
+                                                <ul>
+                                                    <li data-index="0" class="selected">All works</li>
+                                                    <li data-index="1" class="">2019</li>
+                                                    <li data-index="2" class="">2018</li>
+                                                    <li data-index="3" class="">2017</li>
+                                                    <li data-index="4" class="">2016</li>
+                                                    <li data-index="5" class="">2015</li>
+                                                    <li data-index="6" class="last">ETC</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input class="selectric-input" tabindex="0">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="cont02_list_box">
+                                <ul>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/webbys-2019-won-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>THE STARWARS.COM TEAM WINS FIVE 2019 WEBBY AWARDS</p>
+                                                <p>BY: STARWARS.COM TEAM <strong>EVENTS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swge-reservations-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>RESERVATIONS TO VISIT STAR WARS: GALAXY’S EDGE OPEN NEXT WEEK</p>
+                                                <p>BY: STARWARS.COM TEAM <strong>DISNEY PARKS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/jedi-fallen-order-cal-interview-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>LUCASFILM GAMES VP DOUGLAS REILLY AND RESPAWN CEO VINCE ZAMPELLA ON THE POTENT FANTASY OF STAR WARS JEDI: FALLEN ORDER</p>
+                                                <p>BY: ALEX KANE <strong>INTERVIEWS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/claudia-master-tall-v2.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>STAR WARS: MASTER & APPRENTICE: A PEEK INSIDE WITH AUTHOR CLAUDIA GRAY</p>
+                                                <p>BY: LUCAS SEASTROM <strong>BOOKS + COMICS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-fans-tall.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>FANS WERE OUT IN FULL FORCE AT STAR WARS CELEBRATION CHICAGO</p>
+                                                <p>BY: KELLY KNOX <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/clone-wars-rewatch-220-tall.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>THE CLONE WARS REWATCH: BOBA FETT SETS A “DEATH TRAP”</p>
+                                                <p>BY: KRISTIN BAVER <strong>OPINIONS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-resistance-tall-1.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 6 THINGS WE LEARNED FROM THE STAR WARS RESISTANCE PANEL</p>
+                                                <p>BY: ALEX KANE <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/jedi-fallen-order-tall-b-1.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>THE ART OF STAR WARS JEDI: FALLEN ORDER BOOK ANNOUNCED</p>
+                                                <p>BY: KRISTIN BAVER <strong>BOOKS + COMICS</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-idw-jaxxon-tall.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: NEW TALES FROM VADER’S CASTLE SERIES ANNOUNCED, JAXXON RETURNS, AND MORE FROM THE IDW PUBLISHING PANEL</p>
+                                                <p>BY: STARWARS.COM TEA <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-ilm-models-tall-v2.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 9 HIGHLIGHTS FROM THE ILM MODEL SHOP PANEL</p>
+                                                <p>BY: ALEX KANE <strong>BEHIND THE SCENES</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/the-phantom-menace-20th-anniversary-tall.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 5 HIGHLIGHTS FROM THE PHANTOM MENACE ANNIVERSARY PANEL</p>
+                                                <p>BY: KRISTIN BAVER <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/han-cantina-tall.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 6 SURPRISES FROM INSIDE THE MOS EISLEY CANTINA</p>
+                                                <p>BY: LUCAS SEASTROM <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/marvel-swcc-swge-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: MARVEL’S STAR WARS: GALAXY’S EDGE #1 ART AND MORE REVEALED</p>
+                                                <p>BY: DAN BROOKS <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-the-clone-wars-panel-tall-A-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 9 THINGS WE LEARNED FROM THE STAR WARS: THE CLONE WARS PANEL</p>
+                                                <p>BY: DAN BROOKS <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/ilmxlab-swcc-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 5 THINGS WE LEARNED FROM THE ILMXLAB PANEL</p>
+                                                <p>BY: KELLY KNOX <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/swcc-the-mandalorian-panel-recap-tall-B-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 9 THINGS WE LEARNED FROM THE MANDALORIAN PANEL</p>
+                                                <p>BY: KRISTIN BAVER <strong>THE MANDALORIAN</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/the-mandalorian-images-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: SEE NEW PHOTOS FROM THE MANDALORIAN</p>
+                                                <p>BY: STARWARS.COM TEAM <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                        <a href="#a">
+                                            <img src="img/jedi-fallen-order-swcc-tall-1536x512.jpg" alt="">
+                                            <div class="cont02_list_text">
+                                                <p>SWCC 2019: 5 THINGS WE LEARNED FROM THE STAR WARS JEDI: FALLEN ORDER PANEL</p>
+                                                <p>BY: ALEX KANE <strong>STAR WARS CELEBRATION</strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont03">
+                <h2>Featured Blog Contributors</h2>
+                <ul>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2017/06/alex-kane-536x536.jpg" alt="">
+                            <p>Alex Kane</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2016/04/Anina4-536x536.jpg" alt="">
+                            <p>Anina Walas</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2018/04/bria_pic-536x536.jpg" alt="">
+                            <p>Bria LaVorgna</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2014/08/dan-brooks-2-536x536.jpg" alt="">
+                            <p>Dan Brooks</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2015/03/filoni1-536x536.jpg" alt="">
+                            <p>Dave Filoni</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2014/06/jennifer_large.jpg" alt="">
+                            <p>Jennifer Heddle</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2016/04/profile-pic-536x536.jpg" alt="">
+                            <p>James Floyd</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2014/06/jason_large-536x536.jpg" alt="">
+                            <p>Jason Fry</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2017/03/jenn4-536x536.jpg" alt="">
+                            <p>Jenn Fujikawa</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2016/03/IMG_6839-536x536.jpg" alt="">
+                            <p>Jamie Greene</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2016/09/KB1-536x536.jpg" alt="">
+                            <p>Kristin Baver</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2016/07/kelly-knox-536x536.jpg" alt="">
+                            <p>Kelly Knox</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2019/04/lucas-seastrom-sm-536x536.jpg" alt="">
+                            <p>Lucas Seastrom</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2018/04/mark-newbold-profile-536x536.jpg" alt="">
+                            <p>Mark Newbold</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2018/04/neil-kleid-536x536.jpg" alt="">
+                            <p>Neil Kleid</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2015/06/StarWars_com-Picture-536x536.jpg" alt="">
+                            <p>Amy Ratcliffe</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2017/08/bb8-author.jpg" alt="">
+                            <p>StarWars.com Team</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="https://starwarsblog.starwars.com/wp-content/uploads/2014/08/Dan-536x536.jpg" alt="">
+                            <p>Dan Zehr</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

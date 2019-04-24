@@ -83,7 +83,7 @@ html,body{
     height: 20%;
     position: absolute;
     top: 5px;
-    background: url(../img/gr_sow.png)no-repeat center center;
+    background: url(../img/bl_sow.png)no-repeat center center;
     background-size: 100% 100%;
     transition: all 0.4s;
 }
@@ -92,7 +92,7 @@ html,body{
     height: 20%;
     position: absolute;
     top: 18px;
-    background: url(../img/red_sow.png)no-repeat center center;
+    background: url(../img/red_sow2.png)no-repeat center center;
     background-size: 100% 100%;
     transition: all 0.4s;
 }
