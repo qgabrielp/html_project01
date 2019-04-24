@@ -1,0 +1,454 @@
+html,body{
+
+}
+
+.main{
+    
+}
+
+.main_inner{
+ min-width: 1440px;   
+}
+
+.header{
+    
+}
+.header_inner{
+    
+}
+.logo{
+    position: fixed;
+    top: 60px;
+    left: 70px;
+    z-index: 999;
+}
+.logo a{
+    display: block;
+    width: 180px;
+    height: 25px;
+    background: url(../img/sw_logo_horiz-04368052e188.png)no-repeat center center;
+    background-size: 100% 100%;
+    transition: all 0.4s;
+}
+
+.menu_btn{
+    display: block;
+    position: fixed;
+    top: 55px;
+    right: 70px;
+    z-index: 999;
+    width: 100px;
+    height: 30px;
+    padding-right: 35px;
+    transition: all 0.2s;
+}
+
+.menu_text{
+    
+    position: absolute;
+    top: 7px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #fff;
+    line-height: 16px;
+    transition: all 0.4s;
+}
+.menu_text i{
+    font-size: 20px;
+}
+.close_text{
+    position: absolute;
+    top: 7px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #fff;
+    line-height: 16px;
+    display: none;
+}
+.close_text i{
+    font-size: 22px;
+}
+.sow{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 12px;
+    cursor: auto;
+}
+.gr_sow{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 5px;
+    background: url(../img/gr_sow.png)no-repeat center center;
+    background-size: 100% 100%;
+    transition: all 0.4s;
+}
+.red_sow{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 18px;
+    background: url(../img/red_sow.png)no-repeat center center;
+    background-size: 100% 100%;
+    transition: all 0.4s;
+}
+.cross_gr{
+    transform: rotate(-45deg);
+    top: 11px;
+}
+.cross_red{
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,1);
+    z-index: 900;
+    display: none;
+}
+.menu_inner{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main_menu{
+    position: relative;
+}
+.main_menu li{
+    
+}
+.main_menu li a{
+    font-size: 100px;
+    font-weight: 600;
+    color: transparent;
+    cursor: pointer;
+    text-stroke: 1.5px #ffe81f;
+    transition: all 0.4s;
+}
+.main_menu li a:hover{
+    color: #ffe81f;
+}
+
+.join{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.join:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.join li{
+    float: left;
+    margin-left: 30px;
+}
+.join li a{
+    font-size: 18px;
+    color: #fff;
+}
+
+.kren{
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    background: url(../img/kren.png)no-repeat center center;
+    background-size: auto;
+}
+.rei{
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    background: url(../img/rei.png)no-repeat center center;
+    background-size: auto;
+}
+
+.container{
+    overflow: hidden;
+}
+.cont01{
+    min-height: 900px;
+    background: url(../img/ANH-40-Header-Template@2x-2.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.cont01_inner{
+    width: 100%;
+    min-height: 900px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 135px;
+}
+.cont01_text{
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cont01_text_tt{
+    font-size: 140px;
+    color: #fff;
+    font-weight: 800;
+    overflow: hidden;
+}
+.cont01_text_tt>p{
+    display: block;
+}
+.cont01_text_tt>p>span{
+    display: block;
+    position: relative;
+    float: left;
+    line-height: 200px; 
+    font-weight: 800;
+}
+.cont01_text_tt>p>span:nth-child(1){
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: fadeInUpTofadeOut;
+}
+.cont01_text_tt>p>span:nth-child(2){
+    animation-iteration-count: infinite;
+    animation-delay: 1.05s;
+    animation-duration: 5s;
+    animation-name: fadeInUpTofadeOut;
+}
+.cont01_text_tt>p>span:nth-child(3){
+    animation-iteration-count: infinite;
+    animation-delay: 1.1s;
+    animation-duration: 5s;
+    animation-name: fadeInUpTofadeOut;
+}
+.cont01_text_tt>p>span:nth-child(4){
+    animation-iteration-count: infinite;
+    animation-delay: 1.15s;
+    animation-duration: 5s;
+    animation-name: fadeInUpTofadeOut;
+}
+
+@keyframes fadeInUpTofadeOut{
+    0% {opacity: 0; transform: translate3d(0, 100%, 0);}
+    20% { opacity: 1; transform: none;}
+    80% {opacity: 1; transform: none;}
+    100% {opacity: 0; transform: none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+.gototop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 900;
+}
+.gototop div{
+    display: inline-block;
+    position: relative;
+}
+.gototop div p{
+    display: inline-block;
+    height: 30px;
+    color: #fff;
+}
+.gototop div p i{
+    font-size: 30px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.gototop div p i:nth-child(1){
+    animation: gtt1 3s linear infinite;
+}
+.gototop div p i:nth-child(2){
+    animation: gtt2 3s linear infinite;
+    animation-delay: 1.5s;
+}
+.gototop div p span{
+    font-size: 18px
+}
+@keyframes gtt1{
+    0%{top: -30px; opacity: 1}
+    100%{top: -60px; opacity: 0}
+}
+@keyframes gtt2{
+    0%{top: -30px; opacity: 1;}
+    100%{top: -60px; opacity: 0;}
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    clear: both;
+    margin: auto 0;
+    letter-spacing: 1.05px;
+    background-color: #1a1a1a;
+    min-height: 272px;
+    background-image: url(../img/vader-1c0fe900f0e4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ft_top{
+    padding-top: 16px;
+    display: block;
+    letter-spacing: 1.05px;
+    color: #aaa;
+    font-weight: 600;
+}
+.sns{
+    margin-top: 20px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+.sns p{
+    margin: 64px 0 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #858a8d;
+}
+.sns ul{
+    display: block;
+}
+.sns ul li{
+    width: 36px;
+    height: 36px;
+    margin: 0 12px;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 1.05px;
+}
+.sns ul li a{
+    width: 34px;
+    height: 34px;
+    display: block;
+    color: transparent;
+    opacity: 0.42;
+    background-repeat: no-repeat;
+    background-image: url(../img/social_sprite-6d7f2dd441cd.png);
+    background-size: 700% 300%;
+    transition: all 0.4s;
+}
+.sns ul li:nth-child(1) a{
+    background-position: 0% 0%;
+}
+.sns ul li:nth-child(2) a{
+    background-position: 16.66667% 0%;
+}
+.sns ul li:nth-child(3) a{
+    background-position: 33.33333% 0%;
+}
+.sns ul li:nth-child(4) a{
+    background-position: 50% 0%;
+}
+.sns ul li:nth-child(5) a{
+    background-position: 66.66667% 0%;
+}
+.sns ul li a:hover{
+    opacity: 1;
+}
+
+.ft_bot{
+    max-width: none;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+.ft_bot P{
+    margin: 20px auto 6px;
+    margin-top: 28px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #858a8d;
+    display: block;
+}
+.ft_bot ul{
+    width: auto;
+    margin: 0 auto;
+}
+.ft_bot ul li{
+    display: inline-block;
+    width: auto;
+    min-height: 1em;
+    line-height: 0.8rem;
+    margin: 6px 0;
+    padding: 0 8px 0 9px;
+    border: 0;
+    border-right: 1px solid rgba(255,255,255,0.09);
+    vertical-align: top;
+}
+.ft_bot ul li a{
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    padding-bottom: 2px;
+    font-size: 0.8rem;
+    color: #858a8d;
+}
+.ft_bot ul li a:after{
+    content: "";
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    opacity: 0.9;
+    border-bottom: 1px solid transparent;
+    transition: border-color 200ms, width 250ms;
+}
+.ft_bot ul li a:hover::after{
+    width: 100%;
+    border-bottom: 1px solid #858a8d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

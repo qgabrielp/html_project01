@@ -437,6 +437,50 @@ html,body{
     100%{top: -30px; opacity: 0;}
 }
 
+.gototop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 900;
+}
+.gototop div{
+    display: inline-block;
+    position: relative;
+}
+.gototop div p{
+    display: inline-block;
+    height: 30px;
+    color: #fff;
+}
+.gototop div p i{
+    font-size: 30px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.gototop div p i:nth-child(1){
+    animation: gtt1 3s linear infinite;
+}
+.gototop div p i:nth-child(2){
+    animation: gtt2 3s linear infinite;
+    animation-delay: 1.5s;
+}
+.gototop div p span{
+    font-size: 18px
+}
+@keyframes gtt1{
+    0%{top: -30px; opacity: 1}
+    100%{top: -60px; opacity: 0}
+}
+@keyframes gtt2{
+    0%{top: -30px; opacity: 1;}
+    100%{top: -60px; opacity: 0;}
+}
+
 
 .cont02{
     position: relative;
@@ -614,18 +658,55 @@ html,body{
     float: left;
     display: block;
     margin-bottom: 5px;
-    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background-color: #282727;
     cursor: pointer;
     overflow: hidden;
 }
 .tab_sec_img{
-    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.tab_sec_img:hover::before{
+    left: 50%;
+}
+.tab_sec_img:hover::after{
+    left: 0%;
+}
+.tab_sec_img:before{
+    content: '';
+    display: block;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: -150%;
+    transform: translate(-50%, -50%);
+    background: url(../img/section_icon_sprite-383dbefd9b1f.png)no-repeat;
+    background-position: 33% 0%;
+    background-size: 1000% 200%;
+    transition: all 0.4s;
+}
+.tab_sec_img:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.4s;
 }
 .tab_sec_text{
     color: #fff;
+    padding: 2px;
+    position: relative;
 }
 .tab_sec_text h1{
     line-height: 1.2;
+    font-size: 20px;
 }
 .tab_sec_text h1:hover{
     color: #1786eb;
@@ -636,7 +717,6 @@ html,body{
     color: #e1e1e1;
     font-size: 14px;
 }
-
 #tab2{
     display: none;
 }
@@ -650,12 +730,16 @@ html,body{
     width: 70%;
     height: 100%;
     position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.tab_sec_video:hover{
+    background-size: 110% 110%;
 }
 .video1{
     background: url(../img/806.jpg)no-repeat center center;
     background-size: 100% 100%;
 }
-
 .video2{
     background: url(../img/807.jpg)no-repeat center center;
     background-size: 100% 100%;
@@ -663,16 +747,6 @@ html,body{
 .video3{
     background: url(../img/808.jpg)no-repeat center center;
     background-size: 100% 100%;
-}
-.start{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-35% -50%);
-    background-color: #ff0;
-    z-index: 900;
 }
 #tab2 .tab_sec_text{
     width: 30%;
@@ -1011,12 +1085,10 @@ html,body{
     font-size: 1em;
     color: #aaa;
 }
-.icon2{
+.icon3{
     width: 100%;
-/*    padding: 1.41728em 1.648em 1.35136em;*/
     font-size: 1em;
     line-height: 0.9em;
-    position: absolute;
     bottom: 4%;
     left: 0;
 }
@@ -1046,13 +1118,53 @@ html,body{
 .icon3_inner h4 span:nth-child(3){
     color: #aaa;
 }
+.icon3_1{
+    top: 1em;
+    left: 1em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.icon4{
+    width: 100%;
+    font-size: 1em;
+    line-height: 0.9em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.icon4_inner{
+    top: 0.2em;
+    position: relative;
+    text-transform: uppercase;
+}
+.icon4_inner h4{
+    display: inline-block;
+    font-weight: 600;
+}
+.icon4_inner h4 span:nth-child(1){
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    color: #3273c5;
+    background-repeat: no-repeat;
+    background-image: url(../img/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1200% 200%;
+    background-position: 11.11111% 0%;
+}
+.icon4_inner h4 span:nth-child(2){
+    color: #e15021;
+}
+.icon4_inner h4 span:nth-child(3){
+    color: #e15021;
+}
 
 
 footer{
-    display: block;
-    position: relative;
     width: 100%;
     height: 100%;
+    display: block;
+    position: relative;
     clear: both;
     margin: auto 0;
     letter-spacing: 1.05px;
@@ -1062,6 +1174,119 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
 }
+.ft_top{
+    padding-top: 16px;
+    display: block;
+    letter-spacing: 1.05px;
+    color: #aaa;
+    font-weight: 600;
+}
+.sns{
+    margin-top: 20px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+.sns p{
+    margin: 64px 0 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #858a8d;
+}
+.sns ul{
+    display: block;
+}
+.sns ul li{
+    width: 36px;
+    height: 36px;
+    margin: 0 12px;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 1.05px;
+}
+.sns ul li a{
+    width: 34px;
+    height: 34px;
+    display: block;
+    color: transparent;
+    opacity: 0.42;
+    background-repeat: no-repeat;
+    background-image: url(../img/social_sprite-6d7f2dd441cd.png);
+    background-size: 700% 300%;
+    transition: all 0.4s;
+}
+.sns ul li:nth-child(1) a{
+    background-position: 0% 0%;
+}
+.sns ul li:nth-child(2) a{
+    background-position: 16.66667% 0%;
+}
+.sns ul li:nth-child(3) a{
+    background-position: 33.33333% 0%;
+}
+.sns ul li:nth-child(4) a{
+    background-position: 50% 0%;
+}
+.sns ul li:nth-child(5) a{
+    background-position: 66.66667% 0%;
+}
+.sns ul li a:hover{
+    opacity: 1;
+}
+
+.ft_bot{
+    max-width: none;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+.ft_bot P{
+    margin: 20px auto 6px;
+    margin-top: 28px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #858a8d;
+    display: block;
+}
+.ft_bot ul{
+    width: auto;
+    margin: 0 auto;
+}
+.ft_bot ul li{
+    display: inline-block;
+    width: auto;
+    min-height: 1em;
+    line-height: 0.8rem;
+    margin: 6px 0;
+    padding: 0 8px 0 9px;
+    border: 0;
+    border-right: 1px solid rgba(255,255,255,0.09);
+    vertical-align: top;
+}
+.ft_bot ul li a{
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    padding-bottom: 2px;
+    font-size: 0.8rem;
+    color: #858a8d;
+}
+.ft_bot ul li a:after{
+    content: "";
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    opacity: 0.9;
+    border-bottom: 1px solid transparent;
+    transition: border-color 200ms, width 250ms;
+}
+.ft_bot ul li a:hover::after{
+    width: 100%;
+    border-bottom: 1px solid #858a8d;
+}
+
+
 
 
 
