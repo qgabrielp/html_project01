@@ -743,19 +743,19 @@ html,body{
 .cont03_02_wrap{
     background: #151515;
 }
-.cont03_02_01{
+.cont03_02_01, .cont03_02_02{
     max-width: 60%;
     min-height: 500px;
     position: relative;
     margin: 0 auto;
 }
-.cont03_02_01_tt{
+.cont03_02_01_tt, .cont03_02_02_tt{
     margin: 1.52em 0 0.76em;
     padding: 0.65rem 12px 0.4rem;
     border-top: 2px solid rgba(170,170,170,0.25);
     border-bottom: 2px solid rgba(170,170,170,0.25);
 }
-.cont03_02_01_tt h2{
+.cont03_02_01_tt h2, .cont03_02_02_tt h2{
     display: inline-block;
     font-size: 1.15rem;
     font-weight: 800;
@@ -765,7 +765,7 @@ html,body{
     text-transform: uppercase;
     
 }
-.cont03_02_01_inner{
+.cont03_02_01_inner, .cont03_02_02_inner{
     width: 100%;
     min-height: 400px;
     position: relative;
@@ -873,6 +873,201 @@ html,body{
     transform: scaleY(-1);
     font-size: 0.84em;
 }
+.cont03_02_02_inner:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.cont03_02_02_inner>div{
+    float: left;
+}
+.cont03_02_02_01{
+    width: 50%;
+    min-height: 400px;
+    position: relative;
+    padding-right: 20px;
+}
+.cont03_02_02_01_inner{
+    width: 100%;
+    min-height: 400px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.cont03_02_02_01_img{
+    width: 100%;
+    min-height: 330px;
+    background: url(../img/jfo-teaser-tall.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.cont03_02_02_01_text{
+    width: 100%;
+    min-height: 70px;
+    background-color: #282727;
+}
+.cont03_02_02_01_text h4 a{
+    color: #ddd;
+    font-size: 1.6em;
+    line-height: 1.15em;
+    transition: all 0.4s;
+}
+.cont03_02_02_01_text h4 a:hover{
+    color: #1786eb;
+}
+.cont03_02_02_01_text h5{
+    font-size: 1em;
+    color: #aaa;
+}
+.icon2{
+    width: 100%;
+/*    padding: 1.41728em 1.648em 1.35136em;*/
+    font-size: 1em;
+    line-height: 0.9em;
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+}
+.icon2_inner{
+    top: 0.2em;
+    position: relative;
+    text-transform: uppercase;
+}
+.icon2_inner h4{
+    display: inline-block;
+    font-weight: 600;
+}
+.icon2_inner h4 span:nth-child(1){
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    color: #3273c5;
+    margin: -1.7em -0.2em -0.5em -0.5em;
+    background-repeat: no-repeat;
+    background-image: url(../img/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1000% 200%;
+    background-position: 0% 0%;
+}
+.icon2_inner h4 span:nth-child(2){
+    color: #3273c5;
+}
+.icon2_inner h4 span:nth-child(3){
+    color: #aaa;
+}
+.cont03_02_02_02{
+    width: 50%;
+    min-height: 120px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #282727;
+    overflow: hidden;
+    position: relative;
+}
+.cont03_02_02_02_inner:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.cont03_02_02_02_inner>div{
+    float: left;
+}
+.cont03_02_02_02_img{
+    width: 35%;
+    min-height: 120px;
+    background: url(../img/swcc-games-tallv-4.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.cont03_02_02_03_img{
+    width: 35%;
+    min-height: 120px;
+    background: url(../img/count-dooku-battlefront-2-tall.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.cont03_02_02_04_img{
+    width: 35%;
+    min-height: 131px;
+    background: url(../img/battlefront-2-origin-tall.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+.cont03_02_02_02_text{
+    width: 65%;
+    min-height: 120px;
+    border-left: 1px solid #3273c5;
+}
+.cont03_02_02_02_text h4{
+    padding: 5px;
+}
+.cont03_02_02_02_text h4 a{
+    font-size: 1.4em;
+    line-height: 1.15em;
+    letter-spacing: 0.03em;
+    color: #ddd;
+    transition: all 0.4s;
+}
+.cont03_02_02_02_text h4 a:hover{
+    color: #1786eb;
+}
+.cont03_02_02_02_text h5{
+    padding: 5px;
+    font-size: 1em;
+    color: #aaa;
+}
+.icon2{
+    width: 100%;
+/*    padding: 1.41728em 1.648em 1.35136em;*/
+    font-size: 1em;
+    line-height: 0.9em;
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+}
+.icon3_inner{
+    top: 0.2em;
+    position: relative;
+    text-transform: uppercase;
+}
+.icon3_inner h4{
+    display: inline-block;
+    font-weight: 600;
+}
+.icon3_inner h4 span:nth-child(1){
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    color: #3273c5;
+    margin: -1.7em -0.2em -0.5em -0.5em;
+    background-repeat: no-repeat;
+    background-image: url(../img/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1000% 200%;
+    background-position: 0% 0%;
+}
+.icon3_inner h4 span:nth-child(2){
+    color: #3273c5;
+}
+.icon3_inner h4 span:nth-child(3){
+    color: #aaa;
+}
+
+
+footer{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clear: both;
+    margin: auto 0;
+    letter-spacing: 1.05px;
+    background-color: #1a1a1a;
+    min-height: 272px;
+    background-image: url(../img/vader-1c0fe900f0e4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
 
 
 
