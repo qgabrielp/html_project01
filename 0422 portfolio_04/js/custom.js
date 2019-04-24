@@ -58,14 +58,21 @@
     $(window).scroll(function(){
         var mttop = $('.move_text').offset().top-300;
         var tst = $(this).scrollTop();
+        var op = 1;
         console.log("aaa"+tst);
-        if ($(this).scrollTop() > mttop){
-            $('.move_text').stop().animate({"opacity":"0", "top":tst/8+"%"},300);
+        if ($(this).scrollTop() > 4800){
+            $('.move_text').addClass('text_fixed');
+            $('.move_text').stop().animate({"opacity":op-tst/6300},10);
 //            $('.move_text').stop().animate({"top":tst/8+"%"},300);
         }else{
-            $('.move_text').stop().animate({"opacity":"1", "top":"50%"},300);
+//            $('.move_text').removeClass('text_fixed');
+//            $('.move_text').stop().animate({"position":"absolute"},300);
 //            $('.move_text').stop().animate({"top":"50%"},300);
         }
+        if($(this).scrollTop() < 4799){
+           $('.move_text').removeClass('text_fixed');
+            $('.move_text').stop().animate({"opacity":"1"},300);
+           }
         
         
     });
