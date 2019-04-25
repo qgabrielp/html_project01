@@ -196,7 +196,7 @@ main .page{
     height: 5%;
 */
 /*    background-color: rgba(255,255,5,0.5);*/
-    background-color: rgba(29,31,33,0.8);
+/*    background-color: rgba(29,31,33,0.4);*/
     position: absolute;
 /*
     bottom: 40%;
@@ -205,13 +205,13 @@ main .page{
     bottom: 0;
     right: 0;
     transform: translate(0,0);
-/*    font-family: Gaegu;*/
-/*    font-size: 1.4vw;*/
-    font-size: 1vw;
+    font-family: Gaegu;
+    font-size: 1.4vw;
+/*    font-size: 1vw;*/
     text-align: left;
-/*    color: black;*/
-    color: #6ba30a;
-    font-weight: 600;
+    color: black;
+/*    color: #6ba30a;*/
+/*    font-weight: 600;*/
 /*    text-shadow: 1px 1px 1px black;*/
 }
 .pro{
@@ -946,6 +946,7 @@ main .page{
     background: url(../img/puzzle-700381_1280.jpg)no-repeat center center;
     background-size: 100% 100%;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .pick{
@@ -1400,7 +1401,7 @@ main .page{
     left: 110%;
 }
 .go_sc{
-    animation: go_sc 1s cubic-bezier(.82,1.34,1,.5) 1;
+    animation: go_sc 1s ease 1;
 }
 @keyframes go_sc{
     0%{left: 100%; opacity: 0;}
@@ -1419,7 +1420,7 @@ main .page{
     background-color: rgba(255,255,255,0.9);
 }
 .mo_text_move{
-    animation: mo_text_move 1s cubic-bezier(.82,1.34,1,.5) 1;
+    animation: mo_text_move 1s ease 1;
 }
 @keyframes mo_text_move{
     0%{left: 0; opacity: 0;}
@@ -1595,6 +1596,7 @@ main .page{
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
+    overflow: hidden;
 }
 .tu{
     font-size: 70px;
