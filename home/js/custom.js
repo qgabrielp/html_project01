@@ -44,6 +44,8 @@
             $('#portfolio span').addClass('on');
         }else{
             $('#portfolio span').removeClass('on');
+            $(".modal_wrap").stop().fadeOut();
+            $(".modal_in>div").stop().fadeOut();
         }
         if($(this).scrollTop() > page4top-50){
             $('#contact span').addClass('on');
@@ -129,6 +131,8 @@ $(document).ready(function(){
         $(".modal_close").stop().fadeIn();
         $(".modal_wrap").stop().fadeIn();
         $(".modal_in>div").eq(i).stop().fadeIn();
+        $(".mo_text").addClass('mo_text_move');
+        $(".go_site").addClass('go_sc');
         $(".modal1 .mo_pi").addClass('mo_pi1_move');
         $(".modal2 .mo_pi").addClass('mo_pi2_move');
         $(".modal3 .mo_pi").addClass('mo_pi3_move');

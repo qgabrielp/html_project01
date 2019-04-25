@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a,li{
+            text-decoration: none;
+        }
+        
+        header{
+            width: 100%;
+            height: 100px;
+        }
+        #main_menu{
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #logo{
+            width: 10%;
+            height: 100%;
+        }
+        #main_menu>nav{
+            width: 80%;
+            height: 100%;
+        }
+        #main_menu>nav>ul{
+            float: left;
+        }
+        
+        .slideshow{
+            width: 100%;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .slides{
+            width: 500%;
+            height: 100%;
+            position: relative;
+            display: flex;
+/*            animation: slide 20s linear infinite;*/
+        }
+        .slides:hover{
+            animation-play-state: paused;
+        }
+        input[name=sl]{
+            display: none;
+        }
+        .navi {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -5%);
+            z-index: 100;
+        }
+        .bar{
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 1s;
+            color: gray;
+        }
+        .bar:hover{
+            color: #000;
+        }
+        #sl01:checked ~ .slid{
+            margin-left: 0;
+        }
+        #sl02:checked ~ .slid{
+            margin-left: -20%;
+        }
+        #sl03:checked ~ .slid{
+            margin-left: -40%;
+        }
+        #sl04:checked ~ .slid{
+            margin-left: -60%;
+        }
+        #sl05:checked ~ .slid{
+            margin-left: -80%;
+        }
+        .slides div{
+            width: 20%;
+            height: 100%;
+            position: relative;
+            float: left;
+            transition: all 1s;
+        }
+        .slides div img{
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes slide{
+            0%{left: 0;}
+            100%{left: -80%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div id="main_menu">
+            <div id="logo">logo</div>
+            <nav>
+                <ul><a href="#a"><span>HOME</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>ABOUT US</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>SERVIVES</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>TRAVEL INFO</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>CONTACT</span></a>
+
+                </ul>
+            </nav>
+        </div>
+        <div id="ham_menu">
+            <div id="menu_btn"></div>
+            <nav>
+                <ul><a href="#a"><span>HOME</span></a>
+                
+                </ul>
+                <ul><a href="#a"><span>ABOUT US</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>SERVIVES</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>TRAVEL INFO</span></a>
+
+                </ul>
+                <ul><a href="#a"><span>CONTACT</span></a>
+
+                </ul>    
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="slideshow">
+            <div class="slides">
+                <input type="radio" name="sl" id="sl01">
+                <input type="radio" name="sl" id="sl02">
+                <input type="radio" name="sl" id="sl03">
+                <div class="slide slid"><img src="images/img/1.jpg" alt=""></div>
+                <div class="slide"><img src="images/img/2.jpg" alt=""></div>
+                <div class="slide"><img src="images/img/3.jpg" alt=""></div>
+            </div>
+            <div class="navi">
+                <label for="sl01" class="bar">●</label>
+                <label for="sl02" class="bar">●</label>
+                <label for="sl03" class="bar">●</label>
+            </div>
+        </div>
+        <div id="content1">
+            <div class="nomel_text">
+                <h1>welcom</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime consequatur, deleniti. Corporis autem voluptatem, itaque saepe nesciunt, eligendi tempora minus temporibus accusantium quidem iure vero totam ipsam vitae id dolorem sequi! Illum laudantium enim, eaque dolorem. Illum officia sunt corporis praesentium placeat est asperiores repellat, impedit temporibus labore numquam quibusdam.</p>
+            </div>
+            <div class="box_text">ABOUT US</div>
+            <div class="box_text">REGISTRATION</div>
+        </div>
+        <div id="content2">
+            <div>
+                <div>
+                    <div class="con2_icon"></div>
+                    <div>
+                        <h1>1,245</h1>
+                        <p>Happy Travellers</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="con2_icon"></div>
+                    <div>
+                        <h1>845</h1>
+                        <p>videos</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="con2_icon"></div>
+                    <div>
+                        <h1>9,543</h1>
+                        <p>photos</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="con2_icon"></div>
+                    <div>
+                        <h1>145</h1>
+                        <p>Treks and tours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content3">
+            <h1>TESTIMONIALS</h1>
+            <div>
+                <div>
+                    <div class="con3_img"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur minus quae doloribus ipsa eum quasi ex provident eveniet est, illo.</p>
+                    <h3>Mary, Nepal</h3>
+                </div>
+                <div>
+                    <div class="con3_img"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur minus quae doloribus ipsa eum quasi ex provident eveniet est, illo.</p>
+                    <h3>jane, Germany</h3>
+                </div>
+                <div>
+                    <div class="con3_img"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur minus quae doloribus ipsa eum quasi ex provident eveniet est, illo.</p>
+                    <h3>Robert, China</h3>
+                </div>
+                <div>
+                    <div class="con3_img"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur minus quae doloribus ipsa eum quasi ex provident eveniet est, illo.</p>
+                    <h3>Niger, Alps</h3>
+                </div>
+            </div>
+        </div>
+        <div id="content4">
+            
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

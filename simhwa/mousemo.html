@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+    <style>
+        .aa{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .aab{
+            animation: aa 1s linear 1;
+        }
+        @keyframes aa{
+            0%{transform: scale(1)}
+            0%{transform: scale(1.2)}
+        }
+    </style>
+</head>
+<body>
+<!--    <img class="aa" src="images/img/1.jpg" alt="">-->
+    <div class="aa"></div>
+    <script>
+    // pageX , pageY 마우스 좌표 -mousemove
+        $(document).mousemove(function(e){
+            var xpos = e.pageX-25;
+            var ypos = e.pageY-25;
+            $(".aa").css({left:xpos+"px", top:ypos+"px"});
+        });
+        $(".aa").trigger("mousemove");
+        $(document).click(function(){
+            $(".aa").removeClass('aab');
+            $(".aa").addClass('aab');
+            
+        });
+    </script>
+</body>
+</html>

@@ -152,8 +152,13 @@ main .page{
     width: 30%;
     height: 7%;
     position: absolute;
+/*
     top: 70.3%;
     right: 0%;
+*/
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../img/hello.gif)no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -184,19 +189,41 @@ main .page{
     background-color: #fff;
 }
 #fe_by{
-/*    width: 60%;*/
+    width: auto;
+    height: auto;
+/*
+    width: 60%;
     height: 5%;
+*/
 /*    background-color: rgba(255,255,5,0.5);*/
+    background-color: rgba(29,31,33,0.8);
     position: absolute;
-    bottom: 0%;
-    right: 2%;
+/*
+    bottom: 40%;
+    right: 5%;
+*/
+    bottom: 0;
+    right: 0;
     transform: translate(0,0);
-    font-family: Gaegu;
-    font-size: 1.4vw;
+/*    font-family: Gaegu;*/
+/*    font-size: 1.4vw;*/
+    font-size: 1vw;
     text-align: left;
-    color: black;
+/*    color: black;*/
+    color: #6ba30a;
+    font-weight: 600;
 /*    text-shadow: 1px 1px 1px black;*/
 }
+.pro{
+    color: #476bc1;
+}
+.ecol{
+    color: #fff;
+}
+.en{
+    color: #c66b24;
+}
+
 #top_red:before{
     content: '';
     position: fixed;
@@ -374,7 +401,7 @@ main .page{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    box-shadow: 0px 0px 100px 0px #000;
+    box-shadow: inset 0px 0px 20px 0px #000;
 }
 .skill>div{}
 .skill_wrap{
@@ -1105,7 +1132,7 @@ main .page{
     background-repeat: no-repeat;
     background-color: #ededed;
     border-radius: 5%;
-    box-shadow: 0px 0px 50px #000;
+    box-shadow: inset 0px 0px 20px #000;
 }
 /*
 #po_wrap span{
@@ -1372,6 +1399,15 @@ main .page{
 .go_site:hover.go_site:before{
     left: 110%;
 }
+.go_sc{
+    animation: go_sc 1s cubic-bezier(.82,1.34,1,.5) 1;
+}
+@keyframes go_sc{
+    0%{left: 100%; opacity: 0;}
+    50%{opacity: 0.3;}
+    100%{left: 50%; opacity: 1;}
+}
+
 .mo_text{
     width: 30%;
     height: 10%;
@@ -1381,6 +1417,14 @@ main .page{
     text-align: center;
     transform: translateX(-50%);
     background-color: rgba(255,255,255,0.9);
+}
+.mo_text_move{
+    animation: mo_text_move 1s cubic-bezier(.82,1.34,1,.5) 1;
+}
+@keyframes mo_text_move{
+    0%{left: 0; opacity: 0;}
+    50%{opacity: 0.3;}
+    100%{left: 50%; opacity: 1;}
 }
 .html{
     color: #e69b81 !important;
@@ -1552,6 +1596,16 @@ main .page{
     background-attachment: fixed;
     background-position: center;
 }
+.tu{
+    font-size: 70px;
+    font-family: 'Dancing Script';
+    letter-spacing: 1rem;
+    color: #000;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 #con_wrap{
     width: 50%;
     height: 65%;
@@ -1620,11 +1674,37 @@ main .page{
 
 
 
-
-
-
-
-
+footer{
+    width: 100%;
+    height: 8%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(29,31,33,1);
+}
+.github{
+    width: 100%;
+    height: 50%;
+}
+.git_icon{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    background: url(../img/github.png)no-repeat center center;
+    background-size: 100% 100%;
+}
+.ft_info{
+    width: 100%;
+    height: 50%;
+}
+.ft_info>p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    opacity: 0.5;
+    text-align: center;
+}
 
 
 
