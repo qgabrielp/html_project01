@@ -1,0 +1,7 @@
+<p class="pro">〈profire〉</p>
+                    <p>&nbsp;&nbsp;&nbsp;name<b class="ecol">=</b><b class="en">"황덕제"</b></p>
+                    <p>&nbsp;&nbsp;&nbsp;email<b class="ecol">=</b><b class="en">"kiki609@naver.com"</b></p>
+                    <p>&nbsp;&nbsp;&nbsp;phone<b class="ecol">=</b><b class="en">"010-7928-2468"</b></p>
+                    <p>&nbsp;&nbsp;&nbsp;education<b class="ecol">=</b><b class="en">"한국직업전문학교 수료"</b></p>
+                    <p>&nbsp;&nbsp;&nbsp;adress<b class="ecol">=</b><b class="en">"서울시 금천구 가산동 거주"</b></p>
+                    <p class="pro">〈/profire〉</p>

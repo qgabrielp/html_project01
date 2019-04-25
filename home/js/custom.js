@@ -49,8 +49,10 @@
         }
         if($(this).scrollTop() > page4top-50){
             $('#contact span').addClass('on');
+            $('#profile').addClass('profile_move');
         }else{
             $('#contact span').removeClass('on');
+            $('#profile').removeClass('profile_move');
         }
         
         $("#menu_btn").click(function(){
