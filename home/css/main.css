@@ -152,13 +152,13 @@ main .page{
     width: 30%;
     height: 7%;
     position: absolute;
-/*
     top: 70.3%;
     right: 0%;
-*/
+/*
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
+*/
     background: url(../img/hello.gif)no-repeat;
     background-size: 100% 100%;
     background-position: center;
