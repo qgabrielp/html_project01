@@ -365,64 +365,6 @@ html,body{
     overflow: hidden;
     display: block;
 }
-
-.midbox{
-    width: 100%;
-}
-.midbox::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.midbox>div{
-    float: left;
-}
-.midbox1{
-    width: 65%;
-    background-color: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-}
-.mb_img{
-    position: relative;
-    cursor: pointer;
-}
-.start_btn{
-    background-image: url(https://static-mh.content.disney.io/starwars/assets/video/videoplayer_skin/icons-large-sprite-4ed07c8eaac7.png);
-    background-size: 200%;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    padding: 0;
-    height: 72px;
-    width: 72px;
-    background-color: transparent;
-    background-position: 0 0;
-    border-radius: 5px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.start_btn:hover{
-    background-position: -72px 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cont02_1{
     width: 100%;
     margin-top: 20px;
@@ -457,6 +399,268 @@ html,body{
     text-transform: uppercase;
     display: inline-block;
 }
+
+.midbox{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.midbox::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.midbox>div{
+    float: left;
+}
+.midbox1{
+    width: 64%;
+    background-color: #282727;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.mb_img{
+    position: relative;
+    cursor: pointer;
+}
+.mb_img img{
+    border-bottom: 1px solid #e15021;
+}
+.start_btn{
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/video/videoplayer_skin/icons-large-sprite-4ed07c8eaac7.png);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    padding: 0;
+    height: 72px;
+    width: 72px;
+    background-color: transparent;
+    background-position: 0 0;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start_btn:hover{
+    background-position: -72px 0;
+}
+.mb_text{
+    position: relative;
+    padding-bottom: 100px;
+}
+.text_tt{
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 1.15em;
+    font-weight: 600;
+    color: #ddd;
+    transition: all 0.4s;
+}
+.text_tt:hover{
+    color: #e15021;
+}
+.iconbox{
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.icon1_img{
+    display: inline-block;
+    margin: -1.7em -0.2em -0.5em -0.5em;
+    background-repeat: no-repeat;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1000% 200%;
+    width: 1.7em;
+    height: 1.7em;
+    background-position: 11.11111% 0%;
+}
+.icon1_name{
+    font-size: 10px;
+    color: #e15021;
+}
+.deco{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    opacity: 0.06;
+    z-index: 1;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/decal-a67af2e7d567.png);
+    background-size: 300% 200%;
+    right: 20px;
+    bottom: -12px;
+    transform: scaleY(-1);
+}
+
+.midbox2{
+    width: 34%;
+    margin-left: 2%;
+    background-color: #282727;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.mb2_img{
+    width: 100%;
+    max-height: 350px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mb2_img img{
+    width: 100%;
+    max-height: 350px;
+    display: block;
+    border-bottom: 1px solid #75933d;
+}
+.mb2_text{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 120px;
+    position: relative;
+}
+.mb2_text>span{
+    font-size: 20px;
+    line-height: 1.15em;
+    font-weight: 600;
+    color: #ddd;
+    transition: all 0.4s;
+}
+.mb2_text>span:hover{
+    color: #75933d;
+}
+.mb2_text>p{
+    color: #aaa;
+    font-size: 12px;
+}
+.iconbox2{
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.icon2_img{
+    display: inline-block;
+    margin: -1.7em -0.2em -0.5em -0.5em;
+    background-repeat: no-repeat;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1000% 200%;
+    width: 1.5em;
+    height: 1.5em;
+    background-position: 44.44444% 0%;
+}
+.icon2_name{
+    font-size: 10px;
+    color: #75933d;
+}
+.deco2{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    opacity: 0.06;
+    z-index: 1;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/decal-a67af2e7d567.png);
+    background-size: 300% 200%;
+    background-position: -100% 0;
+    right: 10px;
+    bottom: -22px;
+}
+
+
+.midbox1_1{
+    width: 49%;
+    margin-right: 2%;
+}
+.md_img2{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 5px;
+}
+.md_img2 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/562.jpg)no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.midbox3{
+    width: 49%;
+    height: 160px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    background-color: #282727;
+    overflow: hidden;
+}
+.midbox3::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.midbox3>div{
+    float: left;
+}
+.mb3_img{
+    width: 40%;
+    height: 100%;
+}
+.mb3_img img{
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid #3273c5;
+}
+.mb3_text{
+    padding: 2%;
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+.mb3_text>span{
+    font-size: 1.3em;
+    line-height: 1.15em;
+    font-weight: 800;
+    color: #ddd;
+    transition: all 0.4s;
+}
+.mb3_text>span:hover{
+    color: #3273c5;
+}
+.mb3_text>p{
+    font-size: 0.95125em;
+    margin-top: 0.0625em;
+    line-height: 1.24344em;
+    color: #aaa;
+}
+.iconbox3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 2%;
+}
+.icon3_img{
+    display: inline-block;
+    margin: -1.7em -0.2em -0.5em -0.5em;
+    background-repeat: no-repeat;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/section_icon_sprite-383dbefd9b1f.png);
+    background-size: 1000% 200%;
+    width: 1.7em;
+    height: 1.7em;
+    background-position: 0% 0%;
+}
+.icon3_name{
+    color: #3273c5;
+    font-size: 1em;
+}
+.icon3_date{
+    color: #aaa;
+    font-size: 1em;
+}
+
 
 
 
