@@ -1236,7 +1236,8 @@ main .page{
     left: 400px;
 }
 .pu5{
-
+    top: 450px;
+    left: 190px;
 }
 .pu6{
     top: 400px;
@@ -1254,7 +1255,14 @@ main .page{
     top: 220px;
     left: 220px;
 }
-
+.pu9{
+    top: 220px;
+    left: 220px;
+}
+.pu10{
+    top: 500px;
+    left: 240px;
+}
 .pz_wrap>div>div{
     width: 100%;
     height: 100%;
@@ -1292,6 +1300,13 @@ main .page{
     transition: 0.8s;
     z-index: 1;
 }
+.pu5:hover ~.pu10{
+    top: 550px;
+    left: 280px;
+    transform: rotate(10deg);
+    transition: 0.8s;
+    z-index: 1;
+}
 
 .pu2 div{
     background: url(../img/puimg2_big.png)no-repeat center center;
@@ -1309,9 +1324,10 @@ main .page{
     background-size: 100% 100%;
     cursor: pointer;
 }
-.po5 div{
-    background: url(../img/pu05b.png)no-repeat center center;
-    background-size: auto;
+.pu5 div{
+    background: url(../img/puimg5_big.png)no-repeat center center;
+    background-size: 100% 100%;
+    cursor: pointer;
 }
 .pu6 div{
     background: url(../img/pu_none01.png)no-repeat center center;
@@ -1333,12 +1349,11 @@ main .page{
     background-size: 100% 100%;
     background-position: right;
 }
-.pz_wrap>div:nth-child(9) div{
-    background: url(../img/pu09b.png)no-repeat center center;
-    background-size: auto;
+.pu10 div{
+    background: url(../img/pu_none05.png)no-repeat center center;
+    background-size: 100% 100%;
+    background-position: right;
 }
-
-
 
 
 .modal_wrap{
@@ -1604,10 +1619,35 @@ main .page{
     50%{transform: rotate(180deg)}
     100%{top: 29.7%; right: 41.6%; transform: rotate(360deg) scale(1);}
 }
-
 .modal5 .mo_img{
-    
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: url(../../po_img/po4_pu.png)no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px #000;
 }
+.modal5 .mo_pi{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 19%;
+    left: 32%;
+    background: url(../img/puimg5.png)no-repeat center center;
+    background-size: auto;
+}
+.mo_pi5_move{
+    animation: mo_pi5_move 1s linear 1;
+}
+@keyframes mo_pi5_move{
+    0%{top: 80%; left: -10%; transform: rotate(0deg) scale(2.5);}
+    50%{transform: rotate(180deg)}
+    100%{top: 19%; left: 32%;; transform: rotate(360deg) scale(1);}
+}
+
 .modal6{
     
 }
