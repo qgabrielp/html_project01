@@ -183,7 +183,7 @@ html,body{
 }
 .cont01{
     min-height: 400px;
-    background: url(https://lumiere-a.akamaihd.net/v1/images/open-uri20150610-21458-bri2yx_d8a64f8a.jpeg?region=0%2C0%2C1600%2C296)no-repeat center center;
+    background: url(../img/open-uri20150610-21458-16sxng3_c15e4c9e.jpeg)no-repeat center center;
     background-size: 100% 100%;
     background-color: #161616;
     z-index: -1;
@@ -346,52 +346,174 @@ html,body{
     position: relative;
     margin-top: -612px;
 }
-.search{
-    width: 100%;
-    height: 100px;
+
+.film_list{
+    min-width: 1200px;
+    height: 100%;
+    position: relative;
+    overflow: visible;
     margin: 0 auto;
+}
+.film_sec{
+    max-width: 1200px;
+    min-width: 260px;
     position: relative;
-    background-color: #303030;
-    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2.4%;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding: 1.2%;
+   
 }
-.search>input{
-    width: 85%;
-    height: 90%;
-    margin-left: 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #000;
-    font-size: 2.6rem;
-    line-height: 2.6rem;
-    color: #fff;
-}
-.search-button{
-    padding: 9px 4px 6px 20px;
-    position: absolute;
-    top: 5px;
-    right: 20px;
-}
-.search-button>input{
-    padding: 16px 24px 10px 46px;
-    font-size: 1.2em;
-    text-indent: 0;
-    text-transform: uppercase;
-    background-position: 0 95%;
-    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/search/search_icon-2c79f0615f1d.png);
-    background-size: 50px 100px;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 0;
-    vertical-align: middle;
-    color: #fff;
-    background-color: #565656;
-    border: none;
+.film_header{
+    width: 100%;
+    height: 47px;
+    background-color: #282727;
+    text-align: left;
+    padding: 5px 16px;
+    border-radius: 4px;
     display: inline-block;
+    position: relative;
+}
+.film_header01{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 0 0 -7px;
+    width: 100%;
+    line-height: normal;
+/*    white-space: pre-wrap;*/
+    display: inline-block;
+    letter-spacing: 0.08rem;
+    font-weight: 800;
+    text-align: left;
+}
+.film_header01::after{
+    content: '';
+}
+.film_ctg{
+    text-align: left;
+    background-color: #282727;
+    padding: 0;
+    left: -7px;
+    top: -0px;
+    background: transparent;
+    overflow: visible;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    position: relative;
     cursor: pointer;
-    line-height: 35px;
+    z-index: 4;
     border-radius: 6px;
+}
+.film_header02{
+    white-space: nowrap;
+    text-align: left;
+    background-color: #282727;
+    font-size: 1.2em;
+    overflow: hidden;
+    width: calc(100% - 25px);
+    line-height: normal;
+/*    margin: 0.3em 0.3em 0.15em 0.2em;*/
+    display: inline-block;
     user-select: none;
 }
+.film_header02::after{
+    content: '';
+}
+.noselect{
+    background-image: linear-gradient(270deg, #282727 30%, transparent 100%);
+    width: 100px;
+    height: 45px;
+    position: absolute;
+    right: 0px;
+    top: -21px;
+}
+.drop-expand{
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-right: -6px;
+    opacity: 0.6;
+    transform: translateY(50%);
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/utility/drop_arrow-56c9981f5cb4.png);
+    background-size: 100%;
+    position: relative;
+    top: -5px;
+    margin: 0;
+    float: right;
+    transition: all 0.4s;
+}
+.de{
+    transform: rotate(180deg);
+}
+.drop-container{
+    background-color: #333;
+    height: 240px;
+    top: 50px;
+    padding-top: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: stretch;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    padding: 5px;
+    z-index: 3;
+    visibility: hidden;
+    border-radius: 0 0 6px 6px;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+.dc{
+    visibility: visible;
+    max-height: 500px;
+}
+.drop-container>li{
+    border: 0;
+    width: 44%;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 1em;
+    margin-left: -1em;
+    padding-top: 1px;
+    user-select: none;
+    transition: opacity 350ms;
+    display: inline-block;
+    min-height: 17px;
+    min-width: 23px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+}
+.drop-container>li a{
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2em;
+    color: #fff;
+    transition: color 125ms;
+    text-decoration: none;
+}
+.drop-container>li a:hover{
+    color: #ebd800;
+}
+
+
+
+
+
+
+
+#mobile-film-selector{
+    display: none;
+}
+
 
 .cont02_1{
     width: 100%;
@@ -430,12 +552,14 @@ html,body{
 .cont02_box{
     width: 100%;
     position: relative;
+    margin-bottom: 50px;
     border-radius: 6px;
     overflow: hidden;
     background-color: #282727;
 }
 .cont02_1_img{
     width: 40%;
+    float: right;
     display: inline-block;
 }
 .cont02_1_img>a{
@@ -443,11 +567,11 @@ html,body{
 .cont02_1_img>a>img{
     width: 100%;
     height: 100%;
-    border-right: 2px solid #e15021;
+    border-left: 2px solid #edec51;
 }
 .cont02_1_text{
     width: 60%;
-    float: right;
+    float: left;
     display: block;
 }
 .text_wrap{
@@ -477,7 +601,7 @@ html,body{
     transition: all 0.4s;
 }
 .text_tt>a:hover{
-    color: #e15021;
+    color: #edec51;
 }
 .text_sec{
     width: 100%;
@@ -495,7 +619,7 @@ html,body{
     line-height: 0.9rem;
     position: absolute;
     bottom: 0;
-    left: 40%;
+    left: 0%;
     letter-spacing: 0.08rem;
 }
 .icon1>div{
@@ -507,11 +631,11 @@ html,body{
 }
 .icon1>div>h4{
     display: inline-block;
-    color: #e15021;
+    color: #edec51;
     font-weight: 600;
 }
 .icon1>div>h4>span:nth-child(1){
-    background-position: 11.11111% 0%;
+    background-position: 33.33333% 0%;
     display: inline-block;
     margin: -1.7em -0.2em -0.5em -0.5em;
     background-repeat: no-repeat;
@@ -527,281 +651,17 @@ html,body{
     content: "";
     display: block;
     position: absolute;
+    bottom: -10px;
+    left: 50%;
     width: 47px;
     height: 47px;
     opacity: 0.06;
     z-index: 1;
     background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/decal-a67af2e7d567.png);
     background-size: 300% 200%;
-    right: 20px;
-    bottom: -12px;
     transform: scaleY(-1);
 }
 
-.cont03_02_wrap{
-    background: #151515;
-    margin-top: 50px;
-    overflow: hidden;
-}
-.cont03_02_01, .cont03_02_02{
-    max-width: 100%;
-    min-height: 500px;
-    position: relative;
-    margin: 0 auto;
-}
-.cont03_02_01_tt, .cont03_02_02_tt{
-    margin: 1.52em 0 0.76em;
-    padding: 0.65rem 12px 0.4rem;
-    border-top: 2px solid rgba(170,170,170,0.25);
-    border-bottom: 2px solid rgba(170,170,170,0.25);
-}
-.cont03_02_01_tt h2, .cont03_02_02_tt h2{
-    display: inline-block;
-    font-size: 1.15rem;
-    font-weight: 800;
-    line-height: 1.35rem;
-    color: #ddd;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
-    
-}
-.cont03_02_01_inner, .cont03_02_02_inner{
-    width: 100%;
-    min-height: 400px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.cont03_02_02_inner:after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.cont03_02_02_inner>div{
-    float: left;
-}
-.cont03_02_02_01{
-    width: 50%;
-    min-height: 400px;
-    position: relative;
-    padding-right: 20px;
-}
-.cont03_02_02_01_inner{
-    width: 100%;
-    min-height: 400px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.cont03_02_02_01_img{
-    width: 100%;
-    min-height: 330px;
-    background: url(../img/Star-Wars-The-Last-Jedi-movies-Star-Wars-Rey-Luke-Skywalker-Kylo-Ren-lightsaber-men-women-digital-art-1197809.jpg)no-repeat center center;
-    background-size: 100% 100%;
-}
-.start_btn{
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.start_btn>a{
-    width: 72px;
-    height: 72px;
-    position: absolute;
-    top: 70%;
-    left: 60%;
-    transform: translate(-60%, -70%);
-    border-radius: 54px;
-    padding: 20px;
-    cursor: pointer;
-    font-size: 15px;
-    line-height: 18px;
-    z-index: 10;
-}
-.start_btn>a>i{
-    background-image: url(https://static-mh.content.disney.io/starwars/assets/video/videoplayer_skin/icons-large-sprite-4ed07c8eaac7.png);
-    background-size: 200%;
-    background-repeat: no-repeat;
-    margin: -60px 0 0 -58px;
-    opacity: 0.8;
-    padding: 0;
-    height: 72px;
-    width: 72px;
-    background-color: transparent;
-    background-position: 0 0;
-    border-radius: 5px;
-    display: inline-block;
-}
-.start_btn>a>i:hover{
-    background-position: -72px 0;
-}
-.cont03_02_02_01_text{
-    width: 100%;
-    min-height: 70px;
-    background-color: #282727;
-}
-.cont03_02_02_01_text h4 a{
-    color: #ddd;
-    font-size: 1.6em;
-    line-height: 1.15em;
-    transition: all 0.4s;
-}
-.cont03_02_02_01_text h4 a:hover{
-    color: #e15021;
-}
-.cont03_02_02_01_text h5{
-    font-size: 1em;
-    color: #aaa;
-}
-.icon2{
-    width: 100%;
-/*    padding: 1.41728em 1.648em 1.35136em;*/
-    font-size: 1em;
-    line-height: 0.9em;
-    position: absolute;
-    bottom: 4%;
-    left: 0;
-}
-.icon2_inner{
-    top: 0.2em;
-    position: relative;
-    text-transform: uppercase;
-}
-.icon2_inner h4{
-    display: inline-block;
-    font-weight: 600;
-}
-.icon2_inner h4 span:nth-child(1){
-    width: 1.8em;
-    height: 1.8em;
-    display: inline-block;
-    color: #e15021;
-    margin: -1.7em -0.2em -0.5em -0.5em;
-    background-repeat: no-repeat;
-    background-image: url(../img/section_icon_sprite-383dbefd9b1f.png);
-    background-size: 1000% 200%;
-    background-position: 11.11111% 0%;
-}
-.icon2_inner h4 span:nth-child(2){
-    color: #e15021;
-}
-.icon2_inner h4 span:nth-child(3){
-    color: #aaa;
-}
-.cont03_02_02_02{
-    width: 50%;
-    min-height: 120px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    background-color: #282727;
-    overflow: hidden;
-    position: relative;
-}
-.cont03_02_02_02_inner:after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.cont03_02_02_02_inner>div{
-    float: left;
-}
-.cont03_02_02_02_img{
-    width: 35%;
-    min-height: 120px;
-    background: url(../img/806.jpg)no-repeat center center;
-    background-size: 100% 100%;
-}
-.cont03_02_02_03_img{
-    width: 35%;
-    min-height: 120px;
-    background: url(../img/736.jpg)no-repeat center center;
-    background-size: 100% 100%;
-}
-.cont03_02_02_04_img{
-    width: 35%;
-    min-height: 131px;
-    background: url(../img/807.jpg)no-repeat center center;
-    background-size: 100% 100%;
-}
-.cont03_02_02_02_text{
-    width: 65%;
-    min-height: 120px;
-    border-left: 1px solid #e15021;
-}
-.cont03_02_02_02_text h4{
-    padding: 5px;
-}
-.cont03_02_02_02_text h4 a{
-    font-size: 1.4em;
-    line-height: 1.15em;
-    letter-spacing: 0.03em;
-    color: #ddd;
-    transition: all 0.4s;
-}
-.cont03_02_02_02_text h4 a:hover{
-    color: #e15021;
-}
-.cont03_02_02_02_text h5{
-    padding: 5px;
-    font-size: 1em;
-    color: #aaa;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.icon3{
-    width: 100%;
-    font-size: 1em;
-    line-height: 0.9em;
-    bottom: 4%;
-    left: 0;
-}
-.icon3_inner{
-    top: 0.2em;
-    position: relative;
-    text-transform: uppercase;
-}
-.icon3_inner h4{
-    display: inline-block;
-    font-weight: 600;
-}
-.icon3_inner h4 span:nth-child(1){
-    width: 1.8em;
-    height: 1.8em;
-    display: inline-block;
-    color: #e15021;
-    margin: -1.7em -0.2em -0.5em -0.5em;
-    background-repeat: no-repeat;
-    background-image: url(../img/section_icon_sprite-383dbefd9b1f.png);
-    background-size: 1000% 200%;
-    background-position: 11.11111% 0%;
-}
-.icon3_inner h4 span:nth-child(2){
-    color: #e15021;
-}
-.icon3_inner h4 span:nth-child(3){
-    color: #aaa;
-}
-.icon3_1{
-    top: 1em;
-    left: 1em;
-    position: relative;
-    text-transform: uppercase;
-}
-.cont03_02_wrap time{
-    position: absolute;
-    bottom: 6px;
-    left: 25%;
-    padding: 4px 8px 2px;
-    color: #fff;
-    text-align: right;
-    font-weight: 400;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
-    border-radius: 4px;
-    background-color: rgba(1,1,1,0.4);
-}
 
 
 
@@ -812,192 +672,6 @@ html,body{
 
 
 
-
-
-
-
-
-
-
-
-.cont03{
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #151515;
-    overflow: hidden;
-}
-
-.cont03>h2{
-    width: 1200px;
-    margin: 0 auto;
-    border-top: 2px solid #343434;
-    border-bottom: 2px solid #343434;
-    padding-left: .875rem;
-    font-size: 1.4rem;
-    line-height: 1.3;
-    display: block;
-    letter-spacing: .08rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 1.5rem!important;
-    color: #b9b9b9;
-    text-rendering: auto;
-}
-
-.video_ctg{
-    width: 20%;
-    float: left;
-    border: 0;
-    padding: 0;
-    margin-right: 10px;
-    margin-top: 0.688em;
-    margin-left: 0;
-    margin: 1.52em 0 0.76em;
-}
-.ctg_cont{
-    position: relative;
-    padding: 0;
-    margin-bottom: 0.375em;
-}
-.ctg_cont>span:nth-child(1){
-    display: inline-block;
-    padding-left: 16px;
-    font-size: 0.750rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #666;
-    letter-spacing: 2px;
-}
-.ctg_cont>span:nth-child(2){
-    display: none;
-    font-size: 1.15rem;
-    line-height: 1.35rem;
-    color: #ddd;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
-}
-.ctg_list{
-    display: block;
-    text-transform: uppercase;
-    color: #aaa;
-}
-.active{
-    color: #fff;
-    padding-left: 0.750em;
-    border-left: 4px solid #e15021;
-}
-.ctg_list>li{
-    border-radius: 0;
-    font-size: 1em;
-    font-weight: 800;
-    padding: 0.500em 1em;
-    text-align: left;
-    display: block;
-    vertical-align: middle;
-    line-height: 1em;
-    cursor: pointer;
-}
-
-.movie_list{
-    width: 80%;
-    display: block;
-    padding: 0;
-    float: right;
-    overflow: hidden;
-}
-.movie_list::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.movie_list>li{
-    width: 16.66667%;
-    padding: 0 .75rem 1.5rem;
-    display: block;
-    height: auto;
-    float: left;
-}
-.movie_list>li>a{
-    display: block;
-    color: #b9b9b9;
-    font-size: .8125rem;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: .02rem;
-    background: #2a2a2a url(../img/contributor-box-bg.jpg) no-repeat 70.42% bottom;
-    background-size: 16.26%;
-    border-radius: .1875rem;
-    transition: color 125ms;
-    position: relative;
-}
-.movie_list>li>a>img{
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-    border-bottom: .125rem solid #e15021;
-    border-top-left-radius: .375rem;
-    border-top-right-radius: .375rem;
-}
-.movie_list>li>a>p{
-    padding: .5rem;
-    margin: 0;
-    font-size: 0.71rem;
-    line-height: 1.2em;
-    font-weight: 300;
-    text-rendering: auto;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 1;
-    word-wrap: break-word;
-    overflow: hidden;
-    transition: all 0.4s;
-}
-.movie_list>li>a>p:hover{
-    color: #e15021;
-}
-.movie_list time{
-    position: absolute;
-    bottom: 30%;
-    right: 5%;
-    padding: 4px 8px 2px;
-    color: #fff;
-    text-align: right;
-    font-weight: 400;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
-    border-radius: 4px;
-    background-color: rgba(1,1,1,0.4);
-}
-.icon2{
-    width: 100%;
-    font-size: 1em;
-    line-height: 0.9rem;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    letter-spacing: 0.08rem;
-}
-.icon2>div{
-    font-size: 0.76rem;
-    line-height: 0.76rem;
-    top: 0.2em;
-    position: relative;
-}
-.icon2>div>h4{
-    display: inline-block;
-    color: #e15021;
-    font-weight: 600;
-}
-.icon2>div>h4>span:nth-child(1){
-    background-position: 11.11111% 0%;
-    display: inline-block;
-    margin: -1.7em -0.2em -0.5em -0.5em;
-    background-repeat: no-repeat;
-    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/section_icon_sprite-383dbefd9b1f.png);
-    background-size: 1000% 200%;
-    width: 1.7em;
-    height: 1.7em;
-}
 
 
 

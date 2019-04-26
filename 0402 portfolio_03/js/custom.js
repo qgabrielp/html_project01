@@ -210,7 +210,7 @@
         if($(this).scrollTop() > sc3_2top){
             $('.s3_2_1_img').addClass('s3_2_1_img_up');
         }
-        if($(this).scrollTop() > 4200){
+        if($(this).scrollTop() > 5800){
             $('.gtt').addClass('gtt_ab');
         }else{
             $('.gtt').removeClass('gtt_ab');
