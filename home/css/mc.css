@@ -10,7 +10,140 @@
 
 
 @media screen and (min-width:1280px) and (max-width:1599px){
-    
+    .play{
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: white;
+    transform: translate(-50%, -50%);;
+}
+    .play strong:nth-child(1){
+    position: absolute;
+    left: 0;
+    animation: play_strong1 2s linear 1;
+}
+.play strong:nth-child(2){
+    position: absolute;
+    left: 10%;
+    animation: play_strong2 2.3s linear 1;
+}
+.play strong:nth-child(3){
+    position: absolute;
+    left: 20%;
+    animation: play_strong3 2.6s linear 1;
+}
+.play strong:nth-child(4){
+    position: absolute;
+    left: 30%;
+    animation: play_strong4 2.9s linear 1;
+}
+    .cube{
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 81%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.cube strong:nth-child(1){
+    position: absolute;
+    left: 55%;
+    animation: cube_strong1 5s linear infinite;
+}
+.cube strong:nth-child(2){
+    position: absolute;
+    left: 65%;
+    animation: cube_strong2 5s linear infinite;
+}
+.cube strong:nth-child(3){
+    position: absolute;
+    left: 75%;
+    animation: cube_strong3 5s linear infinite;
+}
+.cube strong:nth-child(4){
+    position: absolute;
+    left: 85%;
+    animation: cube_strong4 5s linear infinite;
+}
+    .pick{
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: white;
+    transform: translate(-50%, -50%);;
+}
+.pick strong:nth-child(1){
+    position: absolute;
+    left: 0%;
+    animation: pick_strong1 2s linear 1;
+}
+.pick strong:nth-child(2){
+    position: absolute;
+    left: 10%;
+    animation: pick_strong2 2.3s linear 1;
+}
+.pick strong:nth-child(3){
+    position: absolute;
+    left: 15%;
+    animation: pick_strong3 2.6s linear 1;
+}
+.pick strong:nth-child(4){
+    position: absolute;
+    left: 25%;
+    animation: pick_strong4 2.9s linear 1;
+}
+    .puzzle{
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 81%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.puzzle strong:nth-child(1){
+    position: absolute;
+    left: 55%;
+    animation: puzzle_strong1 2s linear infinite;
+}
+.puzzle strong:nth-child(2){
+    position: absolute;
+    left: 65%;
+    animation: puzzle_strong2 2s linear infinite;
+}
+.puzzle strong:nth-child(3){
+    position: absolute;
+    left: 75%;
+    animation: puzzle_strong3 2s linear infinite;
+}
+.puzzle strong:nth-child(4){
+    position: absolute;
+    left: 85%;
+    animation: puzzle_strong4 2s linear infinite;
+}
+.puzzle strong:nth-child(5){
+    position: absolute;
+    left: 95%;
+    animation: puzzle_strong5 2s linear infinite;
+}
+.puzzle strong:nth-child(6){
+    position: absolute;
+    left: 105%;
+    animation: puzzle_strong6 2s linear infinite;
+}
 }
 
 @media screen and (min-width:1024px) and (max-width:1279px){
