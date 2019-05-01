@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+    //객체
+        var arr = [1,2,3,4,5];
+        // 자바스크립트는 연관배열이 없다
+        var person = {
+            "name":"lee",
+            "age":30,
+            "fn":function(){
+                return this.age;
+            }
+        };
+        document.write(person.name);
+        var k2 = person.fn();
+        document.write(k2);
+        
+    </script>
+</body>
+</html>

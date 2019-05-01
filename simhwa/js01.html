@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"></div>
+    
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+//        var a = document.getElementById("a")
+        //객체 - 프로퍼티(특성) , 메소드(함수)
+//        a.innerHTML="seoul";
+        
+        /* 자바스크립트 출력문
+        .innerHTML
+        .alert();
+        .document.write();
+        consol.log();
+        */
+//        var b = document.getElementsByClassName("b");
+//        b[0].innerHTML="japan";
+//        b[2].innerHTML="korea";
+//        
+//        var pp = document.getElementsByTagName("p");
+//        pp[1].innerHTML="usa";
+        
+        //scope:범위 - 지역변수  , 전역변수
+        //함수
+        
+        
+        //선언적함수 -- 함수명이 직접스여진 것
+//        function aa(){
+//            for(var i=1; i<=10; i++){
+//                document.write(i+"<br>");
+//            }
+//        }
+        
+        //익명함수 -- 함수를 변수로 잡은 것
+//        var aa = function(){
+//            for(var i=1; i<=10; i++){
+//                document.write(i+"<br>");
+//            }
+//        };
+//        
+//        aa();
+        
+        //자기호출함수
+        
+//        (function(){
+//            document.write("kkk");
+//        })();
+        
+        //매개변수 , 리턴값
+        
+//        function aa(a){ //a는 매개변수
+//            document.write(a);
+//        }
+//        aa(30); //30은 인자값
+        
+//        bb(3,4,5);
+//        function bb(a,b,c){  //지역변수
+//            var tot = a+b+c;
+//            document.write(tot);
+//        }
+        
+        var total = 0;  //지역변수
+        function cc(a,b,c){
+            total = a+b+c;
+//            document.write(total);
+        }
+//        cc(1,2,3);
+        document.write(total);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
