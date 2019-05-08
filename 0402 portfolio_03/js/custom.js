@@ -187,7 +187,7 @@
         var sc2top = $(".sec2").offset().top - 1000;
         var sc3_2top = $(".sec3_2").offset().top - 1500;
         var fttop = $(".footer_bot").offset().top -1400;
-        console.log("aaa"+$(this).scrollTop());
+//        console.log("aaa"+$(this).scrollTop());
         if ($(this).scrollTop() > 950){
             $('.gtt').fadeIn();
         } else {
@@ -210,7 +210,8 @@
         if($(this).scrollTop() > sc3_2top){
             $('.s3_2_1_img').addClass('s3_2_1_img_up');
         }
-        if($(this).scrollTop() > 5800){
+        if($(window).scrollTop() > $(".footer_bot").offset().top - $(window).height()){
+//        if($(this).scrollTop() > 5800){
             $('.gtt').addClass('gtt_ab');
         }else{
             $('.gtt').removeClass('gtt_ab');
