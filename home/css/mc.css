@@ -285,8 +285,8 @@ header{
     left: 0%;
 }
 .logo_sm{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background: url(../logo/logo_09.png)no-repeat;
     background-size: cover;
     position: absolute;
@@ -299,6 +299,7 @@ header{
     position: relative;
     top: 70%;
     transform: translateY(-20%);
+    margin: 0 auto;
 /*    display: none;*/
     
 }
@@ -540,7 +541,7 @@ header{
     font-size: 30px;
     display: block;
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 55%;
     color: white;
     transform: translate(-50%, 0%);
@@ -866,7 +867,7 @@ header{
     font-size: 30px;
     display: block;
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 50%;
     color: white;
     transform: translate(-50%, 0%);
