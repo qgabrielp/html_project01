@@ -846,8 +846,8 @@ header{
     background-color: rgba(255,255,255,0.5);
 }
 #po_wrap{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -907,8 +907,8 @@ header{
 }
     
 .modal_in{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -953,9 +953,18 @@ header{
     z-index: 10;
     transition: 0.6s;
 }
+.mo_text_tt{
+    font-size: 14px;
+    color: #000;
+}
+.mo_text_sec{
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+}
 .modal1 .mo_img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     position: absolute;
     top: 0;
     left: 0;
@@ -965,8 +974,8 @@ header{
     box-shadow: 0px 0px 20px #000;
 }
 .modal1 .mo_pi{
-    width: 60px;
-    height: 60px;
+    width: 53.5px;
+    height: 53px;
     position: absolute;
     top: 58.7%;
     right: 38.7%;
