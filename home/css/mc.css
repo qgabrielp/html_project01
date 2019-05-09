@@ -988,8 +988,8 @@ header{
     100%{top: 58.7%; right: 38.7%;; transform: rotate(360deg) scale(1);}
 }
 .modal2 .mo_img{
-     width: 400px;
-    height: 400px;
+     width: 350px;
+    height: 350px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -999,11 +999,11 @@ header{
     box-shadow: 0px 0px 20px #000;
 }
 .modal2 .mo_pi{
-    width: 55px;
-    height: 55px;
+    width: 51px;
+    height: 48.5px;
     position: absolute;
-    top: 35.15%;
-    right: 29.5%;
+    top: 34.8%;
+    right: 29.29%;
     background: url(../img/puimg2.png)no-repeat center center;
     background-size: cover;
 }
@@ -1013,8 +1013,8 @@ header{
     100%{top: 35.15%; right: 29.5%; transform: rotate(360deg) scale(1);}
 }
 .modal3 .mo_img{
-     width: 400px;
-    height: 400px;
+     width: 350px;
+    height: 350px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1024,10 +1024,10 @@ header{
     box-shadow: 0px 0px 20px #000;
 }
 .modal3 .mo_pi{
-    width: 60px;
-    height: 60px;
+    width: 51px;
+    height: 55px;
     position: absolute;
-    top: 33.4%;
+    top: 33%;
     right: 46%;
     background: url(../img/puimg3.png)no-repeat center center;
     background-size: cover;
@@ -1038,8 +1038,8 @@ header{
     100%{top: 33.4%; right: 46%; transform: rotate(360deg) scale(1);}
 }
 .modal4 .mo_img{
-     width: 400px;
-    height: 400px;
+     width: 350px;
+    height: 350px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1049,8 +1049,8 @@ header{
     box-shadow: 0px 0px 20px #000;
 }
 .modal4 .mo_pi{
-    width: 60px;
-    height: 62px;
+    width: 50px;
+    height: 55px;
     position: absolute;
     top: 33%;
     right: 46%;
@@ -1063,8 +1063,8 @@ header{
     100%{top: 33%; right: 46%; transform: rotate(360deg) scale(1);}
 }
 .modal5 .mo_img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1074,8 +1074,8 @@ header{
     box-shadow: 0px 0px 20px #000;
 }
 .modal5 .mo_pi{
-    width: 60px;
-    height: 60px;
+    width: 53px;
+    height: 53px;
     position: absolute;
     top: 22%;
     left: 36%;
