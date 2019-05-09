@@ -314,7 +314,7 @@ main .page{
     top: 50%;
     left: 20%;
     color: white;
-    transform: translate(-50%, -50%);;
+    transform: translate(-50%, -50%);
 }
 .play strong:nth-child(1){
     position: absolute;
@@ -999,7 +999,7 @@ main .page{
     top: 50%;
     left: 20%;
     color: white;
-    transform: translate(-50%, -50%);;
+    transform: translate(-50%, -50%);
 }
 .pick strong:nth-child(1){
     position: absolute;
