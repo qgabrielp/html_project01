@@ -316,6 +316,8 @@ header{
     display: block;
 }
 .menu_li_la{
+    top: 50%;
+    transform: translateY(0%);
     float: left;
 }
 /*
