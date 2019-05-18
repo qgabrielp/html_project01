@@ -67,7 +67,6 @@ $(document).ready(function(){
     $("#menu>li").click(function(){
         var i = $(this).index();
         moveTop=$('main>.page').eq(i).offset().top;
-        console.log(i+"aa");
         $("html,body").stop().animate({
         "scrollTop":moveTop+"px"
         },1000,);
@@ -122,9 +121,9 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    $(".ch").gaugeMeter();
-});
+//$(document).ready(function(){
+//    $(".ch").gaugeMeter();
+//});
 
 
 $(document).ready(function(){

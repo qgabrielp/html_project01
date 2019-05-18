@@ -468,8 +468,8 @@ main .page{
     display: block;
 }
 .skill_wrap>ul>ul>li{
-    width: 166.67px;
-    height: 166.67px;
+    width: 166.6px;
+    height: 166.6px;
     position: relative;
     transition: all 0.4s;
     transform-style: preserve-3d;
@@ -570,6 +570,7 @@ main .page{
 .skill_wrap>ul>ul:nth-child(2):hover li{
     transform: rotateX(-90deg);
     -webkit-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
     transition: all 0.6s;
 }
 /*
@@ -585,6 +586,8 @@ main .page{
     top: -50%;
     left: 0%;
     transform: rotateX(90deg) translateY(-83px);
+    -webkit-transform: rotateX(90deg) translateY(-83px);
+    -ms-transform: rotateX(90deg) translateY(-83px);
     
     background-color: #e69b81;
 }
@@ -737,6 +740,8 @@ main .page{
 */
 .skill_cube:hover ul:nth-child(5) li{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transition: all 0.6s;
 }
 .skill_wrap>ul>ul:nth-child(5) li span{
@@ -746,6 +751,8 @@ main .page{
     top: 0%;
     left: 0%;
     transform: rotateY(180deg) translateX(0px);
+    -webkit-transform: rotateY(180deg) translateX(0px);
+    -ms-transform: rotateY(180deg) translateX(0px);
 
     background-color: #eee;
 }
@@ -1221,10 +1228,6 @@ main .page{
     z-index: 100;
     transition: 0.6s;
 }
-.pz_wrap>.pu:hover div{
-    animation: pu_move 0.5s ease infinite;
-}
-
 .pu1{
     top: 300px;
     left: 50px;
