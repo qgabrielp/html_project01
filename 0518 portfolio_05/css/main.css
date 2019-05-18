@@ -1,0 +1,116 @@
+body{
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+/* 헤더 영역 */
+header{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+}
+header>div{
+    display: inline-block;
+}
+#logo1{
+    width: 100px;
+    height: 90px;
+    background: url(../img/main_logo.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+#logo2{
+    width: 250px;
+    height: 90px;
+    background: url(../img/main_logo_2.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+.main_menu{
+    width: 850px;
+    line-height: 90px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.main_menu>ul{
+    
+}
+.main_menu>ul>li{
+    height: 90px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-block;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+.main_menu>ul>li:hover{
+    border-bottom: 5px solid #ff0000;
+    transition: 0.2s;
+}
+.main_menu>ul>li>a{
+    color: #000;
+    display: block;
+}
+.main_menu>ul>li:hover a{
+    color: #ff0000;
+    transition: 0.2s;
+}
+
+
+/* 메인 영역 */
+main{
+    max-width: 2000px;
+    margin: 0 auto;
+    background-color: #ff0;
+}
+
+.banner{
+    max-width: 2000px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+.banner>div{
+    position: absolute;
+}
+.bn_1{
+    width: 100%;
+    height: 100%;
+    background: url(../img/ban1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bn_2{
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    background: url(../img/ban2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.question{
+    width: 170px;
+    height: 60px;
+    background-color: #19121a;
+    border: 1px solid #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
