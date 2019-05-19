@@ -453,7 +453,8 @@ section{
     color: #ff0000;
 }
 .sec4_in{
-    
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 .sec4_sl{
     width: 100%;
@@ -466,13 +467,13 @@ section{
     font-weight: 600;
     line-height: 55px;
     text-align: center;
-    border: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     float: left;
     cursor: pointer;
 }
-.sec4_sl>div:nth-child(2){
+.sec4_sl>div:nth-child(3){
     border-right: none;
-    border-left: none;
 }
 .sec4_sl>div>p{
     width: 120px;
@@ -481,6 +482,7 @@ section{
 }
 .select{
     color: #ff0000;
+    background-color: #fff;
     border-bottom: none !important;
 }
 .select_bb{
@@ -489,20 +491,29 @@ section{
 .sec4_sl_box{
     width: 100%;
     height: 810px;
-    border: 1px solid #ddd;
     border-top: none;
     position: relative;
 }
 .sec4_sl_box>div{
+    width: 100%;
+    height: 100%;
     padding: 50px;
     position: absolute;
+    background-color: #fff;
     top: 0;
     left: 0;
 }
 .sec4_sl_box_1{
-    width: 100%;
-    height: 100%;
-    position: relative;
+    
+    
+}
+.sec4_sl_box_2{
+
+    
+}
+.sec4_sl_box_3{
+    
+
 }
 .sec4_sl_box_text{
     margin-left: 50px;
@@ -544,12 +555,66 @@ section{
     background-position: center;
     display: inline-block;
 }
-
-
-
-
-
-
+.sec4_sl_box_local{
+    width: 165px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/sec4_3.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.sec4_sl_box_2>.sec4_sl_box_img{
+    width: 1100px;
+    height: 528px;
+    margin-top: 50px;
+    background: url(../img/sec4_2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.sec4_sl_box_text>div{
+    width: 520px;
+    height: 50px;
+    margin-top: 30px;
+}
+.sec4_sl_box_text>div::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec4_sl_box_text>div>h1{
+    width: auto;
+    height: auto;
+    float: left;
+    display: inline;
+    font-size: 16px;
+    text-align: center;
+    color: #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+.sec4_sl_box_text>div>div{
+    width: 80%;
+    height: 50px;
+    float: right;
+}
+.sec4_sl_box_3>.sec4_sl_box_img{
+    width: 620px;
+    height: 390px;
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/sec4_4.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
 
 
 

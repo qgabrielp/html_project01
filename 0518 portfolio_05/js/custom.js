@@ -12,6 +12,18 @@
         $('.bn_1').hide();
         $('.bn_2').fadeIn(600);
     });
+    
+    $('.sec4_sl_box_2').hide();
+    $('.sec4_sl_box_3').hide();
+    $('.sec4_sl>div').click(function(){
+        var i = $(this).index();
+        $('.sec4_sl>div').removeClass('select');
+        $('.sec4_sl>div').eq(i).addClass('select');
+        $('.sec4_sl>div>p').removeClass('select_bb');
+        $('.sec4_sl>div>p').eq(i).addClass('select_bb');
+        $('.sec4_sl_box>div').hide();
+        $('.sec4_sl_box>div').eq(i).show();
+    });
 });
 
 
