@@ -5,8 +5,6 @@
 
 body{
     font-family: 'NanumSquare_acR';
-    max-width: 2000px;
-    margin: 0 auto;
     background-color: #fafafa;
 }
 
@@ -185,7 +183,7 @@ main{
 
 
 /* 섹션 영역 */
-section{
+.section1{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -601,6 +599,9 @@ section{
     width: 80%;
     height: 50px;
     float: right;
+    font-size: 13px;
+    flex-wrap: 600;
+    color: #000;
 }
 .sec4_sl_box_3>.sec4_sl_box_img{
     width: 620px;
@@ -616,7 +617,190 @@ section{
     display: inline-block;
 }
 
+.sec5{
+    width: 820px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.sec5_tt{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ff0000;
+    padding-bottom: 50px;
+}
+.sec5_in{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.sec5_in_ch{
+    width: 100%;
+}
+.sec5_in_ch::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec5_in_ch>div{
+    height: 60px;
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 60px;
+    color: #000;
+}
+.sec5_in_ch>div:nth-child(1){
+    width: 15%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.sec5_in_ch>div:nth-child(2){
+    width: 20%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.sec5_in_ch>div:nth-child(3){
+    width: 35%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.sec5_in_ch>div:nth-child(4){
+    width: 30%;
+    border-bottom: 1px solid #ddd;
+}
+.sec5_in_ch>div>p{
+    line-height: 30px;
+}
+.sec5_in>div:first-child{
+    background-color: #f1f8ff;
+}
+.sec5_in>div:first-child .sl_red{
+    background-color: #ff0000 !important;
+    color: #fff !important;
+}
+.sec5_in>div:last-child .sl_red{
+    border-bottom: 2px solid #ff0000;
+}
+.sl_sky{
+    background-color: #f9fcff;
+}
+.sl_red{
+    border-left: 2px solid #ff0000;
+    border-right: 2px solid #ff0000 !important;
+    box-shadow: 3px 5px 5px 1px #dadada;
+    background-color: #fff;
+    color: #ff0000 !important;
+}
 
+.section2{
+    width: 100%;
+    background-color: #fff;
+}
+.sec6{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sec6_tt{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ff0000;
+    text-align: center;
+}
+.sec6_tt::before{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    background-color: #ff0000;
+}
+.sec6_subtt{
+    padding: 5px 20px 5px 20px;
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff0000;
+    display: inline-block;
+    border: 3px solid #ff0000;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.sec6_in{
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sec6_in_tt{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+.sec6_in_tt>span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+.sec6_in1>.sec6_in_img{
+    width: 1100px;
+    height: 220px;
+    background: url(../img/sec6_1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec6_in2>.sec6_in_img{
+    width: 1100px;
+    height: 220px;
+    background: url(../img/sec6_2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec6_in_arrow{
+    width: 400px;
+    height: 90px;
+    margin-top: 50px;
+    background: url(../img/sec6_arrow.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec6_in3>.sec6_in_img{
+    width: 1100px;
+    height: 220px;
+    background: url(../img/sec6_3.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 
