@@ -12,21 +12,36 @@ body{
 
 /* 헤더 영역 */
 header{
-    max-width: 1200px;
+    width: 100%;
     height: 90px;
     margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 3px 0px #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
-header>div{
+.header_in{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header_in>div{
     display: inline-block;
 }
 #logo1{
     width: 100px;
     height: 90px;
+    float: left;
+}
+#logo1>a{
+    width: 100%;
+    height: 100%;
+    display: block;
     background: url(../img/main_logo.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    float: left;
 }
 #logo2{
     width: 250px;
@@ -72,6 +87,7 @@ header>div{
 main{
     max-width: 2000px;
     margin: 0 auto;
+    margin-top: 90px;
 }
 
 .banner{
@@ -166,6 +182,9 @@ main{
 .on{
     background-color: #fff;
 }
+
+
+/* 섹션 영역 */
 section{
     max-width: 1200px;
     margin: 0 auto;
@@ -218,6 +237,7 @@ section{
 
 .sec2_in{
     width: 100%;
+    padding-bottom: 190px;
     position: relative;
 }
 .sec2_in_tt{
@@ -231,7 +251,6 @@ section{
     color: #ff0000;
 }
 .sec2_in_wrap{
-
 }
 .sec2_in_wrap>div:last-child{
     margin-right: 0;
@@ -262,12 +281,177 @@ section{
 .sec2_in_box_2{
     text-align: center;
     font-size: 11px;
+    font-weight: 600;
     color: #000;
 }
+.sec2_in_box_2>span{
+    display: block;
+}
+.sec2_in_box_2>a{
+    color: #ff0000;
+    border-bottom: 1px solid;
+}
 
+.sec3{
+    width: 100%;
+    position: relative;
+}
+.sec3_tt{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+}
+.sec3_tt>i{
+    color: #ff0000;
+}
+.sec3_vs{
+    padding: 5px 20px 5px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff0000;
+    border: 3px solid #ff0000;
+    border-radius: 25px;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec3_in{
+    width: 100%;
+    height: 465px;
+    padding: 50px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.sec3_in::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec3_in>div{
+    float: left;
+}
+.sec3_text{
+    width: 30%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+.sec3_text_1{
+    margin-bottom: 50px;
+}
+.sec3_text_1>h3{
+    width: 60%;
+    padding: 5px 30px 5px 30px;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 25px;
+}
+.sec3_text_1>span{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+}
+.sec3_text_1>span>i{
+    color: #ff0000;
+}
+.sec3_text_2>h3{
+    width: 60%;
+    padding: 5px 30px 5px 30px;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background-color: #3c9df2;
+    border-radius: 25px;
+}
+.sec3_text_2>span{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+}
+.sec3_text_2>span>i{
+    color: #3c9df2;
+}
+.sec3_gr{
+    width: 60%;
+    height: 100%;
+    margin-left: 5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sec3_gr_img{
+    width: 100%;
+    height: 80%;
+    background: url(../img/sec3_01.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec3_gr_red, .sec3_gr_blue{
+    font-size: 10px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 20%;
+    margin-top: 5%;
+    position: relative;
+}
+.sec3_gr_red::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: -55%;
+    transform: translateY(-50%);
+    background-color: #ff0000;
+}
+.sec3_gr_blue::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+    background-color: #3c9df2;
+}
 
-
-
+.sec4{
+    
+}
+.sec4_tt{
+    margin-top: 5%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+}
+.sec4_tt>i{
+    color: #ff0000;
+}
 
 
 
