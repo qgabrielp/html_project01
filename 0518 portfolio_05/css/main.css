@@ -1525,10 +1525,12 @@ footer{
 }
 
 .ft_icon{
+    padding-top: 30px;
     color: #fff;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: inline-block;
 }
 .ft_icon::after{
     content: '';
@@ -1537,6 +1539,7 @@ footer{
 }
 .ft_icon>div{
     float: left;
+    padding-left: 50px;
 }
 .ft_icon>div::after{
     content: '';
@@ -1546,7 +1549,8 @@ footer{
 .ft_icon>div>div{
     padding-left: 10px;
     float: left;
-    font-size: 16px;
+    font-size: 13px;
+    font-weight: 600;
     line-height: 60px;
 }
 .icon1{
@@ -1577,14 +1581,90 @@ footer{
     display: inline-block;
 }
 
-
-
-
-
-
-
-
-
+.footer_bot{
+    width: 100%;
+}
+.fb_1{
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #87898e;
+    border-bottom: 1px solid #87898e;
+}
+.fb_1_in{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.fb_1_in::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.fb_1_in>div{
+    float: left;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 80px;
+    color: #fff;
+}
+.fb_1_in>div::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.fb_1_in>div>div{
+    float: left;
+}
+.fb_1_1{
+    margin-right: 40%;
+}
+.fb_img1{
+    width: 133px;
+    height: 80px;
+    background: url(../img/fb_1.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.fb_img2{
+    width: 80px;
+    height: 80px;
+    background: url(../img/fb_2.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.fb_img3{
+    width: 80px;
+    height: 80px;
+    background: url(../img/fb_3.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.fb_img4{
+    width: 80px;
+    height: 80px;
+    background: url(../img/fb_4.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.fb_2{
+    width: 100%;
+    height: 150px;
+}
+.fb_2_in{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+}
 
 
 
