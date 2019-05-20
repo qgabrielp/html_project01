@@ -2,7 +2,7 @@
     font-family: 'NanumSquare_acR';
     src: url(../font/NanumSquare_acR.ttf) format('truetype');
 }
-
+ 
 body{
     font-family: 'NanumSquare_acR';
     background-color: #fafafa;
@@ -83,13 +83,14 @@ header{
 
 /* 메인 영역 */
 main{
-    max-width: 2000px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 90px;
 }
 
 .banner{
     max-width: 2000px;
+    margin: 0 auto;
     height: 470px;
     margin-bottom: 60px;
     position: relative;
@@ -1209,6 +1210,289 @@ main{
     color: #ff0000;
     font-size: 18px;
 }
+
+.sec8{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sec8_tt{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+.sec8_tt>i{
+    color: #ff0000;
+}
+.sec8_in{
+    width: 100%;
+    position: relative;
+}
+.sec8_in::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec8_in>div{
+    width: 19%;
+    height: 150px;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sec8_in>div>p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+.sec8_in>div:nth-child(1) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/samsung.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(2) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/kt&g.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(3) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/plumu.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(4) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/carverkorea.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(5) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/coasia.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(6) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/433.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(7) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/m.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(8) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/sp.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(9) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/nextmove.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(10) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/dp.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(11) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/tf.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(12) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/trenshow.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(13) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/Lydia.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec8_in>div:nth-child(14) .img{
+    width: 100%;
+    height: 70%;
+    background: url(../img/bgoos.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sec9{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.sec9_in{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sec9_in::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec9_in>div{
+    float: left;
+}
+.sec9_1{
+    width: 55%;
+    height: 100%;
+    padding: 10px 50px 10px 50px;
+    background-color: #f5f6fa;
+}
+.sec9_1::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec9_1>div{
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sec9_img{
+    width: 20%;
+    height: 80%;
+    background: url(../img/sec9_1.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec9_1_text{
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+.sec9_1_text>p>span{
+    color: #ff0000;
+}
+.sec9_2{
+    width: 45%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    line-height: 75px;
+    border-left: 1px solid #ddd;
+}
+.sec9_2>p{
+    padding-left: 20px;
+}
+.sec9_2>p:first-child{
+    border-bottom: 1px solid #ddd;
+}
+
+.sec10{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.sec10_in{
+    padding: 10px 0px 10px 0px;
+}
+.sec10_in::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sec10_in>div{
+    float: left;
+}
+.sec10_1{
+    width: 50%;
+    padding: 0px 30px 0px 30px;
+}
+.sec10_1_tt{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+}
+.sec10_1_tt>i{
+    color: #ff0000;
+}
+.more{
+    padding: 0px 10px 0px 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: inline-block;
+    float: right;
+}
+.sec10_1_text{
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #000;
+}
+.sec10_1_text>p>span{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
