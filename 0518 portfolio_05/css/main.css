@@ -1434,6 +1434,7 @@ main{
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .sec10_in{
     padding: 10px 0px 10px 0px;
@@ -1479,19 +1480,102 @@ main{
 }
 
 
+/* 푸터 영역 */
+footer{
+    background-color: #61646a;
+}
 
+.footer_top{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.ft_in{
+    padding-top: 50px;
+}
+.ft_tt{
+    color: #fff;
+    text-align: center;
+}
+.ft_tt>h1{
+    font-size: 32px;
+}
+.ft_tt>p{
+    width: 170px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    line-height: 60px;
+    text-align: center;
+}
+.ft_tt>p>a{
+    font-size: 18px;
+    color: #fff;
+    display: block;
+}
+.ft_tt>p:hover{
+    background-color: #19121a;
+    transition: 0.2s;
+}
+.ft_tt>p:hover a{
+    color: #ff0000;
+    transition: 0.2s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.ft_icon{
+    color: #fff;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ft_icon::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.ft_icon>div{
+    float: left;
+}
+.ft_icon>div::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.ft_icon>div>div{
+    padding-left: 10px;
+    float: left;
+    font-size: 16px;
+    line-height: 60px;
+}
+.icon1{
+    width: 60px;
+    height: 60px;
+    background: url(../img/ft_1.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.icon2{
+    width: 60px;
+    height: 60px;
+    background: url(../img/ft_2.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.icon3{
+    width: 60px;
+    height: 60px;
+    background: url(../img/ft_3.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
 
 
 
