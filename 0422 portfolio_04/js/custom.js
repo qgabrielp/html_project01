@@ -59,7 +59,6 @@
         var mttop = $('.move_text').offset().top-300;
         var tst = $(this).scrollTop();
         var op = 1;
-        console.log("aaa"+tst);
         if($(this).scrollTop() > 4800){
             $('.move_text').addClass('text_fixed');
             $('.move_text').stop().animate({"opacity":op-tst/6300},10);
