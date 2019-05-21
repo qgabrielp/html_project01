@@ -88,7 +88,7 @@
         $('.bg').stop().fadeIn();
         
     });
-    $('.colse').click(function(){
+    $('.close').click(function(){
         $('.main_menu').stop().animate({'left' : '100%'}, 600);
         $('.bg').stop().fadeOut();
     });
