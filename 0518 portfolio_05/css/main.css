@@ -1815,21 +1815,43 @@ footer{
         margin-top: 50px;
         overflow: hidden;
     }
+    .banner{
+        
+    }
+    .bn_1{
+        background: url(../img/m_bn_1.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .bn_2{
+        background: url(../img/m_bn_2.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     .bn_text{
         width: 100%;
         padding-left: 0;
         text-align: center;
     }
     .bn_text_top{
-        font-size: 30px;
+        font-size: 20px;
     }
     .bn_text_bot{
+        font-size: 14px;
         padding: 10px 30px;
         text-align: left;
+        padding-left: 10%;
+        display: inline-block;
     }
     .bn_text_qu{
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .sec1{
@@ -1999,6 +2021,170 @@ footer{
     .m_sec5_in_ch{
         display: block;
     }
+    
+    .sec6{
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec6_subtt{
+        top: 0;
+        margin-bottom: 10px;
+    }
+    .sec6_in{
+        padding: 0;
+        border: none;
+    }
+    .sec6_in1>.sec6_in_img{
+    background: url(../img/m_sec6_1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .sec6_in_tt{
+        display: none;
+    }
+    .sec6_in2{
+        display: none;
+    }
+    .sec6_in_arrow{
+        width: 150px;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .sec6_in3>.sec6_in_img{
+    background: url(../img/m_sec6_2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    .sec7{
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec7_tt{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .sec7_tt::before{
+        top: 100px;
+    }
+    .sec7_in_ch_tt,.sec7_in_ch_1,.sec7_in_ch_2,.sec7_in_ch_3,.sec7_in_ch_4{
+        display: none;
+    }
+    .sec7_in_ch1{
+        height: 60px;
+    }
+    .sec7_in_ch_5{
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+    }
+    .sec7_in_ch_6{
+        width: 100%;
+        height: 100%;
+        line-height: 26px;
+        font-size: 12px;
+    }
+    .sec7_in_ch_7{
+        width: 100%;
+    }
+    .sec7_in_ch_7>div:first-child{
+        line-height: 70px;
+    }
+    .sec7_in_ch_7>div:last-child{
+        font-size: 10px;
+    }
+    .sec7_in_ch_7>div:last-child>p:first-child{
+        padding-left: 5px;
+    }
+    .sec7_in_ch4{
+        display: none;
+    }
+    .sec7_in_ch_9{
+        background-color: #edeff6;
+    }
+    .sec7_in_ch_10{
+        width: 34%;
+        left: 45.5%;
+    }
+    .sec7_in_ch_10>p:first-child{
+        font-size: 10px;
+    }
+    .sec7_in_ch_10>p:last-child{
+        font-size: 12px;
+    }
+    .sec7_in_ch_10>p:first-child span::before,.sec7_in_ch_10>p:first-child span::after{
+        display: none;
+    }
+    .sec7_in_ch_11{
+        width: 40%;
+        padding-left: 8px;
+        padding-top: 5px;
+        background-color: #edeff6;
+        font-size: 13px;
+    }
+    .sec7_in_ch_11>p{
+        text-align: left;
+        text-indent: 15px;
+    }
+    
+    .sec8{
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec8_tt{
+        padding-top: 50px;
+    }
+    .sec8_in>div{
+        width: 33%;
+        height: 100px;
+        margin-right: 0%;
+        margin-bottom: 0%;
+        border-radius: 0;
+    }
+    .sec8_in>div>.img{
+        width: 70% !important;
+        margin: 0 auto;
+        background-size: contain !important;
+    }
+    .sec8_in>div:nth-child(7) .img{
+        background-size: 40% 50% !important;
+    }
+    .sec8_in>div>p{
+        font-size: 12px;
+    }
+    
+    .sec9{
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec9_1{
+        width: 100%;
+        height: 55%;
+        padding: 0;
+        padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .sec9_img{
+        background-size: contain;
+    }
+    .sec9_1_text{
+        font-size: 12px;
+    }
+    .sec9_2{
+        width: 100%;
+        height: 45%;
+        font-size: 10px;
+        line-height: 30px;
+    }
+    
+    
     
     
     
