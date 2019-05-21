@@ -1753,6 +1753,7 @@ footer{
         background-repeat: no-repeat;
         background-position: center;
         float: right;
+        cursor: pointer;
     }
     .bg{
         width: 100%;
@@ -1790,6 +1791,7 @@ footer{
         font-size: 36px;
         line-height: 50px;
         color: #fff;
+        cursor: pointer;
     }
     .mlogo2{
         width: 90%;

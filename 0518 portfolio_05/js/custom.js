@@ -92,6 +92,9 @@
         $('.main_menu').stop().animate({'left' : '100%'}, 600);
         $('.bg').stop().fadeOut();
     });
+    $('.main_menu>ul>li').click(function(){
+        $('.main_menu').stop().animate({'left' : '100%'}, 600);
+    });
 });
 
 
