@@ -3,7 +3,8 @@
     src: url(../font/NanumSquare_acR.ttf) format('truetype');
 }
  
-body{
+html,body{
+    width: 100%;
     font-family: 'NanumSquare_acR';
     background-color: #fafafa;
 }
@@ -18,7 +19,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 900;
 }
 .header_in{
     max-width: 1200px;
@@ -67,7 +68,7 @@ header{
     font-weight: 600;
 }
 .main_menu>ul>li>a{
-    height: 90px;
+    height: 100%;
     color: #000;
     display: block;
 }
@@ -75,6 +76,9 @@ header{
     color: #ff0000 !important;
     border-bottom: 5px solid #ff0000;
     transition: 0.2s
+}
+.mm{
+    display: none;
 }
 
 
@@ -1693,6 +1697,229 @@ footer{
     font-weight: 400;
     color: #fff;
 }
+
+
+
+
+
+/* 미디어커리 */
+
+
+@media screen and (min-width:2000px) {
+    
+}
+
+@media screen and (min-width:1600px) and (max-width:1999px) {
+    
+}
+
+@media screen and (min-width:1280px) and (max-width:1599px){
+    
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){
+    
+}
+
+@media screen and (min-width:780px) and (max-width:1023px){
+    
+}
+
+@media screen and (min-width:640px) and (max-width:779px){
+    
+}
+
+@media screen and (max-width:700px){
+    body{
+        width: 100%;
+    }
+    header{
+        height: 50px;
+        padding: 0 0 0 2.5%;
+/*        overflow: hidden;*/
+    }
+    #logo1{
+        width: 20%;
+        height: 50px;
+    }
+    #logo2{
+        display: none;
+    }
+    #mmbtn{
+        width: 50px;
+        height: 50px;
+        background: url(../img/m_1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        float: right;
+    }
+    .bg{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .main_menu{
+        height: 600px;
+        position: relative;
+        top: 0px;
+        left: 100%;
+        float: right;
+        background-color: #fff;
+    }
+    .main_menu>ul>li{
+        height: 50px;
+        margin-left: 0px;
+        display: block;
+        text-align: left;
+        line-height: 50px;
+        border-bottom: 1px solid #ddd;
+        text-indent: 20px;
+    }
+    .colse{
+        width: 50px;
+        height: 50px;
+        background-color: #ff0000;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        font-size: 36px;
+        line-height: 50px;
+        color: #fff;
+    }
+    .mlogo2{
+        width: 90%;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 20px;
+        background: url(../img/main_logo_2.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    
+    main{
+        margin-top: 50px;
+    }
+    .bn_text{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .bn_text_top{
+        font-size: 30px;
+    }
+    .bn_text_bot{
+        padding: 10px 30px;
+        text-align: left;
+    }
+    .bn_text_qu{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    .sec1{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        font-size: 18px;
+    }
+    .sec1>span{
+        border-radius: 0;
+    }
+    
+    .sec2{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec2_in{
+        height: 500px;
+    }
+    .sec2_in_box{
+        width: 100%;
+        height: 80px;
+    }
+    .sec2_in_box>img{
+        width: 14%;
+        padding-left: 5%;
+    }
+    .sec2_in_box_1{
+        margin-left: 5%;
+    }
+    .sec2_in_box_2{
+        width: 60%;
+        display: inline-block;
+        margin-left: 10%;
+    }
+    .sec2_in_box_2>span{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .sec2_in2 .sec2_in_box_2 span{
+        font-size: 12px;
+        display: inline-block;
+    }
+    
+    .sec3{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .sec3_vs{
+        display: none;
+    }
+    .sec3_in{
+        padding: 20px 0 0 0;
+    }
+    .sec3_text{
+        width: 100%;
+        top: 0;
+        transform: none;
+    }
+    .sec3_text>div{
+        width: 50%;
+        float: left;
+    }
+    .sec3_in h3{
+        width: 85%;
+    }
+    .sec3_in span{
+        width: 80%;
+    }
+    .sec3_gr{
+        width: 100%;
+        height: 70%;
+        margin-left: 0;
+        top: 40%;
+    }
+    .sec3_gr_img{
+        background: url(../img/m_gr.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

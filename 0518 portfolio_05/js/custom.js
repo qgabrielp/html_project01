@@ -83,6 +83,15 @@
         },500);
     });
     
+    $('#mmbtn').click(function(){
+        $('.main_menu').stop().animate({'left' : '0%',}, 600);
+        $('.bg').stop().fadeIn();
+        
+    });
+    $('.colse').click(function(){
+        $('.main_menu').stop().animate({'left' : '100%'}, 600);
+        $('.bg').stop().fadeOut();
+    });
 });
 
 
