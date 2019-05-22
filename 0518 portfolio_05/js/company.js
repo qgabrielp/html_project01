@@ -137,6 +137,7 @@ $(document).ready(function(){
             $('.submenu1_m').addClass('on_bg');
             $('.submenu_in_m>div>span').removeClass('on');
             $('.submenu1_m>span').addClass('on');
+            $('html, body').stop().animate({scrollTop : 0}, 400);
             }
     });
     
