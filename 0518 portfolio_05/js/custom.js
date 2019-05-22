@@ -12,6 +12,15 @@
         $('.sec4_sl_box>div').eq(i).show();
     });
     
+    $('.sec10_m_text_2').hide();
+    $('.sec10_m_tap>div').click(function(){
+        var i = $(this).index();
+        $('.sec10_m_tap>div').removeClass('select_m');
+        $('.sec10_m_tap>div').eq(i).addClass('select_m');
+        $('.sec10_m_text>div').hide();
+        $('.sec10_m_text>div').eq(i).show();
+    });
+    
     $('.topgu').hide();
     $(window).scroll(function(){
         sec2Top = $('.sec2').offset().top - 90;
