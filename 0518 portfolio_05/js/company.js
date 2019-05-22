@@ -8,6 +8,10 @@ $(document).ready(function(){
                 $('.topgu').stop().fadeOut();
             }
     });
+    $('.top').click(function(){
+        $('html, body').stop().animate({scrollTop : 0}, 400);
+        return false;
+    });
     
     $('#mmbtn').click(function(){
         $('.main_menu').stop().animate({'left' : '0%',}, 600);

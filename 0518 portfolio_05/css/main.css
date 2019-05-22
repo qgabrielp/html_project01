@@ -492,8 +492,6 @@ main{
 }
 .sec4_sl_box{
     width: 100%;
-    min-height: 810px;
-    max-height: 2000px;
     border-top: none;
     position: relative;
 }
@@ -501,10 +499,7 @@ main{
     width: 100%;
     height: 100%;
     padding: 50px;
-    position: absolute;
     background-color: #fff;
-    top: 0;
-    left: 0;
 }
 .sec4_sl_box_1{
     
@@ -576,6 +571,12 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+}
+.sec4_sl_box_2>.sec4_sl_box_img_2{
+    display: none;
+}
+.sec4_sl_box_img_2_text{
+    display: none;
 }
 .sec4_sl_box_text>div{
     width: 520px;
@@ -1958,7 +1959,7 @@ footer{
         padding-right: 2.5%;
     }
     .sec4_sl_box{
-        height: 1100px;
+/*        height: 1100px;*/
         padding-bottom: 10px;
     }
     .sec4_sl>div{
@@ -1968,7 +1969,7 @@ footer{
         width: 90%;
     }
     .sec4_sl_box>div{
-        padding: 10px;
+        padding: 0;
     }
     .sec4_sl_box_text{
         width: 100%;
@@ -1988,10 +1989,17 @@ footer{
     .sec4_sl_box_local{
         display: none;
     }
+    .sec4_sl_box_1{
+        
+    }
     .sec4_sl_box_2{
         
     }
+    .sec4_sl_box_3{
+        
+    }
     .sec4_sl_box_2>.sec4_sl_box_img{
+        width: 100%;
         height: 650px;
         background: url(../img/m_sec4_2.png);
         background-size: 100% 100%;
@@ -1999,12 +2007,25 @@ footer{
         background-position: center;
     }
     .sec4_sl_box_2>.sec4_sl_box_img_2{
-        height: 400px;
+        width: 100%;
+        height: 200px;
+        padding-top: 20px;
         background: url(../img/m_sec4_3.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
         display: block;
+        border: 1px solid #ddd;
+    }
+    .sec4_sl_box_img_2_text{
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+    }
+    .sec4_sl_box_img_2_text>p{
+        border: 1px solid #ddd;
     }
     .sec4_sl_box_text>div{
         width: 100%;
