@@ -1494,6 +1494,7 @@ main{
     position: fixed;
     top: 60%;
     right: 30px;
+    z-index: 999;
 }
 .top>a{
     width: 58px;
