@@ -92,10 +92,10 @@
         },500);
     });
     
+    $('.bg').stop().hide();
     $('#mmbtn').click(function(){
         $('.main_menu').stop().animate({'left' : '0%',}, 600);
         $('.bg').stop().fadeIn();
-        
     });
     $('.close').click(function(){
         $('.main_menu').stop().animate({'left' : '100%'}, 600);
@@ -103,6 +103,7 @@
     });
     $('.main_menu>ul>li').click(function(){
         $('.main_menu').stop().animate({'left' : '100%'}, 600);
+        $('.bg').stop().fadeOut();
     });
 });
 

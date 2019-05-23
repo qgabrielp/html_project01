@@ -463,7 +463,7 @@ footer{
     }
     .bg{
         width: 100%;
-        height: 100%;
+        height: 1000px;
         background-color: rgba(0,0,0,0.7);
         position: absolute;
         top: 0;
@@ -514,6 +514,22 @@ footer{
     
     main{
         margin-top: 50px;
+    }
+    .banner{
+        width: 100%;
+        height: 200px;
+        background: url(../img/news_1_m.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+    }
+    .ban_tt1::after{
+        content: '';
+        display: block;
+        width: 30%;
+        height: 1px;
+        margin: 0 auto;
+        background-color: #ddd;
     }
     
     .sec1{
@@ -584,6 +600,7 @@ footer{
         position: absolute;
         top: 0;
         right: 2.5%;
+        border-radius: 0;
     }
     .ft_icon{
         width: 100%;
