@@ -92,7 +92,7 @@ main{
 .banner{
     width: 100%;
     height: 150px;
-    background: url(../img/qa_1.png);
+    background: url(../img/news_1.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -111,262 +111,99 @@ main{
 }
 
 .sec1{
-    
+    width: 100%;
 }
 .sec1_in{
     max-width: 1200px;
+    padding: 50px 50px 100px 50px;
     margin: 0 auto;
-    padding: 50px 2.5%;
 }
-
-.rs{
+.sec1_in_tt{
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 2px solid #000;
+}
+.sec1_in_tt>span{
+    width: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;;
+}
+.sec1_in_tt>span:nth-child(1){
+    
+}
+.sec1_in_tt>span:nth-child(2){
+    width: 75%;
+}
+.sec1_in_tt>span:nth-child(3){
+   
+}
+.sec1_in_list{
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.sec1_in_list>span{
+    width: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+.sec1_in_list>a{
+    width: 75%;
+    font-size: 14px;
+    font-weight: 600;
+    text-indent: 30px;
+    display: inline-block;
+}
+.sec1_in_list:hover{
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+.sec1_in_list:hover a{
     color: #ff0000;
-    position: relative;
-    top: 3px;
-    left: 0;
-    transform: translateY(-50%);
+    transition: 0.2s;
 }
-.ex{
+.sec1_in_list>span:nth-child(3){
+    font-size: 13px;
+}
+
+.page{
     width: 100%;
-    font-size: 14px;
-    text-align: right;
-    line-height: 50px;
-    color: #000;
-    position: relative;
+    padding-top: 50px;
 }
-
-.value{
-
-}
-.value::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.value>div{
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.value_1{
-    width: 20%;
-    padding-left: 30px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.value_2{
-    width: 80%;
-    padding-left: 30px;
-}
-.value_2>div{
-    padding-right: 30px;
-    display: inline-block;
-}
-.value_2_in>input{
-    position: relative;
-    top: 2px;
-}
-.value_2_m{
-    display: none;
-}
-
-.qad{
-    
-}
-.qad::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.qad>div{
-    height: 150px;
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.qad_1{
-    width: 20%;
-    padding-left: 30px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.qad_2{
-    width: 80%;
-    padding: 20px 30px;
-}
-.qad_2>textarea{
-    width: 100%;
-    height: 100%;
-    resize: none;
-}
-
-.name{
-    
-}
-.name::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.name>div{
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.name_1{
-    width: 20%;
-    padding-left: 30px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.name_2{
-    width: 80%;
-    padding: 0 30px;
-}
-.name_2>input{
-    width: 100%;
-    line-height: 30px;
-}
-
-.company{
-    
-}
-.company::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.company>div{
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.company_1{
-    width: 20%;
-    padding-left: 30px;
-    text-indent: 10px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.company_2{
-    width: 80%;
-    padding: 0 30px;
-}
-.company_2>input{
-    width: 100%;
-    line-height: 30px;
-}
-
-.phone{
-    
-}
-.phone::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.phone>div{
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.phone_1{
-    width: 20%;
-    padding-left: 30px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.phone_2{
-    width: 80%;
-    padding: 0 30px;
-}
-.phone_2>input{
-    width: 100%;
-    line-height: 30px;
-}
-.phone_2>input::placeholder{
-    color: darkgray;
-}
-.phone_2>input:focus::placeholder{
-    color: transparent;
-}
-.phone_2_m{
-    display: none;
-}
-
-.email{
-    
-}
-.email::after{
-    content: '';
-    clear: both;
-    display: block;
-}
-.email>div{
-    font-size: 14px;
-    line-height: 50px;
-    border: 1px solid #ddd;
-    float: left;
-}
-.email_1{
-    width: 20%;
-    padding-left: 30px;
-    font-weight: 600;
-    color: #000;
-    background-color: #f9f9f9;
-}
-.email_2{
-    width: 80%;
-    padding: 0 30px;
-}
-.email_2>input{
-    width: 100%;
-    line-height: 30px;
-}
-.email_2>input::placeholder{
-    color: darkgray;
-}
-.email_2>input:focus::placeholder{
-    color: transparent;
-}
-.email_2_m{
-    display: none;
-}
-
-.contact{    
-    margin-top: 50px;
-    padding: 0 30px;
-    font-size: 20px;
-    line-height: 50px;
-    border: 2px solid #ff0000;
-    border-radius: 5px;
-    background-color: #ff0000;
-    display: inline-block;
+.page_in{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: inline-block;
 }
-.contact>a{
-    color: #fff;
+.page_in::after{
+    content: '';
+    clear: both;
     display: block;
 }
-.contact:hover{
-    background-color: #19121a;
-    transition: 0.2s;
+.page_in>div{
+    width: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    border: 1px solid #ddd;
+    cursor: pointer;
 }
-.contact:hover a{
-    color: #ff0000;
-    transition: 0.2s;
+.arrow_l{
+    margin-right: 10px;
+}
+.arrow_r{
+    margin-left: 10px;
+}
+.select{
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
 }
 
 
@@ -597,6 +434,7 @@ footer{
 
 
 
+
 /* 미디어커리 */
 @media screen and (max-width:700px){
     body{
@@ -678,169 +516,36 @@ footer{
         margin-top: 50px;
     }
     
-    .value{
-        padding-bottom: 10px;
+    .sec1{
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
-    .value>div{
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
+    .sec1_in{
+        padding: 0;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
     }
-    .value_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .value_2{
+    .sec1_in_tt{
         display: none;
     }
-    .value_2_m{
-        display: block;
+    .sec1_in_list{
+        padding-top: 10px;
+        padding-bottom: 5px;
+        line-height: 20px;
+    }
+    .sec1_in_list>a{
         width: 100%;
-        border: none !important;
     }
-    .value_2_m>select{
-        width: 100%;
-        padding: 10px 20px;
-    }
-    
-
-    .qad>div{
-        height: auto;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
-    }
-    .qad_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .qad_2{
-        width: 100%;
-        padding: 0;
-        border: none !important;
-    }
-    
-    .name{
-        padding-bottom: 10px;
-    }
-    .name>div{
-        height: auto;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
-    }
-    .name_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .name_2{
-        width: 100%;
-        padding: 0;
-        border: none !important;
-    }
-    
-    .company{
-        padding-bottom: 10px;
-    }
-    .company>div{
-        height: auto;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
-    }
-    .company_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .company_2{
-        width: 100%;
-        padding: 0;
-        border: none !important;
-    }
-    
-    .phone{
-        padding-bottom: 10px;
-    }
-    .phone>div{
-        height: auto;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
-    }
-    .phone_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .phone_2{
+    .sec1_in_list>span:nth-child(1){
         display: none;
     }
-    .phone_2_m{
-        width: 100%;
-        display: block;
-        padding: 0;
-        border: none !important;
+    .sec1_in_list>span:nth-child(3){
+        text-indent: 10px;
     }
-    #phone_2_m_1{
-        width: 30%;
-        padding: 10px 20px;
-    }
-    .phone_2_m>input{
-        width: 33%;
-        padding: 10px 20px;
+    .sec1_in_list>a{
+        text-indent: 10px;
     }
     
-    .email{
-        padding-bottom: 10px;
-    }
-    .email>div{
-        height: auto;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #ddd;
-        float: left;
-    }
-    .email_1{
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-        border: none !important;
-    }
-    .email_2{
-        display: none;
-    }
-    .email_2_m{
-        width: 100%;
-        display: block;
-        border: none !important;
-    }
-    .email_2_m>input{
-        width: 40%;
-        padding: 10px 20px;
-    }
-    .email_2_m>span{
-        width: 10%;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .email_2_m>select{
-        width: 50%;
-        padding: 10px 20px;
-    }
     
     
     .topgu{
@@ -957,11 +662,6 @@ footer{
         text-align: center;
     }
 }
-
-
-
-
-
 
 
 

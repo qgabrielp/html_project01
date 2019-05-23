@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<title> 문서의 제목  </title>
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/qa.css" />
+	<link rel="stylesheet" href="css/news.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script type="text/javascript" src="js/qa.js"></script>
+	<script type="text/javascript" src="js/news.js"></script>
 </head>
 <body>
 <header>
@@ -38,103 +38,56 @@
 <main>
     <div class="banner">
         <div class="ban_text">
-            <p class="ban_tt1">상담 &#8226; 문의</p>
+            <p class="ban_tt1">보안 최신 뉴스</p>
         </div>
     </div>
     <section class="sec1">
         <div class="sec1_in">
-            <div class="ex">
-                 <span class="rs">*</span> 표시는 필수 입력 사항입니다
+            <div class="sec1_in_tt">
+                <span>번호</span>
+                <span>제목</span>
+                <span>날짜</span>
             </div>
-            <div class="value">
-                <div class="value_1">
-                    <span class="rs">*</span> 분류
-                </div>
-                <div class="value_2">
-                    <div class="value_2_in">
-                        <input id="value_2_in_1" name="qnatype" type="radio" checked="" value="서비스 문의">
-                        <label for="value_2_in_1">서비스 문의</label>
-                    </div>
-                    <div class="value_2_in">
-                        <input id="value_2_in_2" name="qnatype" type="radio" value="서비스 문의">
-                        <label for="value_2_in_2">사업제휴 문의</label>
-                    </div>
-                    <div class="value_2_in">
-                        <input id="value_2_in_3" name="qnatype" type="radio" value="서비스 문의">
-                        <label for="value_2_in_3">서비스 문의</label>
-                    </div>
-                </div>
-                <div class="value_2_m">
-                    <select name="" id="value_2_m_sl">
-                        <option value="" disabled selected hidden>서비스 문의</option>
-                        <option value="사업제휴 문의">사업제휴 문의</option>
-                        <option value="홈페이지 제작 문의">홈페이지 제작 문의</option>
-                    </select>
-                </div>
+            <div class="sec1_in_list">
+                <span>10</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="qad">
-                <div class="qad_1">
-                    <span class="rs">*</span> 문의 상세내용
-                </div>
-                <div class="qad_2">
-                    <textarea name="qad_2" id="qad_2_text" cols="30" rows="10"></textarea>
-                </div>
+            <div class="sec1_in_list">
+                <span>9</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="name">
-                <div class="name_1">
-                    <span class="rs">*</span> 성명
-                </div>
-                <div class="name_2">
-                    <input type="text">
-                </div>
+            <div class="sec1_in_list">
+                <span>8</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="company">
-                <div class="company_1">
-                    회사명(상호)
-                </div>
-                <div class="company_2">
-                    <input type="text">
-                </div>
+            <div class="sec1_in_list">
+                <span>7</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="phone">
-                <div class="phone_1">
-                    <span class="rs">*</span> 전화번호
-                </div>
-                <div class="phone_2">
-                    <input type="text" placeholder=" 예) 010-0000-0000, 02-0000-0000">
-                </div>
-                <div class="phone_2_m">
-                    <select name="" id="phone_2_m_1">
-                        <option value="010">010</option>
-                        <option value="011">011</option>
-                        <option value="018">018</option>
-                        <option value="019">019</option>
-                    </select>
-                    <input type="text">
-                    <input type="text">
-                </div>
+            <div class="sec1_in_list">
+                <span>6</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="email">
-                <div class="email_1">
-                    <span class="rs">*</span> 이메일
-                </div>
-                <div class="email_2">
-                    <input type="text" placeholder=" 예) email@lascom.co.kr">
-                </div>
-                <div class="email_2_m">
-                    <input type="text">
-                    <span>@</span>
-                    <select name="" id="email_2_m_end">
-                        <option value="naver.com">naver.com</option>
-                        <option value="hanmail.net">hanmail.net</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="yahoo.com">yahoo.com</option>
-                        <option value="직접입력">직접입력</option>
-                    </select>
-                </div>
+            <div class="sec1_in_list">
+                <span>5</span>
+                <a href="#a">웹 보안 취약점 진단이 필요한 이유</a>
+                <span>2017.10.31</span>
             </div>
-            <div class="contact">
-                <a href="#a">신청하기</a>
+            <div class="page">
+                <div class="page_in">
+                    <div class="arrow_l"><i class="fas fa-chevron-left"></i></div>
+                    <div>1</div>
+                    <div class="select">2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div class="arrow_r"><i class="fas fa-chevron-right"></i></div>
+                </div>
             </div>
         </div>
     </section>
