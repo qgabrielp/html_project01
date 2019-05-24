@@ -106,14 +106,14 @@ main{
 .bn_1{
 
     background: url(../img/ban1.jpg);
-    background-size: 100% 100%;
+/*    background-size: 100% 100%;*/
     background-repeat: no-repeat;
     background-position: center;
 }
 .bn_2{
 
     background: url(../img/ban2.jpg);
-    background-size: 100% 100%;
+/*    background-size: 100% 100%;*/
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1984,7 +1984,7 @@ footer{
         width: 100%;
     }
     .sec4_sl_box_img{
-        height: 650px;
+        margin-top: 10px;
         background: url(../img/m_sec4_1.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;

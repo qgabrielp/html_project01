@@ -175,12 +175,16 @@ main{
     cursor: pointer;
 }
 .sec1_in_list:hover{
-    color: #ff0000;
     background-color: #19121a;
     transition: 0.2s;
 }
-
-
+.sec1_in_list>a{
+    color: #fff;
+}
+.sec1_in_list:hover a{
+    color: #ff0000;
+    transition: 0.2s;
+}
 
 
 
